@@ -39,6 +39,11 @@ class ChatViewController: UIViewController {
             withMessage: "Okay..."
         ),
         Message(
+            from: Sender(withName: "Chamiya", withProfilePic: #imageLiteral(resourceName: "NoBgLogo")),
+            on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
+            withMessage: "So?"
+        ),
+        Message(
             from: Sender(withName: "Janardhan", withProfilePic: #imageLiteral(resourceName: "BrandColoredLogo")),
             on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
             withMessage: "The dark side of the Force is a pathway to many abilities some consider to be unnatural. He became so powerful... the only thing he was afraid of was losing his power, which eventually, of course, he did. "
@@ -50,7 +55,9 @@ class ChatViewController: UIViewController {
         )
     ]
     
-    var sender : String = "Janardhan"
+    var prevSender : String?
+    
+    var curruserName : String? = "Janardhan"
     var X : CGFloat = 0.0
     var Y : CGFloat = 0.0
     var tableWidth : CGFloat = 0.0
@@ -65,10 +72,10 @@ class ChatViewController: UIViewController {
         super.viewDidLoad()
         //subject label set up
         subjectLabel.text = subjectLabel.text?.uppercased()
-         subjectLabel.font = UIFont(name: "AirbnbCerealApp-Bold", size: 23)
+         subjectLabel.font = UIFont(name: "AirbnbCerealApp-Medium", size: 30)
         
         //professor label set up
-        professorLabel.font = UIFont(name: "AirbnbCerealApp-Medium", size: 14)
+        professorLabel.font = UIFont(name: "AirbnbCerealApp-Book", size: 14)
         
         
         //chat table view set up
@@ -172,7 +179,7 @@ extension ChatViewController: UITextFieldDelegate {
         }
         let content = textField.text ?? ""
         if content != "" {
-            let sender = Sender(withName: self.sender, withProfilePic: nil)
+            let sender = Sender(withName: self.curruserName ?? "no name", withProfilePic: nil)
             let newMessage = Message(from: sender, on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate), withMessage: content)
             messages.append(newMessage)
             chatTable.reloadData()
@@ -213,32 +220,35 @@ extension ChatViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.messageCell) as! ReceivedMessageCell
-//        cell.messageContent.text = messages[indexPath.row].content
-//        cell.profileImage.image = messages[indexPath.row].sender.profilepic
-//        cell.senderText.text = messages[indexPath.row].sender.name
-//        cell.leftBufferView.isHidden = true
-//        if messages[indexPath.row].sender.name == sender {
-//            cell.bufferView.isHidden = true
-//            cell.leftBufferView.isHidden = false
-//            cell.messageBackground.backgroundColor = hexStringToUIColor(hex: "#3782A4")
-//            cell.profileImage.alpha = 0
-//            cell.senderText.isHidden = true
-//            cell.messageContent.textColor = hexStringToUIColor(hex: "#FCFAF3")
-//
-//        }
-//        return cell
-        
-        if sender == messages[indexPath.row].sender.name {
+
+        if curruserName == messages[indexPath.row].sender.name {
             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.sentCell) as! SentMessageCell
             cell.contentLabel.text = messages[indexPath.row].content
+            if messages.count - 1 != indexPath.row {
+                if curruserName == messages[indexPath.row+1].sender.name {
+                    cell.stackBottomConstraint.constant = 0
+                }
+                
+            }
+//            self.prevSender = self.curruserName
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.messageCell) as! ReceivedMessageCell
             cell.messageContent.text = messages[indexPath.row].content
             cell.profileImage.image = messages[indexPath.row].sender.profilepic
-            cell.senderText.text = messages[indexPath.row].sender.name
-//            cell.leftBufferView.isHidden = true
+            let currentSenderName = messages[indexPath.row].sender.name
+            cell.senderText.text = currentSenderName
+            if indexPath.row != 0 {
+                if messages[indexPath.row - 1].sender.name == currentSenderName {
+                    cell.stackTopConstraint.constant = 0
+                    cell.senderText.isHidden = true
+                    cell.profileImage.alpha = 0
+                }
+            }
+            
+//                self.prevSender = currentSenderName
+            
+           
             return cell
         }
     }

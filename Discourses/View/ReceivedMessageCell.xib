@@ -74,6 +74,8 @@
                 <outlet property="messageContent" destination="LXV-ks-Vhw" id="kKV-ZU-BGY"/>
                 <outlet property="profileImage" destination="prX-sL-TCS" id="s0x-ax-kt1"/>
                 <outlet property="senderText" destination="mbT-pK-ljk" id="ZlP-7s-fbo"/>
+                <outlet property="stackBottomConstraint" destination="2fs-6j-yaS" id="0vJ-s0-XzY"/>
+                <outlet property="stackTopConstraint" destination="0v1-7z-o9q" id="tmX-K9-iuJ"/>
             </connections>
             <point key="canvasLocation" x="210.86956521739131" y="154.35267857142856"/>
         </tableViewCell>

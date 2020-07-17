@@ -128,9 +128,9 @@
 			isa = PBXGroup;
 			children = (
 				8F57476324C1BE1F00286C87 /* ReceivedMessageCell.xib */,
+				8F57476924C1BE5B00286C87 /* ReceivedMessageCell.swift */,
 				8F57476524C1BE5900286C87 /* ClassBubbleTableViewCell.swift */,
 				8F57476724C1BE5A00286C87 /* ClassBubbleTableViewCell.xib */,
-				8F57476924C1BE5B00286C87 /* ReceivedMessageCell.swift */,
 				8F57476824C1BE5B00286C87 /* SentMessageCell.swift */,
 				8F57476624C1BE5A00286C87 /* SentMessageCell.xib */,
 			);

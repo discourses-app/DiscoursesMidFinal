@@ -13,7 +13,9 @@ class ReceivedMessageCell: UITableViewCell {
     @IBOutlet weak var messageContent: UILabel!
     @IBOutlet weak var messageBackground: UIView!
     @IBOutlet weak var senderText: UILabel!
-//    @IBOutlet weak var bufferView: UIView!
+    @IBOutlet weak var stackTopConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var stackBottomConstraint: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,7 +25,7 @@ class ReceivedMessageCell: UITableViewCell {
         messageBackground.layer.cornerRadius = 20
         messageBackground.layer.masksToBounds = false
         /*
-            The code below is in cade you want a shadow to your message
+            The code below is in case you want a shadow to your message
         messageBackground.layer.shadowColor = UIColor.black.cgColor
         messageBackground.layer.shadowOpacity = 0.1
         messageBackground.layer.shadowOffset = CGSize(width: 1.5, height: 5)
