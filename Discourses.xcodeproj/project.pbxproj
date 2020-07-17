@@ -7,23 +7,87 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F5605B324C1B6A30014289C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5605B224C1B6A30014289C /* Message.swift */; };
+		8F5605B524C1B6C20014289C /* ClassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5605B424C1B6C20014289C /* ClassModel.swift */; };
+		8F5605B724C1B6DE0014289C /* UIImage-ResizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5605B624C1B6DE0014289C /* UIImage-ResizeExtension.swift */; };
+		8F5605B924C1B81C0014289C /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5605B824C1B81C0014289C /* ChatViewController.swift */; };
+		8F5605BB24C1B8510014289C /* SubscribedClassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5605BA24C1B8510014289C /* SubscribedClassesViewController.swift */; };
+		8F57475E24C1BCBB00286C87 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F57475D24C1BCBB00286C87 /* KeyboardLayoutConstraint.swift */; };
+		8F57476024C1BCFC00286C87 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F57475F24C1BCFC00286C87 /* LoginViewController.swift */; };
+		8F57476224C1BD6200286C87 /* SearchClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F57476124C1BD6200286C87 /* SearchClassViewController.swift */; };
+		8F57476424C1BE1F00286C87 /* ReceivedMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F57476324C1BE1F00286C87 /* ReceivedMessageCell.xib */; };
+		8F57476A24C1BE5B00286C87 /* ClassBubbleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F57476524C1BE5900286C87 /* ClassBubbleTableViewCell.swift */; };
+		8F57476B24C1BE5B00286C87 /* SentMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F57476624C1BE5A00286C87 /* SentMessageCell.xib */; };
+		8F57476C24C1BE5B00286C87 /* ClassBubbleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F57476724C1BE5A00286C87 /* ClassBubbleTableViewCell.xib */; };
+		8F57476D24C1BE5B00286C87 /* SentMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F57476824C1BE5B00286C87 /* SentMessageCell.swift */; };
+		8F57476E24C1BE5B00286C87 /* ReceivedMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F57476924C1BE5B00286C87 /* ReceivedMessageCell.swift */; };
 		8FFC6CF224C1B14900A41B95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFC6CF124C1B14900A41B95 /* AppDelegate.swift */; };
 		8FFC6CF424C1B14900A41B95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFC6CF324C1B14900A41B95 /* SceneDelegate.swift */; };
-		8FFC6CF624C1B14900A41B95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFC6CF524C1B14900A41B95 /* ViewController.swift */; };
+		8FFC6CF624C1B14900A41B95 /* StartupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFC6CF524C1B14900A41B95 /* StartupViewController.swift */; };
 		8FFC6CF924C1B14900A41B95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC6CF724C1B14900A41B95 /* Main.storyboard */; };
 		8FFC6CFB24C1B14B00A41B95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC6CFA24C1B14B00A41B95 /* Assets.xcassets */; };
 		8FFC6CFE24C1B14B00A41B95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC6CFC24C1B14B00A41B95 /* LaunchScreen.storyboard */; };
+		8FFC6D0624C1B2E800A41B95 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFC6D0524C1B2E800A41B95 /* Constants.swift */; };
+		8FFC6D1324C1B3DC00A41B95 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC6D0A24C1B3D500A41B95 /* OFL.txt */; };
+		8FFC6D1424C1B3DC00A41B95 /* Cabin-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC6D0B24C1B3D600A41B95 /* Cabin-Regular.ttf */; };
+		8FFC6D1524C1B3DC00A41B95 /* Cabin-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC6D0C24C1B3D700A41B95 /* Cabin-Medium.ttf */; };
+		8FFC6D1624C1B3DC00A41B95 /* Cabin-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC6D0D24C1B3D700A41B95 /* Cabin-MediumItalic.ttf */; };
+		8FFC6D1724C1B3DC00A41B95 /* Cabin-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC6D0E24C1B3D800A41B95 /* Cabin-SemiBold.ttf */; };
+		8FFC6D1824C1B3DC00A41B95 /* Cabin-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC6D0F24C1B3D900A41B95 /* Cabin-SemiBoldItalic.ttf */; };
+		8FFC6D1924C1B3DC00A41B95 /* Cabin-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC6D1024C1B3DA00A41B95 /* Cabin-Bold.ttf */; };
+		8FFC6D1A24C1B3DC00A41B95 /* Cabin-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC6D1124C1B3DB00A41B95 /* Cabin-Italic.ttf */; };
+		8FFC6D1B24C1B3DC00A41B95 /* Cabin-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC6D1224C1B3DC00A41B95 /* Cabin-BoldItalic.ttf */; };
+		8FFC6D2324C1B40F00A41B95 /* AirbnbCerealMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC6D1D24C1B40A00A41B95 /* AirbnbCerealMedium.ttf */; };
+		8FFC6D2424C1B40F00A41B95 /* AirbnbCerealBook.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC6D1E24C1B40B00A41B95 /* AirbnbCerealBook.ttf */; };
+		8FFC6D2524C1B40F00A41B95 /* AirbnbCerealExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC6D1F24C1B40C00A41B95 /* AirbnbCerealExtraBold.ttf */; };
+		8FFC6D2624C1B40F00A41B95 /* AirbnbCerealBlack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC6D2024C1B40D00A41B95 /* AirbnbCerealBlack.ttf */; };
+		8FFC6D2724C1B40F00A41B95 /* AirbnbCerealBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC6D2124C1B40E00A41B95 /* AirbnbCerealBold.ttf */; };
+		8FFC6D2824C1B40F00A41B95 /* AirbnbCerealLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC6D2224C1B40F00A41B95 /* AirbnbCerealLight.ttf */; };
+		8FFC6D2C24C1B44A00A41B95 /* Acme-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC6D2A24C1B44900A41B95 /* Acme-Regular.ttf */; };
+		8FFC6D2D24C1B44A00A41B95 /* OFL2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC6D2B24C1B44A00A41B95 /* OFL2.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F5605B224C1B6A30014289C /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		8F5605B424C1B6C20014289C /* ClassModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassModel.swift; sourceTree = "<group>"; };
+		8F5605B624C1B6DE0014289C /* UIImage-ResizeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage-ResizeExtension.swift"; sourceTree = "<group>"; };
+		8F5605B824C1B81C0014289C /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		8F5605BA24C1B8510014289C /* SubscribedClassesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribedClassesViewController.swift; sourceTree = "<group>"; };
+		8F57475D24C1BCBB00286C87 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
+		8F57475F24C1BCFC00286C87 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8F57476124C1BD6200286C87 /* SearchClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchClassViewController.swift; sourceTree = "<group>"; };
+		8F57476324C1BE1F00286C87 /* ReceivedMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReceivedMessageCell.xib; sourceTree = "<group>"; };
+		8F57476524C1BE5900286C87 /* ClassBubbleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassBubbleTableViewCell.swift; sourceTree = "<group>"; };
+		8F57476624C1BE5A00286C87 /* SentMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SentMessageCell.xib; sourceTree = "<group>"; };
+		8F57476724C1BE5A00286C87 /* ClassBubbleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassBubbleTableViewCell.xib; sourceTree = "<group>"; };
+		8F57476824C1BE5B00286C87 /* SentMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentMessageCell.swift; sourceTree = "<group>"; };
+		8F57476924C1BE5B00286C87 /* ReceivedMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceivedMessageCell.swift; sourceTree = "<group>"; };
 		8FFC6CEE24C1B14900A41B95 /* Discourses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Discourses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FFC6CF124C1B14900A41B95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FFC6CF324C1B14900A41B95 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8FFC6CF524C1B14900A41B95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8FFC6CF524C1B14900A41B95 /* StartupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupViewController.swift; sourceTree = "<group>"; };
 		8FFC6CF824C1B14900A41B95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8FFC6CFA24C1B14B00A41B95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FFC6CFD24C1B14B00A41B95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FFC6CFF24C1B14B00A41B95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FFC6D0524C1B2E800A41B95 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8FFC6D0A24C1B3D500A41B95 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		8FFC6D0B24C1B3D600A41B95 /* Cabin-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Regular.ttf"; sourceTree = "<group>"; };
+		8FFC6D0C24C1B3D700A41B95 /* Cabin-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Medium.ttf"; sourceTree = "<group>"; };
+		8FFC6D0D24C1B3D700A41B95 /* Cabin-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-MediumItalic.ttf"; sourceTree = "<group>"; };
+		8FFC6D0E24C1B3D800A41B95 /* Cabin-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-SemiBold.ttf"; sourceTree = "<group>"; };
+		8FFC6D0F24C1B3D900A41B95 /* Cabin-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		8FFC6D1024C1B3DA00A41B95 /* Cabin-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Bold.ttf"; sourceTree = "<group>"; };
+		8FFC6D1124C1B3DB00A41B95 /* Cabin-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Italic.ttf"; sourceTree = "<group>"; };
+		8FFC6D1224C1B3DC00A41B95 /* Cabin-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-BoldItalic.ttf"; sourceTree = "<group>"; };
+		8FFC6D1D24C1B40A00A41B95 /* AirbnbCerealMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCerealMedium.ttf; sourceTree = "<group>"; };
+		8FFC6D1E24C1B40B00A41B95 /* AirbnbCerealBook.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCerealBook.ttf; sourceTree = "<group>"; };
+		8FFC6D1F24C1B40C00A41B95 /* AirbnbCerealExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCerealExtraBold.ttf; sourceTree = "<group>"; };
+		8FFC6D2024C1B40D00A41B95 /* AirbnbCerealBlack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCerealBlack.ttf; sourceTree = "<group>"; };
+		8FFC6D2124C1B40E00A41B95 /* AirbnbCerealBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCerealBold.ttf; sourceTree = "<group>"; };
+		8FFC6D2224C1B40F00A41B95 /* AirbnbCerealLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCerealLight.ttf; sourceTree = "<group>"; };
+		8FFC6D2A24C1B44900A41B95 /* Acme-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Acme-Regular.ttf"; sourceTree = "<group>"; };
+		8FFC6D2B24C1B44A00A41B95 /* OFL2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL2.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +101,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F5605AF24C1B6700014289C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8F5605B224C1B6A30014289C /* Message.swift */,
+				8F5605B424C1B6C20014289C /* ClassModel.swift */,
+				8F5605B624C1B6DE0014289C /* UIImage-ResizeExtension.swift */,
+				8F57475D24C1BCBB00286C87 /* KeyboardLayoutConstraint.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8F5605B024C1B6890014289C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8F5605BA24C1B8510014289C /* SubscribedClassesViewController.swift */,
+				8FFC6CF524C1B14900A41B95 /* StartupViewController.swift */,
+				8F5605B824C1B81C0014289C /* ChatViewController.swift */,
+				8F57475F24C1BCFC00286C87 /* LoginViewController.swift */,
+				8F57476124C1BD6200286C87 /* SearchClassViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8F5605B124C1B6900014289C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8F57476324C1BE1F00286C87 /* ReceivedMessageCell.xib */,
+				8F57476524C1BE5900286C87 /* ClassBubbleTableViewCell.swift */,
+				8F57476724C1BE5A00286C87 /* ClassBubbleTableViewCell.xib */,
+				8F57476924C1BE5B00286C87 /* ReceivedMessageCell.swift */,
+				8F57476824C1BE5B00286C87 /* SentMessageCell.swift */,
+				8F57476624C1BE5A00286C87 /* SentMessageCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		8FFC6CE524C1B14900A41B95 = {
 			isa = PBXGroup;
 			children = (
@@ -58,13 +158,65 @@
 			children = (
 				8FFC6CF124C1B14900A41B95 /* AppDelegate.swift */,
 				8FFC6CF324C1B14900A41B95 /* SceneDelegate.swift */,
-				8FFC6CF524C1B14900A41B95 /* ViewController.swift */,
 				8FFC6CF724C1B14900A41B95 /* Main.storyboard */,
+				8FFC6D0524C1B2E800A41B95 /* Constants.swift */,
+				8F5605AF24C1B6700014289C /* Model */,
+				8F5605B124C1B6900014289C /* View */,
+				8F5605B024C1B6890014289C /* Controller */,
 				8FFC6CFA24C1B14B00A41B95 /* Assets.xcassets */,
 				8FFC6CFC24C1B14B00A41B95 /* LaunchScreen.storyboard */,
 				8FFC6CFF24C1B14B00A41B95 /* Info.plist */,
+				8FFC6D0924C1B3B500A41B95 /* fonts */,
 			);
 			path = Discourses;
+			sourceTree = "<group>";
+		};
+		8FFC6D0924C1B3B500A41B95 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8FFC6D2E24C1B45100A41B95 /* Acme */,
+				8FFC6D2924C1B41F00A41B95 /* Airbnb Cereal App */,
+				8FFC6D1C24C1B3F000A41B95 /* Cabin */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		8FFC6D1C24C1B3F000A41B95 /* Cabin */ = {
+			isa = PBXGroup;
+			children = (
+				8FFC6D1024C1B3DA00A41B95 /* Cabin-Bold.ttf */,
+				8FFC6D1224C1B3DC00A41B95 /* Cabin-BoldItalic.ttf */,
+				8FFC6D1124C1B3DB00A41B95 /* Cabin-Italic.ttf */,
+				8FFC6D0C24C1B3D700A41B95 /* Cabin-Medium.ttf */,
+				8FFC6D0D24C1B3D700A41B95 /* Cabin-MediumItalic.ttf */,
+				8FFC6D0B24C1B3D600A41B95 /* Cabin-Regular.ttf */,
+				8FFC6D0E24C1B3D800A41B95 /* Cabin-SemiBold.ttf */,
+				8FFC6D0F24C1B3D900A41B95 /* Cabin-SemiBoldItalic.ttf */,
+				8FFC6D0A24C1B3D500A41B95 /* OFL.txt */,
+			);
+			path = Cabin;
+			sourceTree = "<group>";
+		};
+		8FFC6D2924C1B41F00A41B95 /* Airbnb Cereal App */ = {
+			isa = PBXGroup;
+			children = (
+				8FFC6D2024C1B40D00A41B95 /* AirbnbCerealBlack.ttf */,
+				8FFC6D2124C1B40E00A41B95 /* AirbnbCerealBold.ttf */,
+				8FFC6D1E24C1B40B00A41B95 /* AirbnbCerealBook.ttf */,
+				8FFC6D1F24C1B40C00A41B95 /* AirbnbCerealExtraBold.ttf */,
+				8FFC6D2224C1B40F00A41B95 /* AirbnbCerealLight.ttf */,
+				8FFC6D1D24C1B40A00A41B95 /* AirbnbCerealMedium.ttf */,
+			);
+			path = "Airbnb Cereal App";
+			sourceTree = "<group>";
+		};
+		8FFC6D2E24C1B45100A41B95 /* Acme */ = {
+			isa = PBXGroup;
+			children = (
+				8FFC6D2A24C1B44900A41B95 /* Acme-Regular.ttf */,
+				8FFC6D2B24C1B44A00A41B95 /* OFL2.txt */,
+			);
+			path = Acme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +277,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FFC6D2C24C1B44A00A41B95 /* Acme-Regular.ttf in Resources */,
+				8FFC6D1624C1B3DC00A41B95 /* Cabin-MediumItalic.ttf in Resources */,
+				8FFC6D1424C1B3DC00A41B95 /* Cabin-Regular.ttf in Resources */,
 				8FFC6CFE24C1B14B00A41B95 /* LaunchScreen.storyboard in Resources */,
+				8FFC6D2724C1B40F00A41B95 /* AirbnbCerealBold.ttf in Resources */,
 				8FFC6CFB24C1B14B00A41B95 /* Assets.xcassets in Resources */,
+				8FFC6D1824C1B3DC00A41B95 /* Cabin-SemiBoldItalic.ttf in Resources */,
+				8FFC6D2424C1B40F00A41B95 /* AirbnbCerealBook.ttf in Resources */,
+				8FFC6D1524C1B3DC00A41B95 /* Cabin-Medium.ttf in Resources */,
+				8FFC6D1324C1B3DC00A41B95 /* OFL.txt in Resources */,
+				8FFC6D2D24C1B44A00A41B95 /* OFL2.txt in Resources */,
+				8FFC6D2624C1B40F00A41B95 /* AirbnbCerealBlack.ttf in Resources */,
 				8FFC6CF924C1B14900A41B95 /* Main.storyboard in Resources */,
+				8F57476B24C1BE5B00286C87 /* SentMessageCell.xib in Resources */,
+				8FFC6D2824C1B40F00A41B95 /* AirbnbCerealLight.ttf in Resources */,
+				8F57476424C1BE1F00286C87 /* ReceivedMessageCell.xib in Resources */,
+				8FFC6D1A24C1B3DC00A41B95 /* Cabin-Italic.ttf in Resources */,
+				8FFC6D2324C1B40F00A41B95 /* AirbnbCerealMedium.ttf in Resources */,
+				8FFC6D2524C1B40F00A41B95 /* AirbnbCerealExtraBold.ttf in Resources */,
+				8FFC6D1B24C1B3DC00A41B95 /* Cabin-BoldItalic.ttf in Resources */,
+				8FFC6D1724C1B3DC00A41B95 /* Cabin-SemiBold.ttf in Resources */,
+				8F57476C24C1BE5B00286C87 /* ClassBubbleTableViewCell.xib in Resources */,
+				8FFC6D1924C1B3DC00A41B95 /* Cabin-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +310,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FFC6CF624C1B14900A41B95 /* ViewController.swift in Sources */,
+				8F57476E24C1BE5B00286C87 /* ReceivedMessageCell.swift in Sources */,
+				8F5605B524C1B6C20014289C /* ClassModel.swift in Sources */,
+				8F57476224C1BD6200286C87 /* SearchClassViewController.swift in Sources */,
+				8FFC6CF624C1B14900A41B95 /* StartupViewController.swift in Sources */,
+				8F5605B924C1B81C0014289C /* ChatViewController.swift in Sources */,
+				8F57475E24C1BCBB00286C87 /* KeyboardLayoutConstraint.swift in Sources */,
+				8F5605B724C1B6DE0014289C /* UIImage-ResizeExtension.swift in Sources */,
 				8FFC6CF224C1B14900A41B95 /* AppDelegate.swift in Sources */,
+				8F5605B324C1B6A30014289C /* Message.swift in Sources */,
+				8F57476A24C1BE5B00286C87 /* ClassBubbleTableViewCell.swift in Sources */,
+				8F57476D24C1BE5B00286C87 /* SentMessageCell.swift in Sources */,
 				8FFC6CF424C1B14900A41B95 /* SceneDelegate.swift in Sources */,
+				8F5605BB24C1B8510014289C /* SubscribedClassesViewController.swift in Sources */,
+				8FFC6D0624C1B2E800A41B95 /* Constants.swift in Sources */,
+				8F57476024C1BCFC00286C87 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
