@@ -13,7 +13,7 @@ class ReceivedMessageCell: UITableViewCell {
     @IBOutlet weak var messageContent: UILabel!
     @IBOutlet weak var messageBackground: UIView!
     @IBOutlet weak var senderText: UILabel!
-    @IBOutlet weak var bufferView: UIView!
+//    @IBOutlet weak var bufferView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

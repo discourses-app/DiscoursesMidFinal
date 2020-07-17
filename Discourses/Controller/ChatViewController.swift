@@ -108,6 +108,11 @@ class ChatViewController: UIViewController {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        scrollToBottom()
+    }
+    
     func scrollToBottom(){
         DispatchQueue.main.async {
             
@@ -165,8 +170,8 @@ extension ChatViewController: UITextFieldDelegate {
         UIView.animate(withDuration: 0.3) {
             self.chatTable.frame = CGRect(x: self.X, y: self.Y, width: self.tableWidth, height: self.tableHeight)
         }
-        
-        if let content = textField.text {
+        let content = textField.text ?? ""
+        if content != "" {
             let sender = Sender(withName: self.sender, withProfilePic: nil)
             let newMessage = Message(from: sender, on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate), withMessage: content)
             messages.append(newMessage)
