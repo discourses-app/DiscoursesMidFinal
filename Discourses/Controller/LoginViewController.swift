@@ -2,7 +2,7 @@
 //  WelcomeViewController.swift
 //  Discourses
 //
-//  Created by Abhishek Marda on 7/10/20.
+//  Created by Abhishek Marda and Aritra Mullick on 7/10/20.
 //  Copyright © 2020 DiscoursesTeam. All rights reserved.
 //
 

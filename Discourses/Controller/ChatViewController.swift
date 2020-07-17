@@ -2,13 +2,13 @@
 //  ChatViewController.swift
 //  Discourses
 //
-//  Created by Abhishek Marda on 7/9/20.
+//  Created by Abhishek Marda and Aritra Mullick on 7/9/20.
 //  Copyright © 2020 DiscoursesTeam. All rights reserved.
 //
 
 import UIKit
 
-class ChatViewController: UIViewController, UITextFieldDelegate {
+class ChatViewController: UIViewController {
 
     @IBOutlet weak var subjectLabel: UILabel!
     @IBOutlet weak var chatTable: UITableView!
@@ -59,40 +59,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     var flag : Int = 0 //just trust me on why we need this
     //scrollToBottom is defined
     
-    func scrollToBottom(){
-          DispatchQueue.main.async {
-             
-              let indexPath = IndexPath(row:  self.chatTable.numberOfRows(inSection: 0) - 1, section: 0)
-              self.chatTable.scrollToRow(at: indexPath, at: .bottom, animated: true)
-          }
-      }
-    //hitting the return button changes chatTable size
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-           self.view.endEditing(true)
-           UIView.animate(withDuration: 0.3) {
-               self.chatTable.frame = CGRect(x: self.X, y: self.Y, width: self.tableWidth, height: self.tableHeight)
-           }
-           
-           scrollToBottom()
-           flag = 0
-           return false
-       }
-    //beginning editing should also change the keyboard stuff
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-           if flag == 0 {
-                 tableWidth = chatTable.frame.width
-                 tableHeight = chatTable.frame.height
-                 X = chatTable.frame.minX
-                 Y = chatTable.frame.minY
-                       print("This is height!")
-                       print(keyboardHeight)
-               UIView.animate(withDuration: 0.3) {
-                   self.chatTable.frame = CGRect(x: self.X, y: self.Y, width: self.tableWidth, height: self.tableHeight - self.keyboardHeight)
-               }
-                 scrollToBottom()
-                 flag = 1;
-           }
-       }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -141,6 +108,14 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    func scrollToBottom(){
+        DispatchQueue.main.async {
+            
+            let indexPath = IndexPath(row:  self.chatTable.numberOfRows(inSection: 0) - 1, section: 0)
+            self.chatTable.scrollToRow(at: indexPath, at: .bottom, animated: true)
+        }
+    }
+    
     //MARK: - Button actions
     
     @IBAction func attachmentButtonPressed(_ sender: UIButton){
@@ -177,6 +152,49 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
             alpha: CGFloat(1.0)
         )
     }
+    
+    
+    
+}
+
+extension ChatViewController: UITextFieldDelegate {
+
+    //hitting the return button changes chatTable size
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        UIView.animate(withDuration: 0.3) {
+            self.chatTable.frame = CGRect(x: self.X, y: self.Y, width: self.tableWidth, height: self.tableHeight)
+        }
+        
+        if let content = textField.text {
+            let sender = Sender(withName: self.sender, withProfilePic: nil)
+            let newMessage = Message(from: sender, on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate), withMessage: content)
+            messages.append(newMessage)
+            chatTable.reloadData()
+        }
+        textField.text = nil
+        
+        scrollToBottom()
+        flag = 0
+        return false
+    }
+    //beginning editing should also change the keyboard stuff
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if flag == 0 {
+            tableWidth = chatTable.frame.width
+            tableHeight = chatTable.frame.height
+            X = chatTable.frame.minX
+            Y = chatTable.frame.minY
+            print("This is height!")
+            print(keyboardHeight)
+            UIView.animate(withDuration: 0.3) {
+                self.chatTable.frame = CGRect(x: self.X, y: self.Y, width: self.tableWidth, height: self.tableHeight - self.keyboardHeight)
+            }
+            scrollToBottom()
+            flag = 1;
+        }
+    }
+    
     
 }
 
