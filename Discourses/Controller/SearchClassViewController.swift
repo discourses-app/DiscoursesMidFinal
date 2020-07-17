@@ -13,7 +13,9 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
         return filterdata.count
     }
     
-    @IBOutlet weak var backBtn: UIButton!
+    
+   
+    @IBOutlet var backBtn: UIButton!
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var addClassLbl: UILabel!
     @IBOutlet var mainView: UIView!
@@ -24,6 +26,9 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
     var filterdata:[String]!
     var selectedCell : IndexPath!
     
+    @IBAction func backBtnPressed(_ sender: UIButton) {
+        self.dismiss(animated: true) 
+    }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
 
             filterdata = searchText.isEmpty ? data : data.filter { $0.contains(searchText) }
@@ -115,11 +120,7 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
         selectedCell = indexPath
     }
 
-    @IBAction func backButtonPressed(_ sender: UIButton) {
-        self.dismiss(animated: true) {
-            print("hello there")
-        }
-    }
+   
     
 }
 
