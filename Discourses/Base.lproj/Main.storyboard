@@ -165,9 +165,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="    Type here..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S6Z-j4-rJv">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="    Type here..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S6Z-j4-rJv">
                                 <rect key="frame" x="20" y="808" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="BrandForegroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -176,8 +175,11 @@
                         <color key="backgroundColor" name="BrandBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="pc1-7h-0OL" firstAttribute="trailing" secondItem="JBi-rK-Z9O" secondAttribute="trailing" constant="20" id="BWQ-zX-cVl"/>
+                            <constraint firstItem="pc1-7h-0OL" firstAttribute="trailing" secondItem="S6Z-j4-rJv" secondAttribute="trailing" constant="20" id="Qse-N5-LBZ"/>
+                            <constraint firstItem="S6Z-j4-rJv" firstAttribute="leading" secondItem="pc1-7h-0OL" secondAttribute="leading" constant="20" id="Rii-W7-FEl"/>
                             <constraint firstItem="JBi-rK-Z9O" firstAttribute="top" secondItem="pc1-7h-0OL" secondAttribute="top" constant="15" id="bfH-yc-aTW"/>
                             <constraint firstItem="JBi-rK-Z9O" firstAttribute="leading" secondItem="pc1-7h-0OL" secondAttribute="leading" constant="20" id="ldA-3d-gVv"/>
+                            <constraint firstItem="pc1-7h-0OL" firstAttribute="bottom" secondItem="S6Z-j4-rJv" secondAttribute="bottom" constant="20" id="nmT-f2-nDX" customClass="KeyboardLayoutConstraint" customModule="Discourses" customModuleProvider="target"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pc1-7h-0OL"/>
                     </view>

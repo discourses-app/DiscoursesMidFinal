@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChatViewController: UIViewController {
+class ChatViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var subjectLabel: UILabel!
     @IBOutlet weak var chatTable: UITableView!
@@ -51,11 +51,51 @@ class ChatViewController: UIViewController {
     ]
     
     var sender : String = "Janardhan"
+    var X : CGFloat = 0.0
+    var Y : CGFloat = 0.0
+    var tableWidth : CGFloat = 0.0
+    var tableHeight : CGFloat = 0.0
+    var keyboardHeight : CGFloat = 346.0 //for iPhone 11
+    var flag : Int = 0 //just trust me on why we need this
+    //scrollToBottom is defined
     
+    func scrollToBottom(){
+          DispatchQueue.main.async {
+             
+              let indexPath = IndexPath(row:  self.chatTable.numberOfRows(inSection: 0) - 1, section: 0)
+              self.chatTable.scrollToRow(at: indexPath, at: .bottom, animated: true)
+          }
+      }
+    //hitting the return button changes chatTable size
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+           self.view.endEditing(true)
+           UIView.animate(withDuration: 0.3) {
+               self.chatTable.frame = CGRect(x: self.X, y: self.Y, width: self.tableWidth, height: self.tableHeight)
+           }
+           
+           scrollToBottom()
+           flag = 0
+           return false
+       }
+    //beginning editing should also change the keyboard stuff
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+           if flag == 0 {
+                 tableWidth = chatTable.frame.width
+                 tableHeight = chatTable.frame.height
+                 X = chatTable.frame.minX
+                 Y = chatTable.frame.minY
+                       print("This is height!")
+                       print(keyboardHeight)
+               UIView.animate(withDuration: 0.3) {
+                   self.chatTable.frame = CGRect(x: self.X, y: self.Y, width: self.tableWidth, height: self.tableHeight - self.keyboardHeight)
+               }
+                 scrollToBottom()
+                 flag = 1;
+           }
+       }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         //subject label set up
         subjectLabel.text = subjectLabel.text?.uppercased()
          subjectLabel.font = UIFont(name: "AirbnbCerealApp-Bold", size: 23)
@@ -81,7 +121,7 @@ class ChatViewController: UIViewController {
         inputField.rightViewMode = .always
         inputField.layer.masksToBounds = true
         inputField.layer.cornerRadius = 15
-        
+        inputField.delegate = self
         
         //menu button set up
         let menuimage = #imageLiteral(resourceName: "ThreeLines").resized(to: CGSize(width: 25, height: 20))
@@ -115,14 +155,6 @@ class ChatViewController: UIViewController {
     
     //MARK: - Helpers
     
-    
-    func scrollToBottom(){
-        DispatchQueue.main.async {
-           
-            let indexPath = IndexPath(row:  self.chatTable.numberOfRows(inSection: 0) - 1, section: 0)
-            self.chatTable.scrollToRow(at: indexPath, at: .bottom, animated: true)
-        }
-    }
     
     func hexStringToUIColor (hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
