@@ -27,7 +27,7 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
     var selectedCell : IndexPath!
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
-        self.dismiss(animated: true) 
+        self.dismiss(animated: true)
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
 
@@ -47,6 +47,7 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
         searchBar.backgroundColor = #colorLiteral(red: 0.8117647059, green: 0.4352941176, blue: 0.1490196078, alpha: 1)
         self.mainView.sendSubviewToBack(bgView)
         addClassLbl.textColor = #colorLiteral(red: 0.8117647059, green: 0.4352941176, blue: 0.1490196078, alpha: 1)
+        addClassLbl.font = UIFont(name: "AirbnbCerealApp-ExtraBold", size: 40)
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         //myLabel.backgroundColor = #colorLiteral(red: 0.8117647059, green: 0.4352941176, blue: 0.1490196078, alpha: 1)
 //        myLabel.backgroundColor = #colorLiteral(red: 0.1098039216, green: 0.2274509804, blue: 0.337254902, alpha: 1)
@@ -64,6 +65,14 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
         tableView.delegate = self
         filterdata = data
         tableView.separatorStyle = .none
+        for family: String in UIFont.familyNames
+              {
+                  print(family)
+                  for names: String in UIFont.fontNames(forFamilyName: family)
+                  {
+                      print("== \(names)")
+                  }
+              }
         
         }
     //trial commit

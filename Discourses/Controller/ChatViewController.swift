@@ -57,11 +57,11 @@ class ChatViewController: UIViewController {
         super.viewDidLoad()
 
         //subject label set up
-        subjectLabel.font = UIFont(name: "AirbnbCerealApp-Book", size: 30)
         subjectLabel.text = subjectLabel.text?.uppercased()
+         subjectLabel.font = UIFont(name: "AirbnbCerealApp-Bold", size: 23)
         
         //professor label set up
-        professorLabel.font = UIFont(name: "AirbnbCerealApp-Book", size: 14)
+        professorLabel.font = UIFont(name: "AirbnbCerealApp-Medium", size: 14)
         
         
         //chat table view set up
