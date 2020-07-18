@@ -88,7 +88,7 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
         profLabel.text = "Prof. Yerl Ame"
         profLabel.textColor = #colorLiteral(red: 0.9490196078, green: 0.937254902, blue: 0.8745098039, alpha: 1)
         profLabel.textAlignment = .left
-        profLabel.font =  UIFont(name: "Acme-Regular", size: 18)
+        profLabel.font =  UIFont(name: "AirbnbCerealApp-ExtraBold", size: 18)
           cell.contentView.addSubview(profLabel)
         cell.layer.cornerRadius = 20
         cell.layer.masksToBounds = true
@@ -108,7 +108,7 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
                 cell.textLabel!.text = data[indexPath.row]
               cell.textLabel?.textAlignment = .left
            }
-        cell.textLabel?.font = UIFont(name: "Acme-Regular", size: 30)
+        cell.textLabel?.font = UIFont(name: "AirbnbCerealApp-ExtraBold", size: 30)
         cell.textLabel?.textColor = #colorLiteral(red: 0.9490196078, green: 0.937254902, blue: 0.8745098039, alpha: 1)
            return cell
        }

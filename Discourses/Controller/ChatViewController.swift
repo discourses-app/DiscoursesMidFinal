@@ -120,7 +120,8 @@ class ChatViewController: UIViewController {
         scrollToBottom()
     }
     
-    func scrollToBottom(){
+    func
+        scrollToBottom(){
         DispatchQueue.main.async {
             
             let indexPath = IndexPath(row:  self.chatTable.numberOfRows(inSection: 0) - 1, section: 0)
@@ -185,11 +186,12 @@ extension ChatViewController: UITextFieldDelegate {
             chatTable.reloadData()
         }
         textField.text = nil
-        
+       
         scrollToBottom()
         flag = 0
         return false
     }
+    
     //beginning editing should also change the keyboard stuff
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if flag == 0 {
@@ -232,23 +234,25 @@ extension ChatViewController: UITableViewDataSource {
             }
 //            self.prevSender = self.curruserName
             return cell
-        } else {
+        }
+        else {
+
             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.messageCell) as! ReceivedMessageCell
             cell.messageContent.text = messages[indexPath.row].content
             cell.profileImage.image = messages[indexPath.row].sender.profilepic
             let currentSenderName = messages[indexPath.row].sender.name
             cell.senderText.text = currentSenderName
-            if indexPath.row != 0 {
-                if messages[indexPath.row - 1].sender.name == currentSenderName {
-                    cell.stackTopConstraint.constant = 0
-                    cell.senderText.isHidden = true
-                    cell.profileImage.alpha = 0
-                }
-            }
+//            if indexPath.row > 0 {
+//                    if self.messages[indexPath.row - 1].sender.name == currentSenderName {
+//                        cell.stackTopConstraint.constant = 0
+//                        cell.senderText.isHidden = true
+//                        cell.profileImage.alpha = 0
+//                    }
+                
+//          }
+            
             
 //                self.prevSender = currentSenderName
-            
-           
             return cell
         }
     }
