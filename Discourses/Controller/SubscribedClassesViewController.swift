@@ -30,6 +30,7 @@ class SubscribedClassesViewController: UIViewController {
     ]
     
     var selectedCellIndex : IndexPath?
+    var selectedCellUIColor : UIColor?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,20 +56,30 @@ class SubscribedClassesViewController: UIViewController {
             selectedCellIndex = nil
         }
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constants.Segues.classListVCToChatVC {
+            if let endVC = segue.destination as? ChatViewController {
+                endVC.bgColor = selectedCellUIColor
+            }
+        }
+    }
     //MARK: - Button helper
     @IBAction func addClassButtonPressed(_ sender: UIButton) {
         performSegue(withIdentifier: "classListToSearchClass", sender: self)
     }
     
+    
+
 }
 
 extension SubscribedClassesViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
-        cell?.alpha = 0.5
+        let cell = tableView.cellForRow(at: indexPath) as! ClassBubbleTableViewCell
+        cell.alpha = 0.5
         tableView.deselectRow(at: indexPath, animated: true)
         selectedCellIndex = indexPath
+        selectedCellUIColor = cell.bubbleView.backgroundColor
         performSegue(withIdentifier: Constants.Segues.classListVCToChatVC, sender: self)
 
     }

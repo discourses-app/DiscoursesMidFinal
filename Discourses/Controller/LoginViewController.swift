@@ -2,7 +2,7 @@
 //  WelcomeViewController.swift
 //  Discourses
 //
-//  Created by Abhishek Marda on 7/10/20.
+//  Created by Aritra Mullick on 7/10/20.
 //  Copyright © 2020 DiscoursesTeam. All rights reserved.
 //
 
@@ -45,17 +45,23 @@ class LoginViewController: UIViewController {
         sloganLabel.font = UIFont(name: "AirbnbCerealApp-ExtraBold", size: 36)
         sloganLabel.textColor = #colorLiteral(red: 0.8117647059, green: 0.4352941176, blue: 0.1490196078, alpha: 1)
         //pwdText............................
+        pwdText.delegate = self
         pwdText.isSecureTextEntry = true
         pwdText.layer.cornerRadius = 20
-        pwdText.layer.masksToBounds = true
+        pwdText.layer.masksToBounds = false
         //usernameTxt.........................
+        usernameText.delegate = self
         usernameText.layer.cornerRadius = 20
-        usernameText.layer.masksToBounds = true
-        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
-        view.addGestureRecognizer(tapGesture)
+        usernameText.layer.masksToBounds = false
+        
+        
+//        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+//        view.addGestureRecognizer(tapGesture)
 
         // Do any additional setup after loading the view.
     }
+    
+
     
    
   
@@ -73,3 +79,18 @@ class LoginViewController: UIViewController {
 
 }
 
+extension LoginViewController : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    
+    
+}

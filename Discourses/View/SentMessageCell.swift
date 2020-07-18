@@ -27,7 +27,7 @@ class SentMessageCell: UITableViewCell {
         if messageBGView.layer.cornerRadius > 20 {
             messageBGView.layer.cornerRadius = 20
         }
-        contentLabel.font = UIFont(name: "Cabin-Regular", size: 17)
+        contentLabel.font = UIFont(name: "AirbnbCerealApp-Book", size: 17)
         // Configure the view for the selected state
     }
     

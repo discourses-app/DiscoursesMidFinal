@@ -35,7 +35,7 @@ class ReceivedMessageCell: UITableViewCell {
         messageBackground.layer.rasterizationScale = true ? UIScreen.main.scale : 1
 
         
-        messageContent.font = UIFont(name: "Cabin-Regular", size: 17)
+        messageContent.font = UIFont(name: "AirbnbCerealApp-Book", size: 17)
         messageContent.textColor = hexStringToUIColor(hex: "#1C3A56")
         
         

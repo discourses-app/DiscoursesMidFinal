@@ -9,13 +9,16 @@
 import UIKit
 
 class ChatViewController: UIViewController {
-
+    @IBOutlet var backMostView: UIView!
+    
     @IBOutlet weak var subjectLabel: UILabel!
     @IBOutlet weak var chatTable: UITableView!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var inputField: UITextField!
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var professorLabel: UILabel!
+    
+    var bgColor : UIColor?
     
     var messages : [Message] = [
         Message(
@@ -70,6 +73,10 @@ class ChatViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //background set up
+//        backMostView.backgroundColor = bgColor ?? UIColor(named: "BrandBackgroundColor")
+        
         //subject label set up
         subjectLabel.text = subjectLabel.text?.uppercased()
          subjectLabel.font = UIFont(name: "AirbnbCerealApp-Medium", size: 30)
@@ -226,12 +233,12 @@ extension ChatViewController: UITableViewDataSource {
         if curruserName == messages[indexPath.row].sender.name {
             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.sentCell) as! SentMessageCell
             cell.contentLabel.text = messages[indexPath.row].content
-            if messages.count - 1 != indexPath.row {
-                if curruserName == messages[indexPath.row+1].sender.name {
-                    cell.stackBottomConstraint.constant = 0
-                }
-                
-            }
+//            if messages.count - 1 != indexPath.row {
+//                if curruserName == messages[indexPath.row+1].sender.name {
+//                    cell.stackBottomConstraint.constant = 0
+//                }
+//
+//            }
 //            self.prevSender = self.curruserName
             return cell
         }
