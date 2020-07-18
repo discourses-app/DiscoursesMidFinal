@@ -139,8 +139,7 @@ class ChatViewController: UIViewController {
         flag = 0
        }
     
-    func
-        scrollToBottom(){
+    func scrollToBottom(){
         DispatchQueue.main.async {
             
             let indexPath = IndexPath(row:  self.chatTable.numberOfRows(inSection: 0) - 1, section: 0)
@@ -193,10 +192,10 @@ extension ChatViewController: UITextFieldDelegate {
 
     //hitting the return button changes chatTable size
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.view.endEditing(true)
-        UIView.animate(withDuration: 0.3) {
-            self.chatTable.frame = CGRect(x: self.X, y: self.Y, width: self.tableWidth, height: self.tableHeight)
-        }
+
+//        UIView.animate(withDuration: 0.3) {
+//            self.chatTable.frame = CGRect(x: self.X, y: self.Y, width: self.tableWidth, height: self.tableHeight)
+//        }
         let content = textField.text ?? ""
         if content != "" {
             let sender = Sender(withName: self.curruserName ?? "no name", withProfilePic: nil)
