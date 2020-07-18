@@ -119,6 +119,9 @@ class ChatViewController: UIViewController {
             ),
             for: .normal
         )
+        //to make keyboard go down when tapping outside
+        let gesture = UITapGestureRecognizer(target: self, action:  #selector (self.someAction (_:)))
+        self.backMostView.addGestureRecognizer(gesture)
         
     }
     
@@ -126,6 +129,15 @@ class ChatViewController: UIViewController {
         super.viewDidAppear(animated)
         scrollToBottom()
     }
+    
+    @objc func someAction(_ sender:UITapGestureRecognizer){
+        backMostView.endEditing(true)
+        UIView.animate(withDuration: 0.3) {
+                   self.chatTable.frame = CGRect(x: self.X, y: self.Y, width: self.tableWidth, height: self.tableHeight)
+               }
+        scrollToBottom()
+        flag = 0
+       }
     
     func
         scrollToBottom(){
@@ -263,6 +275,8 @@ extension ChatViewController: UITableViewDataSource {
             return cell
         }
     }
+    
+    
     
     
     

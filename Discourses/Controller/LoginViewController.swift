@@ -55,8 +55,8 @@ class LoginViewController: UIViewController {
         usernameText.layer.masksToBounds = false
         
         
-//        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
-//        view.addGestureRecognizer(tapGesture)
+        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tapGesture)
 
         // Do any additional setup after loading the view.
     }
