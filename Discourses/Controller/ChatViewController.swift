@@ -73,7 +73,10 @@ class ChatViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableWidth = chatTable.frame.width
+        tableHeight = chatTable.frame.height
+        X = chatTable.frame.minX
+        Y = chatTable.frame.minY
         //background set up
 //        backMostView.backgroundColor = bgColor ?? UIColor(named: "BrandBackgroundColor")
         
@@ -131,12 +134,14 @@ class ChatViewController: UIViewController {
     }
     
     @objc func someAction(_ sender:UITapGestureRecognizer){
-        backMostView.endEditing(true)
-        UIView.animate(withDuration: 0.3) {
-                   self.chatTable.frame = CGRect(x: self.X, y: self.Y, width: self.tableWidth, height: self.tableHeight)
-               }
-        scrollToBottom()
-        flag = 0
+        if inputField.isEditing {
+            backMostView.endEditing(true)
+            UIView.animate(withDuration: 0.3) {
+                       self.chatTable.frame = CGRect(x: self.X, y: self.Y, width: self.tableWidth, height: self.tableHeight)
+                   }
+            scrollToBottom()
+            flag = 0
+        }
        }
     
     func scrollToBottom(){
