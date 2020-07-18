@@ -65,7 +65,7 @@ class ChatViewController: UIViewController {
     var Y : CGFloat = 0.0
     var tableWidth : CGFloat = 0.0
     var tableHeight : CGFloat = 0.0
-    var keyboardHeight : CGFloat = 346.0 //for iPhone 11
+    var keyboardHeight : CGFloat = 0.0//346.0 //for iPhone 11
     var flag : Int = 0 //just trust me on why we need this
     //scrollToBottom is defined
     
@@ -73,6 +73,7 @@ class ChatViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         tableWidth = chatTable.frame.width
         tableHeight = chatTable.frame.height
         X = chatTable.frame.minX
@@ -217,6 +218,7 @@ extension ChatViewController: UITextFieldDelegate {
     
     //beginning editing should also change the keyboard stuff
     func textFieldDidBeginEditing(_ textField: UITextField) {
+        print("2")
         if flag == 0 {
             tableWidth = chatTable.frame.width
             tableHeight = chatTable.frame.height

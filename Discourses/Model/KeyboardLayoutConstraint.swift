@@ -50,14 +50,16 @@ public class KeyboardLayoutConstraint: NSLayoutConstraint {
             if let frameValue = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
                 let frame = frameValue.cgRectValue
                 keyboardVisibleHeight = frame.size.height
+                Constants.keyboardHeight = keyboardVisibleHeight
+                print("1")
             }
-            
+              print("1")
             self.updateConstant()
             switch (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber, userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber) {
             case let (.some(duration), .some(curve)):
                 
                 let options = UIView.AnimationOptions(rawValue: curve.uintValue)
-                
+                  print("1")
                 UIView.animate(
                     withDuration: TimeInterval(duration.doubleValue),
                     delay: 0,

@@ -5,6 +5,8 @@
 //  Created by Abhishek Marda on 7/15/20.
 //  Copyright © 2020 DiscoursesTeam. All rights reserved.
 //
+import CoreGraphics
+import SwiftUI
 
 struct Constants {
     
@@ -25,5 +27,7 @@ struct Constants {
         static let classBubble = "ClassBubbleTableViewCell"
         static let sentCell = "SentMessageCell"
     }
+    
+    static var keyboardHeight : CGFloat!
     
 }
