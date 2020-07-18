@@ -20,6 +20,24 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Acme-Regular.ttf</string>
+		<string>AirbnbCerealBlack.ttf</string>
+		<string>AirbnbCerealBold.ttf</string>
+		<string>AirbnbCerealBook.ttf</string>
+		<string>AirbnbCerealExtraBold.ttf</string>
+		<string>AirbnbCerealLight.ttf</string>
+		<string>AirbnbCerealMedium.ttf</string>
+		<string>Cabin-Bold.ttf</string>
+		<string>Cabin-BoldItalic.ttf</string>
+		<string>Cabin-Italic.ttf</string>
+		<string>Cabin-Medium.ttf</string>
+		<string>Cabin-MediumItalic.ttf</string>
+		<string>Cabin-Regular.ttf</string>
+		<string>Cabin-SemiBold.ttf</string>
+		<string>Cabin-SemiBoldItalic.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -43,24 +61,6 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Acme-Regular.ttf</string>
-		<string>AirbnbCerealBlack.ttf</string>
-		<string>AirbnbCerealBold.ttf</string>
-		<string>AirbnbCerealBook.ttf</string>
-		<string>AirbnbCerealExtraBold.ttf</string>
-		<string>AirbnbCerealLight.ttf</string>
-		<string>AirbnbCerealMedium.ttf</string>
-		<string>Cabin-Bold.ttf</string>
-		<string>Cabin-BoldItalic.ttf</string>
-		<string>Cabin-Italic.ttf</string>
-		<string>Cabin-Medium.ttf</string>
-		<string>Cabin-MediumItalic.ttf</string>
-		<string>Cabin-Regular.ttf</string>
-		<string>Cabin-SemiBold.ttf</string>
-		<string>Cabin-SemiBoldItalic.ttf</string>
-	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

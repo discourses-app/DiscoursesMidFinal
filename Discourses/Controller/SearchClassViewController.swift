@@ -33,7 +33,6 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
 
             filterdata = searchText.isEmpty ? data : data.filter { $0.contains(searchText) }
 
-            //return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
 
         tableView.reloadData()
     }
@@ -49,10 +48,6 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
         addClassLbl.textColor = #colorLiteral(red: 0.8117647059, green: 0.4352941176, blue: 0.1490196078, alpha: 1)
         addClassLbl.font = UIFont(name: "AirbnbCerealApp-ExtraBold", size: 40)
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        //myLabel.backgroundColor = #colorLiteral(red: 0.8117647059, green: 0.4352941176, blue: 0.1490196078, alpha: 1)
-//        myLabel.backgroundColor = #colorLiteral(red: 0.1098039216, green: 0.2274509804, blue: 0.337254902, alpha: 1)
-//        myLabel.layer.cornerRadius = 43
-//        myLabel.layer.masksToBounds = true
         mainView.backgroundColor = #colorLiteral(red: 0.9490196078, green: 0.937254902, blue: 0.8745098039, alpha: 1)
         searchBar.searchTextField.backgroundColor = #colorLiteral(red: 0.9490196078, green: 0.937254902, blue: 0.8745098039, alpha: 1)
         searchBar.searchTextField.textColor = #colorLiteral(red: 0.8117647059, green: 0.4352941176, blue: 0.1490196078, alpha: 1)
@@ -65,31 +60,38 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
         tableView.delegate = self
         filterdata = data
         tableView.separatorStyle = .none
-        for family: String in UIFont.familyNames
-              {
-                  print(family)
-                  for names: String in UIFont.fontNames(forFamilyName: family)
-                  {
-                      print("== \(names)")
-                  }
-              }
+//        for family: String in UIFont.familyNames
+//              {
+//                  print(family)
+//                  for names: String in UIFont.fontNames(forFamilyName: family)
+//                  {
+//                      print("== \(names)")
+//                  }
+//              }
         
         }
     //trial commit
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let joinBtn = UIImageView(frame: CGRect(x: 300, y: 30, width: 40, height: 40))
-        joinBtn.image = #imageLiteral(resourceName: "addImage")
-       let tap = UITapGestureRecognizer()
-        joinBtn.addGestureRecognizer(tap)
-        joinBtn.tag = 1
-        cell.contentView.addSubview(joinBtn)
+        if let imageView : UIImageView = cell.viewWithTag(1) as? UIImageView {
+            imageView.image = #imageLiteral(resourceName: "addImage")
+            print("it got here!")
+        }
+        else {
+            print("not a chance lol")
+            let joinBtn = UIImageView(frame: CGRect(x: 300, y: 30, width: 40, height: 40))
+            joinBtn.image = #imageLiteral(resourceName: "addImage")
+//           let tap = UITapGestureRecognizer()
+//            joinBtn.addGestureRecognizer(tap)
+            joinBtn.tag = 1
+            cell.contentView.addSubview(joinBtn)
+        }
         let profLabel = UILabel(frame: CGRect(x: 25, y: 60, width: 150, height: 20))
         profLabel.text = "Prof. Yerl Ame"
         profLabel.textColor = #colorLiteral(red: 0.9490196078, green: 0.937254902, blue: 0.8745098039, alpha: 1)
         profLabel.textAlignment = .left
         profLabel.font =  UIFont(name: "AirbnbCerealApp-ExtraBold", size: 18)
-          cell.contentView.addSubview(profLabel)
+        cell.contentView.addSubview(profLabel)
         cell.layer.cornerRadius = 20
         cell.layer.masksToBounds = true
         cell.textLabel?.layer.cornerRadius = 20
@@ -102,14 +104,14 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
            if filterdata.count != 0
            {
                cell.textLabel!.text = filterdata[indexPath.row]
-            cell.textLabel?.textAlignment = .left
+            cell.textLabel!.textAlignment = .left
            }
            else{
                 cell.textLabel!.text = data[indexPath.row]
-              cell.textLabel?.textAlignment = .left
+              cell.textLabel!.textAlignment = .left
            }
-        cell.textLabel?.font = UIFont(name: "AirbnbCerealApp-ExtraBold", size: 30)
-        cell.textLabel?.textColor = #colorLiteral(red: 0.9490196078, green: 0.937254902, blue: 0.8745098039, alpha: 1)
+        cell.textLabel!.font = UIFont(name: "AirbnbCerealApp-ExtraBold", size: 30)
+        cell.textLabel!.textColor = #colorLiteral(red: 0.9490196078, green: 0.937254902, blue: 0.8745098039, alpha: 1)
            return cell
        }
     
@@ -123,6 +125,7 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
         completion: nil)
         let className = cell!.textLabel!.text!
         print(className)
+        print(cell?.subviews.count)
         //ADD CLASS NAME TO personal LIST HERE
         //self.performSegue(withIdentifier: "toChatView", sender: self)
         //(cell?.viewWithTag(1) as! UIImageView).image = #imageLiteral(resourceName: "doneAdding")
