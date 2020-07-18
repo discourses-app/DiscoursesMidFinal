@@ -12,15 +12,13 @@ class LoginViewController: UIViewController {
 
     @IBOutlet var loginView: UIView!
     @IBOutlet weak var loginBtn: UIButton!
-    
     @IBOutlet var sloganLabel: UILabel!
     @IBOutlet var colorView: UIView!
-    
     @IBOutlet weak var usernameText: UITextField!
     @IBOutlet weak var pwdText: UITextField!
-    
     @IBOutlet var fullscreenView: UIView!
     @IBOutlet weak var signUpBtn: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         loginBtn.setTitle("Login", for: .normal)
