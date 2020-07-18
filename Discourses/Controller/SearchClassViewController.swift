@@ -23,8 +23,8 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var tableView: UITableView!
     
     var data:[String] = ["CS 180","CS 35L","PSYCH 100A","PSYCH 100A","PSYCH 100B","PSYCH 100C","PSYCH 100D","Kishor","Jignesh","Rushi"]
+    
     var filterdata:[String]!
-    var selectedCell : IndexPath!
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         self.dismiss(animated: true)
@@ -126,10 +126,16 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
         let className = cell!.textLabel!.text!
         print(className)
         print(cell?.subviews.count)
+        //removing a name from the collection 'data' if it is selected by the user
+        //we will have to make a struct that stores the name of a class along with the professor teaching said class
+        if let index = data.firstIndex(of: cell?.textLabel?.text ?? "") {
+            //over here, we would send this className to the list of classes we have on our own MY COURSES page (actually, we would just upload to firebase, since it would be simpler)
+                   data.remove(at: index)
+        }
         //ADD CLASS NAME TO personal LIST HERE
         //self.performSegue(withIdentifier: "toChatView", sender: self)
         //(cell?.viewWithTag(1) as! UIImageView).image = #imageLiteral(resourceName: "doneAdding")
-        selectedCell = indexPath
+        
     }
 
    

@@ -35,6 +35,7 @@ class LoginViewController: UIViewController {
         signUpBtn.setTitleColor(#colorLiteral(red: 0.9490196078, green: 0.937254902, blue: 0.8745098039, alpha: 1) , for: .normal)
         signUpBtn.titleLabel?.font = UIFont(name: "AirbnbCerealApp-Bold", size: 18)
        //colorView designing...................
+        colorView.frame = CGRect(x: 0, y: -15, width: fullscreenView.frame.maxX, height: 230)
         colorView.backgroundColor = #colorLiteral(red: 0.8117647059, green: 0.4352941176, blue: 0.1490196078, alpha: 1)
         colorView.layer.cornerRadius = 35
         colorView.layer.masksToBounds = true
