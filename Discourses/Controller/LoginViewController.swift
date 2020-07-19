@@ -10,6 +10,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var logoImageTopConstraint: NSLayoutConstraint!
     @IBOutlet var loginView: UIView!
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet var sloganLabel: UILabel!
@@ -18,24 +19,24 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var pwdText: UITextField!
     @IBOutlet var fullscreenView: UIView!
     @IBOutlet weak var signUpBtn: UIButton!
-
+    @IBOutlet weak var logoImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         loginBtn.setTitle("Login", for: .normal)
         loginBtn.titleLabel?.font = UIFont(name: "AirbnbCerealApp-Bold", size: 18)
         loginView.backgroundColor = #colorLiteral(red: 0.9490196078, green: 0.937254902, blue: 0.8745098039, alpha: 1)
         loginBtn.backgroundColor = #colorLiteral(red: 0.8117647059, green: 0.4352941176, blue: 0.1490196078, alpha: 1)
-        loginBtn.layer.cornerRadius = 20
+        loginBtn.layer.cornerRadius = 10
         loginBtn.layer.masksToBounds = true
         loginBtn.setTitleColor(#colorLiteral(red: 0.9490196078, green: 0.937254902, blue: 0.8745098039, alpha: 1), for: .normal)
         //signUpBtn designing.................
         signUpBtn.backgroundColor = #colorLiteral(red: 0.8117647059, green: 0.4352941176, blue: 0.1490196078, alpha: 1)
-        signUpBtn.layer.cornerRadius = 20
+        signUpBtn.layer.cornerRadius = 10
         signUpBtn.layer.masksToBounds = true
         signUpBtn.setTitleColor(#colorLiteral(red: 0.9490196078, green: 0.937254902, blue: 0.8745098039, alpha: 1) , for: .normal)
         signUpBtn.titleLabel?.font = UIFont(name: "AirbnbCerealApp-Bold", size: 18)
        //colorView designing...................
-        colorView.frame = CGRect(x: 0, y: -15, width: fullscreenView.frame.maxX, height: 230)
+        colorView.frame = CGRect(x: 0, y: -25, width: fullscreenView.frame.maxX, height: fullscreenView.frame.maxY / 3.5)
         colorView.backgroundColor = #colorLiteral(red: 0.8117647059, green: 0.4352941176, blue: 0.1490196078, alpha: 1)
         colorView.layer.cornerRadius = 35
         colorView.layer.masksToBounds = true
@@ -48,11 +49,17 @@ class LoginViewController: UIViewController {
         pwdText.isSecureTextEntry = true
         pwdText.layer.cornerRadius = 20
         pwdText.layer.masksToBounds = false
+        
         //usernameTxt.........................
         usernameText.delegate = self
         usernameText.layer.cornerRadius = 20
         usernameText.layer.masksToBounds = false
         
+        //logoImg.............................
+        logoImageTopConstraint.constant = (colorView.frame.maxY / 3) - 35
+ 
+        logoImage.layer.masksToBounds = true
+        self.fullscreenView.bringSubviewToFront(logoImage)
         
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tapGesture)
