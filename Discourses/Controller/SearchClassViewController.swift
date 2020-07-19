@@ -29,13 +29,20 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
     @IBAction func backBtnPressed(_ sender: UIButton) {
         self.dismiss(animated: true)
     }
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
 
             filterdata = searchText.isEmpty ? data : data.filter { $0.contains(searchText) }
-
-
-        tableView.reloadData()
+            tableView.reloadData()
     }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
+    {
+        let searchText = searchBar.searchTextField.text ?? ""
+        filterdata = searchText.isEmpty ? data : data.filter { $0.contains(searchText) }
+        searchBar.resignFirstResponder()
+    }
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -60,6 +67,11 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
         tableView.delegate = self
         filterdata = data
         tableView.separatorStyle = .none
+//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapOnSearchPage(_:)))
+//        mainView.addGestureRecognizer(tapGesture)
+ //       TOO MANY ISSUES W THE ABOVE CODE WE CAN WORRY ABOUT IT LATER!
+        
+        //FOR FONTS
 //        for family: String in UIFont.familyNames
 //              {
 //                  print(family)
@@ -71,6 +83,13 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
         
         }
     //trial commit
+    @objc
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        tableView.reloadData()
+    }
+
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         if let imageView : UIImageView = cell.viewWithTag(1) as? UIImageView {
