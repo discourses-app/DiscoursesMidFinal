@@ -98,7 +98,7 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
         }
         else {
             print("not a chance lol")
-            let joinBtn = UIImageView(frame: CGRect(x: tableView.frame.maxX - 100, y: 30, width: 40, height: 40))
+            let joinBtn = UIImageView(frame: CGRect(x: tableView.frame.maxX - 70, y: 30, width: 40, height: 40))
             joinBtn.image = #imageLiteral(resourceName: "addImage")
 //           let tap = UITapGestureRecognizer()
 //            joinBtn.addGestureRecognizer(tap)
