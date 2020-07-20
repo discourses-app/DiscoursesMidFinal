@@ -148,11 +148,14 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
             }
             
         else {
-        let profLabel = UILabel(frame: CGRect(x: 25, y: 60, width: 150, height: 20))
+        let profLabel = UILabel(frame: CGRect(x: 25, y: 60, width: 350, height: 20))
                profLabel.text = selectedCellValues[1]
                profLabel.textColor = #colorLiteral(red: 0.9490196078, green: 0.937254902, blue: 0.8745098039, alpha: 1)
                profLabel.textAlignment = .left
                profLabel.font =  UIFont(name: "AirbnbCerealApp-ExtraBold", size: 18)
+            profLabel.autoresizesSubviews = true
+            profLabel.minimumScaleFactor = 0.4
+            profLabel.numberOfLines = 0
         profLabel.tag = 2
                cell.contentView.addSubview(profLabel)
         }
