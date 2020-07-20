@@ -20,14 +20,14 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dnx-rB-NOg" userLabel="Bubble View">
                         <rect key="frame" x="30" y="20" width="436" height="211"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NI5-K8-1X4">
-                                <rect key="frame" x="22" y="127" width="185" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="NI5-K8-1X4">
+                                <rect key="frame" x="22" y="127" width="391" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" name="ClassLIstForegroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Professor Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWj-2H-cgp">
-                                <rect key="frame" x="23" y="166" width="130" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Professor Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWj-2H-cgp">
+                                <rect key="frame" x="23" y="166.5" width="390" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" name="ClassLIstForegroundColor"/>
                                 <nil key="highlightedColor"/>
@@ -37,9 +37,11 @@
                         <constraints>
                             <constraint firstItem="eWj-2H-cgp" firstAttribute="leading" secondItem="Dnx-rB-NOg" secondAttribute="leading" constant="23" id="7TD-ts-4Ed"/>
                             <constraint firstAttribute="bottom" secondItem="eWj-2H-cgp" secondAttribute="bottom" constant="23" id="9u7-FJ-QGT"/>
+                            <constraint firstAttribute="trailing" secondItem="eWj-2H-cgp" secondAttribute="trailing" constant="23" id="MGO-em-zoU"/>
                             <constraint firstItem="NI5-K8-1X4" firstAttribute="leading" secondItem="Dnx-rB-NOg" secondAttribute="leading" constant="22" id="TZL-wg-T2b"/>
                             <constraint firstAttribute="bottom" secondItem="NI5-K8-1X4" secondAttribute="bottom" constant="41" id="Zzv-dS-8oo"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="137" id="oay-MK-P6u"/>
+                            <constraint firstAttribute="trailing" secondItem="NI5-K8-1X4" secondAttribute="trailing" constant="23" id="ut1-kt-hBI"/>
                         </constraints>
                     </view>
                 </subviews>

@@ -47,7 +47,7 @@ class SubscribedClassesViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
+        super.viewDidAppear(animated)
         classListTable.reloadData()
     }
     
@@ -102,9 +102,9 @@ extension SubscribedClassesViewController : UITableViewDataSource {
         cell.professorNameLabel.text = Constants.classes[indexPath.row].professor
         cell.bubbleView.backgroundColor = bgColorForCell
         
-        if indexPath.row == 0 {
-            cell.bubbleTopConstraint.constant += 20
-        }
+//        if indexPath.row == 0 {
+//            cell.bubbleTopConstraint.constant += 20
+//        }
         
         let backgroundView = UIView()
         backgroundView.backgroundColor = UIColor.clear
