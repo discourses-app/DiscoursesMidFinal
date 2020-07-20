@@ -22,7 +22,7 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    var data:[String] = ["CS 180","CS 35L","PSYCH 100A","PSYCH 100A","PSYCH 100B","PSYCH 100C","PSYCH 100D","Kishor","Jignesh","Rushi"]
+    var data : [String] = []
     
     var filterdata:[String]!
     
@@ -32,7 +32,7 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
 
-            filterdata = searchText.isEmpty ? data : data.filter { $0.contains(searchText) }
+        filterdata = searchText.isEmpty ? data : data.filter { $0.contains(searchText) }
             tableView.reloadData()
     }
     
@@ -43,9 +43,19 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
         searchBar.resignFirstResponder()
     }
     
+    func tableData() {
+        data = []
+        
+        for classes in Constants.allClasses{
+            data.append("\(classes.name)/\(classes.professor)")
+        }
+        
+    }
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        tableData()
         backBtn.setImage(#imageLiteral(resourceName: "backBtn"), for: .normal)
         bgView.layer.cornerRadius = 35
         bgView.layer.masksToBounds = true
@@ -82,7 +92,14 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
 //              }
         
         }
+    
     //trial commit
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        tableData()
+        tableView.reloadData()
+       }
+       
     @objc
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         tableView.reloadData()
@@ -105,12 +122,7 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
             joinBtn.tag = 1
             cell.contentView.addSubview(joinBtn)
         }
-        let profLabel = UILabel(frame: CGRect(x: 25, y: 60, width: 150, height: 20))
-        profLabel.text = "Prof. Yerl Ame"
-        profLabel.textColor = #colorLiteral(red: 0.9490196078, green: 0.937254902, blue: 0.8745098039, alpha: 1)
-        profLabel.textAlignment = .left
-        profLabel.font =  UIFont(name: "AirbnbCerealApp-ExtraBold", size: 18)
-        cell.contentView.addSubview(profLabel)
+      
         cell.layer.cornerRadius = 20
         cell.layer.masksToBounds = true
         cell.textLabel?.layer.cornerRadius = 20
@@ -119,16 +131,31 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
         bg.backgroundColor = UIColor.clear
         cell.selectedBackgroundView = bg
            cell.backgroundColor = #colorLiteral(red: 0.8117647059, green: 0.4352941176, blue: 0.1490196078, alpha: 1)
-
+        let selectedCellValues : [String]
            if filterdata.count != 0
            {
-               cell.textLabel!.text = filterdata[indexPath.row]
+            selectedCellValues = filterdata[indexPath.row].components(separatedBy: "/")
+            cell.textLabel!.text = selectedCellValues[0]
             cell.textLabel!.textAlignment = .left
            }
            else{
-                cell.textLabel!.text = data[indexPath.row]
+           selectedCellValues = data[indexPath.row].components(separatedBy: "/")
+            cell.textLabel!.text = selectedCellValues[0]
               cell.textLabel!.textAlignment = .left
            }
+        if let profLbl : UILabel = cell.viewWithTag(2) as? UILabel {
+            profLbl.text = selectedCellValues[1]
+            }
+            
+        else {
+        let profLabel = UILabel(frame: CGRect(x: 25, y: 60, width: 150, height: 20))
+               profLabel.text = selectedCellValues[1]
+               profLabel.textColor = #colorLiteral(red: 0.9490196078, green: 0.937254902, blue: 0.8745098039, alpha: 1)
+               profLabel.textAlignment = .left
+               profLabel.font =  UIFont(name: "AirbnbCerealApp-ExtraBold", size: 18)
+        profLabel.tag = 2
+               cell.contentView.addSubview(profLabel)
+        }
         cell.textLabel!.font = UIFont(name: "AirbnbCerealApp-ExtraBold", size: 30)
         cell.textLabel!.textColor = #colorLiteral(red: 0.9490196078, green: 0.937254902, blue: 0.8745098039, alpha: 1)
            return cell
@@ -137,20 +164,28 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("This cell from the chat list was selected: \(indexPath.row)")
         let cell = tableView.cellForRow(at: indexPath)
+        if (cell?.viewWithTag(1) as! UIImageView).image == #imageLiteral(resourceName: "checkMark") {
+            return
+        }
         UIView.transition(with: (cell?.viewWithTag(1) as! UIImageView),
         duration: 0.75,
         options: .transitionFlipFromTop,
         animations: { (cell?.viewWithTag(1) as! UIImageView).image = #imageLiteral(resourceName: "checkMark") },
         completion: nil)
         let className = cell!.textLabel!.text!
-        print(className)
-        print(cell?.subviews.count)
+        let profName = cell?.contentView.viewWithTag(2) as! UILabel
+        let newlySubscribed = Class (name: className, professor: profName.text!)
+        Constants.classes.append(newlySubscribed)
         //removing a name from the collection 'data' if it is selected by the user
         //we will have to make a struct that stores the name of a class along with the professor teaching said class
-        if let index = data.firstIndex(of: cell?.textLabel?.text ?? "") {
-            //over here, we would send this className to the list of classes we have on our own MY COURSES page (actually, we would just upload to firebase, since it would be simpler)
-                   data.remove(at: index)
-        }
+        for (index, element) in Constants.allClasses.enumerated() {
+            if element.name == className && element.professor == profName.text! {
+                print("how did I not get here?")
+                Constants.allClasses.remove(at: index)
+            }
+            
+       }
+        tableData()
         //ADD CLASS NAME TO personal LIST HERE
         //self.performSegue(withIdentifier: "toChatView", sender: self)
         //(cell?.viewWithTag(1) as! UIImageView).image = #imageLiteral(resourceName: "doneAdding")

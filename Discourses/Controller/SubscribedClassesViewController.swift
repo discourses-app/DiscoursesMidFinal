@@ -20,14 +20,13 @@ class SubscribedClassesViewController: UIViewController {
         UIColor(named: "BubbleColor3")!,
         UIColor(named: "BubbleColor4")!
     ]
-    
-    let classes : [Class] = [
-        Class(name: "Psych 100A", professor: "Professor Mudane"),
-        Class(name: "Ling 120B", professor: "Professor Sawtelle"),
-        Class(name: "MGMT 100A", professor: "Professor Marugame"),
-        Class(name: "ComSci 180", professor: "Professor Sarrafzadeh"),
-        Class(name: "Physics 1C", professor: "Why are you taking Corbin")
-    ]
+//    let classes : [Class] = [
+//        Class(name: "Psych 100A", professor: "Professor Mudane"),
+//        Class(name: "Ling 120B", professor: "Professor Sawtelle"),
+//        Class(name: "MGMT 100A", professor: "Professor Marugame"),
+//        Class(name: "ComSci 180", professor: "Professor Sarrafzadeh"),
+//        Class(name: "Physics 1C", professor: "Why are you taking Corbin")
+//    ]
     
     var selectedCellIndex : IndexPath?
     var selectedCellUIColor : UIColor?
@@ -43,11 +42,14 @@ class SubscribedClassesViewController: UIViewController {
 
         let image = #imageLiteral(resourceName: "ThreeLines").resized(to: CGSize(width: 25, height: 22))
         threeLinesImage.setImage(image, for: .normal)
-        
-
+    
         myCoursesLabel.font = UIFont(name: "AirbnbCerealApp-ExtraBold", size: 36)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        classListTable.reloadData()
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -56,6 +58,7 @@ class SubscribedClassesViewController: UIViewController {
             selectedCellIndex = nil
         }
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constants.Segues.classListVCToChatVC {
             if let endVC = segue.destination as? ChatViewController {
@@ -89,14 +92,14 @@ extension SubscribedClassesViewController : UITableViewDelegate {
 
 extension SubscribedClassesViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return classes.count
+        return Constants.classes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let bgColorForCell = bubbleBgColors[indexPath.row % 4]
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.classBubble) as! ClassBubbleTableViewCell
-        cell.classNameLabel.text = classes[indexPath.row].name.uppercased()
-        cell.professorNameLabel.text = classes[indexPath.row].professor
+        cell.classNameLabel.text = Constants.classes[indexPath.row].name.uppercased()
+        cell.professorNameLabel.text = Constants.classes[indexPath.row].professor
         cell.bubbleView.backgroundColor = bgColorForCell
         
         if indexPath.row == 0 {
