@@ -16,7 +16,7 @@ class StartupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         companyNameLabel.alpha = 0
-        companyNameLabel.font = UIFont(name: "Acme-Regular", size: 50)
+        companyNameLabel.font = UIFont(name: "AirbnbCerealApp-Light", size: 50)
         
         // Do any additional setup after loading the view.
     }
