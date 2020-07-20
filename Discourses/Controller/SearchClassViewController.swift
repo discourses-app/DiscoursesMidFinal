@@ -39,7 +39,7 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
     {
         let searchText = searchBar.searchTextField.text ?? ""
-        filterdata = searchText.isEmpty ? data : data.filter { $0.contains(searchText) }
+        filterdata = searchText.isEmpty ? data : data.filter { $0.contains(searchText.uppercased()) }
         searchBar.resignFirstResponder()
     }
     
@@ -47,7 +47,7 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
         data = []
         
         for classes in Constants.allClasses{
-            data.append("\(classes.name)/\(classes.professor)")
+            data.append("\(classes.name)/\(classes.professor)".uppercased())
         }
         
     }
@@ -135,26 +135,28 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
            if filterdata.count != 0
            {
             selectedCellValues = filterdata[indexPath.row].components(separatedBy: "/")
-            cell.textLabel!.text = selectedCellValues[0]
+            cell.textLabel!.text = selectedCellValues[0].uppercased()
             cell.textLabel!.textAlignment = .left
            }
            else{
            selectedCellValues = data[indexPath.row].components(separatedBy: "/")
-            cell.textLabel!.text = selectedCellValues[0]
+            cell.textLabel!.text = selectedCellValues[0].uppercased()
               cell.textLabel!.textAlignment = .left
            }
         if let profLbl : UILabel = cell.viewWithTag(2) as? UILabel {
-            profLbl.text = selectedCellValues[1]
+            profLbl.text = selectedCellValues[1].uppercased()
             }
             
         else {
-        let profLabel = UILabel(frame: CGRect(x: 25, y: 60, width: 350, height: 20))
-               profLabel.text = selectedCellValues[1]
+        let profLabel = UILabel(frame: CGRect(x: 25, y: 60, width: 280, height: 20))
+            profLabel.text = selectedCellValues[1].uppercased()
                profLabel.textColor = #colorLiteral(red: 0.9490196078, green: 0.937254902, blue: 0.8745098039, alpha: 1)
                profLabel.textAlignment = .left
                profLabel.font =  UIFont(name: "AirbnbCerealApp-ExtraBold", size: 18)
             profLabel.autoresizesSubviews = true
             profLabel.minimumScaleFactor = 0.4
+            //profLabel.adjustsFontSizeToFitWidth = true (shrinks font!)
+            //profLabel.preferredMaxLayoutWidth = tableView.frame.maxX - 70 - 40
             profLabel.numberOfLines = 0
         profLabel.tag = 2
                cell.contentView.addSubview(profLabel)
