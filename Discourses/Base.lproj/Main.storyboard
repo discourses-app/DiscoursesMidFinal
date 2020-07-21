@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JEu-F2-eTP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JEu-F2-eTP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -122,7 +122,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tGl-o8-ers">
-                                <rect key="frame" x="1" y="129" width="414" height="639"/>
+                                <rect key="frame" x="1" y="129" width="414" height="664"/>
                                 <color key="backgroundColor" name="BrandForegroundColor"/>
                                 <color key="sectionIndexBackgroundColor" name="BrandForegroundColor"/>
                             </tableView>
@@ -168,7 +168,7 @@
                                 </constraints>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="    Type here..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S6Z-j4-rJv">
-                                <rect key="frame" x="20" y="808" width="374" height="34"/>
+                                <rect key="frame" x="20" y="828" width="374" height="34"/>
                                 <color key="backgroundColor" name="BrandForegroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="send"/>
@@ -182,10 +182,10 @@
                             <constraint firstItem="pc1-7h-0OL" firstAttribute="trailing" secondItem="S6Z-j4-rJv" secondAttribute="trailing" constant="20" id="Qse-N5-LBZ"/>
                             <constraint firstItem="S6Z-j4-rJv" firstAttribute="leading" secondItem="pc1-7h-0OL" secondAttribute="leading" constant="20" id="Rii-W7-FEl"/>
                             <constraint firstItem="JBi-rK-Z9O" firstAttribute="top" secondItem="pc1-7h-0OL" secondAttribute="top" constant="15" id="bfH-yc-aTW"/>
-                            <constraint firstItem="S6Z-j4-rJv" firstAttribute="top" secondItem="tGl-o8-ers" secondAttribute="bottom" constant="40" id="dBG-ZK-sAk"/>
                             <constraint firstItem="JBi-rK-Z9O" firstAttribute="leading" secondItem="pc1-7h-0OL" secondAttribute="leading" constant="20" id="ldA-3d-gVv"/>
-                            <constraint firstItem="pc1-7h-0OL" firstAttribute="bottom" secondItem="S6Z-j4-rJv" secondAttribute="bottom" constant="20" id="nmT-f2-nDX" customClass="KeyboardLayoutConstraint" customModule="Discourses" customModuleProvider="target"/>
+                            <constraint firstItem="pc1-7h-0OL" firstAttribute="bottom" secondItem="S6Z-j4-rJv" secondAttribute="bottom" id="lqq-VJ-xcf" customClass="KeyboardLayoutConstraint" customModule="Discourses" customModuleProvider="target"/>
                             <constraint firstItem="tGl-o8-ers" firstAttribute="leading" secondItem="pc1-7h-0OL" secondAttribute="leading" constant="1" id="oLw-EK-pvP"/>
+                            <constraint firstItem="S6Z-j4-rJv" firstAttribute="top" secondItem="tGl-o8-ers" secondAttribute="bottom" constant="35" id="uen-U0-na9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pc1-7h-0OL"/>
                     </view>
@@ -214,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7FP-Rx-enQ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1284" y="151"/>
+            <point key="canvasLocation" x="1282.608695652174" y="150.66964285714286"/>
         </scene>
         <!--Search Class View Controller-->
         <scene sceneID="AFs-4f-8Pj">
