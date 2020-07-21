@@ -122,7 +122,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tGl-o8-ers">
-                                <rect key="frame" x="1" y="129" width="414" height="639"/>
+                                <rect key="frame" x="1" y="129" width="414" height="643"/>
                                 <color key="backgroundColor" name="BrandForegroundColor"/>
                                 <color key="sectionIndexBackgroundColor" name="BrandForegroundColor"/>
                             </tableView>
@@ -168,8 +168,11 @@
                                 </constraints>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="    Type here..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S6Z-j4-rJv">
-                                <rect key="frame" x="20" y="808" width="374" height="34"/>
+                                <rect key="frame" x="20" y="802" width="374" height="45"/>
                                 <color key="backgroundColor" name="BrandForegroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="7tw-5X-qc5"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="send"/>
                             </textField>
@@ -182,9 +185,9 @@
                             <constraint firstItem="pc1-7h-0OL" firstAttribute="trailing" secondItem="S6Z-j4-rJv" secondAttribute="trailing" constant="20" id="Qse-N5-LBZ"/>
                             <constraint firstItem="S6Z-j4-rJv" firstAttribute="leading" secondItem="pc1-7h-0OL" secondAttribute="leading" constant="20" id="Rii-W7-FEl"/>
                             <constraint firstItem="JBi-rK-Z9O" firstAttribute="top" secondItem="pc1-7h-0OL" secondAttribute="top" constant="15" id="bfH-yc-aTW"/>
-                            <constraint firstItem="S6Z-j4-rJv" firstAttribute="top" secondItem="tGl-o8-ers" secondAttribute="bottom" constant="40" id="dBG-ZK-sAk"/>
+                            <constraint firstItem="S6Z-j4-rJv" firstAttribute="top" secondItem="tGl-o8-ers" secondAttribute="bottom" constant="30" id="dBG-ZK-sAk"/>
                             <constraint firstItem="JBi-rK-Z9O" firstAttribute="leading" secondItem="pc1-7h-0OL" secondAttribute="leading" constant="20" id="ldA-3d-gVv"/>
-                            <constraint firstItem="pc1-7h-0OL" firstAttribute="bottom" secondItem="S6Z-j4-rJv" secondAttribute="bottom" constant="20" id="nmT-f2-nDX" customClass="KeyboardLayoutConstraint" customModule="Discourses" customModuleProvider="target"/>
+                            <constraint firstItem="pc1-7h-0OL" firstAttribute="bottom" secondItem="S6Z-j4-rJv" secondAttribute="bottom" constant="15" id="nmT-f2-nDX" customClass="KeyboardLayoutConstraint" customModule="Discourses" customModuleProvider="target"/>
                             <constraint firstItem="tGl-o8-ers" firstAttribute="leading" secondItem="pc1-7h-0OL" secondAttribute="leading" constant="1" id="oLw-EK-pvP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pc1-7h-0OL"/>

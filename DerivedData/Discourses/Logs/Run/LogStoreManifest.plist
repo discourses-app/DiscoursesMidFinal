@@ -448,6 +448,40 @@
 			<key>uniqueIdentifier</key>
 			<string>194E1FFE-B082-4D48-BE8C-6F0E3F653167</string>
 		</dict>
+		<key>1CC6FA4D-F436-4633-BCA3-ECCAB94BE69C</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>1CC6FA4D-F436-4633-BCA3-ECCAB94BE69C.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Discourses project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Discourses</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Discourses</string>
+			<key>timeStartedRecording</key>
+			<real>617043353.49921703</real>
+			<key>timeStoppedRecording</key>
+			<real>617043467.50782001</real>
+			<key>title</key>
+			<string>Run Discourses</string>
+			<key>uniqueIdentifier</key>
+			<string>1CC6FA4D-F436-4633-BCA3-ECCAB94BE69C</string>
+		</dict>
 		<key>1FCAC392-26C4-4977-A969-19DE1432E62D</key>
 		<dict>
 			<key>className</key>
@@ -1161,6 +1195,40 @@
 			<string>Run Discourses</string>
 			<key>uniqueIdentifier</key>
 			<string>4B8B88DA-D8E3-4DEC-845A-93156C50B50E</string>
+		</dict>
+		<key>4DCFDA6E-1357-434D-B31D-124BD0267986</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>4DCFDA6E-1357-434D-B31D-124BD0267986.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Discourses project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Discourses</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Discourses</string>
+			<key>timeStartedRecording</key>
+			<real>617042936.91928804</real>
+			<key>timeStoppedRecording</key>
+			<real>617043237.80986905</real>
+			<key>title</key>
+			<string>Run Discourses</string>
+			<key>uniqueIdentifier</key>
+			<string>4DCFDA6E-1357-434D-B31D-124BD0267986</string>
 		</dict>
 		<key>5212CFD3-DEDC-4957-AF80-06DCB603DE59</key>
 		<dict>
