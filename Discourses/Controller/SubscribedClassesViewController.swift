@@ -8,6 +8,24 @@
 
 import UIKit
 
+//extension UITableView {
+//func reloadWithAnimation() {
+//    self.reloadData()
+//    let tableViewHeight = self.bounds.size.height
+//    let cells = self.visibleCells
+//    var delayCounter = 0
+//    for cell in cells {
+//        cell.transform = CGAffineTransform(translationX: 0, y: tableViewHeight)
+//    }
+//    for cell in cells {
+//        UIView.animate(withDuration: 1.6, delay: 0.08 * Double(delayCounter),usingSpringWithDamping: 0.6, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+//            cell.transform = CGAffineTransform.identity
+//        }, completion: nil)
+//        delayCounter += 1
+//    }
+//}
+//}
+
 class SubscribedClassesViewController: UIViewController {
     @IBOutlet weak var myCoursesLabel: UILabel!
     @IBOutlet weak var addChatButton: UIButton!
@@ -33,7 +51,6 @@ class SubscribedClassesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //table view set up
         classListTable.delegate = self
         classListTable.dataSource = self
@@ -48,7 +65,7 @@ class SubscribedClassesViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        classListTable.reloadData()
+        self.classListTable.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -96,24 +113,23 @@ extension SubscribedClassesViewController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let bgColorForCell = bubbleBgColors[indexPath.row % 4]
+          let bgColorForCell = self.bubbleBgColors[indexPath.row % 4]
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.classBubble) as! ClassBubbleTableViewCell
-        cell.classNameLabel.text = Constants.classes[indexPath.row].name.uppercased()
-        cell.professorNameLabel.text = Constants.classes[indexPath.row].professor
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.clear
+        cell.selectedBackgroundView = backgroundView
         cell.bubbleView.backgroundColor = bgColorForCell
+        cell.classNameLabel.text = Constants.classes[indexPath.row].name.uppercased()
+        cell.professorNameLabel.text = Constants.classes[indexPath.row].professor.uppercased()
         
 //        if indexPath.row == 0 {
 //            cell.bubbleTopConstraint.constant += 20
 //        }
-        
-        let backgroundView = UIView()
-        backgroundView.backgroundColor = UIColor.clear
-        cell.selectedBackgroundView = backgroundView
-        
-        
-        return cell
+         return cell
         
     }
+    
+    
     
     
 }

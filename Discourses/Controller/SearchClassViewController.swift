@@ -31,8 +31,8 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-
-        filterdata = searchText.isEmpty ? data : data.filter { $0.contains(searchText) }
+        
+            filterdata = searchText.isEmpty ? data : data.filter { $0.contains(searchText.uppercased()) }
             tableView.reloadData()
     }
     
@@ -148,11 +148,11 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
             }
             
         else {
-        let profLabel = UILabel(frame: CGRect(x: 25, y: 60, width: 280, height: 20))
+        let profLabel = UILabel(frame: CGRect(x: 30, y: 60, width: 275, height: 20))
             profLabel.text = selectedCellValues[1].uppercased()
                profLabel.textColor = #colorLiteral(red: 0.9490196078, green: 0.937254902, blue: 0.8745098039, alpha: 1)
                profLabel.textAlignment = .left
-               profLabel.font =  UIFont(name: "AirbnbCerealApp-ExtraBold", size: 18)
+               profLabel.font =  UIFont(name: "AirbnbCerealApp-Bold", size: 18)
             profLabel.autoresizesSubviews = true
             profLabel.minimumScaleFactor = 0.4
             //profLabel.adjustsFontSizeToFitWidth = true (shrinks font!)
@@ -184,7 +184,7 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
         //removing a name from the collection 'data' if it is selected by the user
         //we will have to make a struct that stores the name of a class along with the professor teaching said class
         for (index, element) in Constants.allClasses.enumerated() {
-            if element.name == className && element.professor == profName.text! {
+            if element.name.uppercased() == className && element.professor.uppercased() == profName.text! {
                 print("how did I not get here?")
                 Constants.allClasses.remove(at: index)
             }

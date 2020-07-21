@@ -40,6 +40,7 @@ class LoginViewController: UIViewController {
         sloganLabel.font = UIFont(name: "AirbnbCerealApp-Medium", size: 25)
         //pwdText............................
         pwdText.delegate = self
+        pwdText.textContentType = .password
         pwdText.isSecureTextEntry = true
         pwdText.layer.cornerRadius = 15
         pwdText.layer.masksToBounds = true
@@ -47,6 +48,7 @@ class LoginViewController: UIViewController {
                                                            attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "BrandForegroundColor")!, NSAttributedString.Key.font : UIFont(name: "AirbnbCerealApp-Book", size: 14)!])
         
         //usernameTxt.........................
+        usernameText.textContentType = .username
         usernameText.delegate = self
         usernameText.layer.cornerRadius = 15
         usernameText.layer.masksToBounds = true
