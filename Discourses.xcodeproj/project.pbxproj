@@ -115,11 +115,11 @@
 		8F5605B024C1B6890014289C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8F5605BA24C1B8510014289C /* SubscribedClassesViewController.swift */,
 				8FFC6CF524C1B14900A41B95 /* StartupViewController.swift */,
-				8F5605B824C1B81C0014289C /* ChatViewController.swift */,
 				8F57475F24C1BCFC00286C87 /* LoginViewController.swift */,
+				8F5605BA24C1B8510014289C /* SubscribedClassesViewController.swift */,
 				8F57476124C1BD6200286C87 /* SearchClassViewController.swift */,
+				8F5605B824C1B81C0014289C /* ChatViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

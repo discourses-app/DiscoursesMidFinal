@@ -26,6 +26,8 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
     
     var filterdata:[String]!
     
+    
+    
     @IBAction func backBtnPressed(_ sender: UIButton) {
         self.dismiss(animated: true)
     }
@@ -190,6 +192,8 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
             }
             
        }
+        
+
         tableData()
         //ADD CLASS NAME TO personal LIST HERE
         //self.performSegue(withIdentifier: "toChatView", sender: self)

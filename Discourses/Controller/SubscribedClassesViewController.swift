@@ -65,7 +65,7 @@ class SubscribedClassesViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.classListTable.reloadData()
+//        self.classListTable.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -74,6 +74,7 @@ class SubscribedClassesViewController: UIViewController {
             classListTable.cellForRow(at: indexPath)?.alpha = 1
             selectedCellIndex = nil
         }
+                self.classListTable.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -82,10 +83,11 @@ class SubscribedClassesViewController: UIViewController {
                 endVC.bgColor = selectedCellUIColor
             }
         }
+        
     }
     //MARK: - Button helper
     @IBAction func addClassButtonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "classListToSearchClass", sender: self)
+        performSegue(withIdentifier: Constants.Segues.classListVCtoAddClassVC, sender: self)
     }
     
     
