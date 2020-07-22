@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JEu-F2-eTP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JEu-F2-eTP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -126,7 +126,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tGl-o8-ers">
-                                <rect key="frame" x="1" y="117" width="414" height="660"/>
+                                <rect key="frame" x="1" y="117" width="414" height="667"/>
                                 <color key="backgroundColor" name="BrandForegroundColor"/>
                                 <color key="sectionIndexBackgroundColor" name="BrandForegroundColor"/>
                             </tableView>
@@ -169,30 +169,57 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="RPJ-Vx-BY3" firstAttribute="centerX" secondItem="JBi-rK-Z9O" secondAttribute="centerX" id="bLc-Ek-ZqA"/>
+                                    <constraint firstItem="RPJ-Vx-BY3" firstAttribute="top" secondItem="JBi-rK-Z9O" secondAttribute="top" id="vCA-b9-D5o"/>
                                 </constraints>
                             </stackView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="    Type here..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S6Z-j4-rJv">
-                                <rect key="frame" x="20" y="807" width="374" height="45"/>
-                                <color key="backgroundColor" name="BrandForegroundColor"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="lrb-vR-6PS">
+                                <rect key="frame" x="28" y="817" width="364" height="35"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QZY-b8-ZV4">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="35"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="ID3-Tu-lF6"/>
+                                            <constraint firstAttribute="width" constant="330" id="PMY-IT-utp"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bN0-ym-pU0">
+                                        <rect key="frame" x="337" y="0.0" width="27" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="U8h-91-Sqc"/>
+                                        </constraints>
+                                        <state key="normal" image="paperclip" catalog="system"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.177647839" green="0.65279728079999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="tQk-Ti-MLA"/>
+                                    <constraint firstItem="QZY-b8-ZV4" firstAttribute="top" secondItem="lrb-vR-6PS" secondAttribute="top" id="4zM-Vn-fi9"/>
+                                    <constraint firstAttribute="bottom" secondItem="bN0-ym-pU0" secondAttribute="bottom" id="9fB-8T-bpm" customClass="KeyboardLayoutConstraint" customModule="Discourses" customModuleProvider="target"/>
+                                    <constraint firstItem="bN0-ym-pU0" firstAttribute="leading" secondItem="QZY-b8-ZV4" secondAttribute="trailing" constant="7" id="H8k-m5-0HE"/>
+                                    <constraint firstAttribute="height" constant="35" id="HRv-pj-0yx"/>
+                                    <constraint firstItem="QZY-b8-ZV4" firstAttribute="leading" secondItem="lrb-vR-6PS" secondAttribute="leading" id="Zff-6Y-YVB"/>
+                                    <constraint firstItem="bN0-ym-pU0" firstAttribute="top" secondItem="lrb-vR-6PS" secondAttribute="top" id="jFZ-X4-DGc"/>
+                                    <constraint firstAttribute="bottom" secondItem="QZY-b8-ZV4" secondAttribute="bottom" id="r5b-kh-WKC" customClass="KeyboardLayoutConstraint" customModule="Discourses" customModuleProvider="target"/>
+                                    <constraint firstItem="bN0-ym-pU0" firstAttribute="leading" secondItem="QZY-b8-ZV4" secondAttribute="trailing" constant="7" id="vvP-42-MFb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="send"/>
-                            </textField>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" name="ClassListBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="pc1-7h-0OL" firstAttribute="trailing" secondItem="lrb-vR-6PS" secondAttribute="trailing" constant="22" id="1Cp-W3-ntd"/>
                             <constraint firstItem="tGl-o8-ers" firstAttribute="top" secondItem="JBi-rK-Z9O" secondAttribute="bottom" constant="10" id="9og-J5-yOU"/>
                             <constraint firstItem="pc1-7h-0OL" firstAttribute="trailing" secondItem="JBi-rK-Z9O" secondAttribute="trailing" constant="20" id="BWQ-zX-cVl"/>
+                            <constraint firstItem="pc1-7h-0OL" firstAttribute="bottom" secondItem="lrb-vR-6PS" secondAttribute="bottom" constant="10" id="L0M-1f-hdh" customClass="KeyboardLayoutConstraint" customModule="Discourses" customModuleProvider="target"/>
                             <constraint firstAttribute="trailing" secondItem="tGl-o8-ers" secondAttribute="trailing" constant="-1" id="N9E-2a-a8e"/>
-                            <constraint firstItem="pc1-7h-0OL" firstAttribute="trailing" secondItem="S6Z-j4-rJv" secondAttribute="trailing" constant="20" id="Qse-N5-LBZ"/>
-                            <constraint firstItem="S6Z-j4-rJv" firstAttribute="leading" secondItem="pc1-7h-0OL" secondAttribute="leading" constant="20" id="Rii-W7-FEl"/>
+                            <constraint firstItem="pc1-7h-0OL" firstAttribute="bottom" secondItem="lrb-vR-6PS" secondAttribute="bottom" constant="10" id="V1V-jI-O4v" customClass="KeyboardLayoutConstraint" customModule="Discourses" customModuleProvider="target"/>
                             <constraint firstItem="JBi-rK-Z9O" firstAttribute="top" secondItem="pc1-7h-0OL" secondAttribute="top" constant="10" id="bfH-yc-aTW"/>
+                            <constraint firstItem="lrb-vR-6PS" firstAttribute="top" secondItem="tGl-o8-ers" secondAttribute="bottom" constant="33" id="hrg-sq-xQm"/>
                             <constraint firstItem="JBi-rK-Z9O" firstAttribute="leading" secondItem="pc1-7h-0OL" secondAttribute="leading" constant="20" id="ldA-3d-gVv"/>
-                            <constraint firstItem="pc1-7h-0OL" firstAttribute="bottom" secondItem="S6Z-j4-rJv" secondAttribute="bottom" constant="10" id="lqq-VJ-xcf" customClass="KeyboardLayoutConstraint" customModule="Discourses" customModuleProvider="target"/>
                             <constraint firstItem="tGl-o8-ers" firstAttribute="leading" secondItem="pc1-7h-0OL" secondAttribute="leading" constant="1" id="oLw-EK-pvP"/>
-                            <constraint firstItem="S6Z-j4-rJv" firstAttribute="top" secondItem="tGl-o8-ers" secondAttribute="bottom" constant="30" id="uen-U0-na9"/>
+                            <constraint firstItem="lrb-vR-6PS" firstAttribute="leading" secondItem="pc1-7h-0OL" secondAttribute="leading" constant="28" id="sp1-kK-XZc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pc1-7h-0OL"/>
                     </view>
@@ -213,7 +240,8 @@
                         <outlet property="backButton" destination="sxP-eI-TbS" id="rkN-6c-UAC"/>
                         <outlet property="backMostView" destination="LXl-yZ-x99" id="1XK-gI-n5I"/>
                         <outlet property="chatTable" destination="tGl-o8-ers" id="4FE-IA-eGD"/>
-                        <outlet property="inputField" destination="S6Z-j4-rJv" id="CdZ-Rv-60V"/>
+                        <outlet property="inputField" destination="QZY-b8-ZV4" id="U6J-hl-Z8B"/>
+                        <outlet property="inputStackView" destination="lrb-vR-6PS" id="kSP-DQ-YeR"/>
                         <outlet property="menuButton" destination="Js9-hi-638" id="dFI-iG-kOm"/>
                         <outlet property="professorLabel" destination="5UO-Rd-Es8" id="NYS-2R-CkF"/>
                         <outlet property="subjectLabel" destination="Bp7-ln-x4z" id="YuN-OE-Uwh"/>
@@ -474,6 +502,7 @@
         <image name="landingLogoImg" width="107" height="109"/>
         <image name="landingPageImg" width="372" height="363"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
+        <image name="paperclip" catalog="system" width="128" height="128"/>
         <namedColor name="BrandBackgroundColor">
             <color red="0.81199997663497925" green="0.43500000238418579" blue="0.14900000393390656" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
