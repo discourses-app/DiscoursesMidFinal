@@ -37,6 +37,7 @@ depends-member:
 - ["10Discourses9ConstantsV", "init"]
 - ["10Discourses9ConstantsV", "keyboardHeight"]
 - ["10Discourses9ConstantsV6SeguesV", "classListVCToChatVC"]
+- ["10Discourses9ConstantsV6SeguesV", "classListVCtoAddClassVC"]
 - ["10Discourses9ConstantsV6SeguesV", "init"]
 - ["10Discourses9ConstantsV6SeguesV", "startupVCToWelcomeVC"]
 depends-nominal:
@@ -78,4 +79,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "c5bb28e7bfb590463cd951662feba1e5"
+interface-hash: "76dbddfd759a66fac9ee0c556604f924"

@@ -1,5 +1,6 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
+- "users"
 - "ChatViewController"
 provides-nominal:
 - "10Discourses18ChatViewControllerC"
@@ -21,7 +22,6 @@ provides-dynamic-lookup:
 - "keyboardHeight"
 - "menuButton"
 - "messages"
-- "prevSender"
 - "professorLabel"
 - "scrollToBottom"
 - "someAction"
@@ -83,6 +83,7 @@ depends-top-level:
 - !private "UnicodeScalarType"
 - "_ImageLiteralType"
 - !private "print"
+- "users"
 depends-member:
 - !private ["s18AdditiveArithmeticP", "init"]
 - !private ["7SwiftUI10AnimatableP", "height"]
@@ -155,7 +156,7 @@ depends-member:
 - !private ["s7CVarArgP", "IndexPath"]
 - ["s7CVarArgP", "Message"]
 - !private ["s7CVarArgP", "Scanner"]
-- ["s7CVarArgP", "Sender"]
+- !private ["s7CVarArgP", "Sender"]
 - !private ["s7CVarArgP", "SymbolConfiguration"]
 - !private ["s7CVarArgP", "UIButton"]
 - !private ["s7CVarArgP", "UIColor"]
@@ -240,7 +241,7 @@ depends-member:
 - !private ["s7CVarArgP", "someAction"]
 - !private ["s7CVarArgP", "startIndex"]
 - !private ["s7CVarArgP", "subjectLabel"]
-- !private ["s7CVarArgP", "subscript"]
+- ["s7CVarArgP", "subscript"]
 - !private ["s7CVarArgP", "tableHeight"]
 - ["s7CVarArgP", "tableView"]
 - ["s7CVarArgP", "tableViewDidEndMultipleSelectionInteraction"]
@@ -256,6 +257,7 @@ depends-member:
 - ["s7CVarArgP", "textFieldShouldReturn"]
 - !private ["s7CVarArgP", "trimmingCharacters"]
 - !private ["s7CVarArgP", "uppercased"]
+- ["s7CVarArgP", "users"]
 - !private ["s7CVarArgP", "viewDidAppear"]
 - !private ["s7CVarArgP", "viewDidLoad"]
 - ["s7CVarArgP", "viewForZooming"]
@@ -277,7 +279,7 @@ depends-member:
 - ["10Discourses18ChatViewControllerC", "Message"]
 - !private ["10Discourses18ChatViewControllerC", "ReceivedMessageCell"]
 - !private ["10Discourses18ChatViewControllerC", "Scanner"]
-- ["10Discourses18ChatViewControllerC", "Sender"]
+- !private ["10Discourses18ChatViewControllerC", "Sender"]
 - !private ["10Discourses18ChatViewControllerC", "SentMessageCell"]
 - ["10Discourses18ChatViewControllerC", "String"]
 - ["10Discourses18ChatViewControllerC", "UIButton"]
@@ -315,7 +317,6 @@ depends-member:
 - ["10Discourses18ChatViewControllerC", "messages"]
 - ["10Discourses18ChatViewControllerC", "numberOfSections"]
 - ["10Discourses18ChatViewControllerC", "numberOfSectionsInTableView"]
-- ["10Discourses18ChatViewControllerC", "prevSender"]
 - !private ["10Discourses18ChatViewControllerC", "print"]
 - ["10Discourses18ChatViewControllerC", "professorLabel"]
 - ["10Discourses18ChatViewControllerC", "scrollToBottom"]
@@ -348,6 +349,7 @@ depends-member:
 - ["10Discourses18ChatViewControllerC", "textFieldShouldClear"]
 - ["10Discourses18ChatViewControllerC", "textFieldShouldEndEditing"]
 - ["10Discourses18ChatViewControllerC", "textFieldShouldReturn"]
+- ["10Discourses18ChatViewControllerC", "users"]
 - ["10Discourses18ChatViewControllerC", "viewDidAppear"]
 - ["10Discourses18ChatViewControllerC", "viewDidLoad"]
 - ["10Discourses18ChatViewControllerC", "viewForZooming"]
@@ -361,7 +363,7 @@ depends-member:
 - !private ["Sl", "row"]
 - !private ["Sl", "sender"]
 - !private ["Sl", "startIndex"]
-- !private ["Sl", "subscript"]
+- ["Sl", "subscript"]
 - !private ["Sl", "trimmingCharacters"]
 - !private ["Sl", "uppercased"]
 - !private ["SL", "count"]
@@ -390,7 +392,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "IndexPath"]
 - ["s28CustomDebugStringConvertibleP", "Message"]
 - !private ["s28CustomDebugStringConvertibleP", "Scanner"]
-- ["s28CustomDebugStringConvertibleP", "Sender"]
+- !private ["s28CustomDebugStringConvertibleP", "Sender"]
 - !private ["s28CustomDebugStringConvertibleP", "SymbolConfiguration"]
 - !private ["s28CustomDebugStringConvertibleP", "UIButton"]
 - !private ["s28CustomDebugStringConvertibleP", "UIColor"]
@@ -481,7 +483,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "someAction"]
 - !private ["s28CustomDebugStringConvertibleP", "startIndex"]
 - !private ["s28CustomDebugStringConvertibleP", "subjectLabel"]
-- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- ["s28CustomDebugStringConvertibleP", "subscript"]
 - !private ["s28CustomDebugStringConvertibleP", "tableHeight"]
 - ["s28CustomDebugStringConvertibleP", "tableView"]
 - ["s28CustomDebugStringConvertibleP", "tableViewDidEndMultipleSelectionInteraction"]
@@ -498,6 +500,7 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "timeIntervalSinceReferenceDate"]
 - !private ["s28CustomDebugStringConvertibleP", "trimmingCharacters"]
 - !private ["s28CustomDebugStringConvertibleP", "uppercased"]
+- ["s28CustomDebugStringConvertibleP", "users"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidAppear"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
 - ["s28CustomDebugStringConvertibleP", "viewForZooming"]
@@ -532,7 +535,7 @@ depends-member:
 - !private ["s17CustomReflectableP", "sender"]
 - !private ["s17CustomReflectableP", "setImage"]
 - !private ["s17CustomReflectableP", "startIndex"]
-- !private ["s17CustomReflectableP", "subscript"]
+- ["s17CustomReflectableP", "subscript"]
 - !private ["s17CustomReflectableP", "text"]
 - ["s17CustomReflectableP", "timeIntervalSinceReferenceDate"]
 - !private ["s17CustomReflectableP", "trimmingCharacters"]
@@ -547,7 +550,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "IndexPath"]
 - ["s23CustomStringConvertibleP", "Message"]
 - !private ["s23CustomStringConvertibleP", "Scanner"]
-- ["s23CustomStringConvertibleP", "Sender"]
+- !private ["s23CustomStringConvertibleP", "Sender"]
 - !private ["s23CustomStringConvertibleP", "SymbolConfiguration"]
 - !private ["s23CustomStringConvertibleP", "UIButton"]
 - !private ["s23CustomStringConvertibleP", "UIColor"]
@@ -635,7 +638,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "someAction"]
 - !private ["s23CustomStringConvertibleP", "startIndex"]
 - !private ["s23CustomStringConvertibleP", "subjectLabel"]
-- !private ["s23CustomStringConvertibleP", "subscript"]
+- ["s23CustomStringConvertibleP", "subscript"]
 - !private ["s23CustomStringConvertibleP", "tableHeight"]
 - ["s23CustomStringConvertibleP", "tableView"]
 - ["s23CustomStringConvertibleP", "tableViewDidEndMultipleSelectionInteraction"]
@@ -652,6 +655,7 @@ depends-member:
 - ["s23CustomStringConvertibleP", "timeIntervalSinceReferenceDate"]
 - !private ["s23CustomStringConvertibleP", "trimmingCharacters"]
 - !private ["s23CustomStringConvertibleP", "uppercased"]
+- ["s23CustomStringConvertibleP", "users"]
 - !private ["s23CustomStringConvertibleP", "viewDidAppear"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
 - ["s23CustomStringConvertibleP", "viewForZooming"]
@@ -690,13 +694,14 @@ depends-member:
 - !private ["Se", "scrollToRow"]
 - !private ["Se", "setImage"]
 - !private ["Se", "startIndex"]
-- !private ["Se", "subscript"]
+- ["Se", "subscript"]
 - !private ["Se", "text"]
 - ["Se", "timeIntervalSinceReferenceDate"]
 - !private ["Se", "trimmingCharacters"]
 - !private ["Se", "uppercased"]
 - !private ["Se", "whitespacesAndNewlines"]
 - !private ["Se", "width"]
+- ["SD", "subscript"]
 - !private ["So18OS_dispatch_objectC", "async"]
 - !private ["So18OS_dispatch_objectC", "main"]
 - !private ["So17OS_dispatch_queueC", "async"]
@@ -727,7 +732,7 @@ depends-member:
 - !private ["SE", "scrollToRow"]
 - !private ["SE", "setImage"]
 - !private ["SE", "startIndex"]
-- !private ["SE", "subscript"]
+- ["SE", "subscript"]
 - !private ["SE", "text"]
 - ["SE", "timeIntervalSinceReferenceDate"]
 - !private ["SE", "trimmingCharacters"]
@@ -743,7 +748,7 @@ depends-member:
 - !private ["SQ", "IndexPath"]
 - ["SQ", "Message"]
 - !private ["SQ", "Scanner"]
-- ["SQ", "Sender"]
+- !private ["SQ", "Sender"]
 - !private ["SQ", "SymbolConfiguration"]
 - !private ["SQ", "UIButton"]
 - !private ["SQ", "UIColor"]
@@ -838,7 +843,7 @@ depends-member:
 - !private ["SQ", "someAction"]
 - !private ["SQ", "startIndex"]
 - !private ["SQ", "subjectLabel"]
-- !private ["SQ", "subscript"]
+- ["SQ", "subscript"]
 - !private ["SQ", "tableHeight"]
 - ["SQ", "tableView"]
 - ["SQ", "tableViewDidEndMultipleSelectionInteraction"]
@@ -856,6 +861,7 @@ depends-member:
 - !private ["SQ", "touchUpInside"]
 - !private ["SQ", "trimmingCharacters"]
 - !private ["SQ", "uppercased"]
+- ["SQ", "users"]
 - !private ["SQ", "viewDidAppear"]
 - !private ["SQ", "viewDidLoad"]
 - ["SQ", "viewForZooming"]
@@ -873,6 +879,7 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
 - !private ["s25ExpressibleByArrayLiteralP", "touchUpInside"]
 - !private ["s25ExpressibleByArrayLiteralP", "whitespacesAndNewlines"]
+- ["s30ExpressibleByDictionaryLiteralP", "subscript"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "count"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "hasPrefix"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "remove"]
@@ -943,7 +950,7 @@ depends-member:
 - !private ["SH", "IndexPath"]
 - ["SH", "Message"]
 - !private ["SH", "Scanner"]
-- ["SH", "Sender"]
+- !private ["SH", "Sender"]
 - !private ["SH", "SymbolConfiguration"]
 - !private ["SH", "UIButton"]
 - !private ["SH", "UIColor"]
@@ -1034,7 +1041,7 @@ depends-member:
 - !private ["SH", "someAction"]
 - !private ["SH", "startIndex"]
 - !private ["SH", "subjectLabel"]
-- !private ["SH", "subscript"]
+- ["SH", "subscript"]
 - !private ["SH", "tableHeight"]
 - ["SH", "tableView"]
 - ["SH", "tableViewDidEndMultipleSelectionInteraction"]
@@ -1051,6 +1058,7 @@ depends-member:
 - ["SH", "timeIntervalSinceReferenceDate"]
 - !private ["SH", "trimmingCharacters"]
 - !private ["SH", "uppercased"]
+- ["SH", "users"]
 - !private ["SH", "viewDidAppear"]
 - !private ["SH", "viewDidLoad"]
 - ["SH", "viewForZooming"]
@@ -1092,7 +1100,7 @@ depends-member:
 - !private ["So8NSCodingP", "IndexPath"]
 - ["So8NSCodingP", "Message"]
 - !private ["So8NSCodingP", "Scanner"]
-- ["So8NSCodingP", "Sender"]
+- !private ["So8NSCodingP", "Sender"]
 - !private ["So8NSCodingP", "SymbolConfiguration"]
 - !private ["So8NSCodingP", "UIButton"]
 - !private ["So8NSCodingP", "UIColor"]
@@ -1188,6 +1196,7 @@ depends-member:
 - ["So8NSCodingP", "textFieldShouldReturn"]
 - !private ["So8NSCodingP", "trimmingCharacters"]
 - !private ["So8NSCodingP", "uppercased"]
+- ["So8NSCodingP", "users"]
 - !private ["So8NSCodingP", "viewDidAppear"]
 - !private ["So8NSCodingP", "viewDidLoad"]
 - ["So8NSCodingP", "viewForZooming"]
@@ -1210,7 +1219,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "IndexPath"]
 - ["So26NSExtensionRequestHandlingP", "Message"]
 - !private ["So26NSExtensionRequestHandlingP", "Scanner"]
-- ["So26NSExtensionRequestHandlingP", "Sender"]
+- !private ["So26NSExtensionRequestHandlingP", "Sender"]
 - !private ["So26NSExtensionRequestHandlingP", "UIButton"]
 - !private ["So26NSExtensionRequestHandlingP", "UIColor"]
 - !private ["So26NSExtensionRequestHandlingP", "UIEdgeInsets"]
@@ -1269,6 +1278,7 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "textFieldShouldClear"]
 - ["So26NSExtensionRequestHandlingP", "textFieldShouldEndEditing"]
 - ["So26NSExtensionRequestHandlingP", "textFieldShouldReturn"]
+- ["So26NSExtensionRequestHandlingP", "users"]
 - !private ["So26NSExtensionRequestHandlingP", "viewDidAppear"]
 - !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
 - ["So26NSExtensionRequestHandlingP", "viewForZooming"]
@@ -1311,7 +1321,7 @@ depends-member:
 - ["So8NSObjectC", "Message"]
 - !private ["So8NSObjectC", "ReceivedMessageCell"]
 - !private ["So8NSObjectC", "Scanner"]
-- ["So8NSObjectC", "Sender"]
+- !private ["So8NSObjectC", "Sender"]
 - !private ["So8NSObjectC", "SentMessageCell"]
 - ["So8NSObjectC", "String"]
 - !private ["So8NSObjectC", "SymbolConfiguration"]
@@ -1372,7 +1382,6 @@ depends-member:
 - !private ["So8NSObjectC", "numberOfRows"]
 - ["So8NSObjectC", "numberOfSections"]
 - ["So8NSObjectC", "numberOfSectionsInTableView"]
-- ["So8NSObjectC", "prevSender"]
 - !private ["So8NSObjectC", "print"]
 - ["So8NSObjectC", "professorLabel"]
 - !private ["So8NSObjectC", "profileImage"]
@@ -1420,6 +1429,7 @@ depends-member:
 - ["So8NSObjectC", "textFieldShouldReturn"]
 - !private ["So8NSObjectC", "trimmingCharacters"]
 - !private ["So8NSObjectC", "uppercased"]
+- ["So8NSObjectC", "users"]
 - ["So8NSObjectC", "viewDidAppear"]
 - ["So8NSObjectC", "viewDidLoad"]
 - ["So8NSObjectC", "viewForZooming"]
@@ -1433,7 +1443,7 @@ depends-member:
 - !private ["So8NSObjectP", "IndexPath"]
 - ["So8NSObjectP", "Message"]
 - !private ["So8NSObjectP", "Scanner"]
-- ["So8NSObjectP", "Sender"]
+- !private ["So8NSObjectP", "Sender"]
 - !private ["So8NSObjectP", "SymbolConfiguration"]
 - !private ["So8NSObjectP", "UIButton"]
 - !private ["So8NSObjectP", "UIColor"]
@@ -1532,6 +1542,7 @@ depends-member:
 - ["So8NSObjectP", "textFieldShouldReturn"]
 - !private ["So8NSObjectP", "trimmingCharacters"]
 - !private ["So8NSObjectP", "uppercased"]
+- ["So8NSObjectP", "users"]
 - !private ["So8NSObjectP", "viewDidAppear"]
 - !private ["So8NSObjectP", "viewDidLoad"]
 - ["So8NSObjectP", "viewForZooming"]
@@ -1623,7 +1634,7 @@ depends-member:
 - !private ["ST", "row"]
 - !private ["ST", "sender"]
 - !private ["ST", "startIndex"]
-- !private ["ST", "subscript"]
+- ["ST", "subscript"]
 - !private ["ST", "trimmingCharacters"]
 - !private ["ST", "uppercased"]
 - !private ["s10SetAlgebraP", "normal"]
@@ -1726,7 +1737,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "IndexPath"]
 - ["So21UIAppearanceContainerP", "Message"]
 - !private ["So21UIAppearanceContainerP", "Scanner"]
-- ["So21UIAppearanceContainerP", "Sender"]
+- !private ["So21UIAppearanceContainerP", "Sender"]
 - !private ["So21UIAppearanceContainerP", "UIButton"]
 - !private ["So21UIAppearanceContainerP", "UIColor"]
 - !private ["So21UIAppearanceContainerP", "UIEdgeInsets"]
@@ -1811,6 +1822,7 @@ depends-member:
 - ["So21UIAppearanceContainerP", "textFieldShouldClear"]
 - ["So21UIAppearanceContainerP", "textFieldShouldEndEditing"]
 - ["So21UIAppearanceContainerP", "textFieldShouldReturn"]
+- ["So21UIAppearanceContainerP", "users"]
 - !private ["So21UIAppearanceContainerP", "viewDidAppear"]
 - !private ["So21UIAppearanceContainerP", "viewDidLoad"]
 - ["So21UIAppearanceContainerP", "viewForZooming"]
@@ -1831,7 +1843,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "IndexPath"]
 - ["So18UIContentContainerP", "Message"]
 - !private ["So18UIContentContainerP", "Scanner"]
-- ["So18UIContentContainerP", "Sender"]
+- !private ["So18UIContentContainerP", "Sender"]
 - !private ["So18UIContentContainerP", "UIButton"]
 - !private ["So18UIContentContainerP", "UIColor"]
 - !private ["So18UIContentContainerP", "UIEdgeInsets"]
@@ -1890,6 +1902,7 @@ depends-member:
 - ["So18UIContentContainerP", "textFieldShouldClear"]
 - ["So18UIContentContainerP", "textFieldShouldEndEditing"]
 - ["So18UIContentContainerP", "textFieldShouldReturn"]
+- ["So18UIContentContainerP", "users"]
 - !private ["So18UIContentContainerP", "viewDidAppear"]
 - !private ["So18UIContentContainerP", "viewDidLoad"]
 - ["So18UIContentContainerP", "viewForZooming"]
@@ -1984,7 +1997,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "IndexPath"]
 - ["So18UIFocusEnvironmentP", "Message"]
 - !private ["So18UIFocusEnvironmentP", "Scanner"]
-- ["So18UIFocusEnvironmentP", "Sender"]
+- !private ["So18UIFocusEnvironmentP", "Sender"]
 - !private ["So18UIFocusEnvironmentP", "UIButton"]
 - !private ["So18UIFocusEnvironmentP", "UIColor"]
 - !private ["So18UIFocusEnvironmentP", "UIEdgeInsets"]
@@ -2069,6 +2082,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "textFieldShouldClear"]
 - ["So18UIFocusEnvironmentP", "textFieldShouldEndEditing"]
 - ["So18UIFocusEnvironmentP", "textFieldShouldReturn"]
+- ["So18UIFocusEnvironmentP", "users"]
 - !private ["So18UIFocusEnvironmentP", "viewDidAppear"]
 - !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
 - ["So18UIFocusEnvironmentP", "viewForZooming"]
@@ -2192,7 +2206,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "IndexPath"]
 - ["So30UIPasteConfigurationSupportingP", "Message"]
 - !private ["So30UIPasteConfigurationSupportingP", "Scanner"]
-- ["So30UIPasteConfigurationSupportingP", "Sender"]
+- !private ["So30UIPasteConfigurationSupportingP", "Sender"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIButton"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIColor"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIEdgeInsets"]
@@ -2277,6 +2291,7 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "textFieldShouldClear"]
 - ["So30UIPasteConfigurationSupportingP", "textFieldShouldEndEditing"]
 - ["So30UIPasteConfigurationSupportingP", "textFieldShouldReturn"]
+- ["So30UIPasteConfigurationSupportingP", "users"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidAppear"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
 - ["So30UIPasteConfigurationSupportingP", "viewForZooming"]
@@ -2293,7 +2308,7 @@ depends-member:
 - ["So11UIResponderC", "Message"]
 - !private ["So11UIResponderC", "ReceivedMessageCell"]
 - !private ["So11UIResponderC", "Scanner"]
-- ["So11UIResponderC", "Sender"]
+- !private ["So11UIResponderC", "Sender"]
 - !private ["So11UIResponderC", "SentMessageCell"]
 - ["So11UIResponderC", "String"]
 - ["So11UIResponderC", "UIButton"]
@@ -2346,7 +2361,6 @@ depends-member:
 - !private ["So11UIResponderC", "numberOfRows"]
 - ["So11UIResponderC", "numberOfSections"]
 - ["So11UIResponderC", "numberOfSectionsInTableView"]
-- ["So11UIResponderC", "prevSender"]
 - !private ["So11UIResponderC", "print"]
 - ["So11UIResponderC", "professorLabel"]
 - !private ["So11UIResponderC", "profileImage"]
@@ -2388,6 +2402,7 @@ depends-member:
 - ["So11UIResponderC", "textFieldShouldClear"]
 - ["So11UIResponderC", "textFieldShouldEndEditing"]
 - ["So11UIResponderC", "textFieldShouldReturn"]
+- ["So11UIResponderC", "users"]
 - ["So11UIResponderC", "viewDidAppear"]
 - ["So11UIResponderC", "viewDidLoad"]
 - ["So11UIResponderC", "viewForZooming"]
@@ -2401,7 +2416,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "IndexPath"]
 - ["So30UIResponderStandardEditActionsP", "Message"]
 - !private ["So30UIResponderStandardEditActionsP", "Scanner"]
-- ["So30UIResponderStandardEditActionsP", "Sender"]
+- !private ["So30UIResponderStandardEditActionsP", "Sender"]
 - !private ["So30UIResponderStandardEditActionsP", "UIButton"]
 - !private ["So30UIResponderStandardEditActionsP", "UIColor"]
 - !private ["So30UIResponderStandardEditActionsP", "UIEdgeInsets"]
@@ -2486,6 +2501,7 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "textFieldShouldClear"]
 - ["So30UIResponderStandardEditActionsP", "textFieldShouldEndEditing"]
 - ["So30UIResponderStandardEditActionsP", "textFieldShouldReturn"]
+- ["So30UIResponderStandardEditActionsP", "users"]
 - !private ["So30UIResponderStandardEditActionsP", "viewDidAppear"]
 - !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
 - ["So30UIResponderStandardEditActionsP", "viewForZooming"]
@@ -2508,7 +2524,7 @@ depends-member:
 - !private ["So20UIScrollViewDelegateP", "IndexPath"]
 - ["So20UIScrollViewDelegateP", "Message"]
 - !private ["So20UIScrollViewDelegateP", "Scanner"]
-- ["So20UIScrollViewDelegateP", "Sender"]
+- !private ["So20UIScrollViewDelegateP", "Sender"]
 - !private ["So20UIScrollViewDelegateP", "UIButton"]
 - !private ["So20UIScrollViewDelegateP", "UIColor"]
 - !private ["So20UIScrollViewDelegateP", "UIEdgeInsets"]
@@ -2567,6 +2583,7 @@ depends-member:
 - ["So20UIScrollViewDelegateP", "textFieldShouldClear"]
 - ["So20UIScrollViewDelegateP", "textFieldShouldEndEditing"]
 - ["So20UIScrollViewDelegateP", "textFieldShouldReturn"]
+- ["So20UIScrollViewDelegateP", "users"]
 - ["So20UIScrollViewDelegateP", "viewForZooming"]
 - ["So20UIScrollViewDelegateP", "viewForZoomingInScrollView"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "addTarget"]
@@ -2591,7 +2608,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "IndexPath"]
 - ["So16UIStateRestoringP", "Message"]
 - !private ["So16UIStateRestoringP", "Scanner"]
-- ["So16UIStateRestoringP", "Sender"]
+- !private ["So16UIStateRestoringP", "Sender"]
 - !private ["So16UIStateRestoringP", "UIButton"]
 - !private ["So16UIStateRestoringP", "UIColor"]
 - !private ["So16UIStateRestoringP", "UIEdgeInsets"]
@@ -2650,6 +2667,7 @@ depends-member:
 - ["So16UIStateRestoringP", "textFieldShouldClear"]
 - ["So16UIStateRestoringP", "textFieldShouldEndEditing"]
 - ["So16UIStateRestoringP", "textFieldShouldReturn"]
+- ["So16UIStateRestoringP", "users"]
 - !private ["So16UIStateRestoringP", "viewDidAppear"]
 - !private ["So16UIStateRestoringP", "viewDidLoad"]
 - ["So16UIStateRestoringP", "viewForZooming"]
@@ -2676,7 +2694,7 @@ depends-member:
 - !private ["So21UITableViewDataSourceP", "IndexPath"]
 - ["So21UITableViewDataSourceP", "Message"]
 - !private ["So21UITableViewDataSourceP", "Scanner"]
-- ["So21UITableViewDataSourceP", "Sender"]
+- !private ["So21UITableViewDataSourceP", "Sender"]
 - !private ["So21UITableViewDataSourceP", "UIButton"]
 - !private ["So21UITableViewDataSourceP", "UIColor"]
 - !private ["So21UITableViewDataSourceP", "UIEdgeInsets"]
@@ -2735,6 +2753,7 @@ depends-member:
 - ["So21UITableViewDataSourceP", "textFieldShouldClear"]
 - ["So21UITableViewDataSourceP", "textFieldShouldEndEditing"]
 - ["So21UITableViewDataSourceP", "textFieldShouldReturn"]
+- ["So21UITableViewDataSourceP", "users"]
 - ["So21UITableViewDataSourceP", "viewForZooming"]
 - ["So21UITableViewDataSourceP", "viewForZoomingInScrollView"]
 - !private ["So19UITableViewDelegateP", "CGFloat"]
@@ -2746,7 +2765,7 @@ depends-member:
 - !private ["So19UITableViewDelegateP", "IndexPath"]
 - ["So19UITableViewDelegateP", "Message"]
 - !private ["So19UITableViewDelegateP", "Scanner"]
-- ["So19UITableViewDelegateP", "Sender"]
+- !private ["So19UITableViewDelegateP", "Sender"]
 - !private ["So19UITableViewDelegateP", "UIButton"]
 - !private ["So19UITableViewDelegateP", "UIColor"]
 - !private ["So19UITableViewDelegateP", "UIEdgeInsets"]
@@ -2805,6 +2824,7 @@ depends-member:
 - ["So19UITableViewDelegateP", "textFieldShouldClear"]
 - ["So19UITableViewDelegateP", "textFieldShouldEndEditing"]
 - ["So19UITableViewDelegateP", "textFieldShouldReturn"]
+- ["So19UITableViewDelegateP", "users"]
 - ["So19UITableViewDelegateP", "viewForZooming"]
 - ["So19UITableViewDelegateP", "viewForZoomingInScrollView"]
 - !private ["So22UITapGestureRecognizerC", "init"]
@@ -2838,7 +2858,7 @@ depends-member:
 - !private ["So19UITextFieldDelegateP", "IndexPath"]
 - ["So19UITextFieldDelegateP", "Message"]
 - !private ["So19UITextFieldDelegateP", "Scanner"]
-- ["So19UITextFieldDelegateP", "Sender"]
+- !private ["So19UITextFieldDelegateP", "Sender"]
 - !private ["So19UITextFieldDelegateP", "UIButton"]
 - !private ["So19UITextFieldDelegateP", "UIColor"]
 - !private ["So19UITextFieldDelegateP", "UIEdgeInsets"]
@@ -2897,6 +2917,7 @@ depends-member:
 - ["So19UITextFieldDelegateP", "textFieldShouldClear"]
 - ["So19UITextFieldDelegateP", "textFieldShouldEndEditing"]
 - ["So19UITextFieldDelegateP", "textFieldShouldReturn"]
+- ["So19UITextFieldDelegateP", "users"]
 - ["So19UITextFieldDelegateP", "viewForZooming"]
 - ["So19UITextFieldDelegateP", "viewForZoomingInScrollView"]
 - !private ["So11UITextInputP", "delegate"]
@@ -2929,7 +2950,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "IndexPath"]
 - ["So18UITraitEnvironmentP", "Message"]
 - !private ["So18UITraitEnvironmentP", "Scanner"]
-- ["So18UITraitEnvironmentP", "Sender"]
+- !private ["So18UITraitEnvironmentP", "Sender"]
 - !private ["So18UITraitEnvironmentP", "UIButton"]
 - !private ["So18UITraitEnvironmentP", "UIColor"]
 - !private ["So18UITraitEnvironmentP", "UIEdgeInsets"]
@@ -3014,6 +3035,7 @@ depends-member:
 - ["So18UITraitEnvironmentP", "textFieldShouldClear"]
 - ["So18UITraitEnvironmentP", "textFieldShouldEndEditing"]
 - ["So18UITraitEnvironmentP", "textFieldShouldReturn"]
+- ["So18UITraitEnvironmentP", "users"]
 - !private ["So18UITraitEnvironmentP", "viewDidAppear"]
 - !private ["So18UITraitEnvironmentP", "viewDidLoad"]
 - ["So18UITraitEnvironmentP", "viewForZooming"]
@@ -3027,7 +3049,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "IndexPath"]
 - ["So23UIUserActivityRestoringP", "Message"]
 - !private ["So23UIUserActivityRestoringP", "Scanner"]
-- ["So23UIUserActivityRestoringP", "Sender"]
+- !private ["So23UIUserActivityRestoringP", "Sender"]
 - !private ["So23UIUserActivityRestoringP", "UIButton"]
 - !private ["So23UIUserActivityRestoringP", "UIColor"]
 - !private ["So23UIUserActivityRestoringP", "UIEdgeInsets"]
@@ -3112,6 +3134,7 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "textFieldShouldClear"]
 - ["So23UIUserActivityRestoringP", "textFieldShouldEndEditing"]
 - ["So23UIUserActivityRestoringP", "textFieldShouldReturn"]
+- ["So23UIUserActivityRestoringP", "users"]
 - !private ["So23UIUserActivityRestoringP", "viewDidAppear"]
 - !private ["So23UIUserActivityRestoringP", "viewDidLoad"]
 - ["So23UIUserActivityRestoringP", "viewForZooming"]
@@ -3154,7 +3177,7 @@ depends-member:
 - ["So16UIViewControllerC", "Message"]
 - !private ["So16UIViewControllerC", "ReceivedMessageCell"]
 - !private ["So16UIViewControllerC", "Scanner"]
-- ["So16UIViewControllerC", "Sender"]
+- !private ["So16UIViewControllerC", "Sender"]
 - !private ["So16UIViewControllerC", "SentMessageCell"]
 - ["So16UIViewControllerC", "String"]
 - ["So16UIViewControllerC", "UIButton"]
@@ -3192,7 +3215,6 @@ depends-member:
 - ["So16UIViewControllerC", "messages"]
 - ["So16UIViewControllerC", "numberOfSections"]
 - ["So16UIViewControllerC", "numberOfSectionsInTableView"]
-- ["So16UIViewControllerC", "prevSender"]
 - !private ["So16UIViewControllerC", "print"]
 - ["So16UIViewControllerC", "professorLabel"]
 - ["So16UIViewControllerC", "scrollToBottom"]
@@ -3225,6 +3247,7 @@ depends-member:
 - ["So16UIViewControllerC", "textFieldShouldClear"]
 - ["So16UIViewControllerC", "textFieldShouldEndEditing"]
 - ["So16UIViewControllerC", "textFieldShouldReturn"]
+- ["So16UIViewControllerC", "users"]
 - ["So16UIViewControllerC", "viewDidAppear"]
 - ["So16UIViewControllerC", "viewDidLoad"]
 - ["So16UIViewControllerC", "viewForZooming"]
@@ -3309,7 +3332,7 @@ depends-member:
 - !private ["s35_HasCustomAnyHashableRepresentationP", "hasPrefix"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "remove"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "startIndex"]
-- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "trimmingCharacters"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "uppercased"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CGFloat"]
@@ -3321,7 +3344,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "IndexPath"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "Message"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Scanner"]
-- ["10Foundation27_KeyValueCodingAndObservingP", "Sender"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Sender"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "SymbolConfiguration"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIButton"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIColor"]
@@ -3420,6 +3443,7 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "textFieldShouldReturn"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "trimmingCharacters"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "uppercased"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "users"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidAppear"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "viewForZooming"]
@@ -3433,7 +3457,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "IndexPath"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Message"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Scanner"]
-- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Sender"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Sender"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "SymbolConfiguration"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIButton"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIColor"]
@@ -3532,6 +3556,7 @@ depends-member:
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "textFieldShouldReturn"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "trimmingCharacters"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "uppercased"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "users"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewDidAppear"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewDidLoad"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewForZooming"]
@@ -3562,7 +3587,7 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "scrollToRow"]
 - !private ["s21_ObjectiveCBridgeableP", "setImage"]
 - !private ["s21_ObjectiveCBridgeableP", "startIndex"]
-- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["s21_ObjectiveCBridgeableP", "text"]
 - ["s21_ObjectiveCBridgeableP", "timeIntervalSinceReferenceDate"]
 - !private ["s21_ObjectiveCBridgeableP", "trimmingCharacters"]
@@ -3614,7 +3639,7 @@ depends-nominal:
 - !private "10Discourses9ConstantsV15CellStructNamesV"
 - !private "10Foundation12CharacterSetV"
 - "10Discourses18ChatViewControllerC"
-- !private "Sl"
+- "Sl"
 - "SL"
 - !private "So20UIImageConfigurationC"
 - !private "10Discourses9ConstantsV"
@@ -3625,12 +3650,14 @@ depends-nominal:
 - !private "10Foundation12DataProtocolP"
 - "10Foundation4DateV"
 - "Se"
+- "SD"
 - !private "So18OS_dispatch_objectC"
 - !private "So17OS_dispatch_queueC"
 - "SE"
 - "SQ"
 - !private "So15UIControlEventsV"
 - !private "s25ExpressibleByArrayLiteralP"
+- "s30ExpressibleByDictionaryLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
@@ -3671,7 +3698,7 @@ depends-nominal:
 - !private "So25UITableViewScrollPositionV"
 - "10Discourses6SenderV"
 - !private "10Discourses15SentMessageCellC"
-- !private "ST"
+- "ST"
 - !private "s10SetAlgebraP"
 - !private "s13SignedNumericP"
 - !private "So14UIControlStateV"
@@ -3746,7 +3773,7 @@ depends-nominal:
 - !private "s26_ExpressibleByImageLiteralP"
 - !private "7SwiftUI18_FormatSpecifiableP"
 - !private "s19_HasContiguousBytesP"
-- !private "s35_HasCustomAnyHashableRepresentationP"
+- "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "10Foundation37_KeyValueCodingAndObservingPublishingP"
 - "s21_ObjectiveCBridgeableP"
@@ -3784,4 +3811,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "a71e2ebe43d2bde82fce2b106ea92c51"
+interface-hash: "4cceaa5a08ca4fa6a8d89dc6a0b9324a"

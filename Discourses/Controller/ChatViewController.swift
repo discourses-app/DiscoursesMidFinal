@@ -8,6 +8,16 @@
 
 import UIKit
 
+//this is bad programming and i hate it, but not like this line is gonna be in the future any way
+let users : [String : Sender] = [
+    "Leo" : Sender(withName: "Leonard Wang", withProfilePic: #imageLiteral(resourceName: "Leo")),
+    "Sue" : Sender(withName: "Sue Ellen Zhang", withProfilePic: #imageLiteral(resourceName: "Sue")),
+    "Ari" : Sender(withName: "Aritra Mullick", withProfilePic: #imageLiteral(resourceName: "Ari")),
+    "Abs" : Sender(withName: "Abhishek Marda", withProfilePic: #imageLiteral(resourceName: "Abhishek")),
+    "San" : Sender(withName: "Sanya Srivastava", withProfilePic: #imageLiteral(resourceName: "Sanya")),
+    "Ani" : Sender(withName: "Anish Alluri", withProfilePic: #imageLiteral(resourceName: "Anish"))
+]
+
 class ChatViewController: UIViewController {
     @IBOutlet var backMostView: UIView!
     
@@ -22,43 +32,54 @@ class ChatViewController: UIViewController {
     
     var messages : [Message] = [
         Message(
-            from: Sender(withName: "Janardhan", withProfilePic: #imageLiteral(resourceName: "BrandColoredLogo")),
+            from: users["Leo"]!,
             on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
-            withMessage: "Hi"
+            withMessage: "Hey everyone!"
         ),
         Message(
-            from: Sender(withName: "Jonathon", withProfilePic: #imageLiteral(resourceName: "DiscoursesLogo")),
+            from: users["Sue"]!,
             on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
-            withMessage: "I'm doing well, how about yourself?"
+            withMessage: "Hey all, how is everyone doing? Little scared for the exams though lol"
         ),
         Message(
-            from: Sender(withName: "Janardhan", withProfilePic: #imageLiteral(resourceName: "BrandColoredLogo")),
+            from: users["Ari"]!,
             on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
-            withMessage: "Did you ever hear the Tragedy of Wise? I thought not, it's not a story the Jedi would tell you. It's a sith legend. Darth Plagueis was a Dark Lord of the Sith, so powerful and so wise he could use the Force to influence the midichlorians to create life... He had such a knowledge of the dark side that he could even keep the ones he cared about from dying."
+            withMessage: "I'm doing well, how about you?"
         ),
         Message(
-            from: Sender(withName: "Chamiya", withProfilePic: #imageLiteral(resourceName: "NoBgLogo")),
+            from: users["Sue"]!,
             on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
-            withMessage: "Okay..."
+            withMessage: "I'm doing well too 😄"
+        ),
+        
+        Message(
+            from: users["San"]!,
+            on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
+            withMessage: "The professor ROCKS!"
         ),
         Message(
-            from: Sender(withName: "Chamiya", withProfilePic: #imageLiteral(resourceName: "NoBgLogo")),
+            from: users["Ani"]!,
             on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
-            withMessage: "So?"
+            withMessage: "Yeah I'm loving this class so far"
         ),
         Message(
-            from: Sender(withName: "Janardhan", withProfilePic: #imageLiteral(resourceName: "BrandColoredLogo")),
+            from: users["Abs"]!,
             on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
-            withMessage: "The dark side of the Force is a pathway to many abilities some consider to be unnatural. He became so powerful... the only thing he was afraid of was losing his power, which eventually, of course, he did. "
+            withMessage: "Ooof I just took this class thinking it was easy now it's kicking my ass. hjëlp me."
         ),
         Message(
-            from: Sender(withName: "Chamiya", withProfilePic: #imageLiteral(resourceName: "NoBgLogo")),
+            from: users["Ari"]!,
             on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
-            withMessage: "Bro I'm begging you pls stop"
+            withMessage: "Fs in the chat"
+        ),
+        Message(
+            from: users["Leo"]!,
+            on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
+            withMessage: "Hahahaha 😂"
         )
     ]
     
-    var prevSender : String?
+//    var prevSender : String?
     
     var curruserName : String? = "Janardhan"
     var X : CGFloat = 0.0

@@ -33,17 +33,17 @@ struct Constants {
     static var classes : [Class] = [
         Class(name: "Psych 100A", professor: "Mudane"),
         Class(name: "Ling 120B", professor: "Sawtelle"),
-        Class(name: "Physics 1C", professor: "Corbin")
+        Class(name: "ComSci 31", professor: "Smallberg")
     ]
     
     static var allClasses :[Class] = [
-       Class(name: "ComSci 31", professor: "Smallberg"),
+       Class(name: "ComSci 32", professor: "Smallberg"),
        Class(name: "Math 32A", professor: "L. Chayes"),
        Class(name: "Math 33B", professor: "Hlushchanka"),
-       Class(name: "ComSci 32", professor: "Carey Nachenberg"),
+       Class(name: "ComSci 32", professor: "Nachenberg"),
        Class(name: "MGMT 100A", professor: "Marugame"),
        Class(name: "ComSci 180", professor: "Sarrafzadeh"),
-       Class(name: "Physics 1B", professor: "Corbin")
+       Class(name: "Physics 1C", professor: "Corbin")
     ]
     
 

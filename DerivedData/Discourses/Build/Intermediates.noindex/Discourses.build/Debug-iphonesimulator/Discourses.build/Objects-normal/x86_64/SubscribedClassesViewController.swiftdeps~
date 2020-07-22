@@ -34,7 +34,6 @@ depends-top-level:
 - "IndexPath"
 - "Int"
 - !private "IntegerLiteralType"
-- !private "SearchClassViewController"
 - "StringLiteralType"
 - "SubscribedClassesViewController"
 - "UIButton"
@@ -92,7 +91,6 @@ depends-member:
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "alpha"]
 - !private ["s7CVarArgP", "backgroundColor"]
-- !private ["s7CVarArgP", "baseVC"]
 - !private ["s7CVarArgP", "bgColor"]
 - !private ["s7CVarArgP", "bubbleBgColors"]
 - !private ["s7CVarArgP", "bubbleView"]
@@ -186,7 +184,6 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "alpha"]
 - !private ["s28CustomDebugStringConvertibleP", "backgroundColor"]
-- !private ["s28CustomDebugStringConvertibleP", "baseVC"]
 - !private ["s28CustomDebugStringConvertibleP", "bgColor"]
 - !private ["s28CustomDebugStringConvertibleP", "bubbleBgColors"]
 - !private ["s28CustomDebugStringConvertibleP", "bubbleView"]
@@ -274,7 +271,6 @@ depends-member:
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "alpha"]
 - !private ["s23CustomStringConvertibleP", "backgroundColor"]
-- !private ["s23CustomStringConvertibleP", "baseVC"]
 - !private ["s23CustomStringConvertibleP", "bgColor"]
 - !private ["s23CustomStringConvertibleP", "bubbleBgColors"]
 - !private ["s23CustomStringConvertibleP", "bubbleView"]
@@ -379,7 +375,6 @@ depends-member:
 - ["SQ", ""]
 - !private ["SQ", "alpha"]
 - !private ["SQ", "backgroundColor"]
-- !private ["SQ", "baseVC"]
 - !private ["SQ", "bgColor"]
 - !private ["SQ", "bubbleBgColors"]
 - !private ["SQ", "bubbleView"]
@@ -481,7 +476,6 @@ depends-member:
 - ["SH", ""]
 - !private ["SH", "alpha"]
 - !private ["SH", "backgroundColor"]
-- !private ["SH", "baseVC"]
 - !private ["SH", "bgColor"]
 - !private ["SH", "bubbleBgColors"]
 - !private ["SH", "bubbleView"]
@@ -562,7 +556,6 @@ depends-member:
 - ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "alpha"]
 - !private ["So8NSCodingP", "backgroundColor"]
-- !private ["So8NSCodingP", "baseVC"]
 - !private ["So8NSCodingP", "bgColor"]
 - !private ["So8NSCodingP", "bubbleBgColors"]
 - !private ["So8NSCodingP", "bubbleView"]
@@ -627,7 +620,6 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "UINib"]
 - !private ["So26NSExtensionRequestHandlingP", "UIView"]
 - ["So26NSExtensionRequestHandlingP", ""]
-- !private ["So26NSExtensionRequestHandlingP", "baseVC"]
 - !private ["So26NSExtensionRequestHandlingP", "bgColor"]
 - !private ["So26NSExtensionRequestHandlingP", "bubbleBgColors"]
 - !private ["So26NSExtensionRequestHandlingP", "classListTable"]
@@ -678,7 +670,6 @@ depends-member:
 - !private ["So8NSObjectC", "Constants"]
 - ["So8NSObjectC", "IndexPath"]
 - ["So8NSObjectC", "Int"]
-- !private ["So8NSObjectC", "SearchClassViewController"]
 - ["So8NSObjectC", "UIButton"]
 - ["So8NSObjectC", "UIColor"]
 - !private ["So8NSObjectC", "UIFont"]
@@ -692,7 +683,6 @@ depends-member:
 - ["So8NSObjectC", "addClassButtonPressed"]
 - !private ["So8NSObjectC", "alpha"]
 - !private ["So8NSObjectC", "backgroundColor"]
-- !private ["So8NSObjectC", "baseVC"]
 - !private ["So8NSObjectC", "bgColor"]
 - ["So8NSObjectC", "bubbleBgColors"]
 - !private ["So8NSObjectC", "bubbleView"]
@@ -759,7 +749,6 @@ depends-member:
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "alpha"]
 - !private ["So8NSObjectP", "backgroundColor"]
-- !private ["So8NSObjectP", "baseVC"]
 - !private ["So8NSObjectP", "bgColor"]
 - !private ["So8NSObjectP", "bubbleBgColors"]
 - !private ["So8NSObjectP", "bubbleView"]
@@ -845,7 +834,6 @@ depends-member:
 - !private ["Sm", "uppercased"]
 - !private ["SY", "normal"]
 - !private ["10Foundation20ReferenceConvertibleP", "row"]
-- !private ["10Discourses25SearchClassViewControllerC", "baseVC"]
 - !private ["10Discourses9ConstantsV6SeguesV", "classListVCToChatVC"]
 - !private ["10Discourses9ConstantsV6SeguesV", "classListVCtoAddClassVC"]
 - !private ["ST", "count"]
@@ -865,7 +853,6 @@ depends-member:
 - !private ["10Discourses31SubscribedClassesViewControllerC", "Constants"]
 - ["10Discourses31SubscribedClassesViewControllerC", "IndexPath"]
 - ["10Discourses31SubscribedClassesViewControllerC", "Int"]
-- !private ["10Discourses31SubscribedClassesViewControllerC", "SearchClassViewController"]
 - ["10Discourses31SubscribedClassesViewControllerC", "UIButton"]
 - ["10Discourses31SubscribedClassesViewControllerC", "UIColor"]
 - !private ["10Discourses31SubscribedClassesViewControllerC", "UIFont"]
@@ -962,7 +949,6 @@ depends-member:
 - ["So21UIAppearanceContainerP", ""]
 - !private ["So21UIAppearanceContainerP", "alpha"]
 - !private ["So21UIAppearanceContainerP", "backgroundColor"]
-- !private ["So21UIAppearanceContainerP", "baseVC"]
 - !private ["So21UIAppearanceContainerP", "bgColor"]
 - !private ["So21UIAppearanceContainerP", "bubbleBgColors"]
 - !private ["So21UIAppearanceContainerP", "bubbleView"]
@@ -1013,7 +999,6 @@ depends-member:
 - ["So21UIAppearanceContainerP", "viewForZooming"]
 - ["So21UIAppearanceContainerP", "viewForZoomingInScrollView"]
 - !private ["So21UIAppearanceContainerP", "viewWillAppear"]
-- !private ["So24UIBarPositioningDelegateP", "baseVC"]
 - !private ["So8UIButtonC", "setImage"]
 - !private ["So7UIColorC", "clear"]
 - ["So7UIColorC", "init"]
@@ -1024,7 +1009,6 @@ depends-member:
 - !private ["So18UIContentContainerP", "UINib"]
 - !private ["So18UIContentContainerP", "UIView"]
 - ["So18UIContentContainerP", ""]
-- !private ["So18UIContentContainerP", "baseVC"]
 - !private ["So18UIContentContainerP", "bgColor"]
 - !private ["So18UIContentContainerP", "bubbleBgColors"]
 - !private ["So18UIContentContainerP", "classListTable"]
@@ -1115,7 +1099,6 @@ depends-member:
 - ["So18UIFocusEnvironmentP", ""]
 - !private ["So18UIFocusEnvironmentP", "alpha"]
 - !private ["So18UIFocusEnvironmentP", "backgroundColor"]
-- !private ["So18UIFocusEnvironmentP", "baseVC"]
 - !private ["So18UIFocusEnvironmentP", "bgColor"]
 - !private ["So18UIFocusEnvironmentP", "bubbleBgColors"]
 - !private ["So18UIFocusEnvironmentP", "bubbleView"]
@@ -1248,7 +1231,6 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", ""]
 - !private ["So30UIPasteConfigurationSupportingP", "alpha"]
 - !private ["So30UIPasteConfigurationSupportingP", "backgroundColor"]
-- !private ["So30UIPasteConfigurationSupportingP", "baseVC"]
 - !private ["So30UIPasteConfigurationSupportingP", "bgColor"]
 - !private ["So30UIPasteConfigurationSupportingP", "bubbleBgColors"]
 - !private ["So30UIPasteConfigurationSupportingP", "bubbleView"]
@@ -1306,7 +1288,6 @@ depends-member:
 - !private ["So11UIResponderC", "Constants"]
 - ["So11UIResponderC", "IndexPath"]
 - ["So11UIResponderC", "Int"]
-- !private ["So11UIResponderC", "SearchClassViewController"]
 - ["So11UIResponderC", "UIButton"]
 - ["So11UIResponderC", "UIColor"]
 - !private ["So11UIResponderC", "UIFont"]
@@ -1320,7 +1301,6 @@ depends-member:
 - ["So11UIResponderC", "addClassButtonPressed"]
 - !private ["So11UIResponderC", "alpha"]
 - !private ["So11UIResponderC", "backgroundColor"]
-- !private ["So11UIResponderC", "baseVC"]
 - !private ["So11UIResponderC", "bgColor"]
 - ["So11UIResponderC", "bubbleBgColors"]
 - !private ["So11UIResponderC", "bubbleView"]
@@ -1381,7 +1361,6 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", ""]
 - !private ["So30UIResponderStandardEditActionsP", "alpha"]
 - !private ["So30UIResponderStandardEditActionsP", "backgroundColor"]
-- !private ["So30UIResponderStandardEditActionsP", "baseVC"]
 - !private ["So30UIResponderStandardEditActionsP", "bgColor"]
 - !private ["So30UIResponderStandardEditActionsP", "bubbleBgColors"]
 - !private ["So30UIResponderStandardEditActionsP", "bubbleView"]
@@ -1447,7 +1426,6 @@ depends-member:
 - !private ["So20UIScrollViewDelegateP", "UINib"]
 - !private ["So20UIScrollViewDelegateP", "UIView"]
 - ["So20UIScrollViewDelegateP", ""]
-- !private ["So20UIScrollViewDelegateP", "baseVC"]
 - !private ["So20UIScrollViewDelegateP", "bgColor"]
 - !private ["So20UIScrollViewDelegateP", "bubbleBgColors"]
 - !private ["So20UIScrollViewDelegateP", "classListTable"]
@@ -1479,7 +1457,6 @@ depends-member:
 - !private ["So20UIScrollViewDelegateP", "threeLinesImage"]
 - ["So20UIScrollViewDelegateP", "viewForZooming"]
 - ["So20UIScrollViewDelegateP", "viewForZoomingInScrollView"]
-- !private ["So19UISearchBarDelegateP", "baseVC"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "cellForRow"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "dataSource"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "delegate"]
@@ -1496,7 +1473,6 @@ depends-member:
 - !private ["So16UIStateRestoringP", "UINib"]
 - !private ["So16UIStateRestoringP", "UIView"]
 - ["So16UIStateRestoringP", ""]
-- !private ["So16UIStateRestoringP", "baseVC"]
 - !private ["So16UIStateRestoringP", "bgColor"]
 - !private ["So16UIStateRestoringP", "bubbleBgColors"]
 - !private ["So16UIStateRestoringP", "classListTable"]
@@ -1553,7 +1529,6 @@ depends-member:
 - !private ["So21UITableViewDataSourceP", "UINib"]
 - !private ["So21UITableViewDataSourceP", "UIView"]
 - ["So21UITableViewDataSourceP", ""]
-- !private ["So21UITableViewDataSourceP", "baseVC"]
 - !private ["So21UITableViewDataSourceP", "bgColor"]
 - !private ["So21UITableViewDataSourceP", "bubbleBgColors"]
 - !private ["So21UITableViewDataSourceP", "classListTable"]
@@ -1592,7 +1567,6 @@ depends-member:
 - !private ["So19UITableViewDelegateP", "UINib"]
 - !private ["So19UITableViewDelegateP", "UIView"]
 - ["So19UITableViewDelegateP", ""]
-- !private ["So19UITableViewDelegateP", "baseVC"]
 - !private ["So19UITableViewDelegateP", "bgColor"]
 - !private ["So19UITableViewDelegateP", "bubbleBgColors"]
 - !private ["So19UITableViewDelegateP", "classListTable"]
@@ -1634,7 +1608,6 @@ depends-member:
 - ["So18UITraitEnvironmentP", ""]
 - !private ["So18UITraitEnvironmentP", "alpha"]
 - !private ["So18UITraitEnvironmentP", "backgroundColor"]
-- !private ["So18UITraitEnvironmentP", "baseVC"]
 - !private ["So18UITraitEnvironmentP", "bgColor"]
 - !private ["So18UITraitEnvironmentP", "bubbleBgColors"]
 - !private ["So18UITraitEnvironmentP", "bubbleView"]
@@ -1694,7 +1667,6 @@ depends-member:
 - ["So23UIUserActivityRestoringP", ""]
 - !private ["So23UIUserActivityRestoringP", "alpha"]
 - !private ["So23UIUserActivityRestoringP", "backgroundColor"]
-- !private ["So23UIUserActivityRestoringP", "baseVC"]
 - !private ["So23UIUserActivityRestoringP", "bgColor"]
 - !private ["So23UIUserActivityRestoringP", "bubbleBgColors"]
 - !private ["So23UIUserActivityRestoringP", "bubbleView"]
@@ -1770,7 +1742,6 @@ depends-member:
 - !private ["So16UIViewControllerC", "Constants"]
 - ["So16UIViewControllerC", "IndexPath"]
 - ["So16UIViewControllerC", "Int"]
-- !private ["So16UIViewControllerC", "SearchClassViewController"]
 - ["So16UIViewControllerC", "UIButton"]
 - ["So16UIViewControllerC", "UIColor"]
 - !private ["So16UIViewControllerC", "UIFont"]
@@ -1783,7 +1754,6 @@ depends-member:
 - ["So16UIViewControllerC", ""]
 - ["So16UIViewControllerC", "addChatButton"]
 - ["So16UIViewControllerC", "addClassButtonPressed"]
-- !private ["So16UIViewControllerC", "baseVC"]
 - !private ["So16UIViewControllerC", "bgColor"]
 - ["So16UIViewControllerC", "bubbleBgColors"]
 - ["So16UIViewControllerC", "classListTable"]
@@ -1861,7 +1831,6 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "alpha"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "backgroundColor"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "baseVC"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "bgColor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "bubbleBgColors"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "bubbleView"]
@@ -1927,7 +1896,6 @@ depends-member:
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "alpha"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "backgroundColor"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "baseVC"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "bgColor"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "bubbleBgColors"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "bubbleView"]
@@ -2072,7 +2040,6 @@ depends-nominal:
 - !private "Sm"
 - !private "SY"
 - !private "10Foundation20ReferenceConvertibleP"
-- !private "10Discourses25SearchClassViewControllerC"
 - !private "10Discourses9ConstantsV6SeguesV"
 - !private "ST"
 - !private "s10SetAlgebraP"
@@ -2086,7 +2053,6 @@ depends-nominal:
 - !private "So29UIAccessibilityIdentificationP"
 - !private "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
-- !private "So24UIBarPositioningDelegateP"
 - !private "So8UIButtonC"
 - "So7UIColorC"
 - "So18UIContentContainerP"
@@ -2111,7 +2077,6 @@ depends-nominal:
 - "So30UIResponderStandardEditActionsP"
 - !private "So12UIScrollViewC"
 - "So20UIScrollViewDelegateP"
-- !private "So19UISearchBarDelegateP"
 - !private "So35UISpringLoadedInteractionSupportingP"
 - "So16UIStateRestoringP"
 - !private "So17UIStoryboardSegueC"
