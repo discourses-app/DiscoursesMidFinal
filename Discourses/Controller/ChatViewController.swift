@@ -17,14 +17,25 @@ let users : [String : Sender] = [
     "San" : Sender(withName: "Sanya Srivastava", withProfilePic: #imageLiteral(resourceName: "Sanya")),
     "Ani" : Sender(withName: "Anish Alluri", withProfilePic: #imageLiteral(resourceName: "Anish"))
 ]
+extension UIStackView {
+    func addBackground(color: UIColor) {
+        let subView = UIView(frame: bounds)
+        subView.backgroundColor = color
+        subView.layer.cornerRadius = 15
+        subView.layer.masksToBounds = true
+        subView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        insertSubview(subView, at: 0)
+    }
+}
 
-class ChatViewController: UIViewController {
+class ChatViewController: UIViewController, UITextViewDelegate {
     @IBOutlet var backMostView: UIView!
     
+    @IBOutlet var inputField: UITextView!
+    @IBOutlet var inputStackView: UIStackView!
     @IBOutlet weak var subjectLabel: UILabel!
     @IBOutlet weak var chatTable: UITableView!
     @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var inputField: UITextField!
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var professorLabel: UILabel!
     
@@ -116,19 +127,16 @@ class ChatViewController: UIViewController {
         chatTable.register(UINib(nibName: Constants.CellStructNames.sentCell, bundle: nil), forCellReuseIdentifier: Constants.CellIdentifiers.sentCell)
         chatTable.delegate = self
         chatTable.dataSource = self
-
+        //inputStackView set up
+        inputStackView.addBackground(color: #colorLiteral(red: 0.9490196078, green: 0.937254902, blue: 0.8745098039, alpha: 1)) //added extension
+        inputStackView.layer.cornerRadius = 15
+        inputStackView.layer.masksToBounds = true
         //input text field set up
-        let attachmentButton = UIButton(type: .custom)
-        attachmentButton.setImage(UIImage(systemName: "paperclip"), for: .normal)
-        attachmentButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -16, bottom: 0, right: 0)
-        attachmentButton.frame = CGRect(x: 0, y: 0, width: ((inputField.frame.width)), height: ((inputField.frame.height)))
-        attachmentButton.addTarget(self, action: #selector(self.attachmentButtonPressed(_:)), for: .touchUpInside)
-        inputField.rightView = attachmentButton
-        inputField.rightViewMode = .always
+        inputField.isEditable = true
         inputField.layer.masksToBounds = true
         inputField.layer.cornerRadius = 15
         inputField.delegate = self
-        
+        inputField.backgroundColor = #colorLiteral(red: 0.9490196078, green: 0.937254902, blue: 0.8745098039, alpha: 1)
         //menu button set up
         let menuimage = #imageLiteral(resourceName: "ThreeLines").resized(to: CGSize(width: 22, height: 20))
         menuButton.setImage(
@@ -157,7 +165,7 @@ class ChatViewController: UIViewController {
     }
     
     @objc func someAction(_ sender:UITapGestureRecognizer){
-        if inputField.isEditing {
+        if inputField.isFirstResponder {
             backMostView.endEditing(true)
             UIView.animate(withDuration: 0.3) {
                        self.chatTable.frame = CGRect(x: self.X, y: self.Y, width: self.tableWidth, height: self.tableHeight)
@@ -216,44 +224,45 @@ class ChatViewController: UIViewController {
     
 }
 
-extension ChatViewController: UITextFieldDelegate {
+extension ChatViewController {
 
     //hitting the return button changes chatTable size
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-
-//        UIView.animate(withDuration: 0.3) {
-//            self.chatTable.frame = CGRect(x: self.X, y: self.Y, width: self.tableWidth, height: self.tableHeight)
+//    func textViewShouldReturn(_ textField: UITextView) -> Bool {
+//
+////        UIView.animate(withDuration: 0.3) {
+////            self.chatTable.frame = CGRect(x: self.X, y: self.Y, width: self.tableWidth, height: self.tableHeight)
+////        }
+//        let content = textField.text ?? ""
+//        if content != "" {
+//            let sender = Sender(withName: self.curruserName ?? "no name", withProfilePic: nil)
+//            let newMessage = Message(from: sender, on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate), withMessage: content)
+//            messages.append(newMessage)
+//            chatTable.reloadData()
 //        }
-        let content = textField.text ?? ""
-        if content != "" {
-            let sender = Sender(withName: self.curruserName ?? "no name", withProfilePic: nil)
-            let newMessage = Message(from: sender, on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate), withMessage: content)
-            messages.append(newMessage)
-            chatTable.reloadData()
-        }
-        textField.text = nil
-       
-        scrollToBottom()
-        flag = 0
-        return false
-    }
+//        textField.text = nil
+//
+//        scrollToBottom()
+//        flag = 0
+//        return false
+//    }
     
     //beginning editing should also change the keyboard stuff
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        print("2")
-        if flag == 0 {
-            tableWidth = chatTable.frame.width
-            tableHeight = chatTable.frame.height
-            X = chatTable.frame.minX
-            Y = chatTable.frame.minY
-            print("This is height!")
-            print(keyboardHeight)
-            UIView.animate(withDuration: 0.3) {
-                self.chatTable.frame = CGRect(x: self.X, y: self.Y, width: self.tableWidth, height: self.tableHeight - self.keyboardHeight)
-            }
-            scrollToBottom()
-            flag = 1;
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+           let content = textView.text ?? ""
+                  if content != "" {
+                      let sender = Sender(withName: self.curruserName ?? "no name", withProfilePic: nil)
+                      let newMessage = Message(from: sender, on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate), withMessage: content)
+                      messages.append(newMessage)
+                      chatTable.reloadData()
+                  }
+                  textView.text = nil
+                  scrollToBottom()
+                  flag = 0
+                  return false
         }
+        return true
     }
     
     
