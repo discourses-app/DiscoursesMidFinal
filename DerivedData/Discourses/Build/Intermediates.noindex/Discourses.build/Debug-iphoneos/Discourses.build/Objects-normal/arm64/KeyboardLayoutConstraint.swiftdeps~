@@ -17,6 +17,7 @@ depends-top-level:
 - "AssignmentPrecedence"
 - "CGFloat"
 - "CastingPrecedence"
+- !private "Constants"
 - "FloatLiteralType"
 - "IntegerLiteralType"
 - "KeyboardLayoutConstraint"
@@ -26,13 +27,18 @@ depends-top-level:
 - !private "NSValue"
 - "Notification"
 - !private "NotificationCenter"
+- !private "StringLiteralType"
 - !private "TimeInterval"
 - !private "UIApplication"
 - !private "UIResponder"
 - !private "UIView"
 - !private "UIWindow"
+- !private "UnicodeScalarType"
+- !private "print"
 depends-member:
 - !private ["s18AdditiveArithmeticP", "init"]
+- !private ["7SwiftUI10AnimatableP", "height"]
+- !private ["7SwiftUI10AnimatableP", "size"]
 - !private ["So22UIViewAnimationOptionsV", "init"]
 - !private ["SB", "init"]
 - !private ["So15CALayerDelegateP", "AnimationOptions"]
@@ -43,6 +49,7 @@ depends-member:
 - !private ["So6CGRectV", "size"]
 - !private ["So6CGSizeV", "height"]
 - !private ["s7CVarArgP", "AnimationOptions"]
+- !private ["s7CVarArgP", "Constants"]
 - !private ["s7CVarArgP", "KeyboardLayoutConstraint"]
 - !private ["s7CVarArgP", "NotificationCenter"]
 - !private ["s7CVarArgP", "TimeInterval"]
@@ -68,6 +75,7 @@ depends-member:
 - !private ["s7CVarArgP", "keyboardWillShowNotification"]
 - !private ["s7CVarArgP", "layoutIfNeeded"]
 - !private ["s7CVarArgP", "offset"]
+- !private ["s7CVarArgP", "print"]
 - !private ["s7CVarArgP", "removeObserver"]
 - !private ["s7CVarArgP", "shared"]
 - !private ["s7CVarArgP", "subscript"]
@@ -76,7 +84,9 @@ depends-member:
 - !private ["s7CVarArgP", "userInfo"]
 - !private ["Sl", "subscript"]
 - !private ["SL", "init"]
+- !private ["10Discourses9ConstantsV", "keyboardHeight"]
 - !private ["s28CustomDebugStringConvertibleP", "AnimationOptions"]
+- !private ["s28CustomDebugStringConvertibleP", "Constants"]
 - !private ["s28CustomDebugStringConvertibleP", "KeyboardLayoutConstraint"]
 - !private ["s28CustomDebugStringConvertibleP", "NotificationCenter"]
 - !private ["s28CustomDebugStringConvertibleP", "TimeInterval"]
@@ -103,6 +113,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "keyboardWillShowNotification"]
 - !private ["s28CustomDebugStringConvertibleP", "layoutIfNeeded"]
 - !private ["s28CustomDebugStringConvertibleP", "offset"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
 - !private ["s28CustomDebugStringConvertibleP", "removeObserver"]
 - !private ["s28CustomDebugStringConvertibleP", "shared"]
 - !private ["s28CustomDebugStringConvertibleP", "size"]
@@ -118,6 +129,7 @@ depends-member:
 - !private ["s17CustomReflectableP", "subscript"]
 - !private ["s17CustomReflectableP", "userInfo"]
 - !private ["s23CustomStringConvertibleP", "AnimationOptions"]
+- !private ["s23CustomStringConvertibleP", "Constants"]
 - !private ["s23CustomStringConvertibleP", "KeyboardLayoutConstraint"]
 - !private ["s23CustomStringConvertibleP", "NotificationCenter"]
 - !private ["s23CustomStringConvertibleP", "TimeInterval"]
@@ -143,6 +155,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "keyboardWillShowNotification"]
 - !private ["s23CustomStringConvertibleP", "layoutIfNeeded"]
 - !private ["s23CustomStringConvertibleP", "offset"]
+- !private ["s23CustomStringConvertibleP", "print"]
 - !private ["s23CustomStringConvertibleP", "removeObserver"]
 - !private ["s23CustomStringConvertibleP", "shared"]
 - !private ["s23CustomStringConvertibleP", "subscript"]
@@ -162,6 +175,7 @@ depends-member:
 - ["SE", "some"]
 - !private ["SE", "subscript"]
 - !private ["SQ", "AnimationOptions"]
+- !private ["SQ", "Constants"]
 - !private ["SQ", "KeyboardLayoutConstraint"]
 - !private ["SQ", "NotificationCenter"]
 - !private ["SQ", "TimeInterval"]
@@ -188,6 +202,7 @@ depends-member:
 - !private ["SQ", "keyboardWillShowNotification"]
 - !private ["SQ", "layoutIfNeeded"]
 - !private ["SQ", "offset"]
+- !private ["SQ", "print"]
 - !private ["SQ", "removeObserver"]
 - !private ["SQ", "shared"]
 - !private ["SQ", "size"]
@@ -208,7 +223,9 @@ depends-member:
 - !private ["s27ExpressibleByIntegerLiteralP", "uintValue"]
 - ["s23ExpressibleByNilLiteralP", "some"]
 - !private ["SF", "init"]
+- ["7SwiftUI7GestureP", "some"]
 - !private ["SH", "AnimationOptions"]
+- !private ["SH", "Constants"]
 - !private ["SH", "KeyboardLayoutConstraint"]
 - !private ["SH", "NotificationCenter"]
 - !private ["SH", "TimeInterval"]
@@ -234,6 +251,7 @@ depends-member:
 - !private ["SH", "keyboardWillShowNotification"]
 - !private ["SH", "layoutIfNeeded"]
 - !private ["SH", "offset"]
+- !private ["SH", "print"]
 - !private ["SH", "removeObserver"]
 - !private ["SH", "shared"]
 - ["SH", "some"]
@@ -242,6 +260,7 @@ depends-member:
 - !private ["SH", "updateConstant"]
 - !private ["SH", "userInfo"]
 - ["10Discourses24KeyboardLayoutConstraintC", "CGFloat"]
+- !private ["10Discourses24KeyboardLayoutConstraintC", "Constants"]
 - !private ["10Discourses24KeyboardLayoutConstraintC", "KeyboardLayoutConstraint"]
 - ["10Discourses24KeyboardLayoutConstraintC", "NSNotification"]
 - !private ["10Discourses24KeyboardLayoutConstraintC", "NSNumber"]
@@ -261,6 +280,7 @@ depends-member:
 - ["10Discourses24KeyboardLayoutConstraintC", "keyboardWillHideNotification"]
 - ["10Discourses24KeyboardLayoutConstraintC", "keyboardWillShowNotification"]
 - !private ["10Discourses24KeyboardLayoutConstraintC", "offset"]
+- !private ["10Discourses24KeyboardLayoutConstraintC", "print"]
 - ["10Discourses24KeyboardLayoutConstraintC", "updateConstant"]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["So8NSCodingP", "AnimationOptions"]
@@ -276,7 +296,10 @@ depends-member:
 - !private ["So9NSCopyingP", "doubleValue"]
 - !private ["So9NSCopyingP", "uintValue"]
 - !private ["So9NSCopyingP", "userInfo"]
+- !private ["So20NSFetchRequestResultP", "doubleValue"]
+- !private ["So20NSFetchRequestResultP", "uintValue"]
 - ["So18NSLayoutConstraintC", "CGFloat"]
+- !private ["So18NSLayoutConstraintC", "Constants"]
 - !private ["So18NSLayoutConstraintC", "KeyboardLayoutConstraint"]
 - ["So18NSLayoutConstraintC", "NSNotification"]
 - !private ["So18NSLayoutConstraintC", "NSNumber"]
@@ -296,12 +319,14 @@ depends-member:
 - ["So18NSLayoutConstraintC", "keyboardWillHideNotification"]
 - ["So18NSLayoutConstraintC", "keyboardWillShowNotification"]
 - ["So18NSLayoutConstraintC", "offset"]
+- !private ["So18NSLayoutConstraintC", "print"]
 - ["So18NSLayoutConstraintC", "updateConstant"]
 - !private ["So14NSNotificationC", "userInfo"]
 - !private ["So8NSNumberC", "doubleValue"]
 - !private ["So8NSNumberC", "uintValue"]
 - !private ["So8NSObjectC", "AnimationOptions"]
 - ["So8NSObjectC", "CGFloat"]
+- !private ["So8NSObjectC", "Constants"]
 - !private ["So8NSObjectC", "KeyboardLayoutConstraint"]
 - ["So8NSObjectC", "NSNotification"]
 - !private ["So8NSObjectC", "NSNumber"]
@@ -330,12 +355,14 @@ depends-member:
 - ["So8NSObjectC", "keyboardWillShowNotification"]
 - !private ["So8NSObjectC", "layoutIfNeeded"]
 - ["So8NSObjectC", "offset"]
+- !private ["So8NSObjectC", "print"]
 - !private ["So8NSObjectC", "removeObserver"]
 - !private ["So8NSObjectC", "shared"]
 - !private ["So8NSObjectC", "uintValue"]
 - ["So8NSObjectC", "updateConstant"]
 - !private ["So8NSObjectC", "userInfo"]
 - !private ["So8NSObjectP", "AnimationOptions"]
+- !private ["So8NSObjectP", "Constants"]
 - !private ["So8NSObjectP", "KeyboardLayoutConstraint"]
 - !private ["So8NSObjectP", "NotificationCenter"]
 - !private ["So8NSObjectP", "TimeInterval"]
@@ -360,6 +387,7 @@ depends-member:
 - !private ["So8NSObjectP", "keyboardWillShowNotification"]
 - !private ["So8NSObjectP", "layoutIfNeeded"]
 - !private ["So8NSObjectP", "offset"]
+- !private ["So8NSObjectP", "print"]
 - !private ["So8NSObjectP", "removeObserver"]
 - !private ["So8NSObjectP", "shared"]
 - !private ["So8NSObjectP", "uintValue"]
@@ -486,6 +514,8 @@ depends-member:
 - !private ["So8UIWindowC", "keyboardWillHideNotification"]
 - !private ["So8UIWindowC", "keyboardWillShowNotification"]
 - !private ["So8UIWindowC", "layoutIfNeeded"]
+- !private ["7SwiftUI16VectorArithmeticP", "init"]
+- ["7SwiftUI4ViewP", "some"]
 - !private ["s15_CVarArgAlignedP", "init"]
 - !private ["s22_CVarArgPassedAsDoubleP", "init"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "height"]
@@ -493,12 +523,14 @@ depends-member:
 - !private ["s30_CustomPlaygroundQuickLookableP", "size"]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["7SwiftUI18_FormatSpecifiableP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "doubleValue"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "uintValue"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "userInfo"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "AnimationOptions"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Constants"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "KeyboardLayoutConstraint"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NotificationCenter"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "TimeInterval"]
@@ -523,12 +555,14 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "keyboardWillShowNotification"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "layoutIfNeeded"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "offset"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "removeObserver"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "uintValue"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "updateConstant"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "userInfo"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "AnimationOptions"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Constants"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "KeyboardLayoutConstraint"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NotificationCenter"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "TimeInterval"]
@@ -553,6 +587,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "keyboardWillShowNotification"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "layoutIfNeeded"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "offset"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "print"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "removeObserver"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shared"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "uintValue"]
@@ -571,6 +606,7 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "layoutIfNeeded"]
 depends-nominal:
 - !private "s18AdditiveArithmeticP"
+- !private "7SwiftUI10AnimatableP"
 - !private "So22UIViewAnimationOptionsV"
 - !private "SB"
 - !private "So15CALayerDelegateP"
@@ -579,6 +615,7 @@ depends-nominal:
 - "s7CVarArgP"
 - !private "Sl"
 - !private "SL"
+- !private "10Discourses9ConstantsV"
 - "s28CustomDebugStringConvertibleP"
 - "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
@@ -594,11 +631,13 @@ depends-nominal:
 - !private "s27ExpressibleByIntegerLiteralP"
 - "s23ExpressibleByNilLiteralP"
 - !private "SF"
+- "7SwiftUI7GestureP"
 - "SH"
 - "10Discourses24KeyboardLayoutConstraintC"
 - !private "s25LosslessStringConvertibleP"
 - !private "So8NSCodingP"
 - !private "So9NSCopyingP"
+- !private "So20NSFetchRequestResultP"
 - "So18NSLayoutConstraintC"
 - !private "So14NSNotificationC"
 - !private "So8NSNumberC"
@@ -636,11 +675,14 @@ depends-nominal:
 - !private "So23UIUserActivityRestoringP"
 - !private "So6UIViewC"
 - !private "So8UIWindowC"
+- !private "7SwiftUI16VectorArithmeticP"
+- "7SwiftUI4ViewP"
 - !private "s15_CVarArgAlignedP"
 - !private "s22_CVarArgPassedAsDoubleP"
 - !private "s30_CustomPlaygroundQuickLookableP"
 - !private "s33_ExpressibleByBuiltinFloatLiteralP"
 - !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "7SwiftUI18_FormatSpecifiableP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "10Foundation37_KeyValueCodingAndObservingPublishingP"
@@ -649,6 +691,7 @@ depends-nominal:
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreData.swiftmodule/arm64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/arm64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/arm64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/arm64.swiftmodule"
@@ -657,11 +700,15 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/arm64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/arm64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/os.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/arm64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/arm64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftUI.swiftmodule/arm64-apple-ios.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Combine.swiftmodule/arm64-apple-ios.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
@@ -670,6 +717,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"

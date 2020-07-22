@@ -17,22 +17,12 @@ let users : [String : Sender] = [
     "San" : Sender(withName: "Sanya Srivastava", withProfilePic: #imageLiteral(resourceName: "Sanya")),
     "Ani" : Sender(withName: "Anish Alluri", withProfilePic: #imageLiteral(resourceName: "Anish"))
 ]
-extension UIStackView {
-    func addBackground(color: UIColor) {
-        let subView = UIView(frame: bounds)
-        subView.backgroundColor = color
-        subView.layer.cornerRadius = 15
-        subView.layer.masksToBounds = true
-        subView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        insertSubview(subView, at: 0)
-    }
-}
 
-class ChatViewController: UIViewController, UITextViewDelegate {
+
+class ChatViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var backMostView: UIView!
     
-    @IBOutlet var inputField: UITextView!
-    @IBOutlet var inputStackView: UIStackView!
+    @IBOutlet weak var inputField: UITextField!
     @IBOutlet weak var subjectLabel: UILabel!
     @IBOutlet weak var chatTable: UITableView!
     @IBOutlet weak var backButton: UIButton!
@@ -127,12 +117,8 @@ class ChatViewController: UIViewController, UITextViewDelegate {
         chatTable.register(UINib(nibName: Constants.CellStructNames.sentCell, bundle: nil), forCellReuseIdentifier: Constants.CellIdentifiers.sentCell)
         chatTable.delegate = self
         chatTable.dataSource = self
-        //inputStackView set up
-        inputStackView.addBackground(color: #colorLiteral(red: 0.9490196078, green: 0.937254902, blue: 0.8745098039, alpha: 1)) //added extension
-        inputStackView.layer.cornerRadius = 15
-        inputStackView.layer.masksToBounds = true
         //input text field set up
-        inputField.isEditable = true
+//        inputField.isEditable = true
         inputField.layer.masksToBounds = true
         inputField.layer.cornerRadius = 15
         inputField.delegate = self
@@ -227,43 +213,46 @@ class ChatViewController: UIViewController, UITextViewDelegate {
 extension ChatViewController {
 
     //hitting the return button changes chatTable size
-//    func textViewShouldReturn(_ textField: UITextView) -> Bool {
-//
-////        UIView.animate(withDuration: 0.3) {
-////            self.chatTable.frame = CGRect(x: self.X, y: self.Y, width: self.tableWidth, height: self.tableHeight)
-////        }
-//        let content = textField.text ?? ""
-//        if content != "" {
-//            let sender = Sender(withName: self.curruserName ?? "no name", withProfilePic: nil)
-//            let newMessage = Message(from: sender, on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate), withMessage: content)
-//            messages.append(newMessage)
-//            chatTable.reloadData()
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+
+//        UIView.animate(withDuration: 0.3) {
+//            self.chatTable.frame = CGRect(x: self.X, y: self.Y, width: self.tableWidth, height: self.tableHeight)
 //        }
-//        textField.text = nil
-//
-//        scrollToBottom()
-//        flag = 0
-//        return false
-//    }
-    
-    //beginning editing should also change the keyboard stuff
-    
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if text == "\n" {
-           let content = textView.text ?? ""
-                  if content != "" {
-                      let sender = Sender(withName: self.curruserName ?? "no name", withProfilePic: nil)
-                      let newMessage = Message(from: sender, on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate), withMessage: content)
-                      messages.append(newMessage)
-                      chatTable.reloadData()
-                  }
-                  textView.text = nil
-                  scrollToBottom()
-                  flag = 0
-                  return false
+        let content = textField.text ?? ""
+        if content != "" {
+            let sender = Sender(withName: self.curruserName ?? "no name", withProfilePic: nil)
+            let newMessage = Message(from: sender, on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate), withMessage: content)
+            messages.append(newMessage)
+            chatTable.reloadData()
         }
+        textField.text = nil
+
+        scrollToBottom()
+        flag = 0
+        return false
+    }
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        scrollToBottom()
         return true
     }
+    //beginning editing should also change the keyboard stuff
+    
+//    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+//        if text == "\n" {
+//           let content = textView.text ?? ""
+//                  if content != "" {
+//                      let sender = Sender(withName: self.curruserName ?? "no name", withProfilePic: nil)
+//                      let newMessage = Message(from: sender, on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate), withMessage: content)
+//                      messages.append(newMessage)
+//                      chatTable.reloadData()
+//                  }
+//                  textView.text = nil
+//                  scrollToBottom()
+//                  flag = 0
+//                  return false
+//        }
+//        return true
+//    }
     
     
 }

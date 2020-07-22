@@ -219,21 +219,21 @@ SWIFT_CLASS("_TtC10Discourses11AppDelegate")
 @end
 
 @class UIView;
+@class UITextField;
 @class UILabel;
 @class UITableView;
 @class UIButton;
-@class UITextField;
 @class UITapGestureRecognizer;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC10Discourses18ChatViewController")
-@interface ChatViewController : UIViewController
+@interface ChatViewController : UIViewController <UITextFieldDelegate>
 @property (nonatomic, strong) IBOutlet UIView * _Null_unspecified backMostView;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified inputField;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified subjectLabel;
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified chatTable;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified backButton;
-@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified inputField;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified menuButton;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified professorLabel;
 - (void)viewDidLoad;
@@ -249,17 +249,17 @@ SWIFT_CLASS("_TtC10Discourses18ChatViewController")
 @interface ChatViewController (SWIFT_EXTENSION(Discourses)) <UITableViewDelegate>
 @end
 
+
+@interface ChatViewController (SWIFT_EXTENSION(Discourses))
+- (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)textFieldShouldBeginEditing:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
+@end
+
 @class UITableViewCell;
 
 @interface ChatViewController (SWIFT_EXTENSION(Discourses)) <UITableViewDataSource>
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
-@interface ChatViewController (SWIFT_EXTENSION(Discourses)) <UITextFieldDelegate>
-- (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
-- (void)textFieldDidBeginEditing:(UITextField * _Nonnull)textField;
 @end
 
 @class NSLayoutConstraint;
