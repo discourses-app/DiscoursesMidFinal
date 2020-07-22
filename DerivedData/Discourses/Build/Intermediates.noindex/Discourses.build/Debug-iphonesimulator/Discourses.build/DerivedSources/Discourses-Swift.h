@@ -228,7 +228,7 @@ SWIFT_CLASS("_TtC10Discourses11AppDelegate")
 @class NSCoder;
 
 SWIFT_CLASS("_TtC10Discourses18ChatViewController")
-@interface ChatViewController : UIViewController <UITextFieldDelegate>
+@interface ChatViewController : UIViewController
 @property (nonatomic, strong) IBOutlet UIView * _Null_unspecified backMostView;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified inputField;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified subjectLabel;
@@ -249,16 +249,17 @@ SWIFT_CLASS("_TtC10Discourses18ChatViewController")
 @interface ChatViewController (SWIFT_EXTENSION(Discourses)) <UITableViewDelegate>
 @end
 
-
-@interface ChatViewController (SWIFT_EXTENSION(Discourses))
-- (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
-@end
-
 @class UITableViewCell;
 
 @interface ChatViewController (SWIFT_EXTENSION(Discourses)) <UITableViewDataSource>
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+@interface ChatViewController (SWIFT_EXTENSION(Discourses)) <UITextFieldDelegate>
+- (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
+- (void)textFieldDidBeginEditing:(UITextField * _Nonnull)textField;
 @end
 
 @class NSLayoutConstraint;

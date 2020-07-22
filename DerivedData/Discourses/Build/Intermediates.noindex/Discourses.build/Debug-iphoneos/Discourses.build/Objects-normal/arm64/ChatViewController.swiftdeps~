@@ -7,6 +7,7 @@ provides-nominal:
 provides-member:
 - ["10Discourses18ChatViewControllerC", ""]
 - ["10Discourses18ChatViewControllerC", "textFieldShouldReturn"]
+- ["10Discourses18ChatViewControllerC", "textFieldShouldBeginEditing"]
 provides-dynamic-lookup:
 - "X"
 - "Y"
@@ -30,6 +31,7 @@ provides-dynamic-lookup:
 - "tableHeight"
 - "tableView"
 - "tableWidth"
+- "textFieldShouldBeginEditing"
 - "textFieldShouldReturn"
 - "viewDidAppear"
 - "viewDidLoad"
@@ -3564,4 +3566,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "c5ce056b64f23c8d912b77bd5c486060"
+interface-hash: "e43ce418f5502a04cb7ff276986fcec8"

@@ -1,12 +1,12 @@
 version: "Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
 options: "ad74e9295f5c5e7f501e101eaea39ad7"
-build_time: [1595423908, 438741000]
+build_time: [1595425058, 28439000]
 inputs:
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/View/ReceivedMessageCell.swift": [1595054346, 460992428]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Model/ClassModel.swift": [1594982238, 925773869]
-  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Controller/SearchClassViewController.swift": [1595399337, 924902799]
+  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Controller/SearchClassViewController.swift": [1595424875, 567124553]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Controller/StartupViewController.swift": [1595348404, 805232252]
-  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Controller/ChatViewController.swift": [1595423715, 583025580]
+  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Controller/ChatViewController.swift": [1595424932, 866524346]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Model/KeyboardLayoutConstraint.swift": [1595167934, 86090866]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Model/UIImage-ResizeExtension.swift": [1594982344, 778106917]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/AppDelegate.swift": [1594980809, 209873565]
@@ -14,6 +14,6 @@ inputs:
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/View/ClassBubbleTableViewCell.swift": [1594982504, 143625001]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/View/SentMessageCell.swift": [1595054422, 870558742]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/SceneDelegate.swift": [1594980809, 213636782]
-  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Controller/SubscribedClassesViewController.swift": [1595349258, 263628514]
-  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Constants.swift": [1595422438, 672326998]
-  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Controller/LoginViewController.swift": [1595348383, 552019073]
+  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Controller/SubscribedClassesViewController.swift": [1595424875, 567940082]
+  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Constants.swift": [1595425057, 956678105]
+  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Controller/LoginViewController.swift": [1595424875, 566218529]
