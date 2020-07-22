@@ -1,0 +1,19 @@
+version: "Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+options: "3677e36b1b64fe7d672a5f07469c2167"
+build_time: [1595073871, 734449000]
+inputs:
+  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/View/ReceivedMessageCell.swift": [1595054346, 460992428]
+  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Model/ClassModel.swift": [1594982238, 925773869]
+  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Controller/SearchClassViewController.swift": [1595064643, 487542194]
+  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Controller/StartupViewController.swift": [1594999524, 44034488]
+  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Controller/ChatViewController.swift": [1595073849, 640117893]
+  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Model/KeyboardLayoutConstraint.swift": [1594983797, 578369932]
+  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Model/UIImage-ResizeExtension.swift": [1594982344, 778106917]
+  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/AppDelegate.swift": [1594980809, 209873565]
+  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Model/Message.swift": [1594982211, 664187295]
+  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/View/ClassBubbleTableViewCell.swift": [1594982504, 143625001]
+  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/View/SentMessageCell.swift": [1595054422, 870558742]
+  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/SceneDelegate.swift": [1594980809, 213636782]
+  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Controller/SubscribedClassesViewController.swift": [1595055242, 569802106]
+  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Constants.swift": [1594984647, 185296425]
+  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Controller/LoginViewController.swift": [1595064643, 497487263]
