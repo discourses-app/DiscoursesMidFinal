@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JEu-F2-eTP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JEu-F2-eTP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -122,15 +122,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tGl-o8-ers">
-                                <rect key="frame" x="1" y="129" width="414" height="664"/>
+                                <rect key="frame" x="1" y="117" width="414" height="660"/>
                                 <color key="backgroundColor" name="BrandForegroundColor"/>
                                 <color key="sectionIndexBackgroundColor" name="BrandForegroundColor"/>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="JBi-rK-Z9O">
-                                <rect key="frame" x="20" y="59" width="374" height="51"/>
+                                <rect key="frame" x="20" y="54" width="374" height="53"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxP-eI-TbS">
-                                        <rect key="frame" x="0.0" y="0.0" width="41" height="51"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="41" height="53"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="41" id="LNb-8Y-4Nz"/>
                                         </constraints>
@@ -140,8 +140,8 @@
                                             <action selector="backButtonPressed:" destination="3br-K5-M8v" eventType="touchUpInside" id="z90-m9-SOb"/>
                                         </connections>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="RPJ-Vx-BY3">
-                                        <rect key="frame" x="86" y="0.0" width="202" height="51"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-2" translatesAutoresizingMaskIntoConstraints="NO" id="RPJ-Vx-BY3">
+                                        <rect key="frame" x="86" y="0.0" width="202" height="53"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Psych 100A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bp7-ln-x4z">
                                                 <rect key="frame" x="0.0" y="0.0" width="202" height="35"/>
@@ -150,7 +150,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Professor Jack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5UO-Rd-Es8">
-                                                <rect key="frame" x="0.0" y="31" width="202" height="20"/>
+                                                <rect key="frame" x="0.0" y="33" width="202" height="20"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" name="BrandForegroundColor"/>
                                                 <nil key="highlightedColor"/>
@@ -158,7 +158,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Js9-hi-638">
-                                        <rect key="frame" x="333" y="0.0" width="41" height="51"/>
+                                        <rect key="frame" x="333" y="0.0" width="41" height="53"/>
                                         <color key="tintColor" name="BrandForegroundColor"/>
                                         <state key="normal" image="line.horizontal.3" catalog="system"/>
                                     </button>
@@ -168,24 +168,27 @@
                                 </constraints>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="    Type here..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S6Z-j4-rJv">
-                                <rect key="frame" x="20" y="828" width="374" height="34"/>
+                                <rect key="frame" x="20" y="807" width="374" height="45"/>
                                 <color key="backgroundColor" name="BrandForegroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="tQk-Ti-MLA"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="send"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" name="ClassListBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="tGl-o8-ers" firstAttribute="top" secondItem="JBi-rK-Z9O" secondAttribute="bottom" constant="19" id="9og-J5-yOU"/>
+                            <constraint firstItem="tGl-o8-ers" firstAttribute="top" secondItem="JBi-rK-Z9O" secondAttribute="bottom" constant="10" id="9og-J5-yOU"/>
                             <constraint firstItem="pc1-7h-0OL" firstAttribute="trailing" secondItem="JBi-rK-Z9O" secondAttribute="trailing" constant="20" id="BWQ-zX-cVl"/>
                             <constraint firstAttribute="trailing" secondItem="tGl-o8-ers" secondAttribute="trailing" constant="-1" id="N9E-2a-a8e"/>
                             <constraint firstItem="pc1-7h-0OL" firstAttribute="trailing" secondItem="S6Z-j4-rJv" secondAttribute="trailing" constant="20" id="Qse-N5-LBZ"/>
                             <constraint firstItem="S6Z-j4-rJv" firstAttribute="leading" secondItem="pc1-7h-0OL" secondAttribute="leading" constant="20" id="Rii-W7-FEl"/>
-                            <constraint firstItem="JBi-rK-Z9O" firstAttribute="top" secondItem="pc1-7h-0OL" secondAttribute="top" constant="15" id="bfH-yc-aTW"/>
+                            <constraint firstItem="JBi-rK-Z9O" firstAttribute="top" secondItem="pc1-7h-0OL" secondAttribute="top" constant="10" id="bfH-yc-aTW"/>
                             <constraint firstItem="JBi-rK-Z9O" firstAttribute="leading" secondItem="pc1-7h-0OL" secondAttribute="leading" constant="20" id="ldA-3d-gVv"/>
-                            <constraint firstItem="pc1-7h-0OL" firstAttribute="bottom" secondItem="S6Z-j4-rJv" secondAttribute="bottom" id="lqq-VJ-xcf" customClass="KeyboardLayoutConstraint" customModule="Discourses" customModuleProvider="target"/>
+                            <constraint firstItem="pc1-7h-0OL" firstAttribute="bottom" secondItem="S6Z-j4-rJv" secondAttribute="bottom" constant="10" id="lqq-VJ-xcf" customClass="KeyboardLayoutConstraint" customModule="Discourses" customModuleProvider="target"/>
                             <constraint firstItem="tGl-o8-ers" firstAttribute="leading" secondItem="pc1-7h-0OL" secondAttribute="leading" constant="1" id="oLw-EK-pvP"/>
-                            <constraint firstItem="S6Z-j4-rJv" firstAttribute="top" secondItem="tGl-o8-ers" secondAttribute="bottom" constant="35" id="uen-U0-na9"/>
+                            <constraint firstItem="S6Z-j4-rJv" firstAttribute="top" secondItem="tGl-o8-ers" secondAttribute="bottom" constant="30" id="uen-U0-na9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pc1-7h-0OL"/>
                     </view>

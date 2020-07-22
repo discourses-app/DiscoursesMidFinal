@@ -86,7 +86,7 @@ class ChatViewController: UIViewController {
          subjectLabel.font = UIFont(name: "AirbnbCerealApp-Medium", size: 30)
         
         //professor label set up
-        professorLabel.font = UIFont(name: "AirbnbCerealApp-Book", size: 14)
+        professorLabel.font = UIFont(name: "AirbnbCerealApp-Book", size: 16)
         
         
         //chat table view set up
@@ -109,17 +109,18 @@ class ChatViewController: UIViewController {
         inputField.delegate = self
         
         //menu button set up
-        let menuimage = #imageLiteral(resourceName: "ThreeLines").resized(to: CGSize(width: 25, height: 20))
+        let menuimage = #imageLiteral(resourceName: "ThreeLines").resized(to: CGSize(width: 22, height: 20))
         menuButton.setImage(
             menuimage,
             for: .normal
         )
         
         //back button set up
+        
         backButton.setImage(
             UIImage(
                 systemName: "arrow.left",
-                withConfiguration: UIImage.SymbolConfiguration(pointSize: 30)
+                withConfiguration: UIImage.SymbolConfiguration(pointSize: 25)
             ),
             for: .normal
         )
