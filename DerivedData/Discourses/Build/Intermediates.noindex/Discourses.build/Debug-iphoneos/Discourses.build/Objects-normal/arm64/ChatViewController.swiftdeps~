@@ -85,6 +85,11 @@ depends-top-level:
 - !private "print"
 depends-member:
 - !private ["s18AdditiveArithmeticP", "init"]
+- !private ["7SwiftUI10AnimatableP", "height"]
+- !private ["7SwiftUI10AnimatableP", "init"]
+- !private ["7SwiftUI10AnimatableP", "minX"]
+- !private ["7SwiftUI10AnimatableP", "minY"]
+- !private ["7SwiftUI10AnimatableP", "width"]
 - !private ["Sa", "append"]
 - !private ["Sa", "count"]
 - !private ["Sa", "subscript"]
@@ -912,6 +917,23 @@ depends-member:
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "trimmingCharacters"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "uppercased"]
 - !private ["SF", "init"]
+- !private ["7SwiftUI7GestureP", "addGestureRecognizer"]
+- !private ["7SwiftUI7GestureP", "dataSource"]
+- !private ["7SwiftUI7GestureP", "delegate"]
+- !private ["7SwiftUI7GestureP", "endEditing"]
+- !private ["7SwiftUI7GestureP", "font"]
+- !private ["7SwiftUI7GestureP", "frame"]
+- !private ["7SwiftUI7GestureP", "image"]
+- !private ["7SwiftUI7GestureP", "isEditing"]
+- !private ["7SwiftUI7GestureP", "layer"]
+- !private ["7SwiftUI7GestureP", "numberOfRows"]
+- !private ["7SwiftUI7GestureP", "register"]
+- !private ["7SwiftUI7GestureP", "reloadData"]
+- !private ["7SwiftUI7GestureP", "rightView"]
+- !private ["7SwiftUI7GestureP", "rightViewMode"]
+- !private ["7SwiftUI7GestureP", "scrollToRow"]
+- !private ["7SwiftUI7GestureP", "setImage"]
+- !private ["7SwiftUI7GestureP", "text"]
 - !private ["SH", "CGFloat"]
 - !private ["SH", "CGRect"]
 - !private ["SH", "CGSize"]
@@ -3207,6 +3229,24 @@ depends-member:
 - ["So16UIViewControllerC", "viewDidLoad"]
 - ["So16UIViewControllerC", "viewForZooming"]
 - ["So16UIViewControllerC", "viewForZoomingInScrollView"]
+- !private ["7SwiftUI16VectorArithmeticP", "init"]
+- !private ["7SwiftUI4ViewP", "addGestureRecognizer"]
+- !private ["7SwiftUI4ViewP", "dataSource"]
+- !private ["7SwiftUI4ViewP", "delegate"]
+- !private ["7SwiftUI4ViewP", "endEditing"]
+- !private ["7SwiftUI4ViewP", "font"]
+- !private ["7SwiftUI4ViewP", "frame"]
+- !private ["7SwiftUI4ViewP", "image"]
+- !private ["7SwiftUI4ViewP", "isEditing"]
+- !private ["7SwiftUI4ViewP", "layer"]
+- !private ["7SwiftUI4ViewP", "numberOfRows"]
+- !private ["7SwiftUI4ViewP", "register"]
+- !private ["7SwiftUI4ViewP", "reloadData"]
+- !private ["7SwiftUI4ViewP", "rightView"]
+- !private ["7SwiftUI4ViewP", "rightViewMode"]
+- !private ["7SwiftUI4ViewP", "scrollToRow"]
+- !private ["7SwiftUI4ViewP", "setImage"]
+- !private ["7SwiftUI4ViewP", "text"]
 - !private ["So19UITextFieldViewModeV", "always"]
 - !private ["s14_ArrayProtocolP", "append"]
 - !private ["s14_ArrayProtocolP", "content"]
@@ -3255,6 +3295,7 @@ depends-member:
 - !private ["s26_ExpressibleByImageLiteralP", "SymbolConfiguration"]
 - !private ["s26_ExpressibleByImageLiteralP", "init"]
 - !private ["s26_ExpressibleByImageLiteralP", "resized"]
+- !private ["7SwiftUI18_FormatSpecifiableP", "init"]
 - !private ["s19_HasContiguousBytesP", "append"]
 - !private ["s19_HasContiguousBytesP", "count"]
 - !private ["s19_HasContiguousBytesP", "hasPrefix"]
@@ -3556,6 +3597,7 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "text"]
 depends-nominal:
 - !private "s18AdditiveArithmeticP"
+- !private "7SwiftUI10AnimatableP"
 - !private "Sa"
 - !private "s10ArraySliceV"
 - !private "SK"
@@ -3597,6 +3639,7 @@ depends-nominal:
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "SF"
+- !private "7SwiftUI7GestureP"
 - "SH"
 - !private "10Foundation9IndexPathV"
 - !private "s25LosslessStringConvertibleP"
@@ -3688,6 +3731,8 @@ depends-nominal:
 - "So23UIUserActivityRestoringP"
 - !private "So6UIViewC"
 - "So16UIViewControllerC"
+- !private "7SwiftUI16VectorArithmeticP"
+- !private "7SwiftUI4ViewP"
 - !private "So19UITextFieldViewModeV"
 - !private "s14_ArrayProtocolP"
 - !private "s15_CVarArgAlignedP"
@@ -3699,6 +3744,7 @@ depends-nominal:
 - !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
 - !private "s26_ExpressibleByImageLiteralP"
+- !private "7SwiftUI18_FormatSpecifiableP"
 - !private "s19_HasContiguousBytesP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
@@ -3708,6 +3754,7 @@ depends-nominal:
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreData.swiftmodule/arm64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/arm64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/arm64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/arm64.swiftmodule"
@@ -3716,12 +3763,15 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/arm64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/arm64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/os.swiftmodule/arm64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/arm64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/arm64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftUI.swiftmodule/arm64-apple-ios.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Combine.swiftmodule/arm64-apple-ios.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
@@ -3730,7 +3780,8 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "aa54ec19c57477da86968bbf2e4bda50"
+interface-hash: "a71e2ebe43d2bde82fce2b106ea92c51"

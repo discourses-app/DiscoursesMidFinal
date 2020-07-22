@@ -176,6 +176,40 @@
 			<key>uniqueIdentifier</key>
 			<string>09096101-6DE8-4410-9112-6BC65E06C0B0</string>
 		</dict>
+		<key>0EB31A8E-7D08-4FD3-980E-6D04C8FE3AE8</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>0EB31A8E-7D08-4FD3-980E-6D04C8FE3AE8.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Discourses project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Discourses</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Discourses</string>
+			<key>timeStartedRecording</key>
+			<real>617091999.65084696</real>
+			<key>timeStoppedRecording</key>
+			<real>617092000.87846506</real>
+			<key>title</key>
+			<string>Build Discourses</string>
+			<key>uniqueIdentifier</key>
+			<string>0EB31A8E-7D08-4FD3-980E-6D04C8FE3AE8</string>
+		</dict>
 		<key>0EBA2149-54E6-4489-95A6-518802B57FC5</key>
 		<dict>
 			<key>className</key>
@@ -482,6 +516,40 @@
 			<key>uniqueIdentifier</key>
 			<string>1C9D2C22-F8CA-4ED1-B93E-AE3848C23519</string>
 		</dict>
+		<key>1CEFEFC5-5B04-4C75-9A58-9C08AE59E0D1</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>1CEFEFC5-5B04-4C75-9A58-9C08AE59E0D1.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Discourses project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Discourses</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Discourses</string>
+			<key>timeStartedRecording</key>
+			<real>617091809.24888802</real>
+			<key>timeStoppedRecording</key>
+			<real>617091811.29649603</real>
+			<key>title</key>
+			<string>Build Discourses</string>
+			<key>uniqueIdentifier</key>
+			<string>1CEFEFC5-5B04-4C75-9A58-9C08AE59E0D1</string>
+		</dict>
 		<key>1D670B3E-20A8-4FEE-B03A-088FD404BCE1</key>
 		<dict>
 			<key>className</key>
@@ -583,6 +651,40 @@
 			<string>Build Discourses</string>
 			<key>uniqueIdentifier</key>
 			<string>22AEDD26-83F8-4615-AD75-B5BADA6302A6</string>
+		</dict>
+		<key>27B76038-6509-409F-B227-AEF90D1DF99B</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>27B76038-6509-409F-B227-AEF90D1DF99B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Discourses project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Discourses</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Discourses</string>
+			<key>timeStartedRecording</key>
+			<real>617092195.63759196</real>
+			<key>timeStoppedRecording</key>
+			<real>617092197.08404803</real>
+			<key>title</key>
+			<string>Build Discourses</string>
+			<key>uniqueIdentifier</key>
+			<string>27B76038-6509-409F-B227-AEF90D1DF99B</string>
 		</dict>
 		<key>29A971EF-BD50-45D0-AA94-4A3CC7710A6B</key>
 		<dict>
@@ -1638,6 +1740,40 @@
 			<key>uniqueIdentifier</key>
 			<string>5A0A0D23-1CD8-4938-89C7-A0408926BB27</string>
 		</dict>
+		<key>5F6B160E-A3EE-4367-99C2-1B17806F3514</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>5F6B160E-A3EE-4367-99C2-1B17806F3514.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Discourses project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Discourses</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Discourses</string>
+			<key>timeStartedRecording</key>
+			<real>617091926.55372298</real>
+			<key>timeStoppedRecording</key>
+			<real>617091927.68085206</real>
+			<key>title</key>
+			<string>Build Discourses</string>
+			<key>uniqueIdentifier</key>
+			<string>5F6B160E-A3EE-4367-99C2-1B17806F3514</string>
+		</dict>
 		<key>5F9D840F-6598-4919-B84B-9014A54BB2B1</key>
 		<dict>
 			<key>className</key>
@@ -2488,6 +2624,40 @@
 			<key>uniqueIdentifier</key>
 			<string>95D8226A-8215-4995-8D0B-FD1716384D2A</string>
 		</dict>
+		<key>969858EE-BD5D-47AE-BD09-0B1275D50EE8</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>969858EE-BD5D-47AE-BD09-0B1275D50EE8.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Discourses project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Discourses</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Discourses</string>
+			<key>timeStartedRecording</key>
+			<real>617091722.94200504</real>
+			<key>timeStoppedRecording</key>
+			<real>617091725.32283294</real>
+			<key>title</key>
+			<string>Build Discourses</string>
+			<key>uniqueIdentifier</key>
+			<string>969858EE-BD5D-47AE-BD09-0B1275D50EE8</string>
+		</dict>
 		<key>97474BFC-4660-4D2F-B52D-CB3C546E1FF1</key>
 		<dict>
 			<key>className</key>
@@ -2691,6 +2861,40 @@
 			<string>Build Discourses</string>
 			<key>uniqueIdentifier</key>
 			<string>A29E35EB-93DD-4C92-B6DE-BFF2D564A358</string>
+		</dict>
+		<key>A4319F9D-61EA-497F-9C26-EBB6706F71DC</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>A4319F9D-61EA-497F-9C26-EBB6706F71DC.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Discourses project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Discourses</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Discourses</string>
+			<key>timeStartedRecording</key>
+			<real>617092160.34845304</real>
+			<key>timeStoppedRecording</key>
+			<real>617092162.14704394</real>
+			<key>title</key>
+			<string>Build Discourses</string>
+			<key>uniqueIdentifier</key>
+			<string>A4319F9D-61EA-497F-9C26-EBB6706F71DC</string>
 		</dict>
 		<key>A86F354F-B38B-47B4-ACCD-8093F783C555</key>
 		<dict>
@@ -4154,6 +4358,40 @@
 			<key>uniqueIdentifier</key>
 			<string>E9C5D4FA-AE48-4165-98C5-CB2DA01D2306</string>
 		</dict>
+		<key>ECCE2D91-E7BF-45F2-BCE8-77EC13E856D0</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>ECCE2D91-E7BF-45F2-BCE8-77EC13E856D0.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Discourses project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Discourses</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Discourses</string>
+			<key>timeStartedRecording</key>
+			<real>617092013.71534801</real>
+			<key>timeStoppedRecording</key>
+			<real>617092013.76553798</real>
+			<key>title</key>
+			<string>Build Discourses</string>
+			<key>uniqueIdentifier</key>
+			<string>ECCE2D91-E7BF-45F2-BCE8-77EC13E856D0</string>
+		</dict>
 		<key>EDA137D2-ED4D-4F18-81F4-944949C73B4B</key>
 		<dict>
 			<key>className</key>
@@ -4391,6 +4629,40 @@
 			<string>Build Discourses</string>
 			<key>uniqueIdentifier</key>
 			<string>FDC59F49-922F-4224-A0F8-7D619424465A</string>
+		</dict>
+		<key>FE8E41A3-CB56-49E7-B370-FB532236507E</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>FE8E41A3-CB56-49E7-B370-FB532236507E.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Discourses project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Discourses</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Discourses</string>
+			<key>timeStartedRecording</key>
+			<real>617092042.85858297</real>
+			<key>timeStoppedRecording</key>
+			<real>617092046.68950701</real>
+			<key>title</key>
+			<string>Build Discourses</string>
+			<key>uniqueIdentifier</key>
+			<string>FE8E41A3-CB56-49E7-B370-FB532236507E</string>
 		</dict>
 	</dict>
 </dict>

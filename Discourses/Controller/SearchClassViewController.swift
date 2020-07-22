@@ -150,7 +150,7 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
             }
             
         else {
-        let profLabel = UILabel(frame: CGRect(x: 30, y: 60, width: 275, height: 20))
+            let profLabel = UILabel(frame: CGRect(x: 20.5, y: 60, width: 275, height: 20))
             profLabel.text = selectedCellValues[1].uppercased()
                profLabel.textColor = #colorLiteral(red: 0.9490196078, green: 0.937254902, blue: 0.8745098039, alpha: 1)
                profLabel.textAlignment = .left
@@ -182,7 +182,7 @@ class SearchClassViewController: UIViewController, UITableViewDataSource, UITabl
         let className = cell!.textLabel!.text!
         let profName = cell?.contentView.viewWithTag(2) as! UILabel
         let newlySubscribed = Class (name: className, professor: profName.text!)
-        Constants.classes.append(newlySubscribed)
+        Constants.classes.insert(newlySubscribed, at: 0)
         //removing a name from the collection 'data' if it is selected by the user
         //we will have to make a struct that stores the name of a class along with the professor teaching said class
         for (index, element) in Constants.allClasses.enumerated() {

@@ -16,8 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BrandColoredLogo" translatesAutoresizingMaskIntoConstraints="NO" id="jSd-0Q-rMi">
-                                <rect key="frame" x="153" y="402" width="108" height="92"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo Idea #2" translatesAutoresizingMaskIntoConstraints="NO" id="jSd-0Q-rMi">
+                                <rect key="frame" x="137" y="378" width="140" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="3s6-pB-82U"/>
+                                    <constraint firstAttribute="width" constant="140" id="Pe2-hg-dv1"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DISCOURSES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="muL-Fv-JAP">
                                 <rect key="frame" x="154.5" y="467.5" width="105" height="21"/>
@@ -228,7 +232,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68f-MG-F2J">
-                                <rect key="frame" x="394" y="209" width="0.0" height="0.0"/>
+                                <rect key="frame" x="379" y="209" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -292,18 +296,11 @@
                                 <rect key="frame" x="0.0" y="143" width="414" height="803"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdY-zW-pES">
-                                <rect key="frame" x="20" y="87" width="246.5" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a Course" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdY-zW-pES">
+                                <rect key="frame" x="20" y="87" width="231.5" height="48"/>
                                 <color key="tintColor" name="BrandBackgroundColor"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="ADD A CLASS">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="40"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="40"/>
+                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" text="" translatesAutoresizingMaskIntoConstraints="NO" id="ccf-2V-tLJ">
@@ -469,8 +466,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BrandColoredLogo" width="107.5" height="91.5"/>
         <image name="ChatButtonIcon" width="28" height="25"/>
+        <image name="Logo Idea #2" width="147" height="147"/>
         <image name="ThreeLines" width="17" height="16"/>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="backBtn" width="10.5" height="21.5"/>
