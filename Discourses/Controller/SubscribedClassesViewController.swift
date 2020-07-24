@@ -8,49 +8,28 @@
 
 import UIKit
 
-//extension UITableView {
-//func reloadWithAnimation() {
-//    self.reloadData()
-//    let tableViewHeight = self.bounds.size.height
-//    let cells = self.visibleCells
-//    var delayCounter = 0
-//    for cell in cells {
-//        cell.transform = CGAffineTransform(translationX: 0, y: tableViewHeight)
-//    }
-//    for cell in cells {
-//        UIView.animate(withDuration: 1.6, delay: 0.08 * Double(delayCounter),usingSpringWithDamping: 0.6, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-//            cell.transform = CGAffineTransform.identity
-//        }, completion: nil)
-//        delayCounter += 1
-//    }
-//}
-//}
-
 class SubscribedClassesViewController: UIViewController {
+    
+    //MARK: - Element declaration
     @IBOutlet weak var myCoursesLabel: UILabel!
     @IBOutlet weak var addChatButton: UIButton!
     @IBOutlet weak var classListTable: UITableView!
     @IBOutlet weak var threeLinesImage: UIButton!
     
+    //MARK: - Variable delcaration
     let bubbleBgColors : [UIColor] = [
         UIColor(named: "BubbleColor1")!,
         UIColor(named: "BubbleColor2")!,
         UIColor(named: "BubbleColor3")!,
         UIColor(named: "BubbleColor4")!
     ]
-//    let classes : [Class] = [
-//        Class(name: "Psych 100A", professor: "Professor Mudane"),
-//        Class(name: "Ling 120B", professor: "Professor Sawtelle"),
-//        Class(name: "MGMT 100A", professor: "Professor Marugame"),
-//        Class(name: "ComSci 180", professor: "Professor Sarrafzadeh"),
-//        Class(name: "Physics 1C", professor: "Why are you taking Corbin")
-//    ]
-    
     var selectedCellIndex : IndexPath?
     var selectedCellUIColor : UIColor?
     
+//MARK: - Native functions manipulation
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //table view set up
         classListTable.delegate = self
         classListTable.dataSource = self
@@ -63,20 +42,17 @@ class SubscribedClassesViewController: UIViewController {
         myCoursesLabel.font = UIFont(name: "AirbnbCerealApp-ExtraBold", size: 36)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-//        self.classListTable.reloadData()
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         if let indexPath = selectedCellIndex {
             classListTable.cellForRow(at: indexPath)?.alpha = 1
             selectedCellIndex = nil
         }
-                self.classListTable.reloadData()
+        self.classListTable.reloadData()
     }
     
+//MARK: - Segue preparation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constants.Segues.classListVCToChatVC {
             if let endVC = segue.destination as? ChatViewController {
@@ -85,14 +61,13 @@ class SubscribedClassesViewController: UIViewController {
         }
         
     }
-    //MARK: - Button helper
+//MARK: - Button functions
     @IBAction func addClassButtonPressed(_ sender: UIButton) {
         performSegue(withIdentifier: Constants.Segues.classListVCtoAddClassVC, sender: self)
     }
-    
-    
-
 }
+
+//MARK: - TableView Deleagate
 
 extension SubscribedClassesViewController : UITableViewDelegate {
     
@@ -109,6 +84,8 @@ extension SubscribedClassesViewController : UITableViewDelegate {
     
 }
 
+//MARK: - TableView Data Source
+
 extension SubscribedClassesViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Constants.classes.count
@@ -123,17 +100,9 @@ extension SubscribedClassesViewController : UITableViewDataSource {
         cell.bubbleView.backgroundColor = bgColorForCell
         cell.classNameLabel.text = Constants.classes[indexPath.row].name.uppercased()
         cell.professorNameLabel.text = Constants.classes[indexPath.row].professor.uppercased()
-        
-//        if indexPath.row == 0 {
-//            cell.bubbleTopConstraint.constant += 20
-//        }
          return cell
         
     }
-    
-    
-    
-    
 }
 
 

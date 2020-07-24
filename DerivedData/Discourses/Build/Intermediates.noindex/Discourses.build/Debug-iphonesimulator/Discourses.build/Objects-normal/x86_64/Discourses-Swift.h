@@ -219,26 +219,26 @@ SWIFT_CLASS("_TtC10Discourses11AppDelegate")
 @end
 
 @class UIView;
+@class UITextView;
+@class UIStackView;
 @class UILabel;
 @class UITableView;
 @class UIButton;
-@class UITextField;
-@class UITapGestureRecognizer;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC10Discourses18ChatViewController")
 @interface ChatViewController : UIViewController
 @property (nonatomic, strong) IBOutlet UIView * _Null_unspecified backMostView;
+@property (nonatomic, strong) IBOutlet UITextView * _Null_unspecified inputField;
+@property (nonatomic, strong) IBOutlet UIStackView * _Null_unspecified inputStackView;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified subjectLabel;
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified chatTable;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified backButton;
-@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified inputField;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified menuButton;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified professorLabel;
 - (void)viewDidLoad;
 - (void)viewDidAppear:(BOOL)animated;
-- (void)someAction:(UITapGestureRecognizer * _Nonnull)sender;
 - (IBAction)attachmentButtonPressed:(UIButton * _Nonnull)sender;
 - (IBAction)backButtonPressed:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -249,6 +249,11 @@ SWIFT_CLASS("_TtC10Discourses18ChatViewController")
 @interface ChatViewController (SWIFT_EXTENSION(Discourses)) <UITableViewDelegate>
 @end
 
+
+@interface ChatViewController (SWIFT_EXTENSION(Discourses)) <UITextViewDelegate>
+- (BOOL)textView:(UITextView * _Nonnull)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString * _Nonnull)text SWIFT_WARN_UNUSED_RESULT;
+@end
+
 @class UITableViewCell;
 
 @interface ChatViewController (SWIFT_EXTENSION(Discourses)) <UITableViewDataSource>
@@ -256,10 +261,10 @@ SWIFT_CLASS("_TtC10Discourses18ChatViewController")
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 @end
 
+@class UITapGestureRecognizer;
 
-@interface ChatViewController (SWIFT_EXTENSION(Discourses)) <UITextFieldDelegate>
-- (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
-- (void)textFieldDidBeginEditing:(UITextField * _Nonnull)textField;
+@interface ChatViewController (SWIFT_EXTENSION(Discourses))
+- (void)someAction:(UITapGestureRecognizer * _Nonnull)sender;
 @end
 
 @class NSLayoutConstraint;
@@ -287,6 +292,7 @@ SWIFT_CLASS("_TtC10Discourses24KeyboardLayoutConstraint") SWIFT_AVAILABILITY(tvo
 @end
 
 @class UIImageView;
+@class UITextField;
 
 SWIFT_CLASS("_TtC10Discourses19LoginViewController")
 @interface LoginViewController : UIViewController
@@ -343,24 +349,38 @@ SWIFT_CLASS("_TtC10Discourses13SceneDelegate")
 @class UISearchBar;
 
 SWIFT_CLASS("_TtC10Discourses25SearchClassViewController")
-@interface SearchClassViewController : UIViewController <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
-- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+@interface SearchClassViewController : UIViewController
 @property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified backBtn;
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified bgView;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified addClassLbl;
 @property (nonatomic, strong) IBOutlet UIView * _Null_unspecified mainView;
 @property (nonatomic, weak) IBOutlet UISearchBar * _Null_unspecified searchBar;
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;
-- (IBAction)backBtnPressed:(UIButton * _Nonnull)sender;
-- (void)searchBar:(UISearchBar * _Nonnull)searchBar textDidChange:(NSString * _Nonnull)searchText;
-- (void)searchBarSearchButtonClicked:(UISearchBar * _Nonnull)searchBar;
 - (void)viewDidLoad;
 - (void)viewDidAppear:(BOOL)animated;
-- (void)searchBarTextDidEndEditing:(UISearchBar * _Nonnull)searchBar;
-- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (IBAction)backBtnPressed:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+
+@interface SearchClassViewController (SWIFT_EXTENSION(Discourses)) <UITableViewDelegate>
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+@end
+
+
+@interface SearchClassViewController (SWIFT_EXTENSION(Discourses)) <UITableViewDataSource>
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+@interface SearchClassViewController (SWIFT_EXTENSION(Discourses)) <UISearchBarDelegate>
+- (void)searchBar:(UISearchBar * _Nonnull)searchBar textDidChange:(NSString * _Nonnull)searchText;
+- (void)searchBarSearchButtonClicked:(UISearchBar * _Nonnull)searchBar;
+- (void)searchBarTextDidEndEditing:(UISearchBar * _Nonnull)searchBar;
 @end
 
 
@@ -396,7 +416,6 @@ SWIFT_CLASS("_TtC10Discourses31SubscribedClassesViewController")
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified classListTable;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified threeLinesImage;
 - (void)viewDidLoad;
-- (void)viewDidAppear:(BOOL)animated;
 - (void)viewWillAppear:(BOOL)animated;
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (IBAction)addClassButtonPressed:(UIButton * _Nonnull)sender;
@@ -414,6 +433,8 @@ SWIFT_CLASS("_TtC10Discourses31SubscribedClassesViewController")
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 @end
+
+
 
 
 

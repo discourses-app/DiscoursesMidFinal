@@ -47,6 +47,8 @@ class StartupViewController: UIViewController {
             
         }
         
+        //Uncomment the code below whenever a new font is added to see it's name for usage in the UIFont() constructor
+        
 //        UIFont.familyNames.forEach({ familyName in
 //            let fontNames = UIFont.fontNames(forFamilyName: familyName)
 //            print(familyName, fontNames)

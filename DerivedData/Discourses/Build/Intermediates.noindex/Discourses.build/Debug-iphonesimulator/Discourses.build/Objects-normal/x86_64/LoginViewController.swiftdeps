@@ -41,11 +41,8 @@ depends-top-level:
 - "UITextFieldDelegate"
 - "UIView"
 - "UIViewController"
-- !private "UnicodeScalarType"
 - !private "_ColorLiteralType"
-- !private "print"
 depends-member:
-- !private ["7SwiftUI10AnimatableP", "height"]
 - !private ["7SwiftUI10AnimatableP", "init"]
 - !private ["7SwiftUI10AnimatableP", "width"]
 - !private ["So7CALayerC", "cornerRadius"]
@@ -65,7 +62,6 @@ depends-member:
 - !private ["So15CALayerDelegateP", "titleLabel"]
 - !private ["So13CAMediaTimingP", "cornerRadius"]
 - !private ["So13CAMediaTimingP", "masksToBounds"]
-- !private ["So6CGRectV", "height"]
 - !private ["So6CGRectV", "width"]
 - !private ["So6CGSizeV", "init"]
 - !private ["s7CVarArgP", "CGSize"]
@@ -91,7 +87,6 @@ depends-member:
 - !private ["s7CVarArgP", "layer"]
 - !private ["s7CVarArgP", "loginBtn"]
 - !private ["s7CVarArgP", "masksToBounds"]
-- !private ["s7CVarArgP", "print"]
 - !private ["s7CVarArgP", "pwdText"]
 - !private ["s7CVarArgP", "resignFirstResponder"]
 - !private ["s7CVarArgP", "resized"]
@@ -127,7 +122,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "font"]
 - !private ["s28CustomDebugStringConvertibleP", "frame"]
 - !private ["s28CustomDebugStringConvertibleP", "fullscreenView"]
-- !private ["s28CustomDebugStringConvertibleP", "height"]
 - !private ["s28CustomDebugStringConvertibleP", "image"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "isSecureTextEntry"]
@@ -136,7 +130,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "loginBtn"]
 - !private ["s28CustomDebugStringConvertibleP", "masksToBounds"]
 - !private ["s28CustomDebugStringConvertibleP", "password"]
-- !private ["s28CustomDebugStringConvertibleP", "print"]
 - !private ["s28CustomDebugStringConvertibleP", "pwdText"]
 - !private ["s28CustomDebugStringConvertibleP", "resignFirstResponder"]
 - !private ["s28CustomDebugStringConvertibleP", "resized"]
@@ -163,7 +156,6 @@ depends-member:
 - !private ["s17CustomReflectableP", "delegate"]
 - !private ["s17CustomReflectableP", "font"]
 - !private ["s17CustomReflectableP", "frame"]
-- !private ["s17CustomReflectableP", "height"]
 - !private ["s17CustomReflectableP", "image"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "isSecureTextEntry"]
@@ -197,7 +189,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "layer"]
 - !private ["s23CustomStringConvertibleP", "loginBtn"]
 - !private ["s23CustomStringConvertibleP", "masksToBounds"]
-- !private ["s23CustomStringConvertibleP", "print"]
 - !private ["s23CustomStringConvertibleP", "pwdText"]
 - !private ["s23CustomStringConvertibleP", "resignFirstResponder"]
 - !private ["s23CustomStringConvertibleP", "resized"]
@@ -222,7 +213,6 @@ depends-member:
 - !private ["Se", "delegate"]
 - !private ["Se", "font"]
 - !private ["Se", "frame"]
-- !private ["Se", "height"]
 - !private ["Se", "image"]
 - !private ["Se", "init"]
 - !private ["Se", "isSecureTextEntry"]
@@ -238,7 +228,6 @@ depends-member:
 - !private ["SE", "delegate"]
 - !private ["SE", "font"]
 - !private ["SE", "frame"]
-- !private ["SE", "height"]
 - !private ["SE", "image"]
 - !private ["SE", "init"]
 - !private ["SE", "isSecureTextEntry"]
@@ -266,7 +255,6 @@ depends-member:
 - !private ["SQ", "foregroundColor"]
 - !private ["SQ", "frame"]
 - !private ["SQ", "fullscreenView"]
-- !private ["SQ", "height"]
 - !private ["SQ", "image"]
 - !private ["SQ", "init"]
 - !private ["SQ", "isSecureTextEntry"]
@@ -276,7 +264,6 @@ depends-member:
 - !private ["SQ", "masksToBounds"]
 - !private ["SQ", "normal"]
 - !private ["SQ", "password"]
-- !private ["SQ", "print"]
 - !private ["SQ", "pwdText"]
 - !private ["SQ", "resignFirstResponder"]
 - !private ["SQ", "resized"]
@@ -350,7 +337,6 @@ depends-member:
 - !private ["SH", "loginBtn"]
 - !private ["SH", "masksToBounds"]
 - !private ["SH", "password"]
-- !private ["SH", "print"]
 - !private ["SH", "pwdText"]
 - !private ["SH", "resignFirstResponder"]
 - !private ["SH", "resized"]
@@ -391,7 +377,6 @@ depends-member:
 - ["10Discourses19LoginViewControllerC", "loginBtn"]
 - ["10Discourses19LoginViewControllerC", "loginView"]
 - ["10Discourses19LoginViewControllerC", "logoImage"]
-- !private ["10Discourses19LoginViewControllerC", "print"]
 - ["10Discourses19LoginViewControllerC", "pwdText"]
 - ["10Discourses19LoginViewControllerC", "signUpBtn"]
 - ["10Discourses19LoginViewControllerC", "sloganLabel"]
@@ -431,7 +416,6 @@ depends-member:
 - !private ["So8NSCodingP", "layer"]
 - !private ["So8NSCodingP", "loginBtn"]
 - !private ["So8NSCodingP", "masksToBounds"]
-- !private ["So8NSCodingP", "print"]
 - !private ["So8NSCodingP", "pwdText"]
 - !private ["So8NSCodingP", "resignFirstResponder"]
 - !private ["So8NSCodingP", "resized"]
@@ -463,7 +447,6 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "fullscreenView"]
 - !private ["So26NSExtensionRequestHandlingP", "landingPageImg"]
 - !private ["So26NSExtensionRequestHandlingP", "loginBtn"]
-- !private ["So26NSExtensionRequestHandlingP", "print"]
 - !private ["So26NSExtensionRequestHandlingP", "pwdText"]
 - !private ["So26NSExtensionRequestHandlingP", "signUpBtn"]
 - !private ["So26NSExtensionRequestHandlingP", "sloganLabel"]
@@ -515,7 +498,6 @@ depends-member:
 - ["So8NSObjectC", "loginView"]
 - ["So8NSObjectC", "logoImage"]
 - !private ["So8NSObjectC", "masksToBounds"]
-- !private ["So8NSObjectC", "print"]
 - ["So8NSObjectC", "pwdText"]
 - !private ["So8NSObjectC", "resignFirstResponder"]
 - !private ["So8NSObjectC", "resized"]
@@ -558,7 +540,6 @@ depends-member:
 - !private ["So8NSObjectP", "layer"]
 - !private ["So8NSObjectP", "loginBtn"]
 - !private ["So8NSObjectP", "masksToBounds"]
-- !private ["So8NSObjectP", "print"]
 - !private ["So8NSObjectP", "pwdText"]
 - !private ["So8NSObjectP", "resignFirstResponder"]
 - !private ["So8NSObjectP", "resized"]
@@ -654,7 +635,6 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "landingPageImg"]
 - !private ["So21UIAppearanceContainerP", "layer"]
 - !private ["So21UIAppearanceContainerP", "loginBtn"]
-- !private ["So21UIAppearanceContainerP", "print"]
 - !private ["So21UIAppearanceContainerP", "pwdText"]
 - !private ["So21UIAppearanceContainerP", "resignFirstResponder"]
 - !private ["So21UIAppearanceContainerP", "setTitleColor"]
@@ -687,7 +667,6 @@ depends-member:
 - !private ["So18UIContentContainerP", "fullscreenView"]
 - !private ["So18UIContentContainerP", "landingPageImg"]
 - !private ["So18UIContentContainerP", "loginBtn"]
-- !private ["So18UIContentContainerP", "print"]
 - !private ["So18UIContentContainerP", "pwdText"]
 - !private ["So18UIContentContainerP", "signUpBtn"]
 - !private ["So18UIContentContainerP", "sloganLabel"]
@@ -762,7 +741,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "landingPageImg"]
 - !private ["So18UIFocusEnvironmentP", "layer"]
 - !private ["So18UIFocusEnvironmentP", "loginBtn"]
-- !private ["So18UIFocusEnvironmentP", "print"]
 - !private ["So18UIFocusEnvironmentP", "pwdText"]
 - !private ["So18UIFocusEnvironmentP", "resignFirstResponder"]
 - !private ["So18UIFocusEnvironmentP", "setTitleColor"]
@@ -851,7 +829,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "landingPageImg"]
 - !private ["So30UIPasteConfigurationSupportingP", "layer"]
 - !private ["So30UIPasteConfigurationSupportingP", "loginBtn"]
-- !private ["So30UIPasteConfigurationSupportingP", "print"]
 - !private ["So30UIPasteConfigurationSupportingP", "pwdText"]
 - !private ["So30UIPasteConfigurationSupportingP", "resignFirstResponder"]
 - !private ["So30UIPasteConfigurationSupportingP", "setTitleColor"]
@@ -896,7 +873,6 @@ depends-member:
 - ["So11UIResponderC", "loginBtn"]
 - ["So11UIResponderC", "loginView"]
 - ["So11UIResponderC", "logoImage"]
-- !private ["So11UIResponderC", "print"]
 - ["So11UIResponderC", "pwdText"]
 - !private ["So11UIResponderC", "resignFirstResponder"]
 - !private ["So11UIResponderC", "setTitleColor"]
@@ -934,7 +910,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "landingPageImg"]
 - !private ["So30UIResponderStandardEditActionsP", "layer"]
 - !private ["So30UIResponderStandardEditActionsP", "loginBtn"]
-- !private ["So30UIResponderStandardEditActionsP", "print"]
 - !private ["So30UIResponderStandardEditActionsP", "pwdText"]
 - !private ["So30UIResponderStandardEditActionsP", "resignFirstResponder"]
 - !private ["So30UIResponderStandardEditActionsP", "setTitleColor"]
@@ -966,7 +941,6 @@ depends-member:
 - !private ["So16UIStateRestoringP", "fullscreenView"]
 - !private ["So16UIStateRestoringP", "landingPageImg"]
 - !private ["So16UIStateRestoringP", "loginBtn"]
-- !private ["So16UIStateRestoringP", "print"]
 - !private ["So16UIStateRestoringP", "pwdText"]
 - !private ["So16UIStateRestoringP", "signUpBtn"]
 - !private ["So16UIStateRestoringP", "sloganLabel"]
@@ -1012,7 +986,6 @@ depends-member:
 - !private ["So19UITextFieldDelegateP", "fullscreenView"]
 - !private ["So19UITextFieldDelegateP", "landingPageImg"]
 - !private ["So19UITextFieldDelegateP", "loginBtn"]
-- !private ["So19UITextFieldDelegateP", "print"]
 - !private ["So19UITextFieldDelegateP", "pwdText"]
 - !private ["So19UITextFieldDelegateP", "signUpBtn"]
 - !private ["So19UITextFieldDelegateP", "sloganLabel"]
@@ -1063,7 +1036,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "landingPageImg"]
 - !private ["So18UITraitEnvironmentP", "layer"]
 - !private ["So18UITraitEnvironmentP", "loginBtn"]
-- !private ["So18UITraitEnvironmentP", "print"]
 - !private ["So18UITraitEnvironmentP", "pwdText"]
 - !private ["So18UITraitEnvironmentP", "resignFirstResponder"]
 - !private ["So18UITraitEnvironmentP", "setTitleColor"]
@@ -1101,7 +1073,6 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "landingPageImg"]
 - !private ["So23UIUserActivityRestoringP", "layer"]
 - !private ["So23UIUserActivityRestoringP", "loginBtn"]
-- !private ["So23UIUserActivityRestoringP", "print"]
 - !private ["So23UIUserActivityRestoringP", "pwdText"]
 - !private ["So23UIUserActivityRestoringP", "resignFirstResponder"]
 - !private ["So23UIUserActivityRestoringP", "setTitleColor"]
@@ -1151,7 +1122,6 @@ depends-member:
 - ["So16UIViewControllerC", "loginBtn"]
 - ["So16UIViewControllerC", "loginView"]
 - ["So16UIViewControllerC", "logoImage"]
-- !private ["So16UIViewControllerC", "print"]
 - ["So16UIViewControllerC", "pwdText"]
 - ["So16UIViewControllerC", "signUpBtn"]
 - ["So16UIViewControllerC", "sloganLabel"]
@@ -1179,7 +1149,6 @@ depends-member:
 - !private ["7SwiftUI4ViewP", "textContentType"]
 - !private ["7SwiftUI4ViewP", "titleLabel"]
 - !private ["7SwiftUI4ViewP", "username"]
-- !private ["s30_CustomPlaygroundQuickLookableP", "height"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "init"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "width"]
 - !private ["s26_ExpressibleByColorLiteralP", "init"]
@@ -1211,7 +1180,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "layer"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "loginBtn"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "masksToBounds"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "pwdText"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "resignFirstResponder"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "resized"]
@@ -1254,7 +1222,6 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "layer"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "loginBtn"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "masksToBounds"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "print"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "pwdText"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "resignFirstResponder"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "resized"]
@@ -1280,7 +1247,6 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "font"]
 - !private ["s21_ObjectiveCBridgeableP", "foregroundColor"]
 - !private ["s21_ObjectiveCBridgeableP", "frame"]
-- !private ["s21_ObjectiveCBridgeableP", "height"]
 - !private ["s21_ObjectiveCBridgeableP", "image"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "isSecureTextEntry"]
@@ -1411,19 +1377,19 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "f0e46d7a7dfdb0ae3cee2bd1a85e58b9"
