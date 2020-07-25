@@ -1,12 +1,12 @@
 version: "Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
 options: "b958c5304277511cf815eb7266868992"
-build_time: [1595597130, 987958000]
+build_time: [1595598557, 904958000]
 inputs:
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/View/ReceivedMessageCell.swift": [1595054346, 460992428]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Model/ClassModel.swift": [1594982238, 925773869]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Controller/SearchClassViewController.swift": [1595596836, 697839148]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Controller/StartupViewController.swift": [1595596836, 690105182]
-  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Controller/ChatViewController.swift": [1595597130, 923678870]
+  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Controller/ChatViewController.swift": [1595597211, 807344706]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Model/KeyboardLayoutConstraint.swift": [1595167934, 86090866]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Model/UIImage-ResizeExtension.swift": [1594982344, 778106917]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/AppDelegate.swift": [1595588632, 932571726]
@@ -17,4 +17,4 @@ inputs:
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Controller/SubscribedClassesViewController.swift": [1595596836, 716145309]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Constants.swift": [1595588632, 921894214]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Controller/LoginViewController.swift": [1595593734, 253062823]
-  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Model/UIStackVIew-extension.swift": [1595596951, 495745707]
+  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Model/UIStackVIew-extension.swift": [1595598557, 178844712]
