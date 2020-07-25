@@ -219,6 +219,7 @@ SWIFT_CLASS("_TtC10Discourses11AppDelegate")
 @end
 
 @class UIView;
+@class NSLayoutConstraint;
 @class UITextView;
 @class UIStackView;
 @class UILabel;
@@ -230,6 +231,7 @@ SWIFT_CLASS("_TtC10Discourses11AppDelegate")
 SWIFT_CLASS("_TtC10Discourses18ChatViewController")
 @interface ChatViewController : UIViewController
 @property (nonatomic, strong) IBOutlet UIView * _Null_unspecified backMostView;
+@property (nonatomic, strong) IBOutlet NSLayoutConstraint * _Null_unspecified stackViewHeight;
 @property (nonatomic, strong) IBOutlet UITextView * _Null_unspecified inputField;
 @property (nonatomic, strong) IBOutlet UIStackView * _Null_unspecified inputStackView;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified subjectLabel;
@@ -249,11 +251,6 @@ SWIFT_CLASS("_TtC10Discourses18ChatViewController")
 @interface ChatViewController (SWIFT_EXTENSION(Discourses)) <UITableViewDelegate>
 @end
 
-
-@interface ChatViewController (SWIFT_EXTENSION(Discourses)) <UITextViewDelegate>
-- (BOOL)textView:(UITextView * _Nonnull)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString * _Nonnull)text SWIFT_WARN_UNUSED_RESULT;
-@end
-
 @class UITableViewCell;
 
 @interface ChatViewController (SWIFT_EXTENSION(Discourses)) <UITableViewDataSource>
@@ -267,7 +264,13 @@ SWIFT_CLASS("_TtC10Discourses18ChatViewController")
 - (void)someAction:(UITapGestureRecognizer * _Nonnull)sender;
 @end
 
-@class NSLayoutConstraint;
+
+@interface ChatViewController (SWIFT_EXTENSION(Discourses)) <UITextViewDelegate>
+- (BOOL)textView:(UITextView * _Nonnull)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString * _Nonnull)text SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)textViewShouldBeginEditing:(UITextView * _Nonnull)textView SWIFT_WARN_UNUSED_RESULT;
+- (void)textViewDidChange:(UITextView * _Nonnull)textView;
+@end
+
 
 SWIFT_CLASS("_TtC10Discourses24ClassBubbleTableViewCell")
 @interface ClassBubbleTableViewCell : UITableViewCell

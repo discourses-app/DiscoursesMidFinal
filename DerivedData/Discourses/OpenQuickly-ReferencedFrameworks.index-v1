@@ -4,8 +4,8 @@
 <array>
 	<string>GoogleMobileAds</string>
 	<string>FirebasePerformance</string>
-	<string>SafariServices</string>
 	<string>FirebaseDynamicLinks</string>
+	<string>SafariServices</string>
 	<string>FirebaseMLNLTranslate</string>
 	<string>objc</string>
 	<string>FirebaseAuth</string>
@@ -26,8 +26,8 @@
 	<string>FirebaseMLVisionLabelModel</string>
 	<string>FirebaseFirestore</string>
 	<string>FirebaseMLNLLanguageID</string>
-	<string>FirebaseMLVisionFaceModel</string>
 	<string>FirebaseDatabase</string>
+	<string>FirebaseMLVisionFaceModel</string>
 	<string>FBLPromises</string>
 	<string>SwiftUI</string>
 	<string>FirebaseRemoteConfig</string>
@@ -39,20 +39,21 @@
 	<string>FirebaseMLVisionBarcodeModel</string>
 	<string>FirebaseMLVisionTextModel</string>
 	<string>Foundation</string>
-	<string>Security</string>
-	<string>WatchKit</string>
 	<string>FirebaseMLModelInterpreter</string>
-	<string>AppKit</string>
 	<string>Fabric</string>
+	<string>WatchKit</string>
+	<string>AppKit</string>
+	<string>Security</string>
 	<string>GameKit</string>
-	<string>FirebaseMLVisionAutoML</string>
 	<string>netinet</string>
+	<string>FirebaseMLVisionAutoML</string>
 	<string>FirebaseMLVisionObjectDetection</string>
 	<string>FirebaseStorage</string>
 	<string>SystemConfiguration</string>
-	<string>CoreGraphics</string>
-	<string>FirebaseAnalytics</string>
 	<string>FirebaseFunctions</string>
+	<string>FirebaseAnalytics</string>
+	<string>CoreGraphics</string>
+	<string>GTMSessionFetcherCore</string>
 	<string>UIKit</string>
 </array>
 </plist>

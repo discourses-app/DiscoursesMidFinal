@@ -11,6 +11,7 @@ provides-dynamic-lookup:
 - "leftBuffer"
 - "messageBGView"
 - "setSelected"
+- "shouldConcatenate"
 - "stackBottomConstraint"
 depends-top-level:
 - !private "/"
@@ -40,12 +41,14 @@ depends-member:
 - !private ["So15CALayerDelegateP", "leftBuffer"]
 - !private ["So15CALayerDelegateP", "messageBGView"]
 - !private ["So15CALayerDelegateP", "setSelected"]
+- !private ["So15CALayerDelegateP", "stackBottomConstraint"]
 - !private ["So13CAMediaTimingP", "cornerRadius"]
 - !private ["So6CGRectV", "height"]
 - !private ["s7CVarArgP", "UIFont"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "alpha"]
 - !private ["s7CVarArgP", "awakeFromNib"]
+- !private ["s7CVarArgP", "constant"]
 - !private ["s7CVarArgP", "contentLabel"]
 - !private ["s7CVarArgP", "cornerRadius"]
 - !private ["s7CVarArgP", "font"]
@@ -55,10 +58,12 @@ depends-member:
 - !private ["s7CVarArgP", "leftBuffer"]
 - !private ["s7CVarArgP", "messageBGView"]
 - !private ["s7CVarArgP", "setSelected"]
+- !private ["s7CVarArgP", "stackBottomConstraint"]
 - !private ["s28CustomDebugStringConvertibleP", "UIFont"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "alpha"]
 - !private ["s28CustomDebugStringConvertibleP", "awakeFromNib"]
+- !private ["s28CustomDebugStringConvertibleP", "constant"]
 - !private ["s28CustomDebugStringConvertibleP", "contentLabel"]
 - !private ["s28CustomDebugStringConvertibleP", "cornerRadius"]
 - !private ["s28CustomDebugStringConvertibleP", "font"]
@@ -69,7 +74,9 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "leftBuffer"]
 - !private ["s28CustomDebugStringConvertibleP", "messageBGView"]
 - !private ["s28CustomDebugStringConvertibleP", "setSelected"]
+- !private ["s28CustomDebugStringConvertibleP", "stackBottomConstraint"]
 - !private ["s17CustomReflectableP", "alpha"]
+- !private ["s17CustomReflectableP", "constant"]
 - !private ["s17CustomReflectableP", "font"]
 - !private ["s17CustomReflectableP", "frame"]
 - !private ["s17CustomReflectableP", "height"]
@@ -78,6 +85,7 @@ depends-member:
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "alpha"]
 - !private ["s23CustomStringConvertibleP", "awakeFromNib"]
+- !private ["s23CustomStringConvertibleP", "constant"]
 - !private ["s23CustomStringConvertibleP", "contentLabel"]
 - !private ["s23CustomStringConvertibleP", "cornerRadius"]
 - !private ["s23CustomStringConvertibleP", "font"]
@@ -87,12 +95,15 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "leftBuffer"]
 - !private ["s23CustomStringConvertibleP", "messageBGView"]
 - !private ["s23CustomStringConvertibleP", "setSelected"]
+- !private ["s23CustomStringConvertibleP", "stackBottomConstraint"]
 - !private ["Se", "alpha"]
+- !private ["Se", "constant"]
 - !private ["Se", "font"]
 - !private ["Se", "frame"]
 - !private ["Se", "height"]
 - !private ["Se", "layer"]
 - !private ["SE", "alpha"]
+- !private ["SE", "constant"]
 - !private ["SE", "font"]
 - !private ["SE", "frame"]
 - !private ["SE", "height"]
@@ -101,6 +112,7 @@ depends-member:
 - ["SQ", ""]
 - !private ["SQ", "alpha"]
 - !private ["SQ", "awakeFromNib"]
+- !private ["SQ", "constant"]
 - !private ["SQ", "contentLabel"]
 - !private ["SQ", "cornerRadius"]
 - !private ["SQ", "font"]
@@ -111,11 +123,14 @@ depends-member:
 - !private ["SQ", "leftBuffer"]
 - !private ["SQ", "messageBGView"]
 - !private ["SQ", "setSelected"]
+- !private ["SQ", "stackBottomConstraint"]
 - !private ["s23ExpressibleByNilLiteralP", "alpha"]
+- !private ["s23ExpressibleByNilLiteralP", "constant"]
 - !private ["s23ExpressibleByNilLiteralP", "font"]
 - !private ["s23ExpressibleByNilLiteralP", "frame"]
 - !private ["s23ExpressibleByNilLiteralP", "layer"]
 - !private ["7SwiftUI7GestureP", "alpha"]
+- !private ["7SwiftUI7GestureP", "constant"]
 - !private ["7SwiftUI7GestureP", "font"]
 - !private ["7SwiftUI7GestureP", "frame"]
 - !private ["7SwiftUI7GestureP", "layer"]
@@ -123,6 +138,7 @@ depends-member:
 - ["SH", ""]
 - !private ["SH", "alpha"]
 - !private ["SH", "awakeFromNib"]
+- !private ["SH", "constant"]
 - !private ["SH", "contentLabel"]
 - !private ["SH", "cornerRadius"]
 - !private ["SH", "font"]
@@ -132,6 +148,7 @@ depends-member:
 - !private ["SH", "leftBuffer"]
 - !private ["SH", "messageBGView"]
 - !private ["SH", "setSelected"]
+- !private ["SH", "stackBottomConstraint"]
 - !private ["So8NSCodingP", "UIFont"]
 - ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "alpha"]
@@ -144,7 +161,9 @@ depends-member:
 - !private ["So8NSCodingP", "leftBuffer"]
 - !private ["So8NSCodingP", "messageBGView"]
 - !private ["So8NSCodingP", "setSelected"]
+- !private ["So8NSCodingP", "stackBottomConstraint"]
 - !private ["So9NSCopyingP", "init"]
+- !private ["So18NSLayoutConstraintC", "constant"]
 - ["So8NSObjectC", "Bool"]
 - ["So8NSObjectC", "NSLayoutConstraint"]
 - !private ["So8NSObjectC", "UIFont"]
@@ -152,6 +171,7 @@ depends-member:
 - ["So8NSObjectC", "UIView"]
 - !private ["So8NSObjectC", "alpha"]
 - ["So8NSObjectC", "awakeFromNib"]
+- !private ["So8NSObjectC", "constant"]
 - ["So8NSObjectC", "contentLabel"]
 - !private ["So8NSObjectC", "cornerRadius"]
 - !private ["So8NSObjectC", "font"]
@@ -161,11 +181,13 @@ depends-member:
 - ["So8NSObjectC", "leftBuffer"]
 - ["So8NSObjectC", "messageBGView"]
 - ["So8NSObjectC", "setSelected"]
+- ["So8NSObjectC", "shouldConcatenate"]
 - ["So8NSObjectC", "stackBottomConstraint"]
 - !private ["So8NSObjectP", "UIFont"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "alpha"]
 - !private ["So8NSObjectP", "awakeFromNib"]
+- !private ["So8NSObjectP", "constant"]
 - !private ["So8NSObjectP", "contentLabel"]
 - !private ["So8NSObjectP", "cornerRadius"]
 - !private ["So8NSObjectP", "font"]
@@ -175,8 +197,10 @@ depends-member:
 - !private ["So8NSObjectP", "leftBuffer"]
 - !private ["So8NSObjectP", "messageBGView"]
 - !private ["So8NSObjectP", "setSelected"]
+- !private ["So8NSObjectP", "stackBottomConstraint"]
 - !private ["So14NSSecureCodingP", "cornerRadius"]
 - !private ["Sq", "alpha"]
+- !private ["Sq", "constant"]
 - !private ["Sq", "font"]
 - !private ["Sq", "frame"]
 - !private ["Sq", "layer"]
@@ -192,6 +216,7 @@ depends-member:
 - ["10Discourses15SentMessageCellC", "leftBuffer"]
 - ["10Discourses15SentMessageCellC", "messageBGView"]
 - ["10Discourses15SentMessageCellC", "setSelected"]
+- ["10Discourses15SentMessageCellC", "shouldConcatenate"]
 - ["10Discourses15SentMessageCellC", "stackBottomConstraint"]
 - !private ["So29UIAccessibilityIdentificationP", "UIFont"]
 - ["So29UIAccessibilityIdentificationP", ""]
@@ -204,6 +229,7 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "leftBuffer"]
 - !private ["So29UIAccessibilityIdentificationP", "messageBGView"]
 - !private ["So29UIAccessibilityIdentificationP", "setSelected"]
+- !private ["So29UIAccessibilityIdentificationP", "stackBottomConstraint"]
 - !private ["So12UIAppearanceP", "UIFont"]
 - ["So12UIAppearanceP", ""]
 - !private ["So12UIAppearanceP", "alpha"]
@@ -215,6 +241,7 @@ depends-member:
 - !private ["So12UIAppearanceP", "leftBuffer"]
 - !private ["So12UIAppearanceP", "messageBGView"]
 - !private ["So12UIAppearanceP", "setSelected"]
+- !private ["So12UIAppearanceP", "stackBottomConstraint"]
 - !private ["So21UIAppearanceContainerP", "UIFont"]
 - ["So21UIAppearanceContainerP", ""]
 - !private ["So21UIAppearanceContainerP", "alpha"]
@@ -226,6 +253,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "leftBuffer"]
 - !private ["So21UIAppearanceContainerP", "messageBGView"]
 - !private ["So21UIAppearanceContainerP", "setSelected"]
+- !private ["So21UIAppearanceContainerP", "stackBottomConstraint"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "font"]
 - !private ["So17UICoordinateSpaceP", "UIFont"]
 - ["So17UICoordinateSpaceP", ""]
@@ -238,6 +266,7 @@ depends-member:
 - !private ["So17UICoordinateSpaceP", "leftBuffer"]
 - !private ["So17UICoordinateSpaceP", "messageBGView"]
 - !private ["So17UICoordinateSpaceP", "setSelected"]
+- !private ["So17UICoordinateSpaceP", "stackBottomConstraint"]
 - !private ["So13UIDynamicItemP", "UIFont"]
 - ["So13UIDynamicItemP", ""]
 - !private ["So13UIDynamicItemP", "alpha"]
@@ -249,6 +278,7 @@ depends-member:
 - !private ["So13UIDynamicItemP", "leftBuffer"]
 - !private ["So13UIDynamicItemP", "messageBGView"]
 - !private ["So13UIDynamicItemP", "setSelected"]
+- !private ["So13UIDynamicItemP", "stackBottomConstraint"]
 - !private ["So18UIFocusEnvironmentP", "UIFont"]
 - ["So18UIFocusEnvironmentP", ""]
 - !private ["So18UIFocusEnvironmentP", "alpha"]
@@ -260,6 +290,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "leftBuffer"]
 - !private ["So18UIFocusEnvironmentP", "messageBGView"]
 - !private ["So18UIFocusEnvironmentP", "setSelected"]
+- !private ["So18UIFocusEnvironmentP", "stackBottomConstraint"]
 - !private ["So11UIFocusItemP", "UIFont"]
 - ["So11UIFocusItemP", ""]
 - !private ["So11UIFocusItemP", "alpha"]
@@ -271,6 +302,7 @@ depends-member:
 - !private ["So11UIFocusItemP", "leftBuffer"]
 - !private ["So11UIFocusItemP", "messageBGView"]
 - !private ["So11UIFocusItemP", "setSelected"]
+- !private ["So11UIFocusItemP", "stackBottomConstraint"]
 - !private ["So20UIFocusItemContainerP", "UIFont"]
 - ["So20UIFocusItemContainerP", ""]
 - !private ["So20UIFocusItemContainerP", "alpha"]
@@ -282,6 +314,7 @@ depends-member:
 - !private ["So20UIFocusItemContainerP", "leftBuffer"]
 - !private ["So20UIFocusItemContainerP", "messageBGView"]
 - !private ["So20UIFocusItemContainerP", "setSelected"]
+- !private ["So20UIFocusItemContainerP", "stackBottomConstraint"]
 - !private ["So6UIFontC", "init"]
 - !private ["So27UIGestureRecognizerDelegateP", "UIFont"]
 - ["So27UIGestureRecognizerDelegateP", ""]
@@ -290,6 +323,7 @@ depends-member:
 - !private ["So27UIGestureRecognizerDelegateP", "leftBuffer"]
 - !private ["So27UIGestureRecognizerDelegateP", "messageBGView"]
 - !private ["So27UIGestureRecognizerDelegateP", "setSelected"]
+- !private ["So27UIGestureRecognizerDelegateP", "stackBottomConstraint"]
 - !private ["So7UILabelC", "font"]
 - !private ["So24UILargeContentViewerItemP", "UIFont"]
 - ["So24UILargeContentViewerItemP", ""]
@@ -302,6 +336,7 @@ depends-member:
 - !private ["So24UILargeContentViewerItemP", "leftBuffer"]
 - !private ["So24UILargeContentViewerItemP", "messageBGView"]
 - !private ["So24UILargeContentViewerItemP", "setSelected"]
+- !private ["So24UILargeContentViewerItemP", "stackBottomConstraint"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIFont"]
 - ["So30UIPasteConfigurationSupportingP", ""]
 - !private ["So30UIPasteConfigurationSupportingP", "alpha"]
@@ -313,6 +348,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "leftBuffer"]
 - !private ["So30UIPasteConfigurationSupportingP", "messageBGView"]
 - !private ["So30UIPasteConfigurationSupportingP", "setSelected"]
+- !private ["So30UIPasteConfigurationSupportingP", "stackBottomConstraint"]
 - ["So11UIResponderC", "Bool"]
 - ["So11UIResponderC", "NSLayoutConstraint"]
 - !private ["So11UIResponderC", "UIFont"]
@@ -328,6 +364,7 @@ depends-member:
 - ["So11UIResponderC", "leftBuffer"]
 - ["So11UIResponderC", "messageBGView"]
 - ["So11UIResponderC", "setSelected"]
+- ["So11UIResponderC", "shouldConcatenate"]
 - ["So11UIResponderC", "stackBottomConstraint"]
 - !private ["So30UIResponderStandardEditActionsP", "UIFont"]
 - ["So30UIResponderStandardEditActionsP", ""]
@@ -340,6 +377,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "leftBuffer"]
 - !private ["So30UIResponderStandardEditActionsP", "messageBGView"]
 - !private ["So30UIResponderStandardEditActionsP", "setSelected"]
+- !private ["So30UIResponderStandardEditActionsP", "stackBottomConstraint"]
 - ["So15UITableViewCellC", "Bool"]
 - ["So15UITableViewCellC", "NSLayoutConstraint"]
 - !private ["So15UITableViewCellC", "UIFont"]
@@ -352,6 +390,7 @@ depends-member:
 - ["So15UITableViewCellC", "leftBuffer"]
 - ["So15UITableViewCellC", "messageBGView"]
 - ["So15UITableViewCellC", "setSelected"]
+- ["So15UITableViewCellC", "shouldConcatenate"]
 - ["So15UITableViewCellC", "stackBottomConstraint"]
 - !private ["So18UITraitEnvironmentP", "UIFont"]
 - ["So18UITraitEnvironmentP", ""]
@@ -364,6 +403,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "leftBuffer"]
 - !private ["So18UITraitEnvironmentP", "messageBGView"]
 - !private ["So18UITraitEnvironmentP", "setSelected"]
+- !private ["So18UITraitEnvironmentP", "stackBottomConstraint"]
 - !private ["So23UIUserActivityRestoringP", "UIFont"]
 - ["So23UIUserActivityRestoringP", ""]
 - !private ["So23UIUserActivityRestoringP", "alpha"]
@@ -375,6 +415,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "leftBuffer"]
 - !private ["So23UIUserActivityRestoringP", "messageBGView"]
 - !private ["So23UIUserActivityRestoringP", "setSelected"]
+- !private ["So23UIUserActivityRestoringP", "stackBottomConstraint"]
 - ["So6UIViewC", "Bool"]
 - ["So6UIViewC", "NSLayoutConstraint"]
 - !private ["So6UIViewC", "UIFont"]
@@ -390,8 +431,10 @@ depends-member:
 - ["So6UIViewC", "leftBuffer"]
 - ["So6UIViewC", "messageBGView"]
 - ["So6UIViewC", "setSelected"]
+- ["So6UIViewC", "shouldConcatenate"]
 - ["So6UIViewC", "stackBottomConstraint"]
 - !private ["7SwiftUI4ViewP", "alpha"]
+- !private ["7SwiftUI4ViewP", "constant"]
 - !private ["7SwiftUI4ViewP", "font"]
 - !private ["7SwiftUI4ViewP", "frame"]
 - !private ["7SwiftUI4ViewP", "layer"]
@@ -400,6 +443,7 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "alpha"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "awakeFromNib"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "constant"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "contentLabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "cornerRadius"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "font"]
@@ -409,10 +453,12 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "leftBuffer"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "messageBGView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setSelected"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stackBottomConstraint"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIFont"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "alpha"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "awakeFromNib"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "constant"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "contentLabel"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "cornerRadius"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "font"]
@@ -422,7 +468,9 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "leftBuffer"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "messageBGView"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setSelected"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stackBottomConstraint"]
 - !private ["s21_ObjectiveCBridgeableP", "alpha"]
+- !private ["s21_ObjectiveCBridgeableP", "constant"]
 - !private ["s21_ObjectiveCBridgeableP", "font"]
 - !private ["s21_ObjectiveCBridgeableP", "frame"]
 - !private ["s21_ObjectiveCBridgeableP", "height"]
@@ -438,6 +486,7 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "leftBuffer"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "messageBGView"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "setSelected"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "stackBottomConstraint"]
 depends-nominal:
 - !private "7SwiftUI10AnimatableP"
 - !private "So7CALayerC"
@@ -456,6 +505,7 @@ depends-nominal:
 - "SH"
 - "So8NSCodingP"
 - !private "So9NSCopyingP"
+- !private "So18NSLayoutConstraintC"
 - "So8NSObjectC"
 - "So8NSObjectP"
 - !private "So14NSSecureCodingP"
@@ -495,11 +545,17 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/os.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/Pods/Firebase/CoreOnly/Sources/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
@@ -515,4 +571,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "bc471b8bf2202583d84503a7ad118f8e"
+interface-hash: "c8eb395e1bf26adc2c300d83006eb91e"

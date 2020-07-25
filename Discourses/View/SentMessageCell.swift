@@ -11,23 +11,25 @@ import UIKit
 class SentMessageCell: UITableViewCell {
 
     @IBOutlet weak var contentLabel: UILabel!
-
     @IBOutlet weak var messageBGView: UIView!
     @IBOutlet weak var leftBuffer: UIView!
     @IBOutlet weak var stackBottomConstraint: NSLayoutConstraint!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
         leftBuffer.alpha = 0
         messageBGView.layer.cornerRadius = messageBGView.frame.height / 2
         if messageBGView.layer.cornerRadius > 20 {
             messageBGView.layer.cornerRadius = 20
         }
         contentLabel.font = UIFont(name: "AirbnbCerealApp-Book", size: 17)
+        // Initialization code
+    }
+    
+    
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
         // Configure the view for the selected state
     }
     

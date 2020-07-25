@@ -33,6 +33,7 @@ class ChatViewController: UIViewController {
     var keyboardHeight : CGFloat = 0.0//346.0 //for iPhone 11
     var initStackHeight : CGFloat!
     var flag : Int = 0 //just trust me on why we need this
+    var previousRect = CGRect.zero
     var messages : [Message] = [
         Message(
             from: Sender(withName: "Janardhan", withProfilePic: #imageLiteral(resourceName: "BrandColoredLogo")),
@@ -154,41 +155,6 @@ class ChatViewController: UIViewController {
             print("Dismissing current view controller")
         }
     }
-    
-//    @objc func updateHeight() {
-//        var contentSize = inputField.sizeThatFits(inputField.bounds.size)
-//        inputField.frame.size.width = UIScreen.main.bounds.width
-//        if contentSize.height > UIScreen.main.bounds.height / 5{
-//            inputField.isScrollEnabled = true
-//            contentSize.height = UIScreen.main.bounds.height / 5
-//        } else {
-//            inputField.isScrollEnabled = false
-//        }
-//        inputField.frame.size = contentSize
-//    }
-    
-    var previousRect = CGRect.zero
-     func textViewDidChange(_ textView: UITextView) {
-         let pos = textView.endOfDocument
-         let currentRect = textView.caretRect(for: pos)
-         previousRect = previousRect.origin.y == 0.0 ? currentRect : previousRect
-         if currentRect.origin.y > previousRect.origin.y {
-             //new line reached, write your code
-            if stackViewHeight.constant <= (initStackHeight + 36) {
-            stackViewHeight.constant = stackViewHeight.constant + 18
-             print("Started New Line")
-            }
-         }
-        
-        if currentRect.origin.y < previousRect.origin.y && currentRect.origin.x > previousRect.origin.x {
-            if stackViewHeight.constant > initStackHeight {
-                stackViewHeight.constant = stackViewHeight.constant - 18
-                print("Went Back A Line")
-            }
-            
-        }
-         previousRect = currentRect
-     }
 }
   
 
@@ -235,6 +201,45 @@ extension ChatViewController : UITextViewDelegate{
             return false
         }
         return true
+    }
+    
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+        scrollToBottom()
+        return true
+    }
+    //    @objc func updateHeight() {
+    //        var contentSize = inputField.sizeThatFits(inputField.bounds.size)
+    //        inputField.frame.size.width = UIScreen.main.bounds.width
+    //        if contentSize.height > UIScreen.main.bounds.height / 5{
+    //            inputField.isScrollEnabled = true
+    //            contentSize.height = UIScreen.main.bounds.height / 5
+    //        } else {
+    //            inputField.isScrollEnabled = false
+    //        }
+    //        inputField.frame.size = contentSize
+    //    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+
+        let pos = textView.endOfDocument
+        let currentRect = textView.caretRect(for: pos)
+        previousRect = previousRect.origin.y == 0.0 ? currentRect : previousRect
+        if currentRect.origin.y > previousRect.origin.y {
+            //new line reached, write your code
+            if stackViewHeight.constant <= (initStackHeight + 36) {
+                stackViewHeight.constant = stackViewHeight.constant + 18
+                print("Started New Line")
+            }
+        }
+        
+        if currentRect.origin.y < previousRect.origin.y && currentRect.origin.x > previousRect.origin.x {
+            if stackViewHeight.constant > initStackHeight {
+                stackViewHeight.constant = stackViewHeight.constant - 18
+                print("Went Back A Line")
+            }
+            
+        }
+        previousRect = currentRect
     }
     
     
@@ -288,6 +293,8 @@ extension ChatViewController: UITableViewDataSource {
             return cell
         }
     }
+    
+    
 }
 
 //MARK: - TableView Delegate
@@ -340,4 +347,31 @@ extension ChatViewController {
             alpha: CGFloat(1.0)
         )
     }
+    
+//    func reloadTableData() {
+//        DispatchQueue.main.async {
+//            self.chatTable.reloadData()
+//        }
+//        if messages.count > 0 {
+//            var prevSender : String = ""
+//            for i in 0...messages.count {
+//                let cell = chatTable.cellForRow(at: IndexPath(row: i, section: 0))
+//                if let sentCell = cell as? SentMessageCell {
+//                    if messages.count - i > 1 && messages[i+1].sender.name == curruserName{
+//                        sentCell.stackBottomConstraint.constant = 0
+//                    }
+//                    prevSender = messages[i].sender.name
+//                }
+//                else if let receivedCell = cell as? ReceivedMessageCell {
+//                    if messages[i].sender.name == prevSender {
+//                        receivedCell.stackTopConstraint.constant = 0
+//                        receivedCell.senderText.isHidden = true
+//                        receivedCell.profileImage.alpha = 0
+//
+//                    }
+//                    prevSender = messages[i].sender.name
+//                }
+//            }
+//        }
+//    }
 }
