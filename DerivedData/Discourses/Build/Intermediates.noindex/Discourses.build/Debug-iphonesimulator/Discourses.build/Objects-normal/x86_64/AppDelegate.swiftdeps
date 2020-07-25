@@ -11,6 +11,7 @@ depends-top-level:
 - "AppDelegate"
 - "Bool"
 - !private "BooleanLiteralType"
+- !private "FirebaseApp"
 - "Set"
 - !private "StringLiteralType"
 - "UIApplication"
@@ -21,6 +22,7 @@ depends-top-level:
 - "UISceneSession"
 depends-member:
 - ["10Discourses11AppDelegateC", "Bool"]
+- !private ["10Discourses11AppDelegateC", "FirebaseApp"]
 - ["10Discourses11AppDelegateC", "Set"]
 - ["10Discourses11AppDelegateC", "UIApplication"]
 - ["10Discourses11AppDelegateC", "UIScene"]
@@ -42,6 +44,7 @@ depends-member:
 - ["10Discourses11AppDelegateC", "init"]
 - ["10Discourses11AppDelegateC", "window"]
 - ["s7CVarArgP", "ConnectionOptions"]
+- !private ["s7CVarArgP", "FirebaseApp"]
 - ["s7CVarArgP", "LaunchOptionsKey"]
 - !private ["s7CVarArgP", "UISceneConfiguration"]
 - ["s7CVarArgP", ""]
@@ -57,10 +60,12 @@ depends-member:
 - ["s7CVarArgP", "applicationWillEnterForeground"]
 - ["s7CVarArgP", "applicationWillResignActive"]
 - ["s7CVarArgP", "applicationWillTerminate"]
+- !private ["s7CVarArgP", "configure"]
 - !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "role"]
 - ["s7CVarArgP", "window"]
 - ["s28CustomDebugStringConvertibleP", "ConnectionOptions"]
+- !private ["s28CustomDebugStringConvertibleP", "FirebaseApp"]
 - ["s28CustomDebugStringConvertibleP", "LaunchOptionsKey"]
 - !private ["s28CustomDebugStringConvertibleP", "UISceneConfiguration"]
 - ["s28CustomDebugStringConvertibleP", ""]
@@ -76,10 +81,12 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "applicationWillEnterForeground"]
 - ["s28CustomDebugStringConvertibleP", "applicationWillResignActive"]
 - ["s28CustomDebugStringConvertibleP", "applicationWillTerminate"]
+- !private ["s28CustomDebugStringConvertibleP", "configure"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "role"]
 - ["s28CustomDebugStringConvertibleP", "window"]
 - ["s23CustomStringConvertibleP", "ConnectionOptions"]
+- !private ["s23CustomStringConvertibleP", "FirebaseApp"]
 - ["s23CustomStringConvertibleP", "LaunchOptionsKey"]
 - !private ["s23CustomStringConvertibleP", "UISceneConfiguration"]
 - ["s23CustomStringConvertibleP", ""]
@@ -95,10 +102,12 @@ depends-member:
 - ["s23CustomStringConvertibleP", "applicationWillEnterForeground"]
 - ["s23CustomStringConvertibleP", "applicationWillResignActive"]
 - ["s23CustomStringConvertibleP", "applicationWillTerminate"]
+- !private ["s23CustomStringConvertibleP", "configure"]
 - !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "role"]
 - ["s23CustomStringConvertibleP", "window"]
 - ["SQ", "ConnectionOptions"]
+- !private ["SQ", "FirebaseApp"]
 - ["SQ", "LaunchOptionsKey"]
 - !private ["SQ", "UISceneConfiguration"]
 - ["SQ", ""]
@@ -114,10 +123,13 @@ depends-member:
 - ["SQ", "applicationWillEnterForeground"]
 - ["SQ", "applicationWillResignActive"]
 - ["SQ", "applicationWillTerminate"]
+- !private ["SQ", "configure"]
 - !private ["SQ", "init"]
 - !private ["SQ", "role"]
 - ["SQ", "window"]
+- !private ["So6FIRAppC", "configure"]
 - ["SH", "ConnectionOptions"]
+- !private ["SH", "FirebaseApp"]
 - ["SH", "LaunchOptionsKey"]
 - !private ["SH", "UISceneConfiguration"]
 - ["SH", ""]
@@ -133,6 +145,7 @@ depends-member:
 - ["SH", "applicationWillEnterForeground"]
 - ["SH", "applicationWillResignActive"]
 - ["SH", "applicationWillTerminate"]
+- !private ["SH", "configure"]
 - !private ["SH", "init"]
 - !private ["SH", "role"]
 - ["SH", "window"]
@@ -141,6 +154,7 @@ depends-member:
 - !private ["So9NSCopyingP", "init"]
 - ["So8NSObjectC", "Bool"]
 - ["So8NSObjectC", "ConnectionOptions"]
+- !private ["So8NSObjectC", "FirebaseApp"]
 - ["So8NSObjectC", "LaunchOptionsKey"]
 - ["So8NSObjectC", "Set"]
 - ["So8NSObjectC", "UIApplication"]
@@ -159,10 +173,12 @@ depends-member:
 - ["So8NSObjectC", "applicationWillEnterForeground"]
 - ["So8NSObjectC", "applicationWillResignActive"]
 - ["So8NSObjectC", "applicationWillTerminate"]
+- !private ["So8NSObjectC", "configure"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "role"]
 - ["So8NSObjectC", "window"]
 - ["So8NSObjectP", "ConnectionOptions"]
+- !private ["So8NSObjectP", "FirebaseApp"]
 - ["So8NSObjectP", "LaunchOptionsKey"]
 - !private ["So8NSObjectP", "UISceneConfiguration"]
 - ["So8NSObjectP", ""]
@@ -178,12 +194,14 @@ depends-member:
 - ["So8NSObjectP", "applicationWillEnterForeground"]
 - ["So8NSObjectP", "applicationWillResignActive"]
 - ["So8NSObjectP", "applicationWillTerminate"]
+- !private ["So8NSObjectP", "configure"]
 - !private ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "role"]
 - ["So8NSObjectP", "window"]
 - !private ["So14NSSecureCodingP", "init"]
 - !private ["So14NSSecureCodingP", "role"]
 - ["So13UIApplicationC", "LaunchOptionsKey"]
+- !private ["So21UIApplicationDelegateP", "FirebaseApp"]
 - !private ["So21UIApplicationDelegateP", "UISceneConfiguration"]
 - ["So21UIApplicationDelegateP", ""]
 - ["So21UIApplicationDelegateP", "application"]
@@ -200,6 +218,7 @@ depends-member:
 - ["So21UIApplicationDelegateP", "applicationWillTerminate"]
 - ["So21UIApplicationDelegateP", "window"]
 - ["So30UIPasteConfigurationSupportingP", "ConnectionOptions"]
+- !private ["So30UIPasteConfigurationSupportingP", "FirebaseApp"]
 - ["So30UIPasteConfigurationSupportingP", "LaunchOptionsKey"]
 - !private ["So30UIPasteConfigurationSupportingP", "UISceneConfiguration"]
 - ["So30UIPasteConfigurationSupportingP", ""]
@@ -218,6 +237,7 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "window"]
 - ["So11UIResponderC", "Bool"]
 - ["So11UIResponderC", "ConnectionOptions"]
+- !private ["So11UIResponderC", "FirebaseApp"]
 - ["So11UIResponderC", "LaunchOptionsKey"]
 - ["So11UIResponderC", "Set"]
 - ["So11UIResponderC", "UIApplication"]
@@ -240,6 +260,7 @@ depends-member:
 - ["So11UIResponderC", "init"]
 - ["So11UIResponderC", "window"]
 - ["So30UIResponderStandardEditActionsP", "ConnectionOptions"]
+- !private ["So30UIResponderStandardEditActionsP", "FirebaseApp"]
 - ["So30UIResponderStandardEditActionsP", "LaunchOptionsKey"]
 - !private ["So30UIResponderStandardEditActionsP", "UISceneConfiguration"]
 - ["So30UIResponderStandardEditActionsP", ""]
@@ -260,6 +281,7 @@ depends-member:
 - !private ["So20UISceneConfigurationC", "init"]
 - !private ["So14UISceneSessionC", "role"]
 - ["So23UIUserActivityRestoringP", "ConnectionOptions"]
+- !private ["So23UIUserActivityRestoringP", "FirebaseApp"]
 - ["So23UIUserActivityRestoringP", "LaunchOptionsKey"]
 - !private ["So23UIUserActivityRestoringP", "UISceneConfiguration"]
 - ["So23UIUserActivityRestoringP", ""]
@@ -277,6 +299,7 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "applicationWillTerminate"]
 - ["So23UIUserActivityRestoringP", "window"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "ConnectionOptions"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "FirebaseApp"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "LaunchOptionsKey"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UISceneConfiguration"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
@@ -292,10 +315,12 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "applicationWillEnterForeground"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "applicationWillResignActive"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "applicationWillTerminate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "configure"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "role"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "window"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "ConnectionOptions"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "FirebaseApp"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "LaunchOptionsKey"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UISceneConfiguration"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
@@ -311,6 +336,7 @@ depends-member:
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "applicationWillEnterForeground"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "applicationWillResignActive"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "applicationWillTerminate"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "configure"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "role"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "window"]
@@ -320,6 +346,7 @@ depends-nominal:
 - "s28CustomDebugStringConvertibleP"
 - "s23CustomStringConvertibleP"
 - "SQ"
+- !private "So6FIRAppC"
 - "SH"
 - !private "So8NSCodingP"
 - !private "So9NSCopyingP"
@@ -355,7 +382,72 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-umbrella.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore-umbrella.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth-umbrella.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserMetadata.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRSnapshotMetadata.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRCollectionReference.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentReference.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreSource.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentChange.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthAPNSTokenType.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestore.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Pods/Firebase/CoreOnly/Sources/Firebase.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthUIDelegate.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFieldValue.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRWriteBatch.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFieldPath.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIROAuthCredential.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthCredential.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuthVersion.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRMultiFactorSession.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRListenerRegistration.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRTransaction.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRMultiFactorAssertion.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneMultiFactorAssertion.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAdditionalUserInfo.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRMultiFactorInfo.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneMultiFactorInfo.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRTimestamp.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIROAuthProvider.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRFederatedAuthProvider.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthProvider.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGameCenterAuthProvider.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRMultiFactorResolver.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneMultiFactorGenerator.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRMultiFactor.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRActionCodeSettings.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreSettings.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthSettings.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreErrors.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthTokenResult.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRGeoPoint.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentSnapshot.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRQuerySnapshot.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRQuery.h"
 - "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Pods/Firebase/CoreOnly/Sources/module.modulemap"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Modules/module.modulemap"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Modules/module.modulemap"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
@@ -371,4 +463,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "32f3f7f8fec1db170f4a48cd26aba846"
+interface-hash: "d28916b74d5291242f4267e34756c470"

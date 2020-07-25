@@ -1,6 +1,6 @@
 version: "Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
 options: "aab298befbf23acba6ce33190e091faa"
-build_time: [1595670045, 846377000]
+build_time: [1595672432, 62527000]
 inputs:
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/View/ReceivedMessageCell.swift": [1595054346, 460992428]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Model/ClassModel.swift": [1594982238, 925773869]
@@ -9,7 +9,7 @@ inputs:
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Controller/ChatViewController.swift": [1595597211, 807344706]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Model/KeyboardLayoutConstraint.swift": [1595167934, 86090866]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Model/UIImage-ResizeExtension.swift": [1594982344, 778106917]
-  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/AppDelegate.swift": [1595588632, 932571726]
+  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/AppDelegate.swift": [1595670615, 232277353]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Model/Message.swift": [1595588566, 986758234]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/View/ClassBubbleTableViewCell.swift": [1594982504, 143625001]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/View/SentMessageCell.swift": [1595054422, 870558742]

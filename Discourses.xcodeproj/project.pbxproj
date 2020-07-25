@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		6DB73E39D3BADF2855E599AB /* Pods_Discourses.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 828A666248E99A3BD00C896C /* Pods_Discourses.framework */; };
+		8F1C4D6424CC3FB4000FE611 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F1C4D6324CC3FB4000FE611 /* GoogleService-Info.plist */; };
 		8F5605B324C1B6A30014289C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5605B224C1B6A30014289C /* Message.swift */; };
 		8F5605B524C1B6C20014289C /* ClassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5605B424C1B6C20014289C /* ClassModel.swift */; };
 		8F5605B724C1B6DE0014289C /* UIImage-ResizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5605B624C1B6DE0014289C /* UIImage-ResizeExtension.swift */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		828A666248E99A3BD00C896C /* Pods_Discourses.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Discourses.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F1C4D6324CC3FB4000FE611 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8F5605B224C1B6A30014289C /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		8F5605B424C1B6C20014289C /* ClassModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassModel.swift; sourceTree = "<group>"; };
 		8F5605B624C1B6DE0014289C /* UIImage-ResizeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage-ResizeExtension.swift"; sourceTree = "<group>"; };
@@ -122,7 +124,6 @@
 				C8C5C48DA1E9A2A12C71A2D7 /* Pods-Discourses.debug.xcconfig */,
 				A70E9AC9F00BB47C71FEBC38 /* Pods-Discourses.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -194,6 +195,7 @@
 				8FFC6CFA24C1B14B00A41B95 /* Assets.xcassets */,
 				8FFC6CFC24C1B14B00A41B95 /* LaunchScreen.storyboard */,
 				8FFC6CFF24C1B14B00A41B95 /* Info.plist */,
+				8F1C4D6324CC3FB4000FE611 /* GoogleService-Info.plist */,
 				8FFC6D0924C1B3B500A41B95 /* fonts */,
 			);
 			path = Discourses;
@@ -324,6 +326,7 @@
 				8FFC6D2824C1B40F00A41B95 /* AirbnbCerealLight.ttf in Resources */,
 				8F57476424C1BE1F00286C87 /* ReceivedMessageCell.xib in Resources */,
 				8FFC6D1A24C1B3DC00A41B95 /* Cabin-Italic.ttf in Resources */,
+				8F1C4D6424CC3FB4000FE611 /* GoogleService-Info.plist in Resources */,
 				8FFC6D2324C1B40F00A41B95 /* AirbnbCerealMedium.ttf in Resources */,
 				8FFC6D2524C1B40F00A41B95 /* AirbnbCerealExtraBold.ttf in Resources */,
 				8FFC6D1B24C1B3DC00A41B95 /* Cabin-BoldItalic.ttf in Resources */,
@@ -543,13 +546,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FPTFNLQ4A4;
+				DEVELOPMENT_TEAM = 69YFZB2ZXG;
 				INFOPLIST_FILE = Discourses/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.abhishek.Discourses-demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abhishek.Discourses;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -562,13 +565,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FPTFNLQ4A4;
+				DEVELOPMENT_TEAM = 69YFZB2ZXG;
 				INFOPLIST_FILE = Discourses/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.abhishek.Discourses-demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abhishek.Discourses;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

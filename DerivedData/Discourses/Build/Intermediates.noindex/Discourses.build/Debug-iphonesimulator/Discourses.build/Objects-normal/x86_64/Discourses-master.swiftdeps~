@@ -1,6 +1,6 @@
 version: "Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
-options: "b958c5304277511cf815eb7266868992"
-build_time: [1595598557, 904958000]
+options: "aab298befbf23acba6ce33190e091faa"
+build_time: [1595670045, 846377000]
 inputs:
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/View/ReceivedMessageCell.swift": [1595054346, 460992428]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Discourses/Model/ClassModel.swift": [1594982238, 925773869]

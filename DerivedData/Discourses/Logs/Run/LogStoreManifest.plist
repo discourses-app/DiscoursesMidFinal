@@ -40,6 +40,74 @@
 			<key>uniqueIdentifier</key>
 			<string>437D5E2E-5DAB-4876-8463-A02CB1448603</string>
 		</dict>
+		<key>77B5F29A-E2B2-4016-8F73-030E92C262BE</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>77B5F29A-E2B2-4016-8F73-030E92C262BE.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Discourses project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Discourses</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Discourses</string>
+			<key>timeStartedRecording</key>
+			<real>617365466.49718595</real>
+			<key>timeStoppedRecording</key>
+			<real>617365602.04357302</real>
+			<key>title</key>
+			<string>Run Discourses</string>
+			<key>uniqueIdentifier</key>
+			<string>77B5F29A-E2B2-4016-8F73-030E92C262BE</string>
+		</dict>
+		<key>82EFC098-D803-4B24-96B9-9268CE175952</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>82EFC098-D803-4B24-96B9-9268CE175952.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Discourses project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Discourses</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Discourses</string>
+			<key>timeStartedRecording</key>
+			<real>617365243.16511905</real>
+			<key>timeStoppedRecording</key>
+			<real>617365326.75619805</real>
+			<key>title</key>
+			<string>Run Discourses</string>
+			<key>uniqueIdentifier</key>
+			<string>82EFC098-D803-4B24-96B9-9268CE175952</string>
+		</dict>
 	</dict>
 </dict>
 </plist>
