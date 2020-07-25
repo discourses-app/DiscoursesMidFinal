@@ -10,9 +10,9 @@ import UIKit
 
 
 class ChatViewController: UIViewController {
-    
     //MARK: - Element declaration
     @IBOutlet var backMostView: UIView!
+    @IBOutlet var stackViewHeight: NSLayoutConstraint!
     @IBOutlet var inputField: UITextView!
     @IBOutlet var inputStackView: UIStackView!
     @IBOutlet weak var subjectLabel: UILabel!
@@ -31,6 +31,7 @@ class ChatViewController: UIViewController {
     var tableWidth : CGFloat = 0.0
     var tableHeight : CGFloat = 0.0
     var keyboardHeight : CGFloat = 0.0//346.0 //for iPhone 11
+    var initStackHeight : CGFloat!
     var flag : Int = 0 //just trust me on why we need this
     var messages : [Message] = [
         Message(
@@ -75,7 +76,8 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+//        NotificationCenter.default.addObserver(self, selector: #selector(updateHeight), name: UITextView.textDidChangeNotification, object: nil)
+//        inputField.isScrollEnabled = false
         //background set up
         /*
          Uncomment this to make the background color change based on color of class selection
@@ -105,8 +107,9 @@ class ChatViewController: UIViewController {
         inputStackView.addBackground(color: #colorLiteral(red: 0.9490196078, green: 0.937254902, blue: 0.8745098039, alpha: 1)) //added extension
         inputStackView.layer.cornerRadius = 15
         inputStackView.layer.masksToBounds = true
-        
+        initStackHeight = stackViewHeight.constant
         //input text view set up
+        inputField.isScrollEnabled = true
         inputField.isEditable = true
         inputField.layer.masksToBounds = true
         inputField.layer.cornerRadius = 15
@@ -151,7 +154,43 @@ class ChatViewController: UIViewController {
             print("Dismissing current view controller")
         }
     }
+    
+//    @objc func updateHeight() {
+//        var contentSize = inputField.sizeThatFits(inputField.bounds.size)
+//        inputField.frame.size.width = UIScreen.main.bounds.width
+//        if contentSize.height > UIScreen.main.bounds.height / 5{
+//            inputField.isScrollEnabled = true
+//            contentSize.height = UIScreen.main.bounds.height / 5
+//        } else {
+//            inputField.isScrollEnabled = false
+//        }
+//        inputField.frame.size = contentSize
+//    }
+    
+    var previousRect = CGRect.zero
+     func textViewDidChange(_ textView: UITextView) {
+         let pos = textView.endOfDocument
+         let currentRect = textView.caretRect(for: pos)
+         previousRect = previousRect.origin.y == 0.0 ? currentRect : previousRect
+         if currentRect.origin.y > previousRect.origin.y {
+             //new line reached, write your code
+            if stackViewHeight.constant <= (initStackHeight + 36) {
+            stackViewHeight.constant = stackViewHeight.constant + 18
+             print("Started New Line")
+            }
+         }
+        
+        if currentRect.origin.y < previousRect.origin.y && currentRect.origin.x > previousRect.origin.x {
+            if stackViewHeight.constant > initStackHeight {
+                stackViewHeight.constant = stackViewHeight.constant - 18
+                print("Went Back A Line")
+            }
+            
+        }
+         previousRect = currentRect
+     }
 }
+  
 
 //MARK: - TextView Delegate
 
@@ -180,6 +219,8 @@ extension ChatViewController : UITextViewDelegate{
     //beginning editing should also change the keyboard stuff
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        
+       
         if text == "\n" {
             let content = textView.text ?? ""
             if content != "" {
