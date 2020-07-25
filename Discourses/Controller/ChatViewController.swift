@@ -37,37 +37,37 @@ class ChatViewController: UIViewController {
         Message(
             from: Sender(withName: "Janardhan", withProfilePic: #imageLiteral(resourceName: "BrandColoredLogo")),
             on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
-            withMessage: "Hi"
+            withMessage: "Hi", isConsecutive: false
         ),
         Message(
             from: Sender(withName: "Jonathon", withProfilePic: #imageLiteral(resourceName: "DiscoursesLogo")),
             on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
-            withMessage: "I'm doing well, how about yourself?"
+            withMessage: "I'm doing well, how about yourself?", isConsecutive: false
         ),
         Message(
             from: Sender(withName: "Janardhan", withProfilePic: #imageLiteral(resourceName: "BrandColoredLogo")),
             on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
-            withMessage: "I'm just keeping one multiline message so that we know it didn't mess up while we were testing"
+            withMessage: "I'm just keeping one multiline message so that we know it didn't mess up while we were testing",isConsecutive: false
         ),
         Message(
             from: Sender(withName: "Chamiya", withProfilePic: #imageLiteral(resourceName: "NoBgLogo")),
             on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
-            withMessage: "Okay..."
+            withMessage: "Okay...", isConsecutive: false
         ),
         Message(
             from: Sender(withName: "Chamiya", withProfilePic: #imageLiteral(resourceName: "NoBgLogo")),
             on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
-            withMessage: "Well this message is so that the message is suitably long such that the scroll is enabled even in full size"
+            withMessage: "Well this message is so that the message is suitably long such that the scroll is enabled even in full size", isConsecutive: true
         ),
         Message(
             from: Sender(withName: "Janardhan", withProfilePic: #imageLiteral(resourceName: "BrandColoredLogo")),
             on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
-            withMessage: "This message will help the previous message make sure that there is a scroll in the full view"
+            withMessage: "This message will help the previous message make sure that there is a scroll in the full view", isConsecutive: false
         ),
         Message(
             from: Sender(withName: "Chamiya", withProfilePic: #imageLiteral(resourceName: "NoBgLogo")),
             on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
-            withMessage: "Bro I'm begging you pls stop"
+            withMessage: "Bro I'm begging you pls stop", isConsecutive: false
         )
     ]
     
@@ -225,9 +225,14 @@ extension ChatViewController : UITextViewDelegate{
             let content = textView.text ?? ""
             if content != "" {
                 let sender = Sender(withName: self.curruserName ?? "no name", withProfilePic: nil)
-                let newMessage = Message(from: sender, on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate), withMessage: content)
-                messages.append(newMessage)
-                chatTable.reloadData()
+                var newMessage = Message(from: sender, on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate), withMessage: content, isConsecutive: false)
+                let indexPath = IndexPath(row:  self.chatTable.numberOfRows(inSection: 0) - 1, section: 0)
+                if messages[indexPath.row].sender.name == curruserName {
+                    newMessage.isConsecutive = true
+                }
+                 messages.append(newMessage)
+                self.chatTable.reloadData()
+                
             }
             textView.text = nil
             scrollToBottom()
@@ -252,6 +257,7 @@ extension ChatViewController: UITableViewDataSource {
         if curruserName == messages[indexPath.row].sender.name {
             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.sentCell) as! SentMessageCell
             cell.contentLabel.text = messages[indexPath.row].content
+            
             /*
              The following code attempts to grab specific cells to concatenate them in case the sender is the same. However, due to some error with parallel threading that xcode does, we have commented out this code
              
@@ -265,13 +271,13 @@ extension ChatViewController: UITableViewDataSource {
              */
             return cell
         }
-        else {
+        else if messages[indexPath.row].isConsecutive {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.messageCell) as! ReceivedMessageCell
             cell.messageContent.text = messages[indexPath.row].content
-            cell.profileImage.image = messages[indexPath.row].sender.profilepic
-            let currentSenderName = messages[indexPath.row].sender.name
-            cell.senderText.text = currentSenderName
+            cell.profileImage.alpha = 0
+            //let currentSenderName = messages[indexPath.row].sender.name
+            cell.senderText.isHidden = true
             /*
              The following code attempts to grab specific cells to concatenate them in case the sender is the same. However, due to some error with parallel threading that xcode does, we have commented out this code
              
@@ -286,6 +292,17 @@ extension ChatViewController: UITableViewDataSource {
              
              */
             return cell
+        }
+        else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.messageCell) as! ReceivedMessageCell
+                       cell.messageContent.text = messages[indexPath.row].content
+                       cell.profileImage.image = messages[indexPath.row].sender.profilepic
+                       let currentSenderName = messages[indexPath.row].sender.name
+                       cell.senderText.text = currentSenderName
+                       cell.profileImage.alpha = 1
+             cell.senderText.isHidden = false
+             return cell
+            
         }
     }
 }
