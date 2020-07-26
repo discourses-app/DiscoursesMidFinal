@@ -126,7 +126,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tGl-o8-ers">
-                                <rect key="frame" x="1" y="117" width="414" height="666"/>
+                                <rect key="frame" x="1" y="117" width="414" height="652"/>
                                 <color key="backgroundColor" name="BrandForegroundColor"/>
                                 <color key="sectionIndexBackgroundColor" name="BrandForegroundColor"/>
                             </tableView>
@@ -173,10 +173,10 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lrb-vR-6PS">
-                                <rect key="frame" x="22" y="816" width="370" height="36"/>
+                                <rect key="frame" x="22" y="802" width="370" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bN0-ym-pU0">
-                                        <rect key="frame" x="0.0" y="3" width="30" height="30"/>
+                                        <rect key="frame" x="0.0" y="10" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="7if-lh-pKj"/>
                                             <constraint firstAttribute="width" constant="30" id="Rx9-di-GbD"/>
@@ -184,7 +184,7 @@
                                         <state key="normal" image="paperclip" catalog="system"/>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QZY-b8-ZV4">
-                                        <rect key="frame" x="35" y="0.0" width="335" height="36"/>
+                                        <rect key="frame" x="35" y="0.0" width="335" height="50"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -194,7 +194,8 @@
                                 <color key="backgroundColor" name="BrandForegroundColor"/>
                                 <color key="tintColor" name="MessageColorBlue"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="36" identifier="stackViewHeight" id="HRv-pj-0yx"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" identifier="stackViewHeight" id="HRv-pj-0yx"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="Hhg-b0-E34"/>
                                     <constraint firstAttribute="trailing" secondItem="QZY-b8-ZV4" secondAttribute="trailing" id="eWt-hL-5ab"/>
                                     <constraint firstAttribute="bottom" secondItem="QZY-b8-ZV4" secondAttribute="bottom" id="mco-5S-5iA"/>
                                     <constraint firstItem="QZY-b8-ZV4" firstAttribute="top" secondItem="lrb-vR-6PS" secondAttribute="top" id="rQg-4c-Ub4"/>
@@ -238,6 +239,7 @@
                         <outlet property="menuButton" destination="Js9-hi-638" id="dFI-iG-kOm"/>
                         <outlet property="professorLabel" destination="5UO-Rd-Es8" id="NYS-2R-CkF"/>
                         <outlet property="stackViewHeight" destination="HRv-pj-0yx" id="DQg-Kj-Tu6"/>
+                        <outlet property="stackViewMaxHeight" destination="Hhg-b0-E34" id="b2N-Fe-TZp"/>
                         <outlet property="subjectLabel" destination="Bp7-ln-x4z" id="YuN-OE-Uwh"/>
                     </connections>
                 </viewController>
