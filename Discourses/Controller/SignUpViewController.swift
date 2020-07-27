@@ -21,11 +21,15 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
        //an animated spinner so that it doesn't look bad while we wait
         self.activityIndicator.isHidden = true
-        pwdText.textContentType = .newPassword
-        pwdText.isSecureTextEntry = true
+        //pwdText.textContentType = .newPassword
+        //pwdText.isSecureTextEntry = true //REMOVE BEFORE ACTUALLY RUNNING ON APP
+        pwdText.autocorrectionType = .no
+       
         //Confirm Password TextField.........................
-        confirmPwdText.isSecureTextEntry = true
-        confirmPwdText.textContentType = .newPassword
+        //confirmPwdText.isSecureTextEntry = true //REMOVE BEFORE ACTUALLY RUNNING ON APP
+        confirmPwdText.autocorrectionType = .no
+       
+        //confirmPwdText.textContentType = .newPassword
         //Setting up Placeholders.............................
         pwdText.attributedPlaceholder = NSAttributedString(
             string: "  Password",
@@ -89,7 +93,12 @@ class SignUpViewController: UIViewController {
                DispatchQueue.main.async {
                    Auth.auth().createUser(withEmail: self.emailText.text!, password: self.pwdText.text!) { authResult, error in
                  print("I do not think I should be getting any errors!")
-                    print(error)
+                    if error != nil {
+                        print(error)
+                        print("Boss, error ho gaya yaar!")
+                    }
+                    self.activityIndicator.stopAnimating()
+                    self.activityIndicator.isHidden = true
                    }
                  self.activityIndicator.stopAnimating()
                 self.activityIndicator.isHidden = true
