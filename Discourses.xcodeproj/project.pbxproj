@@ -48,6 +48,7 @@
 		8FFC6D2824C1B40F00A41B95 /* AirbnbCerealLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC6D2224C1B40F00A41B95 /* AirbnbCerealLight.ttf */; };
 		8FFC6D2C24C1B44A00A41B95 /* Acme-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC6D2A24C1B44900A41B95 /* Acme-Regular.ttf */; };
 		8FFC6D2D24C1B44A00A41B95 /* OFL2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC6D2B24C1B44A00A41B95 /* OFL2.txt */; };
+		D289F7F024CED7BF0024AD80 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D289F7EF24CED7BF0024AD80 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,7 @@
 		8FFC6D2B24C1B44A00A41B95 /* OFL2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL2.txt; sourceTree = "<group>"; };
 		A70E9AC9F00BB47C71FEBC38 /* Pods-Discourses.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Discourses.release.xcconfig"; path = "Target Support Files/Pods-Discourses/Pods-Discourses.release.xcconfig"; sourceTree = "<group>"; };
 		C8C5C48DA1E9A2A12C71A2D7 /* Pods-Discourses.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Discourses.debug.xcconfig"; path = "Target Support Files/Pods-Discourses/Pods-Discourses.debug.xcconfig"; sourceTree = "<group>"; };
+		D289F7EF24CED7BF0024AD80 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				8F5605BA24C1B8510014289C /* SubscribedClassesViewController.swift */,
 				8F57476124C1BD6200286C87 /* SearchClassViewController.swift */,
 				8F5605B824C1B81C0014289C /* ChatViewController.swift */,
+				D289F7EF24CED7BF0024AD80 /* SignUpViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				8F57476224C1BD6200286C87 /* SearchClassViewController.swift in Sources */,
 				8FFC6CF624C1B14900A41B95 /* StartupViewController.swift in Sources */,
 				8F5605B924C1B81C0014289C /* ChatViewController.swift in Sources */,
+				D289F7F024CED7BF0024AD80 /* SignUpViewController.swift in Sources */,
 				8F57475E24C1BCBB00286C87 /* KeyboardLayoutConstraint.swift in Sources */,
 				8F5605B724C1B6DE0014289C /* UIImage-ResizeExtension.swift in Sources */,
 				8FFC6CF224C1B14900A41B95 /* AppDelegate.swift in Sources */,

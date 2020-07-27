@@ -247,6 +247,156 @@
             </objects>
             <point key="canvasLocation" x="1282.608695652174" y="150.66964285714286"/>
         </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="Pqa-6Z-UEc">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uZt-5h-54S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="iNm-z3-QdU" customClass="SignUpViewController" customModule="Discourses" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sxQ-I7-OA5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RoyceHall" translatesAutoresizingMaskIntoConstraints="NO" id="VN5-Qk-6Eg">
+                                <rect key="frame" x="0.0" y="489.5" width="384" height="458.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VN5-Qk-6Eg" secondAttribute="height" multiplier="221:264" id="4Be-7l-fNs"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ggs-oF-Gkc">
+                                <rect key="frame" x="67" y="192" width="289" height="34"/>
+                                <color key="backgroundColor" name="BrandBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="bP3-aj-PPE"/>
+                                </constraints>
+                                <color key="textColor" name="BrandForegroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qLw-Xn-Gxd">
+                                <rect key="frame" x="67" y="276" width="289" height="34"/>
+                                <color key="backgroundColor" name="BrandBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="POP-u5-1jE"/>
+                                </constraints>
+                                <color key="textColor" name="BrandForegroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TVr-rc-Z2y">
+                                <rect key="frame" x="67" y="234" width="289" height="34"/>
+                                <color key="backgroundColor" name="BrandBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="1aG-LE-cXn"/>
+                                </constraints>
+                                <color key="textColor" name="BrandForegroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wli-8w-qcO">
+                                <rect key="frame" x="67" y="318" width="289" height="34"/>
+                                <color key="backgroundColor" name="BrandBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="f6o-iN-GKv"/>
+                                </constraints>
+                                <color key="textColor" name="BrandForegroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Az3-il-CHy">
+                                <rect key="frame" x="67" y="360" width="289" height="34"/>
+                                <color key="backgroundColor" name="BrandBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="9ST-ij-S1B"/>
+                                </constraints>
+                                <color key="textColor" name="BrandForegroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rzI-j4-JKr">
+                                <rect key="frame" x="78.5" y="147" width="257.5" height="31.5"/>
+                                <color key="tintColor" name="BrandBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="257.5" id="tdj-wF-KgU"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Class chats made easy.">
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="0.32156862745098036" green="0.41960784313725491" blue="0.51372549019607838" alpha="0.0" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.32156862745098036" green="0.41960784313725491" blue="0.51372549019607838" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="24" name="AirbnbCerealApp-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JzM-v4-9fD">
+                                <rect key="frame" x="237" y="423" width="119" height="38"/>
+                                <color key="backgroundColor" red="0.32156862745098036" green="0.41960784313725491" blue="0.51372549019607838" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="q6n-A0-oPR"/>
+                                    <constraint firstAttribute="width" constant="119" id="tQt-dQ-tgx"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Sign Up">
+                                            <attributes>
+                                                <color key="NSColor" red="0.94901960784313721" green="0.93725490196078431" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="15" name="AirbnbCerealApp-Medium"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoWithSlogan" translatesAutoresizingMaskIntoConstraints="NO" id="PRh-Z2-EjS">
+                                <rect key="frame" x="81" y="80" width="252" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="252" id="PPl-4n-Ewl"/>
+                                    <constraint firstAttribute="height" constant="42" id="ta5-ub-Ang"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.93725490196078431" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="NMb-qh-YYc" firstAttribute="trailing" secondItem="Az3-il-CHy" secondAttribute="trailing" constant="58" id="5HP-xd-Q0G"/>
+                            <constraint firstItem="PRh-Z2-EjS" firstAttribute="centerX" secondItem="sxQ-I7-OA5" secondAttribute="centerX" id="5nY-i5-EyH"/>
+                            <constraint firstItem="Wli-8w-qcO" firstAttribute="leading" secondItem="NMb-qh-YYc" secondAttribute="leading" constant="67" id="6GN-6Z-OgX"/>
+                            <constraint firstItem="NMb-qh-YYc" firstAttribute="trailing" secondItem="JzM-v4-9fD" secondAttribute="trailing" constant="58" id="6bW-Db-zTp"/>
+                            <constraint firstItem="Az3-il-CHy" firstAttribute="top" secondItem="Wli-8w-qcO" secondAttribute="bottom" constant="8" id="ATJ-bz-bjU"/>
+                            <constraint firstItem="ggs-oF-Gkc" firstAttribute="leading" secondItem="NMb-qh-YYc" secondAttribute="leading" constant="67" id="FWw-qi-t4c"/>
+                            <constraint firstItem="Wli-8w-qcO" firstAttribute="top" secondItem="qLw-Xn-Gxd" secondAttribute="bottom" constant="8" id="Jcf-mf-DPa"/>
+                            <constraint firstItem="TVr-rc-Z2y" firstAttribute="leading" secondItem="NMb-qh-YYc" secondAttribute="leading" constant="67" id="L4d-Vs-KaM"/>
+                            <constraint firstItem="PRh-Z2-EjS" firstAttribute="top" secondItem="NMb-qh-YYc" secondAttribute="top" constant="36" id="Lns-qC-mi8"/>
+                            <constraint firstItem="NMb-qh-YYc" firstAttribute="trailing" secondItem="ggs-oF-Gkc" secondAttribute="trailing" constant="58" id="Mp2-UR-E2d"/>
+                            <constraint firstItem="NMb-qh-YYc" firstAttribute="trailing" secondItem="Wli-8w-qcO" secondAttribute="trailing" constant="58" id="Rvo-s8-Fwe"/>
+                            <constraint firstItem="rzI-j4-JKr" firstAttribute="top" secondItem="PRh-Z2-EjS" secondAttribute="bottom" constant="25" id="SNE-fM-s7u"/>
+                            <constraint firstItem="TVr-rc-Z2y" firstAttribute="top" secondItem="ggs-oF-Gkc" secondAttribute="bottom" constant="8" id="ZLB-Hm-Xt5"/>
+                            <constraint firstItem="JzM-v4-9fD" firstAttribute="top" secondItem="Az3-il-CHy" secondAttribute="bottom" constant="29" id="boS-98-8De"/>
+                            <constraint firstItem="ggs-oF-Gkc" firstAttribute="top" secondItem="rzI-j4-JKr" secondAttribute="bottom" constant="13.5" id="cUc-jH-2Ur"/>
+                            <constraint firstItem="NMb-qh-YYc" firstAttribute="trailing" secondItem="TVr-rc-Z2y" secondAttribute="trailing" constant="58" id="eEx-tc-lYl"/>
+                            <constraint firstItem="qLw-Xn-Gxd" firstAttribute="leading" secondItem="NMb-qh-YYc" secondAttribute="leading" constant="67" id="ePg-om-Amj"/>
+                            <constraint firstItem="Az3-il-CHy" firstAttribute="leading" secondItem="NMb-qh-YYc" secondAttribute="leading" constant="67" id="gIL-A9-zWm"/>
+                            <constraint firstAttribute="bottom" secondItem="VN5-Qk-6Eg" secondAttribute="bottom" constant="-52" id="juS-AM-msH"/>
+                            <constraint firstItem="VN5-Qk-6Eg" firstAttribute="leading" secondItem="NMb-qh-YYc" secondAttribute="leading" id="kWj-JY-7Ro"/>
+                            <constraint firstItem="qLw-Xn-Gxd" firstAttribute="top" secondItem="TVr-rc-Z2y" secondAttribute="bottom" constant="8" id="mUq-1j-psQ"/>
+                            <constraint firstAttribute="trailing" secondItem="VN5-Qk-6Eg" secondAttribute="trailing" constant="30" id="pKg-yE-c8k"/>
+                            <constraint firstItem="rzI-j4-JKr" firstAttribute="centerX" secondItem="sxQ-I7-OA5" secondAttribute="centerX" id="xFi-O1-Ti0"/>
+                            <constraint firstItem="NMb-qh-YYc" firstAttribute="trailing" secondItem="qLw-Xn-Gxd" secondAttribute="trailing" constant="58" id="ywg-ZY-eUf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NMb-qh-YYc"/>
+                    </view>
+                    <connections>
+                        <outlet property="confirmPwdText" destination="qLw-Xn-Gxd" id="DEj-Ok-lzo"/>
+                        <outlet property="emailText" destination="ggs-oF-Gkc" id="58y-yg-qJd"/>
+                        <outlet property="firstNameText" destination="Wli-8w-qcO" id="9AW-th-y39"/>
+                        <outlet property="lastNameText" destination="Az3-il-CHy" id="KCM-0V-kfr"/>
+                        <outlet property="pwdText" destination="TVr-rc-Z2y" id="64f-6X-Px2"/>
+                        <outlet property="signUpBtn" destination="JzM-v4-9fD" id="Mha-UD-dah"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-378.26086956521743" y="906.69642857142856"/>
+        </scene>
         <!--Search Class View Controller-->
         <scene sceneID="AFs-4f-8Pj">
             <objects>
@@ -442,6 +592,9 @@
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <color key="tintColor" name="BrandForegroundColor"/>
                                 <state key="normal" title="Sign up"/>
+                                <connections>
+                                    <segue destination="iNm-z3-QdU" kind="presentation" modalPresentationStyle="fullScreen" id="xLW-gU-BtV"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landingPageImg" translatesAutoresizingMaskIntoConstraints="NO" id="Xyq-dm-hqT">
                                 <rect key="frame" x="0.0" y="451.5" width="454" height="363"/>
@@ -492,6 +645,8 @@
     <resources>
         <image name="ChatButtonIcon" width="28" height="25"/>
         <image name="Logo Idea #2" width="147" height="147"/>
+        <image name="LogoWithSlogan" width="213" height="36"/>
+        <image name="RoyceHall" width="375" height="384"/>
         <image name="ThreeLines" width="17" height="16"/>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="backBtn" width="10.5" height="21.5"/>

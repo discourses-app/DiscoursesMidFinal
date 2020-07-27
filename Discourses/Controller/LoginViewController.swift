@@ -56,7 +56,7 @@ class LoginViewController: UIViewController {
                 NSAttributedString.Key.font : UIFont(name: "AirbnbCerealApp-Book", size: 14)!
             ]
         )
-        
+      
         //usernameTxt.........................
         usernameText.textContentType = .username
         usernameText.delegate = self
