@@ -250,7 +250,6 @@
         <!--Sign Up View Controller-->
         <scene sceneID="Pqa-6Z-UEc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uZt-5h-54S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="iNm-z3-QdU" customClass="SignUpViewController" customModule="Discourses" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sxQ-I7-OA5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -263,57 +262,57 @@
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ggs-oF-Gkc">
-                                <rect key="frame" x="67" y="192" width="289" height="34"/>
+                                <rect key="frame" x="67" y="188.5" width="289" height="34"/>
                                 <color key="backgroundColor" name="BrandBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="bP3-aj-PPE"/>
                                 </constraints>
                                 <color key="textColor" name="BrandForegroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qLw-Xn-Gxd">
-                                <rect key="frame" x="67" y="276" width="289" height="34"/>
+                                <rect key="frame" x="67" y="272.5" width="289" height="34"/>
                                 <color key="backgroundColor" name="BrandBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="POP-u5-1jE"/>
                                 </constraints>
                                 <color key="textColor" name="BrandForegroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TVr-rc-Z2y">
-                                <rect key="frame" x="67" y="234" width="289" height="34"/>
+                                <rect key="frame" x="67" y="230.5" width="289" height="34"/>
                                 <color key="backgroundColor" name="BrandBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="1aG-LE-cXn"/>
                                 </constraints>
                                 <color key="textColor" name="BrandForegroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wli-8w-qcO">
-                                <rect key="frame" x="67" y="318" width="289" height="34"/>
+                                <rect key="frame" x="67" y="314.5" width="289" height="34"/>
                                 <color key="backgroundColor" name="BrandBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="f6o-iN-GKv"/>
                                 </constraints>
                                 <color key="textColor" name="BrandForegroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Az3-il-CHy">
-                                <rect key="frame" x="67" y="360" width="289" height="34"/>
+                                <rect key="frame" x="67" y="356.5" width="289" height="34"/>
                                 <color key="backgroundColor" name="BrandBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="9ST-ij-S1B"/>
                                 </constraints>
                                 <color key="textColor" name="BrandForegroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rzI-j4-JKr">
-                                <rect key="frame" x="78.5" y="147" width="257.5" height="31.5"/>
+                                <rect key="frame" x="78.5" y="147" width="257.5" height="28"/>
                                 <color key="tintColor" name="BrandBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="257.5" id="tdj-wF-KgU"/>
@@ -331,7 +330,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JzM-v4-9fD">
-                                <rect key="frame" x="237" y="423" width="119" height="38"/>
+                                <rect key="frame" x="237" y="419.5" width="119" height="38"/>
                                 <color key="backgroundColor" red="0.32156862745098036" green="0.41960784313725491" blue="0.51372549019607838" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="q6n-A0-oPR"/>
@@ -347,6 +346,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="signUpAction:" destination="iNm-z3-QdU" eventType="touchUpInside" id="XNb-N6-Bvt"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoWithSlogan" translatesAutoresizingMaskIntoConstraints="NO" id="PRh-Z2-EjS">
                                 <rect key="frame" x="81" y="80" width="252" height="42"/>
@@ -355,6 +357,11 @@
                                     <constraint firstAttribute="height" constant="42" id="ta5-ub-Ang"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="kQb-sv-VUK">
+                                <rect key="frame" x="168" y="417" width="32" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" name="BrandBackgroundColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.94901960784313721" green="0.93725490196078431" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -386,6 +393,7 @@
                         <viewLayoutGuide key="safeArea" id="NMb-qh-YYc"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="kQb-sv-VUK" id="I1t-7x-JzV"/>
                         <outlet property="confirmPwdText" destination="qLw-Xn-Gxd" id="DEj-Ok-lzo"/>
                         <outlet property="emailText" destination="ggs-oF-Gkc" id="58y-yg-qJd"/>
                         <outlet property="firstNameText" destination="Wli-8w-qcO" id="9AW-th-y39"/>
@@ -394,6 +402,7 @@
                         <outlet property="signUpBtn" destination="JzM-v4-9fD" id="Mha-UD-dah"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uZt-5h-54S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-378.26086956521743" y="906.69642857142856"/>
         </scene>
