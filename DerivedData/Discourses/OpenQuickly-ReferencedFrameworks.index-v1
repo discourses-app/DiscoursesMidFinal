@@ -45,8 +45,8 @@
 	<string>AppKit</string>
 	<string>Fabric</string>
 	<string>GameKit</string>
-	<string>FirebaseMLVisionAutoML</string>
 	<string>netinet</string>
+	<string>FirebaseMLVisionAutoML</string>
 	<string>FirebaseMLVisionObjectDetection</string>
 	<string>FirebaseStorage</string>
 	<string>SystemConfiguration</string>

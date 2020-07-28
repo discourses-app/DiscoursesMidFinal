@@ -15,6 +15,8 @@ struct Constants {
         static let classListVCToChatVC = "classlistToChat"
         static let startupVCToWelcomeVC = "startupToWelcome"
         static let classListVCtoAddClassVC = "classListToSearchClass"
+        static let loginVCtoClasslistVC = "loginVCtoClasslistVC"
+        static let loginVCToSignUpVC = "loginVCToSignUpVC"
     }
     
     struct CellIdentifiers {

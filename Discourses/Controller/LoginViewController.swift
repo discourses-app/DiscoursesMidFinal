@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 class LoginViewController: UIViewController {
 
 //MARK: - Element declaration
@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
     
 //MARK: - Variable declaration
     @IBOutlet weak var landingPageImg: UIImageView!
-    @IBOutlet weak var usernameText: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var pwdText: UITextField!
     @IBOutlet var fullscreenView: UIView!
     @IBOutlet weak var signUpBtn: UIButton!
@@ -58,11 +58,11 @@ class LoginViewController: UIViewController {
         )
       
         //usernameTxt.........................
-        usernameText.textContentType = .username
-        usernameText.delegate = self
-        usernameText.layer.cornerRadius = 15
-        usernameText.layer.masksToBounds = true
-        usernameText.attributedPlaceholder = NSAttributedString(
+        emailTextField.textContentType = .username
+        emailTextField.delegate = self
+        emailTextField.layer.cornerRadius = 15
+        emailTextField.layer.masksToBounds = true
+        emailTextField.attributedPlaceholder = NSAttributedString(
             string: "  Username",
             
             attributes: [
@@ -71,17 +71,19 @@ class LoginViewController: UIViewController {
             ]
         )
         // landing page image setup...........
-        let newWidth = fullscreenView.frame.width - 30
-        landingPageImg.image = landingPageImg.image?.resized(to: CGSize(
-                width: newWidth,
-                height: newWidth * 363.0 / 390.0
-            )
-        )
+//        let newWidth = fullscreenView.frame.width - 30
+//        landingPageImg.image = landingPageImg.image?.resized(to: CGSize(
+//                width: newWidth,
+//                height: newWidth * 363.0 / 390.0
+//            )
+//        )
         // gesture set up
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tapGesture)
 
     }
+
+    
 }
 
 //MARK: - TextField Delegate
@@ -99,3 +101,54 @@ extension LoginViewController : UITextFieldDelegate {
     }
 }
 
+//MARK: - Firbase handling
+
+extension LoginViewController {
+    
+    @IBAction func loginButtonPressed(_ sender: UIButton) {
+        
+        if let email = emailTextField.text, let password = pwdText.text {
+            loginFirebase(withEmail: email, withPassword: password)
+        }
+    }
+    
+    func loginFirebase (withEmail email: String, withPassword password : String){
+        let localEmailInexistentErr = "There is no user record corresponding to this identifier. The user may have been deleted." //there's a better way of using an enumeration for catching errors but I can't seem to use it it
+        
+        let goSignIn = UIAlertAction(title: "Sign In Instead", style: .default) { (UIAlertAction) in
+            self.performSegue(withIdentifier: Constants.Segues.loginVCToSignUpVC, sender: self)
+        }
+        let loadingAlert = UIAlertController(title: "Signing In", message: nil, preferredStyle: .alert)
+        self.present(loadingAlert, animated: true, completion: nil)
+        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+            loadingAlert.dismiss(animated: true, completion: nil)
+            if let err = error {
+                let errAlert = UIAlertController(title: "Error logging you in!", message: err.localizedDescription, preferredStyle: .alert)
+                errAlert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+                if err.localizedDescription == localEmailInexistentErr {
+                    errAlert.addAction(goSignIn)
+                }
+                self.present(errAlert, animated: true, completion: nil)
+            } else {
+                self.performSegue(withIdentifier: Constants.Segues.loginVCtoClasslistVC, sender: self)
+            }
+        }
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constants.Segues.loginVCToSignUpVC {
+            let signUpVC = segue.destination as! SignUpViewController
+            let email = emailTextField.text
+            let password = pwdText.text
+            signUpVC.baseVC = self
+            if email != nil{
+                signUpVC.email = email
+            }
+            if password != nil{
+                signUpVC.password = password
+            }
+        }
+    }
+    
+}

@@ -219,6 +219,7 @@ SWIFT_CLASS("_TtC10Discourses11AppDelegate")
 @end
 
 @class UIView;
+@class NSLayoutConstraint;
 @class UITextView;
 @class UIStackView;
 @class UILabel;
@@ -230,7 +231,9 @@ SWIFT_CLASS("_TtC10Discourses11AppDelegate")
 SWIFT_CLASS("_TtC10Discourses18ChatViewController")
 @interface ChatViewController : UIViewController
 @property (nonatomic, strong) IBOutlet UIView * _Null_unspecified backMostView;
+@property (nonatomic, strong) IBOutlet NSLayoutConstraint * _Null_unspecified stackViewHeight;
 @property (nonatomic, strong) IBOutlet UITextView * _Null_unspecified inputField;
+@property (nonatomic, strong) IBOutlet NSLayoutConstraint * _Null_unspecified stackViewMaxHeight;
 @property (nonatomic, strong) IBOutlet UIStackView * _Null_unspecified inputStackView;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified subjectLabel;
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified chatTable;
@@ -249,16 +252,17 @@ SWIFT_CLASS("_TtC10Discourses18ChatViewController")
 @interface ChatViewController (SWIFT_EXTENSION(Discourses)) <UITableViewDelegate>
 @end
 
-
-@interface ChatViewController (SWIFT_EXTENSION(Discourses)) <UITextViewDelegate>
-- (BOOL)textView:(UITextView * _Nonnull)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString * _Nonnull)text SWIFT_WARN_UNUSED_RESULT;
-@end
-
 @class UITableViewCell;
 
 @interface ChatViewController (SWIFT_EXTENSION(Discourses)) <UITableViewDataSource>
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+@interface ChatViewController (SWIFT_EXTENSION(Discourses)) <UITextViewDelegate>
+- (void)textViewDidChange:(UITextView * _Nonnull)textView;
+- (BOOL)textView:(UITextView * _Nonnull)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString * _Nonnull)text SWIFT_WARN_UNUSED_RESULT;
 @end
 
 @class UITapGestureRecognizer;
@@ -267,7 +271,6 @@ SWIFT_CLASS("_TtC10Discourses18ChatViewController")
 - (void)someAction:(UITapGestureRecognizer * _Nonnull)sender;
 @end
 
-@class NSLayoutConstraint;
 
 SWIFT_CLASS("_TtC10Discourses24ClassBubbleTableViewCell")
 @interface ClassBubbleTableViewCell : UITableViewCell
@@ -300,7 +303,7 @@ SWIFT_CLASS("_TtC10Discourses19LoginViewController")
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified loginBtn;
 @property (nonatomic, strong) IBOutlet UILabel * _Null_unspecified sloganLabel;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified landingPageImg;
-@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified usernameText;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified emailTextField;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified pwdText;
 @property (nonatomic, strong) IBOutlet UIView * _Null_unspecified fullscreenView;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified signUpBtn;
@@ -314,6 +317,13 @@ SWIFT_CLASS("_TtC10Discourses19LoginViewController")
 @interface LoginViewController (SWIFT_EXTENSION(Discourses)) <UITextFieldDelegate>
 - (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
 - (BOOL)textFieldShouldEndEditing:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@class UIStoryboardSegue;
+
+@interface LoginViewController (SWIFT_EXTENSION(Discourses))
+- (IBAction)loginButtonPressed:(UIButton * _Nonnull)sender;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 @end
 
 
@@ -396,6 +406,23 @@ SWIFT_CLASS("_TtC10Discourses15SentMessageCell")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIActivityIndicatorView;
+
+SWIFT_CLASS("_TtC10Discourses20SignUpViewController")
+@interface SignUpViewController : UIViewController
+@property (nonatomic, strong) IBOutlet UITextField * _Null_unspecified pwdText;
+@property (nonatomic, strong) IBOutlet UITextField * _Null_unspecified confirmPwdText;
+@property (nonatomic, strong) IBOutlet UITextField * _Null_unspecified emailText;
+@property (nonatomic, strong) IBOutlet UITextField * _Null_unspecified firstNameText;
+@property (nonatomic, strong) IBOutlet UITextField * _Null_unspecified lastNameText;
+@property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified signUpBtn;
+@property (nonatomic, strong) IBOutlet UIActivityIndicatorView * _Null_unspecified activityIndicator;
+- (void)viewDidLoad;
+- (IBAction)signUpAction:(UIButton * _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC10Discourses21StartupViewController")
 @interface StartupViewController : UIViewController
@@ -407,7 +434,6 @@ SWIFT_CLASS("_TtC10Discourses21StartupViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UIStoryboardSegue;
 
 SWIFT_CLASS("_TtC10Discourses31SubscribedClassesViewController")
 @interface SubscribedClassesViewController : UIViewController

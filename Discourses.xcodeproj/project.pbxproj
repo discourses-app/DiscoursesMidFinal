@@ -146,10 +146,10 @@
 			children = (
 				8FFC6CF524C1B14900A41B95 /* StartupViewController.swift */,
 				8F57475F24C1BCFC00286C87 /* LoginViewController.swift */,
+				D289F7EF24CED7BF0024AD80 /* SignUpViewController.swift */,
 				8F5605BA24C1B8510014289C /* SubscribedClassesViewController.swift */,
 				8F57476124C1BD6200286C87 /* SearchClassViewController.swift */,
 				8F5605B824C1B81C0014289C /* ChatViewController.swift */,
-				D289F7EF24CED7BF0024AD80 /* SignUpViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
