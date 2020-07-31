@@ -26,7 +26,9 @@ provides-dynamic-lookup:
 - "viewDidLoad"
 depends-top-level:
 - !private "!="
+- !private "<="
 - !private "=="
+- !private "??"
 - "AssignmentPrecedence"
 - !private "Auth"
 - "Bool"
@@ -54,10 +56,11 @@ depends-top-level:
 - "UIView"
 - "UIViewController"
 - !private "_ColorLiteralType"
-- !private "print"
+- !private "||"
 depends-member:
 - !private ["So7FIRAuthC", "auth"]
 - !private ["So7FIRAuthC", "signIn"]
+- !private ["SK", "count"]
 - !private ["So7CALayerC", "cornerRadius"]
 - !private ["So7CALayerC", "masksToBounds"]
 - !private ["So15CALayerDelegateP", "addGestureRecognizer"]
@@ -91,8 +94,10 @@ depends-member:
 - !private ["s7CVarArgP", "auth"]
 - !private ["s7CVarArgP", "baseVC"]
 - !private ["s7CVarArgP", "cornerRadius"]
+- !private ["s7CVarArgP", "count"]
 - !private ["s7CVarArgP", "delegate"]
 - !private ["s7CVarArgP", "destination"]
+- !private ["s7CVarArgP", "dismiss"]
 - !private ["s7CVarArgP", "email"]
 - !private ["s7CVarArgP", "emailTextField"]
 - !private ["s7CVarArgP", "endEditing"]
@@ -107,7 +112,6 @@ depends-member:
 - !private ["s7CVarArgP", "password"]
 - !private ["s7CVarArgP", "performSegue"]
 - !private ["s7CVarArgP", "present"]
-- !private ["s7CVarArgP", "print"]
 - !private ["s7CVarArgP", "pwdText"]
 - !private ["s7CVarArgP", "resignFirstResponder"]
 - !private ["s7CVarArgP", "setTitleColor"]
@@ -127,6 +131,8 @@ depends-member:
 - !private ["s7CVarArgP", "titleLabel"]
 - !private ["s7CVarArgP", "view"]
 - !private ["s7CVarArgP", "viewDidLoad"]
+- !private ["Sl", "count"]
+- !private ["SL", "count"]
 - !private ["10Discourses9ConstantsV", "Segues"]
 - !private ["s28CustomDebugStringConvertibleP", "Auth"]
 - !private ["s28CustomDebugStringConvertibleP", "Constants"]
@@ -145,8 +151,10 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "auth"]
 - !private ["s28CustomDebugStringConvertibleP", "baseVC"]
 - !private ["s28CustomDebugStringConvertibleP", "cornerRadius"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
 - !private ["s28CustomDebugStringConvertibleP", "delegate"]
 - !private ["s28CustomDebugStringConvertibleP", "destination"]
+- !private ["s28CustomDebugStringConvertibleP", "dismiss"]
 - !private ["s28CustomDebugStringConvertibleP", "email"]
 - !private ["s28CustomDebugStringConvertibleP", "emailTextField"]
 - !private ["s28CustomDebugStringConvertibleP", "endEditing"]
@@ -161,7 +169,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "password"]
 - !private ["s28CustomDebugStringConvertibleP", "performSegue"]
 - !private ["s28CustomDebugStringConvertibleP", "present"]
-- !private ["s28CustomDebugStringConvertibleP", "print"]
 - !private ["s28CustomDebugStringConvertibleP", "pwdText"]
 - !private ["s28CustomDebugStringConvertibleP", "resignFirstResponder"]
 - !private ["s28CustomDebugStringConvertibleP", "setTitleColor"]
@@ -184,6 +191,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
 - !private ["s17CustomReflectableP", "addGestureRecognizer"]
 - !private ["s17CustomReflectableP", "attributedPlaceholder"]
+- !private ["s17CustomReflectableP", "count"]
 - !private ["s17CustomReflectableP", "delegate"]
 - !private ["s17CustomReflectableP", "font"]
 - !private ["s17CustomReflectableP", "isSecureTextEntry"]
@@ -211,8 +219,10 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "auth"]
 - !private ["s23CustomStringConvertibleP", "baseVC"]
 - !private ["s23CustomStringConvertibleP", "cornerRadius"]
+- !private ["s23CustomStringConvertibleP", "count"]
 - !private ["s23CustomStringConvertibleP", "delegate"]
 - !private ["s23CustomStringConvertibleP", "destination"]
+- !private ["s23CustomStringConvertibleP", "dismiss"]
 - !private ["s23CustomStringConvertibleP", "email"]
 - !private ["s23CustomStringConvertibleP", "emailTextField"]
 - !private ["s23CustomStringConvertibleP", "endEditing"]
@@ -227,7 +237,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "password"]
 - !private ["s23CustomStringConvertibleP", "performSegue"]
 - !private ["s23CustomStringConvertibleP", "present"]
-- !private ["s23CustomStringConvertibleP", "print"]
 - !private ["s23CustomStringConvertibleP", "pwdText"]
 - !private ["s23CustomStringConvertibleP", "resignFirstResponder"]
 - !private ["s23CustomStringConvertibleP", "setTitleColor"]
@@ -249,6 +258,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
 - !private ["Se", "addGestureRecognizer"]
 - !private ["Se", "attributedPlaceholder"]
+- !private ["Se", "count"]
 - !private ["Se", "delegate"]
 - !private ["Se", "font"]
 - !private ["Se", "isSecureTextEntry"]
@@ -261,6 +271,7 @@ depends-member:
 - !private ["Se", "username"]
 - !private ["SE", "addGestureRecognizer"]
 - !private ["SE", "attributedPlaceholder"]
+- !private ["SE", "count"]
 - !private ["SE", "delegate"]
 - !private ["SE", "font"]
 - !private ["SE", "isSecureTextEntry"]
@@ -290,8 +301,11 @@ depends-member:
 - !private ["SQ", "baseVC"]
 - !private ["SQ", "cancel"]
 - !private ["SQ", "cornerRadius"]
+- !private ["SQ", "count"]
+- !private ["SQ", "default"]
 - !private ["SQ", "delegate"]
 - !private ["SQ", "destination"]
+- !private ["SQ", "dismiss"]
 - !private ["SQ", "email"]
 - !private ["SQ", "emailTextField"]
 - !private ["SQ", "endEditing"]
@@ -308,7 +322,6 @@ depends-member:
 - !private ["SQ", "password"]
 - !private ["SQ", "performSegue"]
 - !private ["SQ", "present"]
-- !private ["SQ", "print"]
 - !private ["SQ", "pwdText"]
 - !private ["SQ", "resignFirstResponder"]
 - !private ["SQ", "setTitleColor"]
@@ -331,6 +344,7 @@ depends-member:
 - !private ["SQ", "viewDidLoad"]
 - !private ["s5ErrorP", "localizedDescription"]
 - !private ["s25ExpressibleByArrayLiteralP", "normal"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "count"]
 - !private ["s23ExpressibleByNilLiteralP", "addGestureRecognizer"]
 - !private ["s23ExpressibleByNilLiteralP", "attributedPlaceholder"]
 - !private ["s23ExpressibleByNilLiteralP", "delegate"]
@@ -343,6 +357,9 @@ depends-member:
 - !private ["s23ExpressibleByNilLiteralP", "textContentType"]
 - !private ["s23ExpressibleByNilLiteralP", "titleLabel"]
 - !private ["s23ExpressibleByNilLiteralP", "username"]
+- !private ["s32ExpressibleByStringInterpolationP", "count"]
+- !private ["s26ExpressibleByStringLiteralP", "count"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "count"]
 - !private ["7SwiftUI7GestureP", "addGestureRecognizer"]
 - !private ["7SwiftUI7GestureP", "attributedPlaceholder"]
 - !private ["7SwiftUI7GestureP", "delegate"]
@@ -374,8 +391,11 @@ depends-member:
 - !private ["SH", "baseVC"]
 - !private ["SH", "cancel"]
 - !private ["SH", "cornerRadius"]
+- !private ["SH", "count"]
+- !private ["SH", "default"]
 - !private ["SH", "delegate"]
 - !private ["SH", "destination"]
+- !private ["SH", "dismiss"]
 - !private ["SH", "email"]
 - !private ["SH", "emailTextField"]
 - !private ["SH", "endEditing"]
@@ -391,7 +411,6 @@ depends-member:
 - !private ["SH", "password"]
 - !private ["SH", "performSegue"]
 - !private ["SH", "present"]
-- !private ["SH", "print"]
 - !private ["SH", "pwdText"]
 - !private ["SH", "resignFirstResponder"]
 - !private ["SH", "setTitleColor"]
@@ -444,7 +463,6 @@ depends-member:
 - !private ["10Discourses19LoginViewControllerC", "performSegue"]
 - ["10Discourses19LoginViewControllerC", "prepare"]
 - !private ["10Discourses19LoginViewControllerC", "present"]
-- !private ["10Discourses19LoginViewControllerC", "print"]
 - ["10Discourses19LoginViewControllerC", "pwdText"]
 - ["10Discourses19LoginViewControllerC", "signUpBtn"]
 - ["10Discourses19LoginViewControllerC", "sloganLabel"]
@@ -458,6 +476,8 @@ depends-member:
 - ["10Discourses19LoginViewControllerC", "textFieldShouldReturn"]
 - !private ["10Discourses19LoginViewControllerC", "view"]
 - ["10Discourses19LoginViewControllerC", "viewDidLoad"]
+- !private ["s25LosslessStringConvertibleP", "count"]
+- !private ["s10MirrorPathP", "count"]
 - !private ["So18NSAttributedStringC", "Key"]
 - !private ["So18NSAttributedStringC", "init"]
 - !private ["So8NSCodingP", "Auth"]
@@ -476,7 +496,9 @@ depends-member:
 - !private ["So8NSCodingP", "attributedPlaceholder"]
 - !private ["So8NSCodingP", "baseVC"]
 - !private ["So8NSCodingP", "cornerRadius"]
+- !private ["So8NSCodingP", "count"]
 - !private ["So8NSCodingP", "delegate"]
+- !private ["So8NSCodingP", "dismiss"]
 - !private ["So8NSCodingP", "email"]
 - !private ["So8NSCodingP", "emailTextField"]
 - !private ["So8NSCodingP", "endEditing"]
@@ -490,7 +512,6 @@ depends-member:
 - !private ["So8NSCodingP", "password"]
 - !private ["So8NSCodingP", "performSegue"]
 - !private ["So8NSCodingP", "present"]
-- !private ["So8NSCodingP", "print"]
 - !private ["So8NSCodingP", "pwdText"]
 - !private ["So8NSCodingP", "resignFirstResponder"]
 - !private ["So8NSCodingP", "setTitleColor"]
@@ -510,6 +531,7 @@ depends-member:
 - !private ["So8NSCodingP", "view"]
 - !private ["So8NSCodingP", "viewDidLoad"]
 - !private ["So9NSCopyingP", "Key"]
+- !private ["So9NSCopyingP", "count"]
 - !private ["So9NSCopyingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "Auth"]
 - !private ["So26NSExtensionRequestHandlingP", "Constants"]
@@ -523,6 +545,7 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", ""]
 - !private ["So26NSExtensionRequestHandlingP", "addAction"]
 - !private ["So26NSExtensionRequestHandlingP", "baseVC"]
+- !private ["So26NSExtensionRequestHandlingP", "dismiss"]
 - !private ["So26NSExtensionRequestHandlingP", "email"]
 - !private ["So26NSExtensionRequestHandlingP", "emailTextField"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
@@ -531,7 +554,6 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "password"]
 - !private ["So26NSExtensionRequestHandlingP", "performSegue"]
 - !private ["So26NSExtensionRequestHandlingP", "present"]
-- !private ["So26NSExtensionRequestHandlingP", "print"]
 - !private ["So26NSExtensionRequestHandlingP", "pwdText"]
 - !private ["So26NSExtensionRequestHandlingP", "signUpBtn"]
 - !private ["So26NSExtensionRequestHandlingP", "sloganLabel"]
@@ -546,10 +568,13 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "view"]
 - !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
 - !private ["So21NSItemProviderReadingP", "Key"]
+- !private ["So21NSItemProviderReadingP", "count"]
 - !private ["So21NSItemProviderReadingP", "init"]
 - !private ["So21NSItemProviderWritingP", "Key"]
+- !private ["So21NSItemProviderWritingP", "count"]
 - !private ["So21NSItemProviderWritingP", "init"]
 - !private ["So16NSMutableCopyingP", "Key"]
+- !private ["So16NSMutableCopyingP", "count"]
 - !private ["So16NSMutableCopyingP", "init"]
 - !private ["So8NSObjectC", "Auth"]
 - ["So8NSObjectC", "Bool"]
@@ -575,8 +600,10 @@ depends-member:
 - !private ["So8NSObjectC", "auth"]
 - !private ["So8NSObjectC", "baseVC"]
 - !private ["So8NSObjectC", "cornerRadius"]
+- !private ["So8NSObjectC", "count"]
 - !private ["So8NSObjectC", "delegate"]
 - !private ["So8NSObjectC", "destination"]
+- !private ["So8NSObjectC", "dismiss"]
 - !private ["So8NSObjectC", "email"]
 - ["So8NSObjectC", "emailTextField"]
 - !private ["So8NSObjectC", "endEditing"]
@@ -597,7 +624,6 @@ depends-member:
 - !private ["So8NSObjectC", "performSegue"]
 - ["So8NSObjectC", "prepare"]
 - !private ["So8NSObjectC", "present"]
-- !private ["So8NSObjectC", "print"]
 - ["So8NSObjectC", "pwdText"]
 - !private ["So8NSObjectC", "resignFirstResponder"]
 - !private ["So8NSObjectC", "setTitleColor"]
@@ -634,8 +660,10 @@ depends-member:
 - !private ["So8NSObjectP", "auth"]
 - !private ["So8NSObjectP", "baseVC"]
 - !private ["So8NSObjectP", "cornerRadius"]
+- !private ["So8NSObjectP", "count"]
 - !private ["So8NSObjectP", "delegate"]
 - !private ["So8NSObjectP", "destination"]
+- !private ["So8NSObjectP", "dismiss"]
 - !private ["So8NSObjectP", "email"]
 - !private ["So8NSObjectP", "emailTextField"]
 - !private ["So8NSObjectP", "endEditing"]
@@ -650,7 +678,6 @@ depends-member:
 - !private ["So8NSObjectP", "password"]
 - !private ["So8NSObjectP", "performSegue"]
 - !private ["So8NSObjectP", "present"]
-- !private ["So8NSObjectP", "print"]
 - !private ["So8NSObjectP", "pwdText"]
 - !private ["So8NSObjectP", "resignFirstResponder"]
 - !private ["So8NSObjectP", "setTitleColor"]
@@ -672,8 +699,10 @@ depends-member:
 - !private ["So8NSObjectP", "viewDidLoad"]
 - !private ["So14NSSecureCodingP", "Key"]
 - !private ["So14NSSecureCodingP", "cornerRadius"]
+- !private ["So14NSSecureCodingP", "count"]
 - !private ["So14NSSecureCodingP", "init"]
 - !private ["So14NSSecureCodingP", "masksToBounds"]
+- !private ["So8NSStringC", "count"]
 - !private ["s9OptionSetP", "normal"]
 - !private ["Sq", "addGestureRecognizer"]
 - !private ["Sq", "attributedPlaceholder"]
@@ -687,8 +716,10 @@ depends-member:
 - !private ["Sq", "textContentType"]
 - !private ["Sq", "titleLabel"]
 - !private ["Sq", "username"]
+- !private ["Sm", "count"]
 - !private ["SY", "alert"]
 - !private ["SY", "cancel"]
+- !private ["SY", "default"]
 - !private ["SY", "font"]
 - !private ["SY", "foregroundColor"]
 - !private ["SY", "normal"]
@@ -696,13 +727,19 @@ depends-member:
 - !private ["SY", "username"]
 - !private ["10Discourses9ConstantsV6SeguesV", "loginVCToSignUpVC"]
 - !private ["10Discourses9ConstantsV6SeguesV", "loginVCtoClasslistVC"]
+- !private ["ST", "count"]
 - !private ["s10SetAlgebraP", "normal"]
 - !private ["10Discourses20SignUpViewControllerC", "baseVC"]
 - !private ["10Discourses20SignUpViewControllerC", "email"]
 - !private ["10Discourses20SignUpViewControllerC", "password"]
 - !private ["So14UIControlStateV", "normal"]
+- !private ["SS", "count"]
+- !private ["Sy", "count"]
 - !private ["So22UIAlertControllerStyleV", "alert"]
 - !private ["So18UIAlertActionStyleV", "cancel"]
+- !private ["So18UIAlertActionStyleV", "default"]
+- !private ["s16TextOutputStreamP", "count"]
+- !private ["s20TextOutputStreamableP", "count"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "layer"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "setTitleColor"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "titleLabel"]
@@ -720,6 +757,7 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "titleLabel"]
 - !private ["So13UIAlertActionC", "init"]
 - !private ["So17UIAlertControllerC", "addAction"]
+- !private ["So17UIAlertControllerC", "dismiss"]
 - !private ["So17UIAlertControllerC", "init"]
 - !private ["So12UIAppearanceP", "addGestureRecognizer"]
 - !private ["So12UIAppearanceP", "attributedPlaceholder"]
@@ -748,6 +786,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "attributedPlaceholder"]
 - !private ["So21UIAppearanceContainerP", "baseVC"]
 - !private ["So21UIAppearanceContainerP", "delegate"]
+- !private ["So21UIAppearanceContainerP", "dismiss"]
 - !private ["So21UIAppearanceContainerP", "email"]
 - !private ["So21UIAppearanceContainerP", "emailTextField"]
 - !private ["So21UIAppearanceContainerP", "endEditing"]
@@ -760,7 +799,6 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "password"]
 - !private ["So21UIAppearanceContainerP", "performSegue"]
 - !private ["So21UIAppearanceContainerP", "present"]
-- !private ["So21UIAppearanceContainerP", "print"]
 - !private ["So21UIAppearanceContainerP", "pwdText"]
 - !private ["So21UIAppearanceContainerP", "resignFirstResponder"]
 - !private ["So21UIAppearanceContainerP", "setTitleColor"]
@@ -795,6 +833,7 @@ depends-member:
 - ["So18UIContentContainerP", ""]
 - !private ["So18UIContentContainerP", "addAction"]
 - !private ["So18UIContentContainerP", "baseVC"]
+- !private ["So18UIContentContainerP", "dismiss"]
 - !private ["So18UIContentContainerP", "email"]
 - !private ["So18UIContentContainerP", "emailTextField"]
 - !private ["So18UIContentContainerP", "init"]
@@ -803,7 +842,6 @@ depends-member:
 - !private ["So18UIContentContainerP", "password"]
 - !private ["So18UIContentContainerP", "performSegue"]
 - !private ["So18UIContentContainerP", "present"]
-- !private ["So18UIContentContainerP", "print"]
 - !private ["So18UIContentContainerP", "pwdText"]
 - !private ["So18UIContentContainerP", "signUpBtn"]
 - !private ["So18UIContentContainerP", "sloganLabel"]
@@ -873,6 +911,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "attributedPlaceholder"]
 - !private ["So18UIFocusEnvironmentP", "baseVC"]
 - !private ["So18UIFocusEnvironmentP", "delegate"]
+- !private ["So18UIFocusEnvironmentP", "dismiss"]
 - !private ["So18UIFocusEnvironmentP", "email"]
 - !private ["So18UIFocusEnvironmentP", "emailTextField"]
 - !private ["So18UIFocusEnvironmentP", "endEditing"]
@@ -885,7 +924,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "password"]
 - !private ["So18UIFocusEnvironmentP", "performSegue"]
 - !private ["So18UIFocusEnvironmentP", "present"]
-- !private ["So18UIFocusEnvironmentP", "print"]
 - !private ["So18UIFocusEnvironmentP", "pwdText"]
 - !private ["So18UIFocusEnvironmentP", "resignFirstResponder"]
 - !private ["So18UIFocusEnvironmentP", "setTitleColor"]
@@ -965,6 +1003,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "attributedPlaceholder"]
 - !private ["So30UIPasteConfigurationSupportingP", "baseVC"]
 - !private ["So30UIPasteConfigurationSupportingP", "delegate"]
+- !private ["So30UIPasteConfigurationSupportingP", "dismiss"]
 - !private ["So30UIPasteConfigurationSupportingP", "email"]
 - !private ["So30UIPasteConfigurationSupportingP", "emailTextField"]
 - !private ["So30UIPasteConfigurationSupportingP", "endEditing"]
@@ -977,7 +1016,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "password"]
 - !private ["So30UIPasteConfigurationSupportingP", "performSegue"]
 - !private ["So30UIPasteConfigurationSupportingP", "present"]
-- !private ["So30UIPasteConfigurationSupportingP", "print"]
 - !private ["So30UIPasteConfigurationSupportingP", "pwdText"]
 - !private ["So30UIPasteConfigurationSupportingP", "resignFirstResponder"]
 - !private ["So30UIPasteConfigurationSupportingP", "setTitleColor"]
@@ -1018,6 +1056,7 @@ depends-member:
 - !private ["So11UIResponderC", "attributedPlaceholder"]
 - !private ["So11UIResponderC", "baseVC"]
 - !private ["So11UIResponderC", "delegate"]
+- !private ["So11UIResponderC", "dismiss"]
 - !private ["So11UIResponderC", "email"]
 - ["So11UIResponderC", "emailTextField"]
 - !private ["So11UIResponderC", "endEditing"]
@@ -1036,7 +1075,6 @@ depends-member:
 - !private ["So11UIResponderC", "performSegue"]
 - ["So11UIResponderC", "prepare"]
 - !private ["So11UIResponderC", "present"]
-- !private ["So11UIResponderC", "print"]
 - ["So11UIResponderC", "pwdText"]
 - !private ["So11UIResponderC", "resignFirstResponder"]
 - !private ["So11UIResponderC", "setTitleColor"]
@@ -1070,6 +1108,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "attributedPlaceholder"]
 - !private ["So30UIResponderStandardEditActionsP", "baseVC"]
 - !private ["So30UIResponderStandardEditActionsP", "delegate"]
+- !private ["So30UIResponderStandardEditActionsP", "dismiss"]
 - !private ["So30UIResponderStandardEditActionsP", "email"]
 - !private ["So30UIResponderStandardEditActionsP", "emailTextField"]
 - !private ["So30UIResponderStandardEditActionsP", "endEditing"]
@@ -1082,7 +1121,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "password"]
 - !private ["So30UIResponderStandardEditActionsP", "performSegue"]
 - !private ["So30UIResponderStandardEditActionsP", "present"]
-- !private ["So30UIResponderStandardEditActionsP", "print"]
 - !private ["So30UIResponderStandardEditActionsP", "pwdText"]
 - !private ["So30UIResponderStandardEditActionsP", "resignFirstResponder"]
 - !private ["So30UIResponderStandardEditActionsP", "setTitleColor"]
@@ -1102,6 +1140,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "view"]
 - !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "addAction"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "dismiss"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "init"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "layer"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "setTitleColor"]
@@ -1118,6 +1157,7 @@ depends-member:
 - ["So16UIStateRestoringP", ""]
 - !private ["So16UIStateRestoringP", "addAction"]
 - !private ["So16UIStateRestoringP", "baseVC"]
+- !private ["So16UIStateRestoringP", "dismiss"]
 - !private ["So16UIStateRestoringP", "email"]
 - !private ["So16UIStateRestoringP", "emailTextField"]
 - !private ["So16UIStateRestoringP", "init"]
@@ -1126,7 +1166,6 @@ depends-member:
 - !private ["So16UIStateRestoringP", "password"]
 - !private ["So16UIStateRestoringP", "performSegue"]
 - !private ["So16UIStateRestoringP", "present"]
-- !private ["So16UIStateRestoringP", "print"]
 - !private ["So16UIStateRestoringP", "pwdText"]
 - !private ["So16UIStateRestoringP", "signUpBtn"]
 - !private ["So16UIStateRestoringP", "sloganLabel"]
@@ -1181,7 +1220,6 @@ depends-member:
 - !private ["So19UITextFieldDelegateP", "loginFirebase"]
 - !private ["So19UITextFieldDelegateP", "performSegue"]
 - !private ["So19UITextFieldDelegateP", "present"]
-- !private ["So19UITextFieldDelegateP", "print"]
 - !private ["So19UITextFieldDelegateP", "pwdText"]
 - !private ["So19UITextFieldDelegateP", "signUpBtn"]
 - !private ["So19UITextFieldDelegateP", "sloganLabel"]
@@ -1230,6 +1268,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "attributedPlaceholder"]
 - !private ["So18UITraitEnvironmentP", "baseVC"]
 - !private ["So18UITraitEnvironmentP", "delegate"]
+- !private ["So18UITraitEnvironmentP", "dismiss"]
 - !private ["So18UITraitEnvironmentP", "email"]
 - !private ["So18UITraitEnvironmentP", "emailTextField"]
 - !private ["So18UITraitEnvironmentP", "endEditing"]
@@ -1242,7 +1281,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "password"]
 - !private ["So18UITraitEnvironmentP", "performSegue"]
 - !private ["So18UITraitEnvironmentP", "present"]
-- !private ["So18UITraitEnvironmentP", "print"]
 - !private ["So18UITraitEnvironmentP", "pwdText"]
 - !private ["So18UITraitEnvironmentP", "resignFirstResponder"]
 - !private ["So18UITraitEnvironmentP", "setTitleColor"]
@@ -1276,6 +1314,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "attributedPlaceholder"]
 - !private ["So23UIUserActivityRestoringP", "baseVC"]
 - !private ["So23UIUserActivityRestoringP", "delegate"]
+- !private ["So23UIUserActivityRestoringP", "dismiss"]
 - !private ["So23UIUserActivityRestoringP", "email"]
 - !private ["So23UIUserActivityRestoringP", "emailTextField"]
 - !private ["So23UIUserActivityRestoringP", "endEditing"]
@@ -1288,7 +1327,6 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "password"]
 - !private ["So23UIUserActivityRestoringP", "performSegue"]
 - !private ["So23UIUserActivityRestoringP", "present"]
-- !private ["So23UIUserActivityRestoringP", "print"]
 - !private ["So23UIUserActivityRestoringP", "pwdText"]
 - !private ["So23UIUserActivityRestoringP", "resignFirstResponder"]
 - !private ["So23UIUserActivityRestoringP", "setTitleColor"]
@@ -1339,6 +1377,7 @@ depends-member:
 - ["So16UIViewControllerC", ""]
 - !private ["So16UIViewControllerC", "addAction"]
 - !private ["So16UIViewControllerC", "baseVC"]
+- !private ["So16UIViewControllerC", "dismiss"]
 - !private ["So16UIViewControllerC", "email"]
 - ["So16UIViewControllerC", "emailTextField"]
 - ["So16UIViewControllerC", "fullscreenView"]
@@ -1353,7 +1392,6 @@ depends-member:
 - !private ["So16UIViewControllerC", "performSegue"]
 - ["So16UIViewControllerC", "prepare"]
 - !private ["So16UIViewControllerC", "present"]
-- !private ["So16UIViewControllerC", "print"]
 - ["So16UIViewControllerC", "pwdText"]
 - ["So16UIViewControllerC", "signUpBtn"]
 - ["So16UIViewControllerC", "sloganLabel"]
@@ -1379,7 +1417,13 @@ depends-member:
 - !private ["7SwiftUI4ViewP", "textContentType"]
 - !private ["7SwiftUI4ViewP", "titleLabel"]
 - !private ["7SwiftUI4ViewP", "username"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "count"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "count"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "count"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "count"]
 - !private ["s26_ExpressibleByColorLiteralP", "init"]
+- !private ["s19_HasContiguousBytesP", "count"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "font"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "foregroundColor"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "password"]
@@ -1401,8 +1445,10 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "auth"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "baseVC"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "cornerRadius"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "count"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "destination"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dismiss"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "email"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "emailTextField"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "endEditing"]
@@ -1417,7 +1463,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "password"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "performSegue"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "present"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "pwdText"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "resignFirstResponder"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setTitleColor"]
@@ -1454,8 +1499,10 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "auth"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "baseVC"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "cornerRadius"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "count"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "delegate"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "destination"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "dismiss"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "email"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "emailTextField"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "endEditing"]
@@ -1470,7 +1517,6 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "password"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "performSegue"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "present"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "print"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "pwdText"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "resignFirstResponder"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setTitleColor"]
@@ -1492,6 +1538,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewDidLoad"]
 - !private ["s21_ObjectiveCBridgeableP", "addGestureRecognizer"]
 - !private ["s21_ObjectiveCBridgeableP", "attributedPlaceholder"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
 - !private ["s21_ObjectiveCBridgeableP", "delegate"]
 - !private ["s21_ObjectiveCBridgeableP", "font"]
 - !private ["s21_ObjectiveCBridgeableP", "foregroundColor"]
@@ -1521,10 +1568,13 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "titleLabel"]
 depends-nominal:
 - !private "So7FIRAuthC"
+- !private "SK"
 - !private "So7CALayerC"
 - !private "So15CALayerDelegateP"
 - !private "So13CAMediaTimingP"
 - "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
 - !private "10Discourses9ConstantsV"
 - "s28CustomDebugStringConvertibleP"
 - !private "s17CustomReflectableP"
@@ -1534,11 +1584,17 @@ depends-nominal:
 - "SQ"
 - !private "s5ErrorP"
 - !private "s25ExpressibleByArrayLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "7SwiftUI7GestureP"
 - "SH"
 - !private "So21NSAttributedStringKeya"
 - "10Discourses19LoginViewControllerC"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
 - !private "So18NSAttributedStringC"
 - "So8NSCodingP"
 - !private "So9NSCopyingP"
@@ -1549,15 +1605,22 @@ depends-nominal:
 - "So8NSObjectC"
 - "So8NSObjectP"
 - !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
 - !private "s9OptionSetP"
 - !private "Sq"
+- !private "Sm"
 - !private "SY"
 - !private "10Discourses9ConstantsV6SeguesV"
+- !private "ST"
 - !private "s10SetAlgebraP"
 - !private "10Discourses20SignUpViewControllerC"
 - !private "So14UIControlStateV"
+- !private "SS"
+- !private "Sy"
 - !private "So22UIAlertControllerStyleV"
 - !private "So18UIAlertActionStyleV"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
 - !private "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
 - !private "So29UIAccessibilityIdentificationP"
 - !private "So13UIAlertActionC"
@@ -1599,7 +1662,12 @@ depends-nominal:
 - !private "So6UIViewC"
 - "So16UIViewControllerC"
 - !private "7SwiftUI4ViewP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
+- !private "s19_HasContiguousBytesP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "10Foundation37_KeyValueCodingAndObservingPublishingP"

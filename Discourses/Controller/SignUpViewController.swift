@@ -10,6 +10,7 @@ import UIKit
 import FirebaseAuth
 class SignUpViewController: UIViewController {
 
+    @IBOutlet weak var backButton: UIButton!
     @IBOutlet var pwdText: UITextField!
     @IBOutlet var confirmPwdText: UITextField!
     @IBOutlet var emailText: UITextField!
@@ -94,16 +95,22 @@ class SignUpViewController: UIViewController {
         lastNameText.layer.masksToBounds = true
         lastNameText.font = UIFont(name: "AirbnbCerealApp-Book", size: 14)
 
-        emailText.text = email ?? "arijojo2001@gmail.com"
-        pwdText.text = password ?? "Something"
-        confirmPwdText.text = "Something"
-        firstNameText.text = "ja"
-        lastNameText.text = "ba"
+        emailText.text = email
+        pwdText.text = password
+        
         signUpBtn.layer.cornerRadius = 20
         signUpBtn.layer.masksToBounds = true
         
     }
-    //MARK:- Signing Up Button Action
+    
+    
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        self.dismiss(animated: true) {
+            self.baseVC?.emailTextField.text = self.emailText.text
+        }
+    }
+    
+    //MARK:- Firebase Actions
     @IBAction func signUpAction(_ sender: UIButton) {
 
         guard pwdText.text! == confirmPwdText.text! else {
@@ -125,7 +132,7 @@ class SignUpViewController: UIViewController {
         
         let dismissVC = UIAlertAction(title: "Login Instead", style: .default) { (UIAlertAction) in
             self.baseVC?.emailTextField.text = self.emailText.text
-            self.baseVC?.pwdText.text = self.pwdText.text
+//            self.baseVC?.pwdText.text = self.pwdText.text
             self.dismiss(animated: true, completion: nil)
         }
         
@@ -154,6 +161,4 @@ class SignUpViewController: UIViewController {
         
         
     }
-
-
 }

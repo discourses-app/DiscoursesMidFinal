@@ -410,6 +410,7 @@ SWIFT_CLASS("_TtC10Discourses15SentMessageCell")
 
 SWIFT_CLASS("_TtC10Discourses20SignUpViewController")
 @interface SignUpViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified backButton;
 @property (nonatomic, strong) IBOutlet UITextField * _Null_unspecified pwdText;
 @property (nonatomic, strong) IBOutlet UITextField * _Null_unspecified confirmPwdText;
 @property (nonatomic, strong) IBOutlet UITextField * _Null_unspecified emailText;
@@ -418,6 +419,7 @@ SWIFT_CLASS("_TtC10Discourses20SignUpViewController")
 @property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified signUpBtn;
 @property (nonatomic, strong) IBOutlet UIActivityIndicatorView * _Null_unspecified activityIndicator;
 - (void)viewDidLoad;
+- (IBAction)backButtonPressed:(UIButton * _Nonnull)sender;
 - (IBAction)signUpAction:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;

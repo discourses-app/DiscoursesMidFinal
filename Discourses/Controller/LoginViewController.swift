@@ -63,7 +63,7 @@ class LoginViewController: UIViewController {
         emailTextField.layer.cornerRadius = 15
         emailTextField.layer.masksToBounds = true
         emailTextField.attributedPlaceholder = NSAttributedString(
-            string: "  Username",
+            string: "  Email ID",
             
             attributes: [
                 NSAttributedString.Key.foregroundColor: UIColor(named: "BrandForegroundColor")!,
@@ -106,9 +106,23 @@ extension LoginViewController : UITextFieldDelegate {
 extension LoginViewController {
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
+        let emailID = emailTextField.text ?? ""
+        if emailID == "" {
+            let noEmailAlert = UIAlertController(title: "Please provide an email ID.", message: nil, preferredStyle: .alert)
+            noEmailAlert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+            self.present(noEmailAlert, animated: true, completion: nil)
+            return
+        }
+        let password = pwdText.text ?? ""
+        if password == "" || password.count <= 6{
+            let noEmailAlert = UIAlertController(title: "Please provide a valid password.", message: "Password should be 6 characters or longer.", preferredStyle: .alert)
+            noEmailAlert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+            self.present(noEmailAlert, animated: true, completion: nil)
+            return
+        }
         
-        if let email = emailTextField.text, let password = pwdText.text {
-            loginFirebase(withEmail: email, withPassword: password)
+        if let password = pwdText.text {
+            loginFirebase(withEmail: emailID, withPassword: password)
         }
     }
     

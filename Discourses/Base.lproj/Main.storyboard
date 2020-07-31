@@ -341,7 +341,7 @@
                                         <fragment content="Sign Up">
                                             <attributes>
                                                 <color key="NSColor" red="0.94901960784313721" green="0.93725490196078431" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                <font key="NSFont" metaFont="label" size="15"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -361,9 +361,19 @@
                                 <rect key="frame" x="188.5" y="458.5" width="37" height="37"/>
                                 <color key="color" name="BrandBackgroundColor"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rB4-st-oyY">
+                                <rect key="frame" x="30" y="54" width="10.5" height="22"/>
+                                <state key="normal" image="backBtn">
+                                    <color key="titleColor" name="BubbleColor2"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="iNm-z3-QdU" eventType="touchUpInside" id="rpu-6V-jt9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94901960784313721" green="0.93725490196078431" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="rB4-st-oyY" firstAttribute="leading" secondItem="NMb-qh-YYc" secondAttribute="leading" constant="30" id="0dq-pa-wRg"/>
                             <constraint firstItem="JzM-v4-9fD" firstAttribute="centerX" secondItem="sxQ-I7-OA5" secondAttribute="centerX" id="1ti-sW-scS"/>
                             <constraint firstItem="NMb-qh-YYc" firstAttribute="trailing" secondItem="Az3-il-CHy" secondAttribute="trailing" constant="65" id="5HP-xd-Q0G"/>
                             <constraint firstItem="PRh-Z2-EjS" firstAttribute="centerX" secondItem="sxQ-I7-OA5" secondAttribute="centerX" id="5nY-i5-EyH"/>
@@ -372,6 +382,7 @@
                             <constraint firstItem="Az3-il-CHy" firstAttribute="top" secondItem="Wli-8w-qcO" secondAttribute="bottom" constant="10" id="ATJ-bz-bjU"/>
                             <constraint firstItem="ggs-oF-Gkc" firstAttribute="leading" secondItem="NMb-qh-YYc" secondAttribute="leading" constant="65" id="FWw-qi-t4c"/>
                             <constraint firstItem="Wli-8w-qcO" firstAttribute="top" secondItem="qLw-Xn-Gxd" secondAttribute="bottom" constant="10" id="Jcf-mf-DPa"/>
+                            <constraint firstItem="rB4-st-oyY" firstAttribute="top" secondItem="NMb-qh-YYc" secondAttribute="top" constant="10" id="Kba-1A-UXJ"/>
                             <constraint firstItem="TVr-rc-Z2y" firstAttribute="leading" secondItem="NMb-qh-YYc" secondAttribute="leading" constant="65" id="L4d-Vs-KaM"/>
                             <constraint firstItem="PRh-Z2-EjS" firstAttribute="top" secondItem="NMb-qh-YYc" secondAttribute="top" constant="36" id="Lns-qC-mi8"/>
                             <constraint firstItem="NMb-qh-YYc" firstAttribute="trailing" secondItem="ggs-oF-Gkc" secondAttribute="trailing" constant="65" id="Mp2-UR-E2d"/>
@@ -396,6 +407,7 @@
                     <navigationItem key="navigationItem" id="NgT-4c-8OQ"/>
                     <connections>
                         <outlet property="activityIndicator" destination="kQb-sv-VUK" id="I1t-7x-JzV"/>
+                        <outlet property="backButton" destination="rB4-st-oyY" id="taV-eh-oGQ"/>
                         <outlet property="confirmPwdText" destination="qLw-Xn-Gxd" id="DEj-Ok-lzo"/>
                         <outlet property="emailText" destination="ggs-oF-Gkc" id="58y-yg-qJd"/>
                         <outlet property="firstNameText" destination="Wli-8w-qcO" id="9AW-th-y39"/>

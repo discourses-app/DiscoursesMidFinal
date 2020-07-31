@@ -23,8 +23,8 @@
 	<string>nanopb</string>
 	<string>FirebaseInstanceID</string>
 	<string>FirebaseMLNLSmartReply</string>
-	<string>FirebaseMLVisionLabelModel</string>
 	<string>FirebaseFirestore</string>
+	<string>FirebaseMLVisionLabelModel</string>
 	<string>FirebaseMLNLLanguageID</string>
 	<string>FirebaseMLVisionFaceModel</string>
 	<string>FirebaseDatabase</string>
@@ -39,14 +39,14 @@
 	<string>FirebaseMLVisionBarcodeModel</string>
 	<string>FirebaseMLVisionTextModel</string>
 	<string>Foundation</string>
-	<string>Security</string>
 	<string>WatchKit</string>
 	<string>FirebaseMLModelInterpreter</string>
-	<string>AppKit</string>
 	<string>Fabric</string>
+	<string>AppKit</string>
 	<string>GameKit</string>
-	<string>netinet</string>
+	<string>Security</string>
 	<string>FirebaseMLVisionAutoML</string>
+	<string>netinet</string>
 	<string>FirebaseMLVisionObjectDetection</string>
 	<string>FirebaseStorage</string>
 	<string>SystemConfiguration</string>
