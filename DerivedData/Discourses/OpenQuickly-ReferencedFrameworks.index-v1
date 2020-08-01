@@ -23,8 +23,8 @@
 	<string>nanopb</string>
 	<string>FirebaseInstanceID</string>
 	<string>FirebaseMLNLSmartReply</string>
-	<string>FirebaseFirestore</string>
 	<string>FirebaseMLVisionLabelModel</string>
+	<string>FirebaseFirestore</string>
 	<string>FirebaseMLNLLanguageID</string>
 	<string>FirebaseMLVisionFaceModel</string>
 	<string>FirebaseDatabase</string>

@@ -5,10 +5,9 @@ provides-nominal:
 - "10Discourses19LoginViewControllerC"
 provides-member:
 - ["10Discourses19LoginViewControllerC", ""]
-- ["10Discourses19LoginViewControllerC", "loginButtonPressed"]
 - ["10Discourses19LoginViewControllerC", "loginFirebase"]
-- ["10Discourses19LoginViewControllerC", "prepare"]
 provides-dynamic-lookup:
+- "db"
 - "emailTextField"
 - "fullscreenView"
 - "landingPageImg"
@@ -17,12 +16,14 @@ provides-dynamic-lookup:
 - "loginFirebase"
 - "loginView"
 - "logoImage"
+- "newUser"
 - "prepare"
 - "pwdText"
 - "signUpBtn"
 - "sloganLabel"
 - "textFieldShouldEndEditing"
 - "textFieldShouldReturn"
+- "userEmail"
 - "viewDidLoad"
 depends-top-level:
 - !private "!="
@@ -32,16 +33,18 @@ depends-top-level:
 - "AssignmentPrecedence"
 - !private "Auth"
 - "Bool"
-- !private "BooleanLiteralType"
+- "BooleanLiteralType"
 - "CastingPrecedence"
-- !private "Constants"
+- "Firestore"
 - !private "FloatLiteralType"
 - !private "IntegerLiteralType"
+- !private "K"
 - "LoginViewController"
 - !private "NSAttributedString"
 - !private "SignUpViewController"
 - "String"
 - !private "StringLiteralType"
+- !private "SubscribedClassesViewController"
 - !private "UIAlertAction"
 - !private "UIAlertController"
 - "UIButton"
@@ -59,7 +62,9 @@ depends-top-level:
 - !private "||"
 depends-member:
 - !private ["So7FIRAuthC", "auth"]
+- !private ["So7FIRAuthC", "currentUser"]
 - !private ["So7FIRAuthC", "signIn"]
+- !private ["So17FIRAuthDataResultC", "user"]
 - !private ["SK", "count"]
 - !private ["So7CALayerC", "cornerRadius"]
 - !private ["So7CALayerC", "masksToBounds"]
@@ -78,7 +83,8 @@ depends-member:
 - !private ["So13CAMediaTimingP", "cornerRadius"]
 - !private ["So13CAMediaTimingP", "masksToBounds"]
 - !private ["s7CVarArgP", "Auth"]
-- !private ["s7CVarArgP", "Constants"]
+- ["s7CVarArgP", "Firestore"]
+- !private ["s7CVarArgP", "K"]
 - !private ["s7CVarArgP", "Key"]
 - !private ["s7CVarArgP", "NSAttributedString"]
 - !private ["s7CVarArgP", "UIAlertAction"]
@@ -95,12 +101,14 @@ depends-member:
 - !private ["s7CVarArgP", "baseVC"]
 - !private ["s7CVarArgP", "cornerRadius"]
 - !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "currentUser"]
 - !private ["s7CVarArgP", "delegate"]
 - !private ["s7CVarArgP", "destination"]
 - !private ["s7CVarArgP", "dismiss"]
 - !private ["s7CVarArgP", "email"]
 - !private ["s7CVarArgP", "emailTextField"]
 - !private ["s7CVarArgP", "endEditing"]
+- ["s7CVarArgP", "firestore"]
 - !private ["s7CVarArgP", "font"]
 - !private ["s7CVarArgP", "identifier"]
 - !private ["s7CVarArgP", "init"]
@@ -109,6 +117,7 @@ depends-member:
 - !private ["s7CVarArgP", "loginBtn"]
 - !private ["s7CVarArgP", "loginFirebase"]
 - !private ["s7CVarArgP", "masksToBounds"]
+- !private ["s7CVarArgP", "newUser"]
 - !private ["s7CVarArgP", "password"]
 - !private ["s7CVarArgP", "performSegue"]
 - !private ["s7CVarArgP", "present"]
@@ -129,13 +138,15 @@ depends-member:
 - ["s7CVarArgP", "textFieldShouldEndEditing"]
 - ["s7CVarArgP", "textFieldShouldReturn"]
 - !private ["s7CVarArgP", "titleLabel"]
+- !private ["s7CVarArgP", "user"]
+- !private ["s7CVarArgP", "userEmail"]
 - !private ["s7CVarArgP", "view"]
 - !private ["s7CVarArgP", "viewDidLoad"]
 - !private ["Sl", "count"]
 - !private ["SL", "count"]
-- !private ["10Discourses9ConstantsV", "Segues"]
 - !private ["s28CustomDebugStringConvertibleP", "Auth"]
-- !private ["s28CustomDebugStringConvertibleP", "Constants"]
+- ["s28CustomDebugStringConvertibleP", "Firestore"]
+- !private ["s28CustomDebugStringConvertibleP", "K"]
 - !private ["s28CustomDebugStringConvertibleP", "Key"]
 - !private ["s28CustomDebugStringConvertibleP", "NSAttributedString"]
 - !private ["s28CustomDebugStringConvertibleP", "UIAlertAction"]
@@ -152,12 +163,14 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "baseVC"]
 - !private ["s28CustomDebugStringConvertibleP", "cornerRadius"]
 - !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "currentUser"]
 - !private ["s28CustomDebugStringConvertibleP", "delegate"]
 - !private ["s28CustomDebugStringConvertibleP", "destination"]
 - !private ["s28CustomDebugStringConvertibleP", "dismiss"]
 - !private ["s28CustomDebugStringConvertibleP", "email"]
 - !private ["s28CustomDebugStringConvertibleP", "emailTextField"]
 - !private ["s28CustomDebugStringConvertibleP", "endEditing"]
+- ["s28CustomDebugStringConvertibleP", "firestore"]
 - !private ["s28CustomDebugStringConvertibleP", "font"]
 - !private ["s28CustomDebugStringConvertibleP", "identifier"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
@@ -166,6 +179,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "loginBtn"]
 - !private ["s28CustomDebugStringConvertibleP", "loginFirebase"]
 - !private ["s28CustomDebugStringConvertibleP", "masksToBounds"]
+- !private ["s28CustomDebugStringConvertibleP", "newUser"]
 - !private ["s28CustomDebugStringConvertibleP", "password"]
 - !private ["s28CustomDebugStringConvertibleP", "performSegue"]
 - !private ["s28CustomDebugStringConvertibleP", "present"]
@@ -186,6 +200,8 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "textFieldShouldEndEditing"]
 - ["s28CustomDebugStringConvertibleP", "textFieldShouldReturn"]
 - !private ["s28CustomDebugStringConvertibleP", "titleLabel"]
+- !private ["s28CustomDebugStringConvertibleP", "user"]
+- !private ["s28CustomDebugStringConvertibleP", "userEmail"]
 - !private ["s28CustomDebugStringConvertibleP", "username"]
 - !private ["s28CustomDebugStringConvertibleP", "view"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
@@ -203,7 +219,8 @@ depends-member:
 - !private ["s17CustomReflectableP", "titleLabel"]
 - !private ["s17CustomReflectableP", "username"]
 - !private ["s23CustomStringConvertibleP", "Auth"]
-- !private ["s23CustomStringConvertibleP", "Constants"]
+- ["s23CustomStringConvertibleP", "Firestore"]
+- !private ["s23CustomStringConvertibleP", "K"]
 - !private ["s23CustomStringConvertibleP", "Key"]
 - !private ["s23CustomStringConvertibleP", "NSAttributedString"]
 - !private ["s23CustomStringConvertibleP", "UIAlertAction"]
@@ -220,12 +237,14 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "baseVC"]
 - !private ["s23CustomStringConvertibleP", "cornerRadius"]
 - !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "currentUser"]
 - !private ["s23CustomStringConvertibleP", "delegate"]
 - !private ["s23CustomStringConvertibleP", "destination"]
 - !private ["s23CustomStringConvertibleP", "dismiss"]
 - !private ["s23CustomStringConvertibleP", "email"]
 - !private ["s23CustomStringConvertibleP", "emailTextField"]
 - !private ["s23CustomStringConvertibleP", "endEditing"]
+- ["s23CustomStringConvertibleP", "firestore"]
 - !private ["s23CustomStringConvertibleP", "font"]
 - !private ["s23CustomStringConvertibleP", "identifier"]
 - !private ["s23CustomStringConvertibleP", "init"]
@@ -234,6 +253,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "loginBtn"]
 - !private ["s23CustomStringConvertibleP", "loginFirebase"]
 - !private ["s23CustomStringConvertibleP", "masksToBounds"]
+- !private ["s23CustomStringConvertibleP", "newUser"]
 - !private ["s23CustomStringConvertibleP", "password"]
 - !private ["s23CustomStringConvertibleP", "performSegue"]
 - !private ["s23CustomStringConvertibleP", "present"]
@@ -254,6 +274,8 @@ depends-member:
 - ["s23CustomStringConvertibleP", "textFieldShouldEndEditing"]
 - ["s23CustomStringConvertibleP", "textFieldShouldReturn"]
 - !private ["s23CustomStringConvertibleP", "titleLabel"]
+- !private ["s23CustomStringConvertibleP", "user"]
+- !private ["s23CustomStringConvertibleP", "userEmail"]
 - !private ["s23CustomStringConvertibleP", "view"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
 - !private ["Se", "addGestureRecognizer"]
@@ -283,7 +305,8 @@ depends-member:
 - !private ["SE", "titleLabel"]
 - !private ["SE", "username"]
 - !private ["SQ", "Auth"]
-- !private ["SQ", "Constants"]
+- ["SQ", "Firestore"]
+- !private ["SQ", "K"]
 - !private ["SQ", "Key"]
 - !private ["SQ", "NSAttributedString"]
 - !private ["SQ", "UIAlertAction"]
@@ -302,6 +325,7 @@ depends-member:
 - !private ["SQ", "cancel"]
 - !private ["SQ", "cornerRadius"]
 - !private ["SQ", "count"]
+- !private ["SQ", "currentUser"]
 - !private ["SQ", "default"]
 - !private ["SQ", "delegate"]
 - !private ["SQ", "destination"]
@@ -309,6 +333,7 @@ depends-member:
 - !private ["SQ", "email"]
 - !private ["SQ", "emailTextField"]
 - !private ["SQ", "endEditing"]
+- ["SQ", "firestore"]
 - !private ["SQ", "font"]
 - !private ["SQ", "foregroundColor"]
 - !private ["SQ", "identifier"]
@@ -318,6 +343,7 @@ depends-member:
 - !private ["SQ", "loginBtn"]
 - !private ["SQ", "loginFirebase"]
 - !private ["SQ", "masksToBounds"]
+- !private ["SQ", "newUser"]
 - !private ["SQ", "normal"]
 - !private ["SQ", "password"]
 - !private ["SQ", "performSegue"]
@@ -339,6 +365,8 @@ depends-member:
 - ["SQ", "textFieldShouldEndEditing"]
 - ["SQ", "textFieldShouldReturn"]
 - !private ["SQ", "titleLabel"]
+- !private ["SQ", "user"]
+- !private ["SQ", "userEmail"]
 - !private ["SQ", "username"]
 - !private ["SQ", "view"]
 - !private ["SQ", "viewDidLoad"]
@@ -360,6 +388,7 @@ depends-member:
 - !private ["s32ExpressibleByStringInterpolationP", "count"]
 - !private ["s26ExpressibleByStringLiteralP", "count"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "count"]
+- ["So12FIRFirestoreC", "firestore"]
 - !private ["7SwiftUI7GestureP", "addGestureRecognizer"]
 - !private ["7SwiftUI7GestureP", "attributedPlaceholder"]
 - !private ["7SwiftUI7GestureP", "delegate"]
@@ -373,7 +402,8 @@ depends-member:
 - !private ["7SwiftUI7GestureP", "titleLabel"]
 - !private ["7SwiftUI7GestureP", "username"]
 - !private ["SH", "Auth"]
-- !private ["SH", "Constants"]
+- ["SH", "Firestore"]
+- !private ["SH", "K"]
 - !private ["SH", "Key"]
 - !private ["SH", "NSAttributedString"]
 - !private ["SH", "UIAlertAction"]
@@ -392,6 +422,7 @@ depends-member:
 - !private ["SH", "cancel"]
 - !private ["SH", "cornerRadius"]
 - !private ["SH", "count"]
+- !private ["SH", "currentUser"]
 - !private ["SH", "default"]
 - !private ["SH", "delegate"]
 - !private ["SH", "destination"]
@@ -399,6 +430,7 @@ depends-member:
 - !private ["SH", "email"]
 - !private ["SH", "emailTextField"]
 - !private ["SH", "endEditing"]
+- ["SH", "firestore"]
 - !private ["SH", "font"]
 - !private ["SH", "foregroundColor"]
 - !private ["SH", "identifier"]
@@ -408,6 +440,7 @@ depends-member:
 - !private ["SH", "loginBtn"]
 - !private ["SH", "loginFirebase"]
 - !private ["SH", "masksToBounds"]
+- !private ["SH", "newUser"]
 - !private ["SH", "password"]
 - !private ["SH", "performSegue"]
 - !private ["SH", "present"]
@@ -428,17 +461,22 @@ depends-member:
 - ["SH", "textFieldShouldEndEditing"]
 - ["SH", "textFieldShouldReturn"]
 - !private ["SH", "titleLabel"]
+- !private ["SH", "user"]
+- !private ["SH", "userEmail"]
 - !private ["SH", "username"]
 - !private ["SH", "view"]
 - !private ["SH", "viewDidLoad"]
+- !private ["10Discourses1KV", "Segues"]
 - !private ["So21NSAttributedStringKeya", "font"]
 - !private ["So21NSAttributedStringKeya", "foregroundColor"]
 - !private ["10Discourses19LoginViewControllerC", "Auth"]
 - ["10Discourses19LoginViewControllerC", "Bool"]
-- !private ["10Discourses19LoginViewControllerC", "Constants"]
+- ["10Discourses19LoginViewControllerC", "Firestore"]
+- !private ["10Discourses19LoginViewControllerC", "K"]
 - !private ["10Discourses19LoginViewControllerC", "NSAttributedString"]
 - !private ["10Discourses19LoginViewControllerC", "SignUpViewController"]
 - ["10Discourses19LoginViewControllerC", "String"]
+- !private ["10Discourses19LoginViewControllerC", "SubscribedClassesViewController"]
 - !private ["10Discourses19LoginViewControllerC", "UIAlertAction"]
 - !private ["10Discourses19LoginViewControllerC", "UIAlertController"]
 - ["10Discourses19LoginViewControllerC", "UIButton"]
@@ -450,6 +488,7 @@ depends-member:
 - !private ["10Discourses19LoginViewControllerC", "UITapGestureRecognizer"]
 - ["10Discourses19LoginViewControllerC", "UITextField"]
 - ["10Discourses19LoginViewControllerC", "UIView"]
+- ["10Discourses19LoginViewControllerC", "db"]
 - ["10Discourses19LoginViewControllerC", "deinit"]
 - ["10Discourses19LoginViewControllerC", "emailTextField"]
 - ["10Discourses19LoginViewControllerC", "fullscreenView"]
@@ -460,6 +499,7 @@ depends-member:
 - ["10Discourses19LoginViewControllerC", "loginFirebase"]
 - ["10Discourses19LoginViewControllerC", "loginView"]
 - ["10Discourses19LoginViewControllerC", "logoImage"]
+- ["10Discourses19LoginViewControllerC", "newUser"]
 - !private ["10Discourses19LoginViewControllerC", "performSegue"]
 - ["10Discourses19LoginViewControllerC", "prepare"]
 - !private ["10Discourses19LoginViewControllerC", "present"]
@@ -474,6 +514,7 @@ depends-member:
 - ["10Discourses19LoginViewControllerC", "textFieldShouldClear"]
 - ["10Discourses19LoginViewControllerC", "textFieldShouldEndEditing"]
 - ["10Discourses19LoginViewControllerC", "textFieldShouldReturn"]
+- ["10Discourses19LoginViewControllerC", "userEmail"]
 - !private ["10Discourses19LoginViewControllerC", "view"]
 - ["10Discourses19LoginViewControllerC", "viewDidLoad"]
 - !private ["s25LosslessStringConvertibleP", "count"]
@@ -481,7 +522,8 @@ depends-member:
 - !private ["So18NSAttributedStringC", "Key"]
 - !private ["So18NSAttributedStringC", "init"]
 - !private ["So8NSCodingP", "Auth"]
-- !private ["So8NSCodingP", "Constants"]
+- ["So8NSCodingP", "Firestore"]
+- !private ["So8NSCodingP", "K"]
 - !private ["So8NSCodingP", "Key"]
 - !private ["So8NSCodingP", "NSAttributedString"]
 - !private ["So8NSCodingP", "UIAlertAction"]
@@ -509,6 +551,7 @@ depends-member:
 - !private ["So8NSCodingP", "loginBtn"]
 - !private ["So8NSCodingP", "loginFirebase"]
 - !private ["So8NSCodingP", "masksToBounds"]
+- !private ["So8NSCodingP", "newUser"]
 - !private ["So8NSCodingP", "password"]
 - !private ["So8NSCodingP", "performSegue"]
 - !private ["So8NSCodingP", "present"]
@@ -528,13 +571,15 @@ depends-member:
 - ["So8NSCodingP", "textFieldShouldEndEditing"]
 - ["So8NSCodingP", "textFieldShouldReturn"]
 - !private ["So8NSCodingP", "titleLabel"]
+- !private ["So8NSCodingP", "userEmail"]
 - !private ["So8NSCodingP", "view"]
 - !private ["So8NSCodingP", "viewDidLoad"]
 - !private ["So9NSCopyingP", "Key"]
 - !private ["So9NSCopyingP", "count"]
 - !private ["So9NSCopyingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "Auth"]
-- !private ["So26NSExtensionRequestHandlingP", "Constants"]
+- ["So26NSExtensionRequestHandlingP", "Firestore"]
+- !private ["So26NSExtensionRequestHandlingP", "K"]
 - !private ["So26NSExtensionRequestHandlingP", "NSAttributedString"]
 - !private ["So26NSExtensionRequestHandlingP", "UIAlertAction"]
 - !private ["So26NSExtensionRequestHandlingP", "UIAlertController"]
@@ -551,6 +596,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "loginBtn"]
 - !private ["So26NSExtensionRequestHandlingP", "loginFirebase"]
+- !private ["So26NSExtensionRequestHandlingP", "newUser"]
 - !private ["So26NSExtensionRequestHandlingP", "password"]
 - !private ["So26NSExtensionRequestHandlingP", "performSegue"]
 - !private ["So26NSExtensionRequestHandlingP", "present"]
@@ -565,6 +611,7 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "textFieldShouldClear"]
 - ["So26NSExtensionRequestHandlingP", "textFieldShouldEndEditing"]
 - ["So26NSExtensionRequestHandlingP", "textFieldShouldReturn"]
+- !private ["So26NSExtensionRequestHandlingP", "userEmail"]
 - !private ["So26NSExtensionRequestHandlingP", "view"]
 - !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
 - !private ["So21NSItemProviderReadingP", "Key"]
@@ -578,11 +625,13 @@ depends-member:
 - !private ["So16NSMutableCopyingP", "init"]
 - !private ["So8NSObjectC", "Auth"]
 - ["So8NSObjectC", "Bool"]
-- !private ["So8NSObjectC", "Constants"]
+- ["So8NSObjectC", "Firestore"]
+- !private ["So8NSObjectC", "K"]
 - !private ["So8NSObjectC", "Key"]
 - !private ["So8NSObjectC", "NSAttributedString"]
 - !private ["So8NSObjectC", "SignUpViewController"]
 - ["So8NSObjectC", "String"]
+- !private ["So8NSObjectC", "SubscribedClassesViewController"]
 - !private ["So8NSObjectC", "UIAlertAction"]
 - !private ["So8NSObjectC", "UIAlertController"]
 - ["So8NSObjectC", "UIButton"]
@@ -601,12 +650,15 @@ depends-member:
 - !private ["So8NSObjectC", "baseVC"]
 - !private ["So8NSObjectC", "cornerRadius"]
 - !private ["So8NSObjectC", "count"]
+- !private ["So8NSObjectC", "currentUser"]
+- ["So8NSObjectC", "db"]
 - !private ["So8NSObjectC", "delegate"]
 - !private ["So8NSObjectC", "destination"]
 - !private ["So8NSObjectC", "dismiss"]
 - !private ["So8NSObjectC", "email"]
 - ["So8NSObjectC", "emailTextField"]
 - !private ["So8NSObjectC", "endEditing"]
+- ["So8NSObjectC", "firestore"]
 - !private ["So8NSObjectC", "font"]
 - ["So8NSObjectC", "fullscreenView"]
 - !private ["So8NSObjectC", "identifier"]
@@ -620,6 +672,7 @@ depends-member:
 - ["So8NSObjectC", "loginView"]
 - ["So8NSObjectC", "logoImage"]
 - !private ["So8NSObjectC", "masksToBounds"]
+- ["So8NSObjectC", "newUser"]
 - !private ["So8NSObjectC", "password"]
 - !private ["So8NSObjectC", "performSegue"]
 - ["So8NSObjectC", "prepare"]
@@ -641,10 +694,13 @@ depends-member:
 - ["So8NSObjectC", "textFieldShouldEndEditing"]
 - ["So8NSObjectC", "textFieldShouldReturn"]
 - !private ["So8NSObjectC", "titleLabel"]
+- !private ["So8NSObjectC", "user"]
+- ["So8NSObjectC", "userEmail"]
 - !private ["So8NSObjectC", "view"]
 - ["So8NSObjectC", "viewDidLoad"]
 - !private ["So8NSObjectP", "Auth"]
-- !private ["So8NSObjectP", "Constants"]
+- ["So8NSObjectP", "Firestore"]
+- !private ["So8NSObjectP", "K"]
 - !private ["So8NSObjectP", "Key"]
 - !private ["So8NSObjectP", "NSAttributedString"]
 - !private ["So8NSObjectP", "UIAlertAction"]
@@ -661,12 +717,14 @@ depends-member:
 - !private ["So8NSObjectP", "baseVC"]
 - !private ["So8NSObjectP", "cornerRadius"]
 - !private ["So8NSObjectP", "count"]
+- !private ["So8NSObjectP", "currentUser"]
 - !private ["So8NSObjectP", "delegate"]
 - !private ["So8NSObjectP", "destination"]
 - !private ["So8NSObjectP", "dismiss"]
 - !private ["So8NSObjectP", "email"]
 - !private ["So8NSObjectP", "emailTextField"]
 - !private ["So8NSObjectP", "endEditing"]
+- ["So8NSObjectP", "firestore"]
 - !private ["So8NSObjectP", "font"]
 - !private ["So8NSObjectP", "identifier"]
 - !private ["So8NSObjectP", "init"]
@@ -675,6 +733,7 @@ depends-member:
 - !private ["So8NSObjectP", "loginBtn"]
 - !private ["So8NSObjectP", "loginFirebase"]
 - !private ["So8NSObjectP", "masksToBounds"]
+- !private ["So8NSObjectP", "newUser"]
 - !private ["So8NSObjectP", "password"]
 - !private ["So8NSObjectP", "performSegue"]
 - !private ["So8NSObjectP", "present"]
@@ -695,6 +754,8 @@ depends-member:
 - ["So8NSObjectP", "textFieldShouldEndEditing"]
 - ["So8NSObjectP", "textFieldShouldReturn"]
 - !private ["So8NSObjectP", "titleLabel"]
+- !private ["So8NSObjectP", "user"]
+- !private ["So8NSObjectP", "userEmail"]
 - !private ["So8NSObjectP", "view"]
 - !private ["So8NSObjectP", "viewDidLoad"]
 - !private ["So14NSSecureCodingP", "Key"]
@@ -725,8 +786,8 @@ depends-member:
 - !private ["SY", "normal"]
 - !private ["SY", "password"]
 - !private ["SY", "username"]
-- !private ["10Discourses9ConstantsV6SeguesV", "loginVCToSignUpVC"]
-- !private ["10Discourses9ConstantsV6SeguesV", "loginVCtoClasslistVC"]
+- !private ["10Discourses1KV6SeguesV", "loginVCToSignUpVC"]
+- !private ["10Discourses1KV6SeguesV", "loginVCtoClasslistVC"]
 - !private ["ST", "count"]
 - !private ["s10SetAlgebraP", "normal"]
 - !private ["10Discourses20SignUpViewControllerC", "baseVC"]
@@ -738,6 +799,7 @@ depends-member:
 - !private ["So22UIAlertControllerStyleV", "alert"]
 - !private ["So18UIAlertActionStyleV", "cancel"]
 - !private ["So18UIAlertActionStyleV", "default"]
+- !private ["10Discourses31SubscribedClassesViewControllerC", "newUser"]
 - !private ["s16TextOutputStreamP", "count"]
 - !private ["s20TextOutputStreamableP", "count"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "layer"]
@@ -772,7 +834,8 @@ depends-member:
 - !private ["So12UIAppearanceP", "textContentType"]
 - !private ["So12UIAppearanceP", "titleLabel"]
 - !private ["So21UIAppearanceContainerP", "Auth"]
-- !private ["So21UIAppearanceContainerP", "Constants"]
+- ["So21UIAppearanceContainerP", "Firestore"]
+- !private ["So21UIAppearanceContainerP", "K"]
 - !private ["So21UIAppearanceContainerP", "NSAttributedString"]
 - !private ["So21UIAppearanceContainerP", "UIAlertAction"]
 - !private ["So21UIAppearanceContainerP", "UIAlertController"]
@@ -796,6 +859,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "layer"]
 - !private ["So21UIAppearanceContainerP", "loginBtn"]
 - !private ["So21UIAppearanceContainerP", "loginFirebase"]
+- !private ["So21UIAppearanceContainerP", "newUser"]
 - !private ["So21UIAppearanceContainerP", "password"]
 - !private ["So21UIAppearanceContainerP", "performSegue"]
 - !private ["So21UIAppearanceContainerP", "present"]
@@ -815,6 +879,7 @@ depends-member:
 - ["So21UIAppearanceContainerP", "textFieldShouldEndEditing"]
 - ["So21UIAppearanceContainerP", "textFieldShouldReturn"]
 - !private ["So21UIAppearanceContainerP", "titleLabel"]
+- !private ["So21UIAppearanceContainerP", "userEmail"]
 - !private ["So21UIAppearanceContainerP", "view"]
 - !private ["So21UIAppearanceContainerP", "viewDidLoad"]
 - !private ["So8UIButtonC", "layer"]
@@ -822,7 +887,8 @@ depends-member:
 - !private ["So8UIButtonC", "titleLabel"]
 - !private ["So7UIColorC", "init"]
 - !private ["So18UIContentContainerP", "Auth"]
-- !private ["So18UIContentContainerP", "Constants"]
+- ["So18UIContentContainerP", "Firestore"]
+- !private ["So18UIContentContainerP", "K"]
 - !private ["So18UIContentContainerP", "NSAttributedString"]
 - !private ["So18UIContentContainerP", "UIAlertAction"]
 - !private ["So18UIContentContainerP", "UIAlertController"]
@@ -839,6 +905,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "loginBtn"]
 - !private ["So18UIContentContainerP", "loginFirebase"]
+- !private ["So18UIContentContainerP", "newUser"]
 - !private ["So18UIContentContainerP", "password"]
 - !private ["So18UIContentContainerP", "performSegue"]
 - !private ["So18UIContentContainerP", "present"]
@@ -853,6 +920,7 @@ depends-member:
 - ["So18UIContentContainerP", "textFieldShouldClear"]
 - ["So18UIContentContainerP", "textFieldShouldEndEditing"]
 - ["So18UIContentContainerP", "textFieldShouldReturn"]
+- !private ["So18UIContentContainerP", "userEmail"]
 - !private ["So18UIContentContainerP", "view"]
 - !private ["So18UIContentContainerP", "viewDidLoad"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "attributedPlaceholder"]
@@ -897,7 +965,8 @@ depends-member:
 - !private ["So13UIDynamicItemP", "textContentType"]
 - !private ["So13UIDynamicItemP", "titleLabel"]
 - !private ["So18UIFocusEnvironmentP", "Auth"]
-- !private ["So18UIFocusEnvironmentP", "Constants"]
+- ["So18UIFocusEnvironmentP", "Firestore"]
+- !private ["So18UIFocusEnvironmentP", "K"]
 - !private ["So18UIFocusEnvironmentP", "NSAttributedString"]
 - !private ["So18UIFocusEnvironmentP", "UIAlertAction"]
 - !private ["So18UIFocusEnvironmentP", "UIAlertController"]
@@ -921,6 +990,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "layer"]
 - !private ["So18UIFocusEnvironmentP", "loginBtn"]
 - !private ["So18UIFocusEnvironmentP", "loginFirebase"]
+- !private ["So18UIFocusEnvironmentP", "newUser"]
 - !private ["So18UIFocusEnvironmentP", "password"]
 - !private ["So18UIFocusEnvironmentP", "performSegue"]
 - !private ["So18UIFocusEnvironmentP", "present"]
@@ -940,6 +1010,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "textFieldShouldEndEditing"]
 - ["So18UIFocusEnvironmentP", "textFieldShouldReturn"]
 - !private ["So18UIFocusEnvironmentP", "titleLabel"]
+- !private ["So18UIFocusEnvironmentP", "userEmail"]
 - !private ["So18UIFocusEnvironmentP", "view"]
 - !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
 - !private ["So11UIFocusItemP", "addGestureRecognizer"]
@@ -989,7 +1060,8 @@ depends-member:
 - !private ["So24UILargeContentViewerItemP", "textContentType"]
 - !private ["So24UILargeContentViewerItemP", "titleLabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "Auth"]
-- !private ["So30UIPasteConfigurationSupportingP", "Constants"]
+- ["So30UIPasteConfigurationSupportingP", "Firestore"]
+- !private ["So30UIPasteConfigurationSupportingP", "K"]
 - !private ["So30UIPasteConfigurationSupportingP", "NSAttributedString"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIAlertAction"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIAlertController"]
@@ -1013,6 +1085,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "layer"]
 - !private ["So30UIPasteConfigurationSupportingP", "loginBtn"]
 - !private ["So30UIPasteConfigurationSupportingP", "loginFirebase"]
+- !private ["So30UIPasteConfigurationSupportingP", "newUser"]
 - !private ["So30UIPasteConfigurationSupportingP", "password"]
 - !private ["So30UIPasteConfigurationSupportingP", "performSegue"]
 - !private ["So30UIPasteConfigurationSupportingP", "present"]
@@ -1032,14 +1105,17 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "textFieldShouldEndEditing"]
 - ["So30UIPasteConfigurationSupportingP", "textFieldShouldReturn"]
 - !private ["So30UIPasteConfigurationSupportingP", "titleLabel"]
+- !private ["So30UIPasteConfigurationSupportingP", "userEmail"]
 - !private ["So30UIPasteConfigurationSupportingP", "view"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
 - !private ["So11UIResponderC", "Auth"]
 - ["So11UIResponderC", "Bool"]
-- !private ["So11UIResponderC", "Constants"]
+- ["So11UIResponderC", "Firestore"]
+- !private ["So11UIResponderC", "K"]
 - !private ["So11UIResponderC", "NSAttributedString"]
 - !private ["So11UIResponderC", "SignUpViewController"]
 - ["So11UIResponderC", "String"]
+- !private ["So11UIResponderC", "SubscribedClassesViewController"]
 - !private ["So11UIResponderC", "UIAlertAction"]
 - !private ["So11UIResponderC", "UIAlertController"]
 - ["So11UIResponderC", "UIButton"]
@@ -1055,6 +1131,7 @@ depends-member:
 - !private ["So11UIResponderC", "addGestureRecognizer"]
 - !private ["So11UIResponderC", "attributedPlaceholder"]
 - !private ["So11UIResponderC", "baseVC"]
+- ["So11UIResponderC", "db"]
 - !private ["So11UIResponderC", "delegate"]
 - !private ["So11UIResponderC", "dismiss"]
 - !private ["So11UIResponderC", "email"]
@@ -1071,6 +1148,7 @@ depends-member:
 - ["So11UIResponderC", "loginFirebase"]
 - ["So11UIResponderC", "loginView"]
 - ["So11UIResponderC", "logoImage"]
+- ["So11UIResponderC", "newUser"]
 - !private ["So11UIResponderC", "password"]
 - !private ["So11UIResponderC", "performSegue"]
 - ["So11UIResponderC", "prepare"]
@@ -1091,10 +1169,12 @@ depends-member:
 - ["So11UIResponderC", "textFieldShouldEndEditing"]
 - ["So11UIResponderC", "textFieldShouldReturn"]
 - !private ["So11UIResponderC", "titleLabel"]
+- ["So11UIResponderC", "userEmail"]
 - !private ["So11UIResponderC", "view"]
 - ["So11UIResponderC", "viewDidLoad"]
 - !private ["So30UIResponderStandardEditActionsP", "Auth"]
-- !private ["So30UIResponderStandardEditActionsP", "Constants"]
+- ["So30UIResponderStandardEditActionsP", "Firestore"]
+- !private ["So30UIResponderStandardEditActionsP", "K"]
 - !private ["So30UIResponderStandardEditActionsP", "NSAttributedString"]
 - !private ["So30UIResponderStandardEditActionsP", "UIAlertAction"]
 - !private ["So30UIResponderStandardEditActionsP", "UIAlertController"]
@@ -1118,6 +1198,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "layer"]
 - !private ["So30UIResponderStandardEditActionsP", "loginBtn"]
 - !private ["So30UIResponderStandardEditActionsP", "loginFirebase"]
+- !private ["So30UIResponderStandardEditActionsP", "newUser"]
 - !private ["So30UIResponderStandardEditActionsP", "password"]
 - !private ["So30UIResponderStandardEditActionsP", "performSegue"]
 - !private ["So30UIResponderStandardEditActionsP", "present"]
@@ -1137,8 +1218,10 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "textFieldShouldEndEditing"]
 - ["So30UIResponderStandardEditActionsP", "textFieldShouldReturn"]
 - !private ["So30UIResponderStandardEditActionsP", "titleLabel"]
+- !private ["So30UIResponderStandardEditActionsP", "userEmail"]
 - !private ["So30UIResponderStandardEditActionsP", "view"]
 - !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
+- !private ["So20UIScrollViewDelegateP", "newUser"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "addAction"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "dismiss"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "init"]
@@ -1146,7 +1229,8 @@ depends-member:
 - !private ["So35UISpringLoadedInteractionSupportingP", "setTitleColor"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "titleLabel"]
 - !private ["So16UIStateRestoringP", "Auth"]
-- !private ["So16UIStateRestoringP", "Constants"]
+- ["So16UIStateRestoringP", "Firestore"]
+- !private ["So16UIStateRestoringP", "K"]
 - !private ["So16UIStateRestoringP", "NSAttributedString"]
 - !private ["So16UIStateRestoringP", "UIAlertAction"]
 - !private ["So16UIStateRestoringP", "UIAlertController"]
@@ -1163,6 +1247,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "loginBtn"]
 - !private ["So16UIStateRestoringP", "loginFirebase"]
+- !private ["So16UIStateRestoringP", "newUser"]
 - !private ["So16UIStateRestoringP", "password"]
 - !private ["So16UIStateRestoringP", "performSegue"]
 - !private ["So16UIStateRestoringP", "present"]
@@ -1177,10 +1262,13 @@ depends-member:
 - ["So16UIStateRestoringP", "textFieldShouldClear"]
 - ["So16UIStateRestoringP", "textFieldShouldEndEditing"]
 - ["So16UIStateRestoringP", "textFieldShouldReturn"]
+- !private ["So16UIStateRestoringP", "userEmail"]
 - !private ["So16UIStateRestoringP", "view"]
 - !private ["So16UIStateRestoringP", "viewDidLoad"]
 - !private ["So17UIStoryboardSegueC", "destination"]
 - !private ["So17UIStoryboardSegueC", "identifier"]
+- !private ["So21UITableViewDataSourceP", "newUser"]
+- !private ["So19UITableViewDelegateP", "newUser"]
 - !private ["So22UITapGestureRecognizerC", "init"]
 - !private ["So17UITextContentTypea", "password"]
 - !private ["So17UITextContentTypea", "username"]
@@ -1206,7 +1294,8 @@ depends-member:
 - !private ["So11UITextFieldC", "text"]
 - !private ["So11UITextFieldC", "textContentType"]
 - !private ["So19UITextFieldDelegateP", "Auth"]
-- !private ["So19UITextFieldDelegateP", "Constants"]
+- ["So19UITextFieldDelegateP", "Firestore"]
+- !private ["So19UITextFieldDelegateP", "K"]
 - !private ["So19UITextFieldDelegateP", "NSAttributedString"]
 - !private ["So19UITextFieldDelegateP", "UIAlertAction"]
 - !private ["So19UITextFieldDelegateP", "UIAlertController"]
@@ -1218,6 +1307,7 @@ depends-member:
 - !private ["So19UITextFieldDelegateP", "emailTextField"]
 - !private ["So19UITextFieldDelegateP", "loginBtn"]
 - !private ["So19UITextFieldDelegateP", "loginFirebase"]
+- !private ["So19UITextFieldDelegateP", "newUser"]
 - !private ["So19UITextFieldDelegateP", "performSegue"]
 - !private ["So19UITextFieldDelegateP", "present"]
 - !private ["So19UITextFieldDelegateP", "pwdText"]
@@ -1231,6 +1321,7 @@ depends-member:
 - ["So19UITextFieldDelegateP", "textFieldShouldClear"]
 - ["So19UITextFieldDelegateP", "textFieldShouldEndEditing"]
 - ["So19UITextFieldDelegateP", "textFieldShouldReturn"]
+- !private ["So19UITextFieldDelegateP", "userEmail"]
 - !private ["So19UITextFieldDelegateP", "view"]
 - !private ["So11UITextInputP", "attributedPlaceholder"]
 - !private ["So11UITextInputP", "delegate"]
@@ -1254,7 +1345,8 @@ depends-member:
 - !private ["So34UITextPasteConfigurationSupportingP", "text"]
 - !private ["So34UITextPasteConfigurationSupportingP", "textContentType"]
 - !private ["So18UITraitEnvironmentP", "Auth"]
-- !private ["So18UITraitEnvironmentP", "Constants"]
+- ["So18UITraitEnvironmentP", "Firestore"]
+- !private ["So18UITraitEnvironmentP", "K"]
 - !private ["So18UITraitEnvironmentP", "NSAttributedString"]
 - !private ["So18UITraitEnvironmentP", "UIAlertAction"]
 - !private ["So18UITraitEnvironmentP", "UIAlertController"]
@@ -1278,6 +1370,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "layer"]
 - !private ["So18UITraitEnvironmentP", "loginBtn"]
 - !private ["So18UITraitEnvironmentP", "loginFirebase"]
+- !private ["So18UITraitEnvironmentP", "newUser"]
 - !private ["So18UITraitEnvironmentP", "password"]
 - !private ["So18UITraitEnvironmentP", "performSegue"]
 - !private ["So18UITraitEnvironmentP", "present"]
@@ -1297,10 +1390,12 @@ depends-member:
 - ["So18UITraitEnvironmentP", "textFieldShouldEndEditing"]
 - ["So18UITraitEnvironmentP", "textFieldShouldReturn"]
 - !private ["So18UITraitEnvironmentP", "titleLabel"]
+- !private ["So18UITraitEnvironmentP", "userEmail"]
 - !private ["So18UITraitEnvironmentP", "view"]
 - !private ["So18UITraitEnvironmentP", "viewDidLoad"]
 - !private ["So23UIUserActivityRestoringP", "Auth"]
-- !private ["So23UIUserActivityRestoringP", "Constants"]
+- ["So23UIUserActivityRestoringP", "Firestore"]
+- !private ["So23UIUserActivityRestoringP", "K"]
 - !private ["So23UIUserActivityRestoringP", "NSAttributedString"]
 - !private ["So23UIUserActivityRestoringP", "UIAlertAction"]
 - !private ["So23UIUserActivityRestoringP", "UIAlertController"]
@@ -1324,6 +1419,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "layer"]
 - !private ["So23UIUserActivityRestoringP", "loginBtn"]
 - !private ["So23UIUserActivityRestoringP", "loginFirebase"]
+- !private ["So23UIUserActivityRestoringP", "newUser"]
 - !private ["So23UIUserActivityRestoringP", "password"]
 - !private ["So23UIUserActivityRestoringP", "performSegue"]
 - !private ["So23UIUserActivityRestoringP", "present"]
@@ -1343,6 +1439,7 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "textFieldShouldEndEditing"]
 - ["So23UIUserActivityRestoringP", "textFieldShouldReturn"]
 - !private ["So23UIUserActivityRestoringP", "titleLabel"]
+- !private ["So23UIUserActivityRestoringP", "userEmail"]
 - !private ["So23UIUserActivityRestoringP", "view"]
 - !private ["So23UIUserActivityRestoringP", "viewDidLoad"]
 - !private ["So6UIViewC", "addGestureRecognizer"]
@@ -1359,10 +1456,12 @@ depends-member:
 - !private ["So6UIViewC", "titleLabel"]
 - !private ["So16UIViewControllerC", "Auth"]
 - ["So16UIViewControllerC", "Bool"]
-- !private ["So16UIViewControllerC", "Constants"]
+- ["So16UIViewControllerC", "Firestore"]
+- !private ["So16UIViewControllerC", "K"]
 - !private ["So16UIViewControllerC", "NSAttributedString"]
 - !private ["So16UIViewControllerC", "SignUpViewController"]
 - ["So16UIViewControllerC", "String"]
+- !private ["So16UIViewControllerC", "SubscribedClassesViewController"]
 - !private ["So16UIViewControllerC", "UIAlertAction"]
 - !private ["So16UIViewControllerC", "UIAlertController"]
 - ["So16UIViewControllerC", "UIButton"]
@@ -1377,6 +1476,7 @@ depends-member:
 - ["So16UIViewControllerC", ""]
 - !private ["So16UIViewControllerC", "addAction"]
 - !private ["So16UIViewControllerC", "baseVC"]
+- ["So16UIViewControllerC", "db"]
 - !private ["So16UIViewControllerC", "dismiss"]
 - !private ["So16UIViewControllerC", "email"]
 - ["So16UIViewControllerC", "emailTextField"]
@@ -1388,6 +1488,7 @@ depends-member:
 - ["So16UIViewControllerC", "loginFirebase"]
 - ["So16UIViewControllerC", "loginView"]
 - ["So16UIViewControllerC", "logoImage"]
+- ["So16UIViewControllerC", "newUser"]
 - !private ["So16UIViewControllerC", "password"]
 - !private ["So16UIViewControllerC", "performSegue"]
 - ["So16UIViewControllerC", "prepare"]
@@ -1403,8 +1504,11 @@ depends-member:
 - ["So16UIViewControllerC", "textFieldShouldClear"]
 - ["So16UIViewControllerC", "textFieldShouldEndEditing"]
 - ["So16UIViewControllerC", "textFieldShouldReturn"]
+- ["So16UIViewControllerC", "userEmail"]
 - !private ["So16UIViewControllerC", "view"]
 - ["So16UIViewControllerC", "viewDidLoad"]
+- !private ["So7FIRUserC", "email"]
+- !private ["So11FIRUserInfoP", "email"]
 - !private ["7SwiftUI4ViewP", "addGestureRecognizer"]
 - !private ["7SwiftUI4ViewP", "attributedPlaceholder"]
 - !private ["7SwiftUI4ViewP", "delegate"]
@@ -1429,7 +1533,8 @@ depends-member:
 - !private ["s35_HasCustomAnyHashableRepresentationP", "password"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "username"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Auth"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "Constants"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Firestore"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "K"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Key"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSAttributedString"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIAlertAction"]
@@ -1446,12 +1551,14 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "baseVC"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "cornerRadius"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "count"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "currentUser"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "destination"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "dismiss"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "email"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "emailTextField"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "endEditing"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "firestore"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "font"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "identifier"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
@@ -1460,6 +1567,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "loginBtn"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "loginFirebase"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "masksToBounds"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "newUser"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "password"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "performSegue"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "present"]
@@ -1480,10 +1588,13 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "textFieldShouldEndEditing"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "textFieldShouldReturn"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "titleLabel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "user"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "userEmail"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "view"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Auth"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Constants"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Firestore"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "K"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Key"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSAttributedString"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIAlertAction"]
@@ -1500,12 +1611,14 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "baseVC"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "cornerRadius"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "count"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "currentUser"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "delegate"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "destination"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "dismiss"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "email"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "emailTextField"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "endEditing"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "firestore"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "font"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "identifier"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
@@ -1514,6 +1627,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "loginBtn"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "loginFirebase"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "masksToBounds"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "newUser"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "password"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "performSegue"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "present"]
@@ -1534,6 +1648,8 @@ depends-member:
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "textFieldShouldEndEditing"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "textFieldShouldReturn"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "titleLabel"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "user"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "userEmail"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "view"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewDidLoad"]
 - !private ["s21_ObjectiveCBridgeableP", "addGestureRecognizer"]
@@ -1568,6 +1684,7 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "titleLabel"]
 depends-nominal:
 - !private "So7FIRAuthC"
+- !private "So17FIRAuthDataResultC"
 - !private "SK"
 - !private "So7CALayerC"
 - !private "So15CALayerDelegateP"
@@ -1575,7 +1692,6 @@ depends-nominal:
 - "s7CVarArgP"
 - !private "Sl"
 - !private "SL"
-- !private "10Discourses9ConstantsV"
 - "s28CustomDebugStringConvertibleP"
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
@@ -1589,8 +1705,10 @@ depends-nominal:
 - !private "s32ExpressibleByStringInterpolationP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "So12FIRFirestoreC"
 - !private "7SwiftUI7GestureP"
 - "SH"
+- !private "10Discourses1KV"
 - !private "So21NSAttributedStringKeya"
 - "10Discourses19LoginViewControllerC"
 - !private "s25LosslessStringConvertibleP"
@@ -1610,7 +1728,7 @@ depends-nominal:
 - !private "Sq"
 - !private "Sm"
 - !private "SY"
-- !private "10Discourses9ConstantsV6SeguesV"
+- !private "10Discourses1KV6SeguesV"
 - !private "ST"
 - !private "s10SetAlgebraP"
 - !private "10Discourses20SignUpViewControllerC"
@@ -1619,6 +1737,7 @@ depends-nominal:
 - !private "Sy"
 - !private "So22UIAlertControllerStyleV"
 - !private "So18UIAlertActionStyleV"
+- !private "10Discourses31SubscribedClassesViewControllerC"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
 - !private "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
@@ -1645,9 +1764,12 @@ depends-nominal:
 - "So30UIPasteConfigurationSupportingP"
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
+- !private "So20UIScrollViewDelegateP"
 - !private "So35UISpringLoadedInteractionSupportingP"
 - "So16UIStateRestoringP"
 - !private "So17UIStoryboardSegueC"
+- !private "So21UITableViewDataSourceP"
+- !private "So19UITableViewDelegateP"
 - !private "So22UITapGestureRecognizerC"
 - !private "So17UITextContentTypea"
 - !private "So15UITextDraggableP"
@@ -1661,6 +1783,8 @@ depends-nominal:
 - "So23UIUserActivityRestoringP"
 - !private "So6UIViewC"
 - "So16UIViewControllerC"
+- !private "So7FIRUserC"
+- !private "So11FIRUserInfoP"
 - !private "7SwiftUI4ViewP"
 - !private "s30_CustomPlaygroundQuickLookableP"
 - !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
@@ -1773,4 +1897,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "4025b0b79dc1ff37a47cebffb4fe3a3e"
+interface-hash: "36d1025acbf9f39679ddd14804b1cf4f"

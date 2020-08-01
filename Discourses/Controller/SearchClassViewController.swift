@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseFirestore
+import FirebaseAuth
 class SearchClassViewController: UIViewController {
     //MARK: - Element declaration
     @IBOutlet var backBtn: UIButton!
@@ -20,14 +21,25 @@ class SearchClassViewController: UIViewController {
     //MARK: - Variable declaration
     var data : [String] = []
     var filterdata:[String]!
-    
+    let db = Firestore.firestore()
+    var userEmail : String?
+    var userName : String?
     //MARK: - Native function manipulation
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        //load the data
+        //set user email
         tableData()
-        
+        userEmail = Auth.auth().currentUser?.email
+        db.collection(K.Firebase.EmailCollection.name).document(userEmail!).getDocument { (document, error) in
+            if let e = error {
+                print(e)
+                return
+            }
+            if let document = document, document.exists {
+                let data = document.data()!
+                self.userName = "\(data[K.Firebase.EmailCollection.userFirstField]!) \(data[K.Firebase.EmailCollection.userLastField]!)"
+            }
+        }
         //back buton set up
         backBtn.setImage(#imageLiteral(resourceName: "backBtn"), for: .normal)
         
@@ -65,15 +77,6 @@ class SearchClassViewController: UIViewController {
         //        mainView.addGestureRecognizer(tapGesture)
         //       TOO MANY ISSUES W THE ABOVE CODE WE CAN WORRY ABOUT IT LATER!
         
-        //MARK:- To Understand Database Schema
-        let db = Firestore.firestore()
-        for (index,name) in data.enumerated() {
-            let fullName = name.components(separatedBy: "/")
-            let className = fullName[0]
-            print("did i get here to do google things? This is at SearchViewController!")
-            let key = String(index)
-            db.collection("Classes").document(className).setData(["Name":className])
-        }
         
     }
     
@@ -85,11 +88,47 @@ class SearchClassViewController: UIViewController {
     
     //MARK: - Button functions
     @IBAction func backBtnPressed(_ sender: UIButton) {
-        Constants.loadAllClassesSubscribed { success in
+//        loadAllClassesSubscribed { success in
         self.dismiss(animated: true)
-        }
+//        }
     }
     
+}
+
+//MARK: - Firebase functions
+
+extension SearchClassViewController {
+//    func loadAllClassesSubscribed(completionHandler: @escaping(_ success: Bool)->Void) {
+//
+//        let db = Firestore.firestore()
+//        db.collection("EmailIDs").document(self.userEmail!).collection("Classes").getDocuments() { (querySnapshot, err) in
+//            K.subcribedClasses = []
+//            if let err = err {
+//                print("Error getting documents: \(err)")
+//                completionHandler(false)
+//            } else {
+//                for (index, document) in querySnapshot!.documents.enumerated() {
+//                    let course = document.documentID.split(separator: "*")
+//                    K.subcribedClasses.append(Class(name: String(course[0]), professor: String(course[1]), lectureNo: Int(String(course[2]))!))
+//                }
+//            }
+//            completionHandler(true)
+//        }
+//    }
+    
+    func subscribeUser(toCourse course : Class){
+        //add course to user
+        db.collection(K.Firebase.EmailCollection.name)
+            .document(userEmail!)
+            .collection(K.Firebase.EmailCollection.subbedClasses)
+            .addDocument(data: course.dbRepresentation)
+        
+        //add user to course
+        db.collection(K.Firebase.ClassCollection.name)
+            .document(course.stringRepresentation)
+            .collection(K.Firebase.ClassCollection.userCollection)
+            .addDocument(data: ["name": userName!, "email": userEmail!])
+    }
 }
 
 //MARK: - SearchBar Delegate
@@ -126,10 +165,10 @@ extension SearchClassViewController : UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         if let imageView : UIImageView = cell.viewWithTag(1) as? UIImageView {
             imageView.image = #imageLiteral(resourceName: "addImage")
-            print("it got here!")
+            
         }
         else {
-            print("not a chance lol")
+            
             let joinBtn = UIImageView(frame: CGRect(x: tableView.frame.maxX - 70, y: 30, width: 40, height: 40))
             joinBtn.image = #imageLiteral(resourceName: "addImage")
             //           let tap = UITapGestureRecognizer()
@@ -186,27 +225,32 @@ extension SearchClassViewController : UITableViewDataSource {
 
 extension SearchClassViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("This cell from the chat list was selected: \(indexPath.row)")
+//        print("This cell from the chat list was selected: \(indexPath.row)")
         let cell = tableView.cellForRow(at: indexPath)
         guard (cell?.viewWithTag(1) as! UIImageView).image != #imageLiteral(resourceName: "checkMark") else {return}
-        let db = Firestore.firestore()
         UIView.transition(with: (cell?.viewWithTag(1) as! UIImageView),
                           duration: 0.75,
                           options: .transitionFlipFromTop,
                           animations: { (cell?.viewWithTag(1) as! UIImageView).image = #imageLiteral(resourceName: "checkMark") },
                           completion: nil)
         let className = cell!.textLabel!.text!
-        let profName = cell?.contentView.viewWithTag(2) as! UILabel
+        let profName = (cell?.contentView.viewWithTag(2) as! UILabel).text!
+        let lectureNumber = 1 //TODO: assign later
+        
+        let addingClassAlert = UIAlertController(title: "Adding your class", message: "Please wait a moment.", preferredStyle: .alert)
+        self.present(addingClassAlert, animated: true, completion: nil)
+        subscribeUser(toCourse: Class(name: className, professor: profName, lectureNo: lectureNumber))
+        addingClassAlert.dismiss(animated: true, completion: nil)
         //ADDING CLASS TO THE DATABASE!
-        let newlySubscribed = Class (name: className, professor: profName.text!)
-        db.collection("EmailIDs").document(Constants.userEmail).collection("Classes").addDocument(data:["name":className, "professor":profName.text!])
+//        let newlySubscribed = Class (name: className, professor: profName)
+        
+        
         
         //removing a name from the collection 'data' if it is selected by the user
         //we will have to make a struct that stores the name of a class along with the professor teaching said class
-        for (index, element) in Constants.allClasses.enumerated() {
-            if element.name.uppercased() == className && element.professor.uppercased() == profName.text! {
-                print("how did I not get here?")
-                Constants.allClasses.remove(at: index)
+        for (index, element) in K.allClasses.enumerated() {
+            if element.name.uppercased() == className && element.professor.uppercased() == profName {
+                K.allClasses.remove(at: index)
             }
         }
         tableData()
@@ -224,7 +268,7 @@ extension SearchClassViewController {
     func tableData() {
         data = []
         
-        for classes in Constants.allClasses{
+        for classes in K.allClasses{
             data.append("\(classes.name)/\(classes.professor)".uppercased())
         }
         

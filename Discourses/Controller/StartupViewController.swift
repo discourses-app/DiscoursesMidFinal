@@ -41,7 +41,7 @@ class StartupViewController: UIViewController {
                 
                 if i==100{
                     Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { (Timer) in
-                        self.performSegue(withIdentifier: Constants.Segues.startupVCToWelcomeVC, sender: self)
+                        self.performSegue(withIdentifier: K.Segues.startupVCToWelcomeVC, sender: self)
                     }
                 }
             

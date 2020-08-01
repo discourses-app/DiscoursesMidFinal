@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 class SignUpViewController: UIViewController {
 
     @IBOutlet weak var backButton: UIButton!
@@ -21,6 +22,7 @@ class SignUpViewController: UIViewController {
     var baseVC : LoginViewController?
     var email : String?
     var password : String?
+    let db = Firestore.firestore()
     override func viewDidLoad() {
         super.viewDidLoad()
        //an animated spinner so that it doesn't look bad while we wait
@@ -126,6 +128,21 @@ class SignUpViewController: UIViewController {
             self.present(passwordMatchError, animated: true, completion: nil)
             return
         }
+        
+        guard firstNameText.text ?? "" != ""  else {
+            let firstNameMissingAlert = UIAlertController(title: "Please provide a first name", message: nil, preferredStyle: .alert)
+            firstNameMissingAlert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+            self.present(firstNameMissingAlert, animated: true, completion: nil)
+            return
+        }
+        
+        guard lastNameText.text ?? "" != ""  else {
+            let lastNameMissingAlert = UIAlertController(title: "Please provide a last name", message: nil, preferredStyle: .alert)
+            lastNameMissingAlert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+            self.present(lastNameMissingAlert, animated: true, completion: nil)
+            return
+        }
+        
         self.signUpBtn.isHidden = true
         self.activityIndicator.isHidden = false
         self.activityIndicator.startAnimating()
@@ -154,11 +171,16 @@ class SignUpViewController: UIViewController {
                     return
                 }
                 print("Successfully registered new user.")
+                
+                
+                self.db.collection(K.Firebase.EmailCollection.name).document(self.emailText.text!).setData([
+                        K.Firebase.EmailCollection.userFirstField: self.firstNameText.text!,
+                        K.Firebase.EmailCollection.userLastField : self.lastNameText.text!
+                ])
+                self.baseVC?.newUser = true
                 self.baseVC?.loginFirebase(withEmail: self.emailText.text!, withPassword: self.pwdText.text!)
                 self.dismiss(animated: true, completion: nil)
             }
         }
-        
-        
     }
 }

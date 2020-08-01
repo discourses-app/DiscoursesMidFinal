@@ -8,14 +8,13 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 class LoginViewController: UIViewController {
 
 //MARK: - Element declaration
     @IBOutlet var loginView: UIView!
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet var sloganLabel: UILabel!
-    
-//MARK: - Variable declaration
     @IBOutlet weak var landingPageImg: UIImageView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var pwdText: UITextField!
@@ -23,10 +22,17 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var signUpBtn: UIButton!
     @IBOutlet weak var logoImage: UIImageView!
     
+//MARK: - Variable declaration
+    var userEmail : String?
+    var newUser = false
+    let db = Firestore.firestore()
 //MARK: - Native function manipulation
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //assign userEmail
+        userEmail = Auth.auth().currentUser?.email
+        
         //login button designing..............
         loginBtn.titleLabel?.font = UIFont(name: "AirbnbCerealApp-Medium", size: 14)
         loginBtn.layer.cornerRadius = 15
@@ -80,30 +86,11 @@ class LoginViewController: UIViewController {
         // gesture set up
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tapGesture)
-
-    }
-
-    
-}
-
-//MARK: - TextField Delegate
-
-extension LoginViewController : UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        textField.resignFirstResponder()
-        return true
+//TODO: remember to remove
+        emailTextField.text = "am@gmail.com"
+        pwdText.text = "discourse"
     }
-    
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-}
-
-//MARK: - Firbase handling
-
-extension LoginViewController {
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         let emailID = emailTextField.text ?? ""
@@ -126,11 +113,53 @@ extension LoginViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == K.Segues.loginVCToSignUpVC {
+            let signUpVC = segue.destination as! SignUpViewController
+            let email = emailTextField.text
+            let password = pwdText.text
+            signUpVC.baseVC = self
+            if email != nil{
+                signUpVC.email = email
+            }
+            if password != nil{
+                signUpVC.password = password
+            }
+            return
+        }
+        if segue.identifier == K.Segues.loginVCtoClasslistVC {
+            let homeVC = segue.destination as! SubscribedClassesViewController
+            homeVC.newUser = newUser
+        }
+        
+    }
+}
+
+//MARK: - TextField Delegate
+
+extension LoginViewController : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+
+}
+
+
+extension LoginViewController {
+    
+    
     func loginFirebase (withEmail email: String, withPassword password : String){
-        let localEmailInexistentErr = "There is no user record corresponding to this identifier. The user may have been deleted." //there's a better way of using an enumeration for catching errors but I can't seem to use it it
+        let localEmailInexistentErr = "There is no user record corresponding to this identifier. The user may have been deleted." //there's a better way of using an enumeration for catching errors but I can't seem to use it
         
         let goSignIn = UIAlertAction(title: "Sign In Instead", style: .default) { (UIAlertAction) in
-            self.performSegue(withIdentifier: Constants.Segues.loginVCToSignUpVC, sender: self)
+            self.performSegue(withIdentifier: K.Segues.loginVCToSignUpVC, sender: self)
         }
         let loadingAlert = UIAlertController(title: "Signing In", message: nil, preferredStyle: .alert)
         self.present(loadingAlert, animated: true, completion: nil)
@@ -144,29 +173,31 @@ extension LoginViewController {
                 }
                 self.present(errAlert, animated: true, completion: nil)
             } else {
-                Constants.userEmail = authResult?.user.email
-                Constants.loadAllClassesSubscribed { success in
-                self.performSegue(withIdentifier: Constants.Segues.loginVCtoClasslistVC, sender: self)
-                }
+                self.userEmail = authResult?.user.email
+//                self.loadAllClassesSubscribed { success in
+                self.performSegue(withIdentifier: K.Segues.loginVCtoClasslistVC, sender: self)
+//                }
                 
             }
         }
     }
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == Constants.Segues.loginVCToSignUpVC {
-            let signUpVC = segue.destination as! SignUpViewController
-            let email = emailTextField.text
-            let password = pwdText.text
-            signUpVC.baseVC = self
-            if email != nil{
-                signUpVC.email = email
-            }
-            if password != nil{
-                signUpVC.password = password
-            }
-        }
-    }
+//    func loadAllClassesSubscribed(completionHandler: @escaping(_ success: Bool)->Void) {
+//
+//        let db = Firestore.firestore()
+//        db.collection("EmailIDs").document(self.userEmail!).collection("Classes").getDocuments() { (querySnapshot, err) in
+//            K.subcribedClasses = []
+//            if let err = err {
+//                print("Error getting documents: \(err)")
+//                completionHandler(false)
+//            } else {
+//                for (index, document) in querySnapshot!.documents.enumerated() {
+//                    let dict = document.data()
+//                    K.subcribedClasses.append(Class(name: dict["name"] as! String, professor: dict["professor"] as! String, lectureNo: dict["lectureNo"] as! Int))
+//                }
+//            }
+//            completionHandler(true)
+//        }
+//
+//    }
     
 }

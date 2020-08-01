@@ -1,53 +1,78 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
-- "Constants"
+- "K"
 provides-nominal:
-- "10Discourses9ConstantsV"
-- "10Discourses9ConstantsV6SeguesV"
-- "10Discourses9ConstantsV15CellIdentifiersV"
-- "10Discourses9ConstantsV15CellStructNamesV"
+- "10Discourses1KV"
+- "10Discourses1KV6SeguesV"
+- "10Discourses1KV15CellIdentifiersV"
+- "10Discourses1KV15CellStructNamesV"
+- "10Discourses1KV8FirebaseV"
+- "10Discourses1KV8FirebaseV15ClassCollectionV"
+- "10Discourses1KV8FirebaseV15EmailCollectionV"
 provides-member:
-- ["10Discourses9ConstantsV", ""]
-- ["10Discourses9ConstantsV6SeguesV", ""]
-- ["10Discourses9ConstantsV15CellIdentifiersV", ""]
-- ["10Discourses9ConstantsV15CellStructNamesV", ""]
+- ["10Discourses1KV", ""]
+- ["10Discourses1KV6SeguesV", ""]
+- ["10Discourses1KV15CellIdentifiersV", ""]
+- ["10Discourses1KV15CellStructNamesV", ""]
+- ["10Discourses1KV8FirebaseV", ""]
+- ["10Discourses1KV8FirebaseV15ClassCollectionV", ""]
+- ["10Discourses1KV8FirebaseV15EmailCollectionV", ""]
 provides-dynamic-lookup:
 depends-top-level:
 - "CGFloat"
 - "Class"
-- "Constants"
+- "FloatLiteralType"
+- "IntegerLiteralType"
+- "K"
 - "StringLiteralType"
 depends-member:
-- ["10Discourses9ConstantsV15CellIdentifiersV", "classBubble"]
-- ["10Discourses9ConstantsV15CellIdentifiersV", "init"]
-- ["10Discourses9ConstantsV15CellIdentifiersV", "messageCell"]
-- ["10Discourses9ConstantsV15CellIdentifiersV", "sentCell"]
-- ["10Discourses9ConstantsV15CellStructNamesV", "classBubble"]
-- ["10Discourses9ConstantsV15CellStructNamesV", "init"]
-- ["10Discourses9ConstantsV15CellStructNamesV", "messageCell"]
-- ["10Discourses9ConstantsV15CellStructNamesV", "sentCell"]
+- ["10Discourses1KV15CellIdentifiersV", "classBubble"]
+- ["10Discourses1KV15CellIdentifiersV", "init"]
+- ["10Discourses1KV15CellIdentifiersV", "messageCell"]
+- ["10Discourses1KV15CellIdentifiersV", "sentCell"]
+- ["10Discourses1KV15CellStructNamesV", "classBubble"]
+- ["10Discourses1KV15CellStructNamesV", "init"]
+- ["10Discourses1KV15CellStructNamesV", "messageCell"]
+- ["10Discourses1KV15CellStructNamesV", "sentCell"]
 - ["10Discourses5ClassV", "init"]
-- ["10Discourses9ConstantsV", "CGFloat"]
-- ["10Discourses9ConstantsV", "CellIdentifiers"]
-- ["10Discourses9ConstantsV", "CellStructNames"]
-- ["10Discourses9ConstantsV", "Class"]
-- ["10Discourses9ConstantsV", "Segues"]
-- ["10Discourses9ConstantsV", "allClasses"]
-- ["10Discourses9ConstantsV", "classes"]
-- ["10Discourses9ConstantsV", "init"]
-- ["10Discourses9ConstantsV", "keyboardHeight"]
-- ["10Discourses9ConstantsV6SeguesV", "classListVCToChatVC"]
-- ["10Discourses9ConstantsV6SeguesV", "classListVCtoAddClassVC"]
-- ["10Discourses9ConstantsV6SeguesV", "init"]
-- ["10Discourses9ConstantsV6SeguesV", "loginVCToSignUpVC"]
-- ["10Discourses9ConstantsV6SeguesV", "loginVCtoClasslistVC"]
-- ["10Discourses9ConstantsV6SeguesV", "startupVCToWelcomeVC"]
+- ["10Discourses1KV8FirebaseV15ClassCollectionV", "init"]
+- ["10Discourses1KV8FirebaseV15ClassCollectionV", "name"]
+- ["10Discourses1KV8FirebaseV15EmailCollectionV", "init"]
+- ["10Discourses1KV8FirebaseV15EmailCollectionV", "name"]
+- ["10Discourses1KV8FirebaseV15EmailCollectionV", "subbedClasses"]
+- ["10Discourses1KV8FirebaseV15EmailCollectionV", "userFirstField"]
+- ["10Discourses1KV8FirebaseV15EmailCollectionV", "userLastField"]
+- ["10Discourses1KV8FirebaseV", "ClassCollection"]
+- ["10Discourses1KV8FirebaseV", "EmailCollection"]
+- ["10Discourses1KV8FirebaseV", "classNameField"]
+- ["10Discourses1KV8FirebaseV", "init"]
+- ["10Discourses1KV8FirebaseV", "lectureNoField"]
+- ["10Discourses1KV8FirebaseV", "profNameField"]
+- ["10Discourses1KV", "CGFloat"]
+- ["10Discourses1KV", "CellIdentifiers"]
+- ["10Discourses1KV", "CellStructNames"]
+- ["10Discourses1KV", "Class"]
+- ["10Discourses1KV", "Firebase"]
+- ["10Discourses1KV", "Segues"]
+- ["10Discourses1KV", "allClasses"]
+- ["10Discourses1KV", "init"]
+- ["10Discourses1KV", "keyboardHeight"]
+- ["10Discourses1KV", "subcribedClasses"]
+- ["10Discourses1KV6SeguesV", "classListVCToChatVC"]
+- ["10Discourses1KV6SeguesV", "classListVCtoAddClassVC"]
+- ["10Discourses1KV6SeguesV", "init"]
+- ["10Discourses1KV6SeguesV", "loginVCToSignUpVC"]
+- ["10Discourses1KV6SeguesV", "loginVCtoClasslistVC"]
+- ["10Discourses1KV6SeguesV", "startupVCToWelcomeVC"]
 depends-nominal:
-- "10Discourses9ConstantsV15CellIdentifiersV"
-- "10Discourses9ConstantsV15CellStructNamesV"
+- "10Discourses1KV15CellIdentifiersV"
+- "10Discourses1KV15CellStructNamesV"
 - "10Discourses5ClassV"
-- "10Discourses9ConstantsV"
-- "10Discourses9ConstantsV6SeguesV"
+- "10Discourses1KV8FirebaseV15ClassCollectionV"
+- "10Discourses1KV8FirebaseV15EmailCollectionV"
+- "10Discourses1KV8FirebaseV"
+- "10Discourses1KV"
+- "10Discourses1KV6SeguesV"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64.swiftmodule"
@@ -147,4 +172,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "dfd44c2394e8ef4a02c41c75192949a8"
+interface-hash: "076b890c15564892755f4a93b578dcad"

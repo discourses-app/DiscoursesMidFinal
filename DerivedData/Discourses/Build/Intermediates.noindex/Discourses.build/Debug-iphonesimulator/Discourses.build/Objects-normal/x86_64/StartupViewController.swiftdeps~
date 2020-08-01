@@ -21,11 +21,11 @@ depends-top-level:
 - "Bool"
 - !private "BooleanLiteralType"
 - !private "CGFloat"
-- !private "Constants"
 - !private "DispatchQueue"
 - !private "Double"
 - !private "FloatLiteralType"
 - !private "IntegerLiteralType"
+- !private "K"
 - "StartupViewController"
 - !private "StringLiteralType"
 - !private "Timer"
@@ -45,9 +45,9 @@ depends-member:
 - !private ["12CoreGraphics7CGFloatV", "init"]
 - !private ["So7CGPointV", "y"]
 - !private ["s7CVarArgP", "CGFloat"]
-- !private ["s7CVarArgP", "Constants"]
 - !private ["s7CVarArgP", "DispatchQueue"]
 - !private ["s7CVarArgP", "Double"]
+- !private ["s7CVarArgP", "K"]
 - !private ["s7CVarArgP", "Timer"]
 - !private ["s7CVarArgP", "UIFont"]
 - ["s7CVarArgP", ""]
@@ -65,11 +65,10 @@ depends-member:
 - !private ["s7CVarArgP", "viewDidAppear"]
 - !private ["s7CVarArgP", "viewDidLoad"]
 - !private ["SL", "init"]
-- !private ["10Discourses9ConstantsV", "Segues"]
 - !private ["s28CustomDebugStringConvertibleP", "CGFloat"]
-- !private ["s28CustomDebugStringConvertibleP", "Constants"]
 - !private ["s28CustomDebugStringConvertibleP", "DispatchQueue"]
 - !private ["s28CustomDebugStringConvertibleP", "Double"]
+- !private ["s28CustomDebugStringConvertibleP", "K"]
 - !private ["s28CustomDebugStringConvertibleP", "Timer"]
 - !private ["s28CustomDebugStringConvertibleP", "UIFont"]
 - ["s28CustomDebugStringConvertibleP", ""]
@@ -93,9 +92,9 @@ depends-member:
 - !private ["s17CustomReflectableP", "layer"]
 - !private ["s17CustomReflectableP", "y"]
 - !private ["s23CustomStringConvertibleP", "CGFloat"]
-- !private ["s23CustomStringConvertibleP", "Constants"]
 - !private ["s23CustomStringConvertibleP", "DispatchQueue"]
 - !private ["s23CustomStringConvertibleP", "Double"]
+- !private ["s23CustomStringConvertibleP", "K"]
 - !private ["s23CustomStringConvertibleP", "Timer"]
 - !private ["s23CustomStringConvertibleP", "UIFont"]
 - ["s23CustomStringConvertibleP", ""]
@@ -128,9 +127,9 @@ depends-member:
 - !private ["SE", "layer"]
 - !private ["SE", "y"]
 - !private ["SQ", "CGFloat"]
-- !private ["SQ", "Constants"]
 - !private ["SQ", "DispatchQueue"]
 - !private ["SQ", "Double"]
+- !private ["SQ", "K"]
 - !private ["SQ", "Timer"]
 - !private ["SQ", "UIFont"]
 - ["SQ", ""]
@@ -158,9 +157,9 @@ depends-member:
 - !private ["7SwiftUI7GestureP", "font"]
 - !private ["7SwiftUI7GestureP", "layer"]
 - !private ["SH", "CGFloat"]
-- !private ["SH", "Constants"]
 - !private ["SH", "DispatchQueue"]
 - !private ["SH", "Double"]
+- !private ["SH", "K"]
 - !private ["SH", "Timer"]
 - !private ["SH", "UIFont"]
 - ["SH", ""]
@@ -177,11 +176,12 @@ depends-member:
 - !private ["SH", "scheduledTimer"]
 - !private ["SH", "viewDidAppear"]
 - !private ["SH", "viewDidLoad"]
+- !private ["10Discourses1KV", "Segues"]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["So8NSCodingP", "CGFloat"]
-- !private ["So8NSCodingP", "Constants"]
 - !private ["So8NSCodingP", "DispatchQueue"]
 - !private ["So8NSCodingP", "Double"]
+- !private ["So8NSCodingP", "K"]
 - !private ["So8NSCodingP", "Timer"]
 - !private ["So8NSCodingP", "UIFont"]
 - ["So8NSCodingP", ""]
@@ -196,9 +196,9 @@ depends-member:
 - !private ["So8NSCodingP", "viewDidLoad"]
 - !private ["So9NSCopyingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "CGFloat"]
-- !private ["So26NSExtensionRequestHandlingP", "Constants"]
 - !private ["So26NSExtensionRequestHandlingP", "DispatchQueue"]
 - !private ["So26NSExtensionRequestHandlingP", "Double"]
+- !private ["So26NSExtensionRequestHandlingP", "K"]
 - !private ["So26NSExtensionRequestHandlingP", "Timer"]
 - !private ["So26NSExtensionRequestHandlingP", "UIFont"]
 - ["So26NSExtensionRequestHandlingP", ""]
@@ -209,9 +209,9 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
 - ["So8NSObjectC", "Bool"]
 - !private ["So8NSObjectC", "CGFloat"]
-- !private ["So8NSObjectC", "Constants"]
 - !private ["So8NSObjectC", "DispatchQueue"]
 - !private ["So8NSObjectC", "Double"]
+- !private ["So8NSObjectC", "K"]
 - !private ["So8NSObjectC", "Timer"]
 - !private ["So8NSObjectC", "UIFont"]
 - ["So8NSObjectC", "UIImageView"]
@@ -230,9 +230,9 @@ depends-member:
 - ["So8NSObjectC", "viewDidAppear"]
 - ["So8NSObjectC", "viewDidLoad"]
 - !private ["So8NSObjectP", "CGFloat"]
-- !private ["So8NSObjectP", "Constants"]
 - !private ["So8NSObjectP", "DispatchQueue"]
 - !private ["So8NSObjectP", "Double"]
+- !private ["So8NSObjectP", "K"]
 - !private ["So8NSObjectP", "Timer"]
 - !private ["So8NSObjectP", "UIFont"]
 - ["So8NSObjectP", ""]
@@ -259,13 +259,13 @@ depends-member:
 - !private ["s10SIMDScalarP", "init"]
 - !private ["7Combine9SchedulerP", "async"]
 - !private ["7Combine9SchedulerP", "main"]
-- !private ["10Discourses9ConstantsV6SeguesV", "startupVCToWelcomeVC"]
+- !private ["10Discourses1KV6SeguesV", "startupVCToWelcomeVC"]
 - !private ["s13SignedNumericP", "init"]
 - ["10Discourses21StartupViewControllerC", "Bool"]
 - !private ["10Discourses21StartupViewControllerC", "CGFloat"]
-- !private ["10Discourses21StartupViewControllerC", "Constants"]
 - !private ["10Discourses21StartupViewControllerC", "DispatchQueue"]
 - !private ["10Discourses21StartupViewControllerC", "Double"]
+- !private ["10Discourses21StartupViewControllerC", "K"]
 - !private ["10Discourses21StartupViewControllerC", "Timer"]
 - !private ["10Discourses21StartupViewControllerC", "UIFont"]
 - ["10Discourses21StartupViewControllerC", "UIImageView"]
@@ -289,9 +289,9 @@ depends-member:
 - !private ["So12UIAppearanceP", "font"]
 - !private ["So12UIAppearanceP", "layer"]
 - !private ["So21UIAppearanceContainerP", "CGFloat"]
-- !private ["So21UIAppearanceContainerP", "Constants"]
 - !private ["So21UIAppearanceContainerP", "DispatchQueue"]
 - !private ["So21UIAppearanceContainerP", "Double"]
+- !private ["So21UIAppearanceContainerP", "K"]
 - !private ["So21UIAppearanceContainerP", "Timer"]
 - !private ["So21UIAppearanceContainerP", "UIFont"]
 - ["So21UIAppearanceContainerP", ""]
@@ -304,9 +304,9 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "viewDidAppear"]
 - !private ["So21UIAppearanceContainerP", "viewDidLoad"]
 - !private ["So18UIContentContainerP", "CGFloat"]
-- !private ["So18UIContentContainerP", "Constants"]
 - !private ["So18UIContentContainerP", "DispatchQueue"]
 - !private ["So18UIContentContainerP", "Double"]
+- !private ["So18UIContentContainerP", "K"]
 - !private ["So18UIContentContainerP", "Timer"]
 - !private ["So18UIContentContainerP", "UIFont"]
 - ["So18UIContentContainerP", ""]
@@ -324,9 +324,9 @@ depends-member:
 - !private ["So13UIDynamicItemP", "font"]
 - !private ["So13UIDynamicItemP", "layer"]
 - !private ["So18UIFocusEnvironmentP", "CGFloat"]
-- !private ["So18UIFocusEnvironmentP", "Constants"]
 - !private ["So18UIFocusEnvironmentP", "DispatchQueue"]
 - !private ["So18UIFocusEnvironmentP", "Double"]
+- !private ["So18UIFocusEnvironmentP", "K"]
 - !private ["So18UIFocusEnvironmentP", "Timer"]
 - !private ["So18UIFocusEnvironmentP", "UIFont"]
 - ["So18UIFocusEnvironmentP", ""]
@@ -353,9 +353,9 @@ depends-member:
 - !private ["So24UILargeContentViewerItemP", "font"]
 - !private ["So24UILargeContentViewerItemP", "layer"]
 - !private ["So30UIPasteConfigurationSupportingP", "CGFloat"]
-- !private ["So30UIPasteConfigurationSupportingP", "Constants"]
 - !private ["So30UIPasteConfigurationSupportingP", "DispatchQueue"]
 - !private ["So30UIPasteConfigurationSupportingP", "Double"]
+- !private ["So30UIPasteConfigurationSupportingP", "K"]
 - !private ["So30UIPasteConfigurationSupportingP", "Timer"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIFont"]
 - ["So30UIPasteConfigurationSupportingP", ""]
@@ -369,9 +369,9 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
 - ["So11UIResponderC", "Bool"]
 - !private ["So11UIResponderC", "CGFloat"]
-- !private ["So11UIResponderC", "Constants"]
 - !private ["So11UIResponderC", "DispatchQueue"]
 - !private ["So11UIResponderC", "Double"]
+- !private ["So11UIResponderC", "K"]
 - !private ["So11UIResponderC", "Timer"]
 - !private ["So11UIResponderC", "UIFont"]
 - ["So11UIResponderC", "UIImageView"]
@@ -386,9 +386,9 @@ depends-member:
 - ["So11UIResponderC", "viewDidAppear"]
 - ["So11UIResponderC", "viewDidLoad"]
 - !private ["So30UIResponderStandardEditActionsP", "CGFloat"]
-- !private ["So30UIResponderStandardEditActionsP", "Constants"]
 - !private ["So30UIResponderStandardEditActionsP", "DispatchQueue"]
 - !private ["So30UIResponderStandardEditActionsP", "Double"]
+- !private ["So30UIResponderStandardEditActionsP", "K"]
 - !private ["So30UIResponderStandardEditActionsP", "Timer"]
 - !private ["So30UIResponderStandardEditActionsP", "UIFont"]
 - ["So30UIResponderStandardEditActionsP", ""]
@@ -401,9 +401,9 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "viewDidAppear"]
 - !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
 - !private ["So16UIStateRestoringP", "CGFloat"]
-- !private ["So16UIStateRestoringP", "Constants"]
 - !private ["So16UIStateRestoringP", "DispatchQueue"]
 - !private ["So16UIStateRestoringP", "Double"]
+- !private ["So16UIStateRestoringP", "K"]
 - !private ["So16UIStateRestoringP", "Timer"]
 - !private ["So16UIStateRestoringP", "UIFont"]
 - ["So16UIStateRestoringP", ""]
@@ -413,9 +413,9 @@ depends-member:
 - !private ["So16UIStateRestoringP", "viewDidAppear"]
 - !private ["So16UIStateRestoringP", "viewDidLoad"]
 - !private ["So18UITraitEnvironmentP", "CGFloat"]
-- !private ["So18UITraitEnvironmentP", "Constants"]
 - !private ["So18UITraitEnvironmentP", "DispatchQueue"]
 - !private ["So18UITraitEnvironmentP", "Double"]
+- !private ["So18UITraitEnvironmentP", "K"]
 - !private ["So18UITraitEnvironmentP", "Timer"]
 - !private ["So18UITraitEnvironmentP", "UIFont"]
 - ["So18UITraitEnvironmentP", ""]
@@ -428,9 +428,9 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "viewDidAppear"]
 - !private ["So18UITraitEnvironmentP", "viewDidLoad"]
 - !private ["So23UIUserActivityRestoringP", "CGFloat"]
-- !private ["So23UIUserActivityRestoringP", "Constants"]
 - !private ["So23UIUserActivityRestoringP", "DispatchQueue"]
 - !private ["So23UIUserActivityRestoringP", "Double"]
+- !private ["So23UIUserActivityRestoringP", "K"]
 - !private ["So23UIUserActivityRestoringP", "Timer"]
 - !private ["So23UIUserActivityRestoringP", "UIFont"]
 - ["So23UIUserActivityRestoringP", ""]
@@ -447,9 +447,9 @@ depends-member:
 - !private ["So6UIViewC", "layer"]
 - ["So16UIViewControllerC", "Bool"]
 - !private ["So16UIViewControllerC", "CGFloat"]
-- !private ["So16UIViewControllerC", "Constants"]
 - !private ["So16UIViewControllerC", "DispatchQueue"]
 - !private ["So16UIViewControllerC", "Double"]
+- !private ["So16UIViewControllerC", "K"]
 - !private ["So16UIViewControllerC", "Timer"]
 - !private ["So16UIViewControllerC", "UIFont"]
 - ["So16UIViewControllerC", "UIImageView"]
@@ -474,9 +474,9 @@ depends-member:
 - !private ["7SwiftUI18_FormatSpecifiableP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CGFloat"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "Constants"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQueue"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Double"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "K"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Timer"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIFont"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
@@ -494,9 +494,9 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidAppear"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CGFloat"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Constants"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "DispatchQueue"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Double"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "K"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Timer"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIFont"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
@@ -532,7 +532,6 @@ depends-nominal:
 - !private "So7CGPointV"
 - "s7CVarArgP"
 - !private "SL"
-- !private "10Discourses9ConstantsV"
 - "s28CustomDebugStringConvertibleP"
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
@@ -548,6 +547,7 @@ depends-nominal:
 - !private "SF"
 - !private "7SwiftUI7GestureP"
 - "SH"
+- !private "10Discourses1KV"
 - !private "s25LosslessStringConvertibleP"
 - "So8NSCodingP"
 - !private "So9NSCopyingP"
@@ -560,7 +560,7 @@ depends-nominal:
 - !private "Sq"
 - !private "s10SIMDScalarP"
 - !private "7Combine9SchedulerP"
-- !private "10Discourses9ConstantsV6SeguesV"
+- !private "10Discourses1KV6SeguesV"
 - !private "s13SignedNumericP"
 - "10Discourses21StartupViewControllerC"
 - !private "Sx"

@@ -50,7 +50,7 @@ public class KeyboardLayoutConstraint: NSLayoutConstraint {
             if let frameValue = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
                 let frame = frameValue.cgRectValue
                 keyboardVisibleHeight = frame.size.height
-                Constants.keyboardHeight = keyboardVisibleHeight
+                K.keyboardHeight = keyboardVisibleHeight
                 print("1")
             }
               print("1")

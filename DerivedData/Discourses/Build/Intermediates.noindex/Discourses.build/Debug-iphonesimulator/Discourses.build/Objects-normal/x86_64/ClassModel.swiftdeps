@@ -9,14 +9,43 @@ provides-dynamic-lookup:
 depends-top-level:
 - "AssignmentPrecedence"
 - "Class"
+- !private "FloatLiteralType"
+- "Int"
+- !private "IntegerLiteralType"
+- !private "K"
 - "String"
+- !private "StringLiteralType"
+- !private "UnicodeScalarType"
 depends-member:
+- ["10Discourses5ClassV", "Int"]
+- !private ["10Discourses5ClassV", "K"]
 - ["10Discourses5ClassV", "String"]
+- ["10Discourses5ClassV", "dbRepresentation"]
 - ["10Discourses5ClassV", "init"]
+- ["10Discourses5ClassV", "lectureNo"]
 - ["10Discourses5ClassV", "name"]
 - ["10Discourses5ClassV", "professor"]
+- ["10Discourses5ClassV", "stringRepresentation"]
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
+- !private ["10Discourses1KV8FirebaseV", "classNameField"]
+- !private ["10Discourses1KV8FirebaseV", "lectureNoField"]
+- !private ["10Discourses1KV8FirebaseV", "profNameField"]
+- !private ["10Discourses1KV", "Firebase"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
 depends-nominal:
 - "10Discourses5ClassV"
+- !private "s23CustomStringConvertibleP"
+- !private "s26DefaultStringInterpolationV"
+- !private "10Discourses1KV8FirebaseV"
+- !private "10Discourses1KV"
+- !private "s27StringInterpolationProtocolP"
+- !private "s16TextOutputStreamP"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64.swiftmodule"
@@ -116,4 +145,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "e8ff701e4f1250e58b87288bf6cf596d"
+interface-hash: "6db77f451d54a2d4ae4101149dc6495e"

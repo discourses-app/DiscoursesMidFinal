@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import FirebaseAuth
+import FirebaseFirestore
 
 class ChatViewController: UIViewController {
     //MARK: - Element declaration
@@ -26,70 +27,86 @@ class ChatViewController: UIViewController {
     
     var bgColor : UIColor?
     var prevSender : String?
-    var curruserName : String? = "Janardhan"
+    var curruserName : String?
     var X : CGFloat = 0.0
     var Y : CGFloat = 0.0
     var tableWidth : CGFloat = 0.0
     var tableHeight : CGFloat = 0.0
     var keyboardHeight : CGFloat = 0.0//346.0 //for iPhone 11
     var initStackHeight : CGFloat!
-    var flag : Int = 0 //just trust me on why we need this
+    var flag : Int = 0 //just trust me on why we need this - aritra
+    let db = Firestore.firestore()
+    var courseName : String?
+    var profName : String?
+    var lecNumber : Int? = 1
     var messages : [Message] = [
         Message(
             from: Sender(withName: "Janardhan", withProfilePic: #imageLiteral(resourceName: "BrandColoredLogo")),
-            on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
+            on: Date().timeIntervalSince1970,
             withMessage: "Hi", isConsecutive: false
         ),
         Message(
             from: Sender(withName: "Jonathon", withProfilePic: #imageLiteral(resourceName: "DiscoursesLogo")),
-            on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
+            on: Date().timeIntervalSince1970,
             withMessage: "I'm doing well, how about yourself?", isConsecutive: false
         ),
         Message(
             from: Sender(withName: "Janardhan", withProfilePic: #imageLiteral(resourceName: "BrandColoredLogo")),
-            on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
+            on: Date().timeIntervalSince1970,
             withMessage: "I'm just keeping one multiline message so that we know it didn't mess up while we were testing",isConsecutive: false
         ),
         Message(
             from: Sender(withName: "Chamiya", withProfilePic: #imageLiteral(resourceName: "NoBgLogo")),
-            on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
+            on: Date().timeIntervalSince1970,
             withMessage: "Okay...", isConsecutive: false
         ),
         Message(
             from: Sender(withName: "Chamiya", withProfilePic: #imageLiteral(resourceName: "NoBgLogo")),
-            on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
+            on: Date().timeIntervalSince1970,
             withMessage: "Well this message is so that the message is suitably long such that the scroll is enabled even in full size", isConsecutive: true
         ),
         Message(
             from: Sender(withName: "Janardhan", withProfilePic: #imageLiteral(resourceName: "BrandColoredLogo")),
-            on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
+            on: Date().timeIntervalSince1970,
             withMessage: "This message will help the previous message make sure that there is a scroll in the full view", isConsecutive: false
         ),
         Message(
             from: Sender(withName: "Chamiya", withProfilePic: #imageLiteral(resourceName: "NoBgLogo")),
-            on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
+            on: Date().timeIntervalSince1970,
             withMessage: "Bro I'm begging you pls stop", isConsecutive: false
         )
     ]
-    
+
     //MARK: - Native function manipulation
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-//        NotificationCenter.default.addObserver(self, selector: #selector(updateHeight), name: UITextView.textDidChangeNotification, object: nil)
-//        inputField.isScrollEnabled = false
         //background set up
         /*
          Uncomment this to make the background color change based on color of class selection
          backMostView.backgroundColor = bgColor ?? UIColor(named: "BrandBackgroundColor")
          */
         
+        //getting name of the user
+        let userEmail = Auth.auth().currentUser?.email
+        db.collection(K.Firebase.EmailCollection.name).document(userEmail!).getDocument { (document, error) in
+            if let e = error {
+                print(e)
+                return
+            }
+            if let document = document, document.exists {
+                let data = document.data()!
+                self.curruserName = "\(data[K.Firebase.EmailCollection.userFirstField]!) \(data[K.Firebase.EmailCollection.userLastField]!)"
+            }
+        }
+        
         //subject label set up
+        subjectLabel.text = courseName
         subjectLabel.text = subjectLabel.text?.uppercased()
         subjectLabel.font = UIFont(name: "AirbnbCerealApp-Medium", size: 30)
         
         //professor label set up
+        professorLabel.text = profName
         professorLabel.font = UIFont(name: "AirbnbCerealApp-Book", size: 16)
         
         
@@ -101,8 +118,8 @@ class ChatViewController: UIViewController {
         X = chatTable.frame.minX
         Y = chatTable.frame.minY
         chatTable.layer.cornerRadius = 40
-        chatTable.register(UINib(nibName: Constants.CellStructNames.messageCell, bundle: nil), forCellReuseIdentifier: Constants.CellIdentifiers.messageCell)
-        chatTable.register(UINib(nibName: Constants.CellStructNames.sentCell, bundle: nil), forCellReuseIdentifier: Constants.CellIdentifiers.sentCell)
+        chatTable.register(UINib(nibName: K.CellStructNames.messageCell, bundle: nil), forCellReuseIdentifier: K.CellIdentifiers.messageCell)
+        chatTable.register(UINib(nibName: K.CellStructNames.sentCell, bundle: nil), forCellReuseIdentifier: K.CellIdentifiers.sentCell)
         
         //inputStackView set up
         inputStackView.addBackground(color: #colorLiteral(red: 0.9490196078, green: 0.937254902, blue: 0.8745098039, alpha: 1)) //added extension
@@ -111,6 +128,7 @@ class ChatViewController: UIViewController {
         initStackHeight = stackViewHeight.constant
         stackViewMaxHeight.constant = initStackHeight + 36
         inputField.isScrollEnabled = false
+        
         //input text view set up
 //        inputField.isScrollEnabled = true
         inputField.isEditable = true
@@ -158,35 +176,28 @@ class ChatViewController: UIViewController {
             print("Dismissing current view controller")
         }
     }
-    
-    
 }
-  
+//MARK: - Firebase implementation
+
+extension ChatViewController {
+    func uploadMessage(_ message: Message){
+        let senderName = message.sender.name
+        let content = message.content
+        let date = message.timeSent
+        let data : [String : Any] = [
+            "sender" : senderName,
+            "time" : date,
+            "content" : content
+        ]
+        let classthread = "\(self.courseName!)_\(self.profName!)_\(self.lecNumber!)"
+        
+        
+    }
+}
 
 //MARK: - TextView Delegate
 
 extension ChatViewController : UITextViewDelegate{
-    
-    //hitting the return button changes chatTable size
-    //    func textViewShouldReturn(_ textField: UITextView) -> Bool {
-    //
-    ////        UIView.animate(withDuration: 0.3) {
-    ////            self.chatTable.frame = CGRect(x: self.X, y: self.Y, width: self.tableWidth, height: self.tableHeight)
-    ////        }
-    //        let content = textField.text ?? ""
-    //        if content != "" {
-    //            let sender = Sender(withName: self.curruserName ?? "no name", withProfilePic: nil)
-    //            let newMessage = Message(from: sender, on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate), withMessage: content)
-    //            messages.append(newMessage)
-    //            chatTable.reloadData()
-    //        }
-    //        textField.text = nil
-    //
-    //        scrollToBottom()
-    //        flag = 0
-    //        return false
-    //    }
-    
     //beginning editing should also change the keyboard stuff
     
     func textViewDidChange(_ textView: UITextView) {
@@ -196,6 +207,10 @@ extension ChatViewController : UITextViewDelegate{
            }
         
        }
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+        scrollToBottom()
+        return true
+    }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         
@@ -204,7 +219,7 @@ extension ChatViewController : UITextViewDelegate{
             let content = textView.text ?? ""
             if content != "" {
                 let sender = Sender(withName: self.curruserName ?? "no name", withProfilePic: nil)
-                var newMessage = Message(from: sender, on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate), withMessage: content, isConsecutive: false)
+                var newMessage = Message(from: sender, on: Date().timeIntervalSince1970, withMessage: content, isConsecutive: false)
                 let indexPath = IndexPath(row:  self.chatTable.numberOfRows(inSection: 0) - 1, section: 0)
                 if messages[indexPath.row].sender.name == curruserName {
                     newMessage.isConsecutive = true
@@ -236,7 +251,7 @@ extension ChatViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if curruserName == messages[indexPath.row].sender.name {
-            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.sentCell) as! SentMessageCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: K.CellIdentifiers.sentCell) as! SentMessageCell
             cell.contentLabel.text = messages[indexPath.row].content
             
             /*
@@ -254,7 +269,7 @@ extension ChatViewController: UITableViewDataSource {
         }
         else if messages[indexPath.row].isConsecutive {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.messageCell) as! ReceivedMessageCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: K.CellIdentifiers.messageCell) as! ReceivedMessageCell
             cell.messageContent.text = messages[indexPath.row].content
             cell.profileImage.alpha = 0
             //let currentSenderName = messages[indexPath.row].sender.name
@@ -275,7 +290,7 @@ extension ChatViewController: UITableViewDataSource {
             return cell
         }
         else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.messageCell) as! ReceivedMessageCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: K.CellIdentifiers.messageCell) as! ReceivedMessageCell
                        cell.messageContent.text = messages[indexPath.row].content
                        cell.profileImage.image = messages[indexPath.row].sender.profilepic
                        let currentSenderName = messages[indexPath.row].sender.name

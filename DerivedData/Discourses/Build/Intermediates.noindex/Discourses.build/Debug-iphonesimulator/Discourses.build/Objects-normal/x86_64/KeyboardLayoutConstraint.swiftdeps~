@@ -17,9 +17,9 @@ depends-top-level:
 - "AssignmentPrecedence"
 - "CGFloat"
 - "CastingPrecedence"
-- !private "Constants"
 - "FloatLiteralType"
 - "IntegerLiteralType"
+- !private "K"
 - "KeyboardLayoutConstraint"
 - "NSLayoutConstraint"
 - "NSNotification"
@@ -49,7 +49,7 @@ depends-member:
 - !private ["So6CGRectV", "size"]
 - !private ["So6CGSizeV", "height"]
 - !private ["s7CVarArgP", "AnimationOptions"]
-- !private ["s7CVarArgP", "Constants"]
+- !private ["s7CVarArgP", "K"]
 - !private ["s7CVarArgP", "KeyboardLayoutConstraint"]
 - !private ["s7CVarArgP", "NotificationCenter"]
 - !private ["s7CVarArgP", "TimeInterval"]
@@ -84,9 +84,8 @@ depends-member:
 - !private ["s7CVarArgP", "userInfo"]
 - !private ["Sl", "subscript"]
 - !private ["SL", "init"]
-- !private ["10Discourses9ConstantsV", "keyboardHeight"]
 - !private ["s28CustomDebugStringConvertibleP", "AnimationOptions"]
-- !private ["s28CustomDebugStringConvertibleP", "Constants"]
+- !private ["s28CustomDebugStringConvertibleP", "K"]
 - !private ["s28CustomDebugStringConvertibleP", "KeyboardLayoutConstraint"]
 - !private ["s28CustomDebugStringConvertibleP", "NotificationCenter"]
 - !private ["s28CustomDebugStringConvertibleP", "TimeInterval"]
@@ -129,7 +128,7 @@ depends-member:
 - !private ["s17CustomReflectableP", "subscript"]
 - !private ["s17CustomReflectableP", "userInfo"]
 - !private ["s23CustomStringConvertibleP", "AnimationOptions"]
-- !private ["s23CustomStringConvertibleP", "Constants"]
+- !private ["s23CustomStringConvertibleP", "K"]
 - !private ["s23CustomStringConvertibleP", "KeyboardLayoutConstraint"]
 - !private ["s23CustomStringConvertibleP", "NotificationCenter"]
 - !private ["s23CustomStringConvertibleP", "TimeInterval"]
@@ -175,7 +174,7 @@ depends-member:
 - ["SE", "some"]
 - !private ["SE", "subscript"]
 - !private ["SQ", "AnimationOptions"]
-- !private ["SQ", "Constants"]
+- !private ["SQ", "K"]
 - !private ["SQ", "KeyboardLayoutConstraint"]
 - !private ["SQ", "NotificationCenter"]
 - !private ["SQ", "TimeInterval"]
@@ -225,7 +224,7 @@ depends-member:
 - !private ["SF", "init"]
 - ["7SwiftUI7GestureP", "some"]
 - !private ["SH", "AnimationOptions"]
-- !private ["SH", "Constants"]
+- !private ["SH", "K"]
 - !private ["SH", "KeyboardLayoutConstraint"]
 - !private ["SH", "NotificationCenter"]
 - !private ["SH", "TimeInterval"]
@@ -259,8 +258,9 @@ depends-member:
 - !private ["SH", "uintValue"]
 - !private ["SH", "updateConstant"]
 - !private ["SH", "userInfo"]
+- !private ["10Discourses1KV", "keyboardHeight"]
 - ["10Discourses24KeyboardLayoutConstraintC", "CGFloat"]
-- !private ["10Discourses24KeyboardLayoutConstraintC", "Constants"]
+- !private ["10Discourses24KeyboardLayoutConstraintC", "K"]
 - !private ["10Discourses24KeyboardLayoutConstraintC", "KeyboardLayoutConstraint"]
 - ["10Discourses24KeyboardLayoutConstraintC", "NSNotification"]
 - !private ["10Discourses24KeyboardLayoutConstraintC", "NSNumber"]
@@ -299,7 +299,7 @@ depends-member:
 - !private ["So20NSFetchRequestResultP", "doubleValue"]
 - !private ["So20NSFetchRequestResultP", "uintValue"]
 - ["So18NSLayoutConstraintC", "CGFloat"]
-- !private ["So18NSLayoutConstraintC", "Constants"]
+- !private ["So18NSLayoutConstraintC", "K"]
 - !private ["So18NSLayoutConstraintC", "KeyboardLayoutConstraint"]
 - ["So18NSLayoutConstraintC", "NSNotification"]
 - !private ["So18NSLayoutConstraintC", "NSNumber"]
@@ -326,7 +326,7 @@ depends-member:
 - !private ["So8NSNumberC", "uintValue"]
 - !private ["So8NSObjectC", "AnimationOptions"]
 - ["So8NSObjectC", "CGFloat"]
-- !private ["So8NSObjectC", "Constants"]
+- !private ["So8NSObjectC", "K"]
 - !private ["So8NSObjectC", "KeyboardLayoutConstraint"]
 - ["So8NSObjectC", "NSNotification"]
 - !private ["So8NSObjectC", "NSNumber"]
@@ -362,7 +362,7 @@ depends-member:
 - ["So8NSObjectC", "updateConstant"]
 - !private ["So8NSObjectC", "userInfo"]
 - !private ["So8NSObjectP", "AnimationOptions"]
-- !private ["So8NSObjectP", "Constants"]
+- !private ["So8NSObjectP", "K"]
 - !private ["So8NSObjectP", "KeyboardLayoutConstraint"]
 - !private ["So8NSObjectP", "NotificationCenter"]
 - !private ["So8NSObjectP", "TimeInterval"]
@@ -530,7 +530,7 @@ depends-member:
 - !private ["s35_HasCustomAnyHashableRepresentationP", "uintValue"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "userInfo"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "AnimationOptions"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "Constants"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "K"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "KeyboardLayoutConstraint"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NotificationCenter"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "TimeInterval"]
@@ -562,7 +562,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "updateConstant"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "userInfo"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "AnimationOptions"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Constants"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "K"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "KeyboardLayoutConstraint"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NotificationCenter"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "TimeInterval"]
@@ -615,7 +615,6 @@ depends-nominal:
 - "s7CVarArgP"
 - !private "Sl"
 - !private "SL"
-- !private "10Discourses9ConstantsV"
 - "s28CustomDebugStringConvertibleP"
 - "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
@@ -633,6 +632,7 @@ depends-nominal:
 - !private "SF"
 - "7SwiftUI7GestureP"
 - "SH"
+- !private "10Discourses1KV"
 - "10Discourses24KeyboardLayoutConstraintC"
 - !private "s25LosslessStringConvertibleP"
 - !private "So8NSCodingP"

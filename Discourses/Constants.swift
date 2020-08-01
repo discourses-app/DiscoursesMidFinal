@@ -8,7 +8,8 @@
 import CoreGraphics
 import SwiftUI
 import FirebaseFirestore
-struct Constants {
+import FirebaseAuth
+struct K {
     
     struct Segues {
 //        static let welcomeVCToClassListVC = "welcomeToClasslist"
@@ -31,6 +32,22 @@ struct Constants {
         static let sentCell = "SentMessageCell"
     }
     
+    struct Firebase {
+        struct ClassCollection {
+            static let name = "Classes"
+            static let userCollection = "users"
+        }
+        struct EmailCollection {
+            static let name = "EmailIDs"
+            static let userFirstField = "first name"
+            static let userLastField = "last name"
+            static let subbedClasses = "Classes"
+        }
+        static let classNameField = "Name"
+        static let profNameField = "professor"
+        static let lectureNoField = "lecture number"
+    }
+    
     static var keyboardHeight : CGFloat!
     static var subcribedClasses : [Class] = [
 //        Class(name: "Psych 100A", professor: "Mudane"),
@@ -39,39 +56,13 @@ struct Constants {
     ]
     
     static var allClasses :[Class] = [
-       Class(name: "ComSci 31", professor: "Smallberg"),
-       Class(name: "Math 32A", professor: "L. Chayes"),
-       Class(name: "Math 33B", professor: "Hlushchanka"),
-       Class(name: "ComSci 32", professor: "Carey Nachenberg"),
-       Class(name: "MGMT 100A", professor: "Marugame"),
-       Class(name: "ComSci 180", professor: "Sarrafzadeh"),
-       Class(name: "Physics 1B", professor: "Corbin")
+        Class(name: "ComSci 31", professor: "Smallberg", lectureNo: 1),
+        Class(name: "Math 32A", professor: "L. Chayes", lectureNo: 1),
+       Class(name: "Math 33B", professor: "Hlushchanka", lectureNo: 1),
+       Class(name: "ComSci 32", professor: "Carey Nachenberg", lectureNo: 1),
+       Class(name: "MGMT 100A", professor: "Marugame", lectureNo: 1),
+       Class(name: "ComSci 180", professor: "Sarrafzadeh", lectureNo: 1),
+       Class(name: "Physics 1B", professor: "Corbin", lectureNo: 1)
     ]
     
-    static var userEmail : String!
-    static func loadAllClassesSubscribed(completionHandler: @escaping(_ success: Bool)->Void) {
-    
-        let db = Firestore.firestore()
-        db.collection("EmailIDs").document(Constants.userEmail).collection("Classes").getDocuments() { (querySnapshot, err) in
-    print("Entered!")
-    Constants.subcribedClasses = []
-    if let err = err {
-        print("Error getting documents: \(err)")
-        completionHandler(false)
-    } else {
-        for (index, document) in querySnapshot!.documents.enumerated() {
-            print("\(document.documentID) => \(document.data())")
-            let dict = document.data()
-            Constants.subcribedClasses.append(Class(name: dict["name"] as! String, professor: dict["professor"] as! String))
-            print("Happening serially? \(dict["name"]) \(index)")
-        }
-    }
-            print("Exited!")
-            completionHandler(true)
-        }
-      
-      
 }
-    
-}
-//i did the merge!

@@ -12,14 +12,14 @@ provides-dynamic-lookup:
 depends-top-level:
 - "AssignmentPrecedence"
 - "Bool"
-- "Date"
+- "Double"
 - "Message"
 - "Sender"
 - "String"
 - "UIImage"
 depends-member:
 - ["10Discourses7MessageV", "Bool"]
-- ["10Discourses7MessageV", "Date"]
+- ["10Discourses7MessageV", "Double"]
 - ["10Discourses7MessageV", "Sender"]
 - ["10Discourses7MessageV", "String"]
 - ["10Discourses7MessageV", "content"]
@@ -134,4 +134,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "b0dc80175a1abe0dc98502484524da5a"
+interface-hash: "39cfd838133862dca973668e0cd9a803"

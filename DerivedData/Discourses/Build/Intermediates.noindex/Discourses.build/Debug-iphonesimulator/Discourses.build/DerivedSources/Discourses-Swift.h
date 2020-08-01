@@ -252,6 +252,8 @@ SWIFT_CLASS("_TtC10Discourses18ChatViewController")
 @interface ChatViewController (SWIFT_EXTENSION(Discourses)) <UITableViewDelegate>
 @end
 
+
+
 @class UITableViewCell;
 
 @interface ChatViewController (SWIFT_EXTENSION(Discourses)) <UITableViewDataSource>
@@ -259,16 +261,17 @@ SWIFT_CLASS("_TtC10Discourses18ChatViewController")
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 @end
 
-
-@interface ChatViewController (SWIFT_EXTENSION(Discourses)) <UITextViewDelegate>
-- (void)textViewDidChange:(UITextView * _Nonnull)textView;
-- (BOOL)textView:(UITextView * _Nonnull)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString * _Nonnull)text SWIFT_WARN_UNUSED_RESULT;
-@end
-
 @class UITapGestureRecognizer;
 
 @interface ChatViewController (SWIFT_EXTENSION(Discourses))
 - (void)someAction:(UITapGestureRecognizer * _Nonnull)sender;
+@end
+
+
+@interface ChatViewController (SWIFT_EXTENSION(Discourses)) <UITextViewDelegate>
+- (void)textViewDidChange:(UITextView * _Nonnull)textView;
+- (BOOL)textViewShouldBeginEditing:(UITextView * _Nonnull)textView SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)textView:(UITextView * _Nonnull)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString * _Nonnull)text SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -296,6 +299,7 @@ SWIFT_CLASS("_TtC10Discourses24KeyboardLayoutConstraint") SWIFT_AVAILABILITY(tvo
 
 @class UIImageView;
 @class UITextField;
+@class UIStoryboardSegue;
 
 SWIFT_CLASS("_TtC10Discourses19LoginViewController")
 @interface LoginViewController : UIViewController
@@ -309,21 +313,18 @@ SWIFT_CLASS("_TtC10Discourses19LoginViewController")
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified signUpBtn;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified logoImage;
 - (void)viewDidLoad;
+- (IBAction)loginButtonPressed:(UIButton * _Nonnull)sender;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
+
+
 @interface LoginViewController (SWIFT_EXTENSION(Discourses)) <UITextFieldDelegate>
 - (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
 - (BOOL)textFieldShouldEndEditing:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
-@end
-
-@class UIStoryboardSegue;
-
-@interface LoginViewController (SWIFT_EXTENSION(Discourses))
-- (IBAction)loginButtonPressed:(UIButton * _Nonnull)sender;
-- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 @end
 
 
@@ -372,6 +373,8 @@ SWIFT_CLASS("_TtC10Discourses25SearchClassViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
 
 
 
@@ -450,6 +453,8 @@ SWIFT_CLASS("_TtC10Discourses31SubscribedClassesViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
 
 
 @interface SubscribedClassesViewController (SWIFT_EXTENSION(Discourses)) <UITableViewDelegate>
