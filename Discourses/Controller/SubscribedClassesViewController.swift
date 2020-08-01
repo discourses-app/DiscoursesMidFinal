@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class SubscribedClassesViewController: UIViewController {
     
@@ -28,6 +29,8 @@ class SubscribedClassesViewController: UIViewController {
     
 //MARK: - Native functions manipulation
     override func viewDidLoad() {
+        print("this is from viewDidLoad in subscribedClassView")
+        
         super.viewDidLoad()
         
         //table view set up
@@ -49,7 +52,11 @@ class SubscribedClassesViewController: UIViewController {
             classListTable.cellForRow(at: indexPath)?.alpha = 1
             selectedCellIndex = nil
         }
+       
+        print("This is from viewWillAppear in subscribedClassVC")
+        Constants.loadAllClassesSubscribed { success in
         self.classListTable.reloadData()
+        }
     }
     
 //MARK: - Segue preparation
@@ -65,6 +72,8 @@ class SubscribedClassesViewController: UIViewController {
     @IBAction func addClassButtonPressed(_ sender: UIButton) {
         performSegue(withIdentifier: Constants.Segues.classListVCtoAddClassVC, sender: self)
     }
+    
+ 
 }
 
 //MARK: - TableView Deleagate
@@ -88,7 +97,7 @@ extension SubscribedClassesViewController : UITableViewDelegate {
 
 extension SubscribedClassesViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Constants.classes.count
+        return Constants.subcribedClasses.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -98,8 +107,9 @@ extension SubscribedClassesViewController : UITableViewDataSource {
         backgroundView.backgroundColor = UIColor.clear
         cell.selectedBackgroundView = backgroundView
         cell.bubbleView.backgroundColor = bgColorForCell
-        cell.classNameLabel.text = Constants.classes[indexPath.row].name.uppercased()
-        cell.professorNameLabel.text = Constants.classes[indexPath.row].professor.uppercased()
+        print(indexPath.row)
+        cell.classNameLabel.text = Constants.subcribedClasses[indexPath.row].name.uppercased()
+        cell.professorNameLabel.text = Constants.subcribedClasses[indexPath.row].professor.uppercased()
          return cell
         
     }

@@ -144,7 +144,11 @@ extension LoginViewController {
                 }
                 self.present(errAlert, animated: true, completion: nil)
             } else {
+                Constants.userEmail = authResult?.user.email
+                Constants.loadAllClassesSubscribed { success in
                 self.performSegue(withIdentifier: Constants.Segues.loginVCtoClasslistVC, sender: self)
+                }
+                
             }
         }
     }

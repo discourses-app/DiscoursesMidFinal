@@ -7,7 +7,7 @@
 //
 import CoreGraphics
 import SwiftUI
-
+import FirebaseFirestore
 struct Constants {
     
     struct Segues {
@@ -32,10 +32,10 @@ struct Constants {
     }
     
     static var keyboardHeight : CGFloat!
-    static var classes : [Class] = [
-        Class(name: "Psych 100A", professor: "Mudane"),
-        Class(name: "Ling 120B", professor: "Sawtelle"),
-        Class(name: "Physics 1C", professor: "Corbin")
+    static var subcribedClasses : [Class] = [
+//        Class(name: "Psych 100A", professor: "Mudane"),
+//        Class(name: "Ling 120B", professor: "Sawtelle"),
+//        Class(name: "Physics 1C", professor: "Corbin")
     ]
     
     static var allClasses :[Class] = [
@@ -48,7 +48,30 @@ struct Constants {
        Class(name: "Physics 1B", professor: "Corbin")
     ]
     
-
+    static var userEmail : String!
+    static func loadAllClassesSubscribed(completionHandler: @escaping(_ success: Bool)->Void) {
+    
+        let db = Firestore.firestore()
+        db.collection("EmailIDs").document(Constants.userEmail).collection("Classes").getDocuments() { (querySnapshot, err) in
+    print("Entered!")
+    Constants.subcribedClasses = []
+    if let err = err {
+        print("Error getting documents: \(err)")
+        completionHandler(false)
+    } else {
+        for (index, document) in querySnapshot!.documents.enumerated() {
+            print("\(document.documentID) => \(document.data())")
+            let dict = document.data()
+            Constants.subcribedClasses.append(Class(name: dict["name"] as! String, professor: dict["professor"] as! String))
+            print("Happening serially? \(dict["name"]) \(index)")
+        }
+    }
+            print("Exited!")
+            completionHandler(true)
+        }
+      
+      
+}
     
 }
 //i did the merge!

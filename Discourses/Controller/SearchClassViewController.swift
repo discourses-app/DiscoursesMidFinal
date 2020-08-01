@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 class SearchClassViewController: UIViewController {
     //MARK: - Element declaration
     @IBOutlet var backBtn: UIButton!
@@ -64,6 +65,16 @@ class SearchClassViewController: UIViewController {
         //        mainView.addGestureRecognizer(tapGesture)
         //       TOO MANY ISSUES W THE ABOVE CODE WE CAN WORRY ABOUT IT LATER!
         
+        //MARK:- To Understand Database Schema
+        let db = Firestore.firestore()
+        for (index,name) in data.enumerated() {
+            let fullName = name.components(separatedBy: "/")
+            let className = fullName[0]
+            print("did i get here to do google things? This is at SearchViewController!")
+            let key = String(index)
+            db.collection("Classes").document(className).setData(["Name":className])
+        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -74,7 +85,9 @@ class SearchClassViewController: UIViewController {
     
     //MARK: - Button functions
     @IBAction func backBtnPressed(_ sender: UIButton) {
+        Constants.loadAllClassesSubscribed { success in
         self.dismiss(animated: true)
+        }
     }
     
 }
@@ -176,7 +189,7 @@ extension SearchClassViewController : UITableViewDelegate {
         print("This cell from the chat list was selected: \(indexPath.row)")
         let cell = tableView.cellForRow(at: indexPath)
         guard (cell?.viewWithTag(1) as! UIImageView).image != #imageLiteral(resourceName: "checkMark") else {return}
-        
+        let db = Firestore.firestore()
         UIView.transition(with: (cell?.viewWithTag(1) as! UIImageView),
                           duration: 0.75,
                           options: .transitionFlipFromTop,
@@ -184,8 +197,9 @@ extension SearchClassViewController : UITableViewDelegate {
                           completion: nil)
         let className = cell!.textLabel!.text!
         let profName = cell?.contentView.viewWithTag(2) as! UILabel
+        //ADDING CLASS TO THE DATABASE!
         let newlySubscribed = Class (name: className, professor: profName.text!)
-        Constants.classes.insert(newlySubscribed, at: 0)
+        db.collection("EmailIDs").document(Constants.userEmail).collection("Classes").addDocument(data:["name":className, "professor":profName.text!])
         
         //removing a name from the collection 'data' if it is selected by the user
         //we will have to make a struct that stores the name of a class along with the professor teaching said class
