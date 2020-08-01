@@ -107,8 +107,8 @@ extension SubscribedClassesViewController {
 //    }
 
     func loadClasses() {
-        subbedCourses = []
         db.collection(K.Firebase.EmailCollection.name).document(userEmail!).collection(K.Firebase.EmailCollection.subbedClasses).getDocuments { (querySnapshot, error) in
+            self.subbedCourses = []
             if let e = error {
                 print(e.localizedDescription)
                 return

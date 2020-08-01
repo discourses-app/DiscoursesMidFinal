@@ -188,12 +188,12 @@ extension SearchClassViewController : UITableViewDataSource {
         let selectedCellValues : [String]
         if filterdata.count != 0
         {
-            selectedCellValues = filterdata[indexPath.row].components(separatedBy: "/")
+            selectedCellValues = filterdata[indexPath.row].components(separatedBy: "*")
             cell.textLabel!.text = selectedCellValues[0].uppercased()
             cell.textLabel!.textAlignment = .left
         }
         else{
-            selectedCellValues = data[indexPath.row].components(separatedBy: "/")
+            selectedCellValues = data[indexPath.row].components(separatedBy: "*")
             cell.textLabel!.text = selectedCellValues[0].uppercased()
             cell.textLabel!.textAlignment = .left
         }
@@ -269,7 +269,7 @@ extension SearchClassViewController {
         data = []
         
         for classes in K.allClasses{
-            data.append("\(classes.name)/\(classes.professor)".uppercased())
+            data.append("\(classes.name)*\(classes.professor)".uppercased())
         }
         
     }

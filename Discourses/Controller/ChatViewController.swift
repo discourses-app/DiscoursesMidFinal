@@ -39,42 +39,44 @@ class ChatViewController: UIViewController {
     var courseName : String?
     var profName : String?
     var lecNumber : Int? = 1
+    var userEmail : String!
+    var messageListener: ListenerRegistration?
     var messages : [Message] = [
-        Message(
-            from: Sender(withName: "Janardhan", withProfilePic: #imageLiteral(resourceName: "BrandColoredLogo")),
-            on: Date().timeIntervalSince1970,
-            withMessage: "Hi", isConsecutive: false
-        ),
-        Message(
-            from: Sender(withName: "Jonathon", withProfilePic: #imageLiteral(resourceName: "DiscoursesLogo")),
-            on: Date().timeIntervalSince1970,
-            withMessage: "I'm doing well, how about yourself?", isConsecutive: false
-        ),
-        Message(
-            from: Sender(withName: "Janardhan", withProfilePic: #imageLiteral(resourceName: "BrandColoredLogo")),
-            on: Date().timeIntervalSince1970,
-            withMessage: "I'm just keeping one multiline message so that we know it didn't mess up while we were testing",isConsecutive: false
-        ),
-        Message(
-            from: Sender(withName: "Chamiya", withProfilePic: #imageLiteral(resourceName: "NoBgLogo")),
-            on: Date().timeIntervalSince1970,
-            withMessage: "Okay...", isConsecutive: false
-        ),
-        Message(
-            from: Sender(withName: "Chamiya", withProfilePic: #imageLiteral(resourceName: "NoBgLogo")),
-            on: Date().timeIntervalSince1970,
-            withMessage: "Well this message is so that the message is suitably long such that the scroll is enabled even in full size", isConsecutive: true
-        ),
-        Message(
-            from: Sender(withName: "Janardhan", withProfilePic: #imageLiteral(resourceName: "BrandColoredLogo")),
-            on: Date().timeIntervalSince1970,
-            withMessage: "This message will help the previous message make sure that there is a scroll in the full view", isConsecutive: false
-        ),
-        Message(
-            from: Sender(withName: "Chamiya", withProfilePic: #imageLiteral(resourceName: "NoBgLogo")),
-            on: Date().timeIntervalSince1970,
-            withMessage: "Bro I'm begging you pls stop", isConsecutive: false
-        )
+//        Message(
+//            from: Sender(withName: "Janardhan", withProfilePic: #imageLiteral(resourceName: "BrandColoredLogo")),
+//            on: Date().timeIntervalSince1970,
+//            withMessage: "Hi"
+//        ),
+//        Message(
+//            from: Sender(withName: "Jonathon", withProfilePic: #imageLiteral(resourceName: "DiscoursesLogo")),
+//            on: Date().timeIntervalSince1970,
+//            withMessage: "I'm doing well, how about yourself?"
+//        ),
+//        Message(
+//            from: Sender(withName: "Janardhan", withProfilePic: #imageLiteral(resourceName: "BrandColoredLogo")),
+//            on: Date().timeIntervalSince1970,
+//            withMessage: "I'm just keeping one multiline message so that we know it didn't mess up while we were testing"
+//        ),
+//        Message(
+//            from: Sender(withName: "Chamiya", withProfilePic: #imageLiteral(resourceName: "NoBgLogo")),
+//            on: Date().timeIntervalSince1970,
+//            withMessage: "Okay..."
+//        ),
+//        Message(
+//            from: Sender(withName: "Chamiya", withProfilePic: #imageLiteral(resourceName: "NoBgLogo")),
+//            on: Date().timeIntervalSince1970,
+//            withMessage: "Well this message is so that the message is suitably long such that the scroll is enabled even in full size"
+//        ),
+//        Message(
+//            from: Sender(withName: "Janardhan", withProfilePic: #imageLiteral(resourceName: "BrandColoredLogo")),
+//            on: Date().timeIntervalSince1970,
+//            withMessage: "This message will help the previous message make sure that there is a scroll in the full view"
+//        ),
+//        Message(
+//            from: Sender(withName: "Chamiya", withProfilePic: #imageLiteral(resourceName: "NoBgLogo")),
+//            on: Date().timeIntervalSince1970,
+//            withMessage: "Bro I'm begging you pls stop"
+//        )
     ]
 
     //MARK: - Native function manipulation
@@ -87,18 +89,10 @@ class ChatViewController: UIViewController {
          backMostView.backgroundColor = bgColor ?? UIColor(named: "BrandBackgroundColor")
          */
         
-        //getting name of the user
-        let userEmail = Auth.auth().currentUser?.email
-        db.collection(K.Firebase.EmailCollection.name).document(userEmail!).getDocument { (document, error) in
-            if let e = error {
-                print(e)
-                return
-            }
-            if let document = document, document.exists {
-                let data = document.data()!
-                self.curruserName = "\(data[K.Firebase.EmailCollection.userFirstField]!) \(data[K.Firebase.EmailCollection.userLastField]!)"
-            }
-        }
+        //getting email id, name of the user, and adding listener for chat changes
+         userEmail = Auth.auth().currentUser?.email
+         getUsername()
+         addListener()
         
         //subject label set up
         subjectLabel.text = courseName
@@ -162,8 +156,13 @@ class ChatViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         scrollToBottom()
-    }
+       
+        }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadEveryMessage()
+    }
     
     //MARK: - Button actions
     
@@ -187,13 +186,82 @@ extension ChatViewController {
         let data : [String : Any] = [
             "sender" : senderName,
             "time" : date,
-            "content" : content
+            "content" : content,
         ]
-        let classthread = "\(self.courseName!)_\(self.profName!)_\(self.lecNumber!)"
-        
-        
+        let classthread = "\(self.courseName!)*\(self.profName!)*\(self.lecNumber!)"
+        db.collection(K.Firebase.ClassCollection.name)
+            .document(classthread)
+            .collection(K.Firebase.threads[0])
+            .addDocument(data: data)
+    }
+    
+    func addListener() {
+        let classthread = "\(self.courseName!)*\(self.profName!)*\(self.lecNumber!)"
+        let reference = db.collection(K.Firebase.ClassCollection.name)
+        .document(classthread)
+        .collection(K.Firebase.threads[0])
+        messageListener = reference.addSnapshotListener { querySnapshot, error in
+          guard let snapshot = querySnapshot else {
+            print("Error listening for channel updates: \(error?.localizedDescription ?? "No error")")
+            return
+          }
+          
+          snapshot.documentChanges.forEach { change in
+            print(change.document.data())
+            let dict = change.document.data()
+            let sender = Sender(withName: dict["sender"] as! String, withProfilePic: nil)
+            self.messages.append(Message(from: sender, on: dict["time"] as! Double, withMessage: dict["content"] as! String))
+            self.chatTable.reloadData()
+            self.scrollToBottom()
+          }
+    }
+    
+}
+    
+    func loadEveryMessage() {
+    //Having classthread as a glibal variable is an option, but would we have to reassign it's value when we click on a new class name? As in, initially picking a class to chat on, and then choosing a different class to chat on.
+        let classthread = "\(self.courseName!)*\(self.profName!)*\(self.lecNumber!)"
+    //if we globalize classthread, then reference can also be globalized I believe (since it is a value we use quite often!)
+        let reference = db.collection(K.Firebase.ClassCollection.name)
+        .document(classthread)
+        .collection(K.Firebase.threads[0])
+        reference.order(by: "time").getDocuments {  (querySnapshot, error) in
+                print("Loading every message!")
+                self.messages = []
+               if let e = error {
+                   print(e.localizedDescription)
+                   return
+               }
+               if let documents = querySnapshot?.documents {
+                   for document in documents {
+                        let dict = document.data()
+                        let sender = Sender(withName: dict["sender"] as! String, withProfilePic: nil)
+                        self.messages.append(Message(from: sender, on: dict["time"] as! Double, withMessage: dict["content"] as! String))
+                        
+                    }
+                
+                }
+            print("Done Loading Every Message!")
+            self.chatTable.reloadData()
+        }
+    }
+    
+    func getUsername() {
+        db.collection(K.Firebase.EmailCollection.name)
+            .document(userEmail!)
+            .getDocument { (document, error) in
+                  if let e = error {
+                      print(e)
+                      return
+                  }
+                  if let document = document, document.exists {
+                      let data = document.data()!
+                      self.curruserName = "\(data[K.Firebase.EmailCollection.userFirstField]!) \(data[K.Firebase.EmailCollection.userLastField]!)"
+                  }
+              }
     }
 }
+
 
 //MARK: - TextView Delegate
 
@@ -219,15 +287,14 @@ extension ChatViewController : UITextViewDelegate{
             let content = textView.text ?? ""
             if content != "" {
                 let sender = Sender(withName: self.curruserName ?? "no name", withProfilePic: nil)
-                var newMessage = Message(from: sender, on: Date().timeIntervalSince1970, withMessage: content, isConsecutive: false)
-                let indexPath = IndexPath(row:  self.chatTable.numberOfRows(inSection: 0) - 1, section: 0)
-                if messages[indexPath.row].sender.name == curruserName {
-                    newMessage.isConsecutive = true
-                }
+                let newMessage = Message(from: sender, on: Date().timeIntervalSince1970, withMessage: content)
                 stackViewMaxHeight.constant = initStackHeight + 36
                 stackViewHeight.constant = initStackHeight
-                 messages.append(newMessage)
-                self.chatTable.reloadData()
+                 //messages.append(newMessage)
+                DispatchQueue.main.async {
+                    self.uploadMessage(newMessage)
+                    self.chatTable.reloadData()
+                }
                 
             }
             textView.text = nil
@@ -249,57 +316,54 @@ extension ChatViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        //CASE 1: YOU SEND A MESSAGE, OR YOU SEND MULTIPLE CONSECUTIVE MESSAGES
         if curruserName == messages[indexPath.row].sender.name {
             let cell = tableView.dequeueReusableCell(withIdentifier: K.CellIdentifiers.sentCell) as! SentMessageCell
             cell.contentLabel.text = messages[indexPath.row].content
-            
-            /*
-             The following code attempts to grab specific cells to concatenate them in case the sender is the same. However, due to some error with parallel threading that xcode does, we have commented out this code
-             
-             if messages.count - 1 != indexPath.row {
-             if curruserName == messages[indexPath.row+1].sender.name {
-             cell.stackBottomConstraint.constant = 0
-             }
-             
-             }
-             self.prevSender = self.curruserName
-             */
+            cell.stackBottomConstraint.constant = cell.initStackBottomConstraintConstant
+            //NEED TO TAKE CARE THAT THE indexPath VARIABLE IS NEVER OUT OF INDEX
+            if indexPath.row + 1 < messages.count {
+                if curruserName == messages[indexPath.row + 1].sender.name {
+                    cell.stackBottomConstraint.constant = 0
+                }
+            }
             return cell
         }
-        else if messages[indexPath.row].isConsecutive {
+        //CASE 2: THE VERY FIRST MESSAGE IN A TABLE VIEW
+        else if indexPath.row == 0 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: K.CellIdentifiers.messageCell) as! ReceivedMessageCell
             cell.messageContent.text = messages[indexPath.row].content
-            cell.profileImage.alpha = 0
-            //let currentSenderName = messages[indexPath.row].sender.name
-            cell.senderText.isHidden = true
-            /*
-             The following code attempts to grab specific cells to concatenate them in case the sender is the same. However, due to some error with parallel threading that xcode does, we have commented out this code
-             
-             if indexPath.row > 0 {
-             if self.messages[indexPath.row - 1].sender.name == currentSenderName {
-             cell.stackTopConstraint.constant = 0
-             cell.senderText.isHidden = true
-             cell.profileImage.alpha = 0
-             }
-             }
-             self.prevSender = currentSenderName
-             
-             */
+            cell.senderText.text = messages[indexPath.row].sender.name
+            cell.profileImage.image = nil
+            cell.profileImage.alpha = 1
+            cell.senderText.isHidden = false
+            cell.stackTopConstraint.constant = cell.initstackTopConstraintConstant
             return cell
         }
+        //CASE 3: OTHERS SEND CONSECUTIVE MESSAGES, OR THEY SEND INDIVIDUAL MESSAGES
         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: K.CellIdentifiers.messageCell) as! ReceivedMessageCell
-                       cell.messageContent.text = messages[indexPath.row].content
-                       cell.profileImage.image = messages[indexPath.row].sender.profilepic
-                       let currentSenderName = messages[indexPath.row].sender.name
-                       cell.senderText.text = currentSenderName
-                       cell.profileImage.alpha = 1
-             cell.senderText.isHidden = false
-             return cell
+             cell.messageContent.text = messages[indexPath.row].content
+            cell.senderText.text = messages[indexPath.row].sender.name
+            cell.profileImage.image = nil
+            //CONSECUTIVE MESSAGE CASE
+            if self.messages[indexPath.row - 1].sender.name == self.messages[indexPath.row].sender.name
+                {
+                    cell.stackTopConstraint.constant = 0
+                    cell.senderText.isHidden = true
+                    cell.profileImage.alpha = 0
+                    return cell
+                }
+            //SINGLE MESSAGE CASE
+                else {
+                cell.stackTopConstraint.constant = cell.initstackTopConstraintConstant
+                    cell.senderText.isHidden = false
+                    cell.profileImage.alpha = 1
+                    return cell
+                }
+            }
             
-        }
     }
 }
 
@@ -326,9 +390,10 @@ extension ChatViewController {
     
     func scrollToBottom(){
         DispatchQueue.main.async {
-            
-            let indexPath = IndexPath(row:  self.chatTable.numberOfRows(inSection: 0) - 1, section: 0)
-            self.chatTable.scrollToRow(at: indexPath, at: .bottom, animated: true)
+            if (self.chatTable.numberOfRows(inSection: 0) > 0) {
+                let indexPath = IndexPath(row:  self.chatTable.numberOfRows(inSection: 0) - 1, section: 0)
+                self.chatTable.scrollToRow(at: indexPath, at: .bottom, animated: true)
+            }
         }
     }
     

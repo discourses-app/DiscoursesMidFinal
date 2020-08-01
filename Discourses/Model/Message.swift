@@ -17,16 +17,15 @@ struct Sender {
 }
 struct Message {
     
-    init (from sender: Sender, on time: Double, withMessage content: String, isConsecutive isItConsecutive: Bool)
+    init (from sender: Sender, on time: Double, withMessage content: String)
     {
         self.sender = sender
         self.timeSent = time
         self.content = content
-        self.isConsecutive = isItConsecutive
     }
     
     let sender : Sender
     let timeSent : Double
     let content : String
-    var isConsecutive : Bool
+    
 }

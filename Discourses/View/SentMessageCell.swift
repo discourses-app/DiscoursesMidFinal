@@ -15,9 +15,11 @@ class SentMessageCell: UITableViewCell {
     @IBOutlet weak var messageBGView: UIView!
     @IBOutlet weak var leftBuffer: UIView!
     @IBOutlet weak var stackBottomConstraint: NSLayoutConstraint!
+    var initStackBottomConstraintConstant : CGFloat!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        initStackBottomConstraintConstant = stackBottomConstraint.constant
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

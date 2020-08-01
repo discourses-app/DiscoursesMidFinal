@@ -46,7 +46,10 @@ struct K {
         static let classNameField = "Name"
         static let profNameField = "professor"
         static let lectureNoField = "lecture number"
+        static var threads = ["Main"]
     }
+    
+    
     
     static var keyboardHeight : CGFloat!
     static var subcribedClasses : [Class] = [
