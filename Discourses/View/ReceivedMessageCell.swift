@@ -16,12 +16,12 @@ class ReceivedMessageCell: UITableViewCell {
     @IBOutlet weak var stackTopConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var stackBottomConstraint: NSLayoutConstraint!
-    
+    var initstackTopConstraintConstant : CGFloat!
     override func awakeFromNib() {
         super.awakeFromNib()
         
         profileImage.layer.cornerRadius = profileImage.frame.size.height / 2
-        
+        initstackTopConstraintConstant = stackTopConstraint.constant
         messageBackground.layer.cornerRadius = 20
         messageBackground.layer.masksToBounds = false
         /*

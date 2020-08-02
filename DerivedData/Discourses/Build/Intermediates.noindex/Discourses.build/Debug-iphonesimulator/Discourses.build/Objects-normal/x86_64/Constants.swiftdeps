@@ -9,6 +9,7 @@ provides-nominal:
 - "10Discourses1KV8FirebaseV"
 - "10Discourses1KV8FirebaseV15ClassCollectionV"
 - "10Discourses1KV8FirebaseV15EmailCollectionV"
+- "10Discourses1KV8FirebaseV13MessageFieldsV"
 provides-member:
 - ["10Discourses1KV", ""]
 - ["10Discourses1KV6SeguesV", ""]
@@ -17,6 +18,7 @@ provides-member:
 - ["10Discourses1KV8FirebaseV", ""]
 - ["10Discourses1KV8FirebaseV15ClassCollectionV", ""]
 - ["10Discourses1KV8FirebaseV15EmailCollectionV", ""]
+- ["10Discourses1KV8FirebaseV13MessageFieldsV", ""]
 provides-dynamic-lookup:
 depends-top-level:
 - "CGFloat"
@@ -36,6 +38,7 @@ depends-member:
 - ["10Discourses1KV15CellStructNamesV", "sentCell"]
 - ["10Discourses5ClassV", "init"]
 - ["10Discourses1KV8FirebaseV15ClassCollectionV", "init"]
+- ["10Discourses1KV8FirebaseV15ClassCollectionV", "messagesCollection"]
 - ["10Discourses1KV8FirebaseV15ClassCollectionV", "name"]
 - ["10Discourses1KV8FirebaseV15ClassCollectionV", "userCollection"]
 - ["10Discourses1KV8FirebaseV15EmailCollectionV", "init"]
@@ -45,6 +48,7 @@ depends-member:
 - ["10Discourses1KV8FirebaseV15EmailCollectionV", "userLastField"]
 - ["10Discourses1KV8FirebaseV", "ClassCollection"]
 - ["10Discourses1KV8FirebaseV", "EmailCollection"]
+- ["10Discourses1KV8FirebaseV", "MessageFields"]
 - ["10Discourses1KV8FirebaseV", "classNameField"]
 - ["10Discourses1KV8FirebaseV", "init"]
 - ["10Discourses1KV8FirebaseV", "lectureNoField"]
@@ -59,6 +63,10 @@ depends-member:
 - ["10Discourses1KV", "init"]
 - ["10Discourses1KV", "keyboardHeight"]
 - ["10Discourses1KV", "subcribedClasses"]
+- ["10Discourses1KV8FirebaseV13MessageFieldsV", "contentField"]
+- ["10Discourses1KV8FirebaseV13MessageFieldsV", "init"]
+- ["10Discourses1KV8FirebaseV13MessageFieldsV", "senderField"]
+- ["10Discourses1KV8FirebaseV13MessageFieldsV", "timeField"]
 - ["10Discourses1KV6SeguesV", "classListVCToChatVC"]
 - ["10Discourses1KV6SeguesV", "classListVCtoAddClassVC"]
 - ["10Discourses1KV6SeguesV", "init"]
@@ -73,6 +81,7 @@ depends-nominal:
 - "10Discourses1KV8FirebaseV15EmailCollectionV"
 - "10Discourses1KV8FirebaseV"
 - "10Discourses1KV"
+- "10Discourses1KV8FirebaseV13MessageFieldsV"
 - "10Discourses1KV6SeguesV"
 depends-dynamic-lookup:
 depends-external:
@@ -173,4 +182,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "5ee84ce6dae9633a8fa4eec07a95c3f5"
+interface-hash: "8cf4b20984469aecad2e65c075ee51cc"

@@ -241,7 +241,6 @@ SWIFT_CLASS("_TtC10Discourses18ChatViewController")
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified menuButton;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified professorLabel;
 - (void)viewDidLoad;
-- (void)viewDidAppear:(BOOL)animated;
 - (IBAction)attachmentButtonPressed:(UIButton * _Nonnull)sender;
 - (IBAction)backButtonPressed:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;

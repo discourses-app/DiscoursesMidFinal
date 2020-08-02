@@ -73,10 +73,11 @@ class SubscribedClassesViewController: UIViewController {
         if segue.identifier == K.Segues.classListVCToChatVC {
             if let endVC = segue.destination as? ChatViewController {
                 endVC.bgColor = selectedCellUIColor
-                let selectedCell = tableView(classListTable, cellForRowAt: selectedCellIndex!) as! ClassBubbleTableViewCell
-                endVC.courseName = selectedCell.classNameLabel.text
-                endVC.profName = selectedCell.professorNameLabel.text
+                endVC.course = user!.subbedClasses[selectedCellIndex!.row]
                 endVC.user = user
+                //ADELE
+                endVC.messages = []
+                endVC.loadMessages(forCourse: endVC.course!)
             }
         }
         if segue.identifier == K.Segues.classListVCtoAddClassVC {

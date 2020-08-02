@@ -27,7 +27,6 @@ class ChatViewController: UIViewController {
     
     var bgColor : UIColor?
     var prevSender : String?
-    var curruserName : String?
     var user : User?
     var X : CGFloat = 0.0
     var Y : CGFloat = 0.0
@@ -37,47 +36,12 @@ class ChatViewController: UIViewController {
     var initStackHeight : CGFloat!
     var flag : Int = 0 //just trust me on why we need this - aritra
     let db = Firestore.firestore()
-    var courseName : String?
-    var profName : String?
+    var course : Class?
     var lecNumber : Int? = 1
-    var messages : [Message] = [
-        Message(
-            from: Sender(withName: "Janardhan", withProfilePic: #imageLiteral(resourceName: "BrandColoredLogo")),
-            on: Date().timeIntervalSince1970,
-            withMessage: "Hi", isConsecutive: false
-        ),
-        Message(
-            from: Sender(withName: "Jonathon", withProfilePic: #imageLiteral(resourceName: "DiscoursesLogo")),
-            on: Date().timeIntervalSince1970,
-            withMessage: "I'm doing well, how about yourself?", isConsecutive: false
-        ),
-        Message(
-            from: Sender(withName: "Janardhan", withProfilePic: #imageLiteral(resourceName: "BrandColoredLogo")),
-            on: Date().timeIntervalSince1970,
-            withMessage: "I'm just keeping one multiline message so that we know it didn't mess up while we were testing",isConsecutive: false
-        ),
-        Message(
-            from: Sender(withName: "Chamiya", withProfilePic: #imageLiteral(resourceName: "NoBgLogo")),
-            on: Date().timeIntervalSince1970,
-            withMessage: "Okay...", isConsecutive: false
-        ),
-        Message(
-            from: Sender(withName: "Chamiya", withProfilePic: #imageLiteral(resourceName: "NoBgLogo")),
-            on: Date().timeIntervalSince1970,
-            withMessage: "Well this message is so that the message is suitably long such that the scroll is enabled even in full size", isConsecutive: true
-        ),
-        Message(
-            from: Sender(withName: "Janardhan", withProfilePic: #imageLiteral(resourceName: "BrandColoredLogo")),
-            on: Date().timeIntervalSince1970,
-            withMessage: "This message will help the previous message make sure that there is a scroll in the full view", isConsecutive: false
-        ),
-        Message(
-            from: Sender(withName: "Chamiya", withProfilePic: #imageLiteral(resourceName: "NoBgLogo")),
-            on: Date().timeIntervalSince1970,
-            withMessage: "Bro I'm begging you pls stop", isConsecutive: false
-        )
-    ]
-
+    var userEmail : String!
+    var messageListener: ListenerRegistration?
+    var messages : [Message] = []
+    
     //MARK: - Native function manipulation
     
     override func viewDidLoad() {
@@ -88,26 +52,15 @@ class ChatViewController: UIViewController {
          backMostView.backgroundColor = bgColor ?? UIColor(named: "BrandBackgroundColor")
          */
         
-        //getting name of the user
-        let userEmail = Auth.auth().currentUser?.email
-        db.collection(K.Firebase.EmailCollection.name).document(userEmail!).getDocument { (document, error) in
-            if let e = error {
-                print(e)
-                return
-            }
-            if let document = document, document.exists {
-                let data = document.data()!
-                self.curruserName = "\(data[K.Firebase.EmailCollection.userFirstField]!) \(data[K.Firebase.EmailCollection.userLastField]!)"
-            }
-        }
+        //getting email id, name of the user, and adding listener for chat changes
         
         //subject label set up
-        subjectLabel.text = courseName
+        subjectLabel.text = course!.name
         subjectLabel.text = subjectLabel.text?.uppercased()
         subjectLabel.font = UIFont(name: "AirbnbCerealApp-Medium", size: 30)
         
         //professor label set up
-        professorLabel.text = profName
+        professorLabel.text = course?.professor
         professorLabel.font = UIFont(name: "AirbnbCerealApp-Book", size: 16)
         
         
@@ -131,7 +84,7 @@ class ChatViewController: UIViewController {
         inputField.isScrollEnabled = false
         
         //input text view set up
-//        inputField.isScrollEnabled = true
+        //        inputField.isScrollEnabled = true
         inputField.isEditable = true
         inputField.layer.masksToBounds = true
         inputField.layer.cornerRadius = 15
@@ -158,13 +111,10 @@ class ChatViewController: UIViewController {
         let gesture = UITapGestureRecognizer(target: self, action:  #selector (self.someAction (_:)))
         self.backMostView.addGestureRecognizer(gesture)
         
+        
+        //ADELE - remove if used in performSegue
+//        loadMessages(forCourse: course!)
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        scrollToBottom()
-    }
-    
     
     //MARK: - Button actions
     
@@ -180,17 +130,46 @@ class ChatViewController: UIViewController {
 }
 //MARK: - Firebase implementation
 
+
 extension ChatViewController {
-    func uploadMessage(_ message: Message){
-        let senderName = message.sender.name
-        let content = message.content
-        let date = message.timeSent
-        let data : [String : Any] = [
-            "sender" : senderName,
-            "time" : date,
-            "content" : content
-        ]
-        let classthread = "\(self.courseName!)_\(self.profName!)_\(self.lecNumber!)"
+    func uploadMessage(_ message: Message, toCourse course : Class){
+        db.collection(K.Firebase.ClassCollection.name)
+            .document(course.stringRepresentation)
+            .collection(K.Firebase.ClassCollection.messagesCollection)
+            .addDocument(data: message.dbRepresentation)
+    }
+    
+    func loadMessages(forCourse course : Class) {
+        db.collection(K.Firebase.ClassCollection.name)
+            .document(course.stringRepresentation)
+            .collection(K.Firebase.ClassCollection.messagesCollection)
+            .order(by: K.Firebase.MessageFields.timeField)
+            .addSnapshotListener { (querySnapshot, error) in
+                self.messages = []
+                if let e = error {
+                    print("There was an issue retrieving data from Firestore. \(e)")
+                } else {
+                    if let snapshotDocuments = querySnapshot?.documents {
+                        for doc in snapshotDocuments {
+                            let data = doc.data()
+                            let newMessage = Message(
+                                from: Sender(
+                                    withName: data[K.Firebase.MessageFields.senderField] as! String,
+                                    withProfilePic: nil
+                                ),
+                                on: data[K.Firebase.MessageFields.timeField] as! Double,
+                                withMessage: data[K.Firebase.MessageFields.contentField] as! String
+                            )
+                            self.messages.append(newMessage)
+                            
+                            DispatchQueue.main.async {
+                                self.chatTable.reloadData()
+                                self.scrollToBottom()
+                            }
+                        }
+                    }
+                }
+        }
     }
 }
 
@@ -200,33 +179,33 @@ extension ChatViewController : UITextViewDelegate{
     //beginning editing should also change the keyboard stuff
     
     func textViewDidChange(_ textView: UITextView) {
-           if inputStackView.frame.height >= stackViewMaxHeight.constant {
-               stackViewHeight.constant = stackViewMaxHeight.constant
-               inputField.isScrollEnabled = true
-           }
+        if inputStackView.frame.height >= stackViewMaxHeight.constant {
+            stackViewHeight.constant = stackViewMaxHeight.constant
+            inputField.isScrollEnabled = true
+        }
         
-       }
+    }
     func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
         scrollToBottom()
         return true
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if textView.text.trimmingCharacters(in: [" "]) == "" && text == "\n"{
+            return false
+        }
         
-       
         if text == "\n" {
             let content = textView.text ?? ""
             if content != "" {
-                let sender = Sender(withName: self.curruserName ?? "no name", withProfilePic: nil)
-                var newMessage = Message(from: sender, on: Date().timeIntervalSince1970, withMessage: content, isConsecutive: false)
-                let indexPath = IndexPath(row:  self.chatTable.numberOfRows(inSection: 0) - 1, section: 0)
-                if messages[indexPath.row].sender.name == curruserName {
-                    newMessage.isConsecutive = true
-                }
+                let sender = Sender(withName: self.user?.fullName ?? "no name", withProfilePic: nil)
+                let newMessage = Message(from: sender, on: Date().timeIntervalSince1970, withMessage: content)
                 stackViewMaxHeight.constant = initStackHeight + 36
                 stackViewHeight.constant = initStackHeight
-                 messages.append(newMessage)
-                self.chatTable.reloadData()
+                //messages.append(newMessage)
+                DispatchQueue.main.async {
+                    self.uploadMessage(newMessage, toCourse: self.course!)
+                }
                 
             }
             textView.text = nil
@@ -248,57 +227,72 @@ extension ChatViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        if curruserName == messages[indexPath.row].sender.name {
+        //CASE 1: YOU SEND A MESSAGE, OR YOU SEND MULTIPLE CONSECUTIVE MESSAGES
+        if user!.fullName == messages[indexPath.row].sender.name {
             let cell = tableView.dequeueReusableCell(withIdentifier: K.CellIdentifiers.sentCell) as! SentMessageCell
             cell.contentLabel.text = messages[indexPath.row].content
-            
-            /*
-             The following code attempts to grab specific cells to concatenate them in case the sender is the same. However, due to some error with parallel threading that xcode does, we have commented out this code
-             
-             if messages.count - 1 != indexPath.row {
-             if curruserName == messages[indexPath.row+1].sender.name {
-             cell.stackBottomConstraint.constant = 0
-             }
-             
-             }
-             self.prevSender = self.curruserName
-             */
+            if cell.contentLabel.text!.count < 3 {
+                cell.contentLabel.text = " " + cell.contentLabel.text! + " "
+                if cell.contentLabel.text!.count < 2 {
+                    cell.contentLabel.text?.append(" ")
+                }
+            }
+            cell.stackBottomConstraint.constant = cell.initStackBottomConstraintConstant
+            //NEED TO TAKE CARE THAT THE indexPath VARIABLE IS NEVER OUT OF INDEX
+            if indexPath.row + 1 < messages.count {
+                if user!.fullName == messages[indexPath.row + 1].sender.name {
+                    cell.stackBottomConstraint.constant = 0
+                }
+            }
             return cell
         }
-        else if messages[indexPath.row].isConsecutive {
+            //CASE 2: THE VERY FIRST MESSAGE IN A TABLE VIEW
+        else if indexPath.row == 0 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: K.CellIdentifiers.messageCell) as! ReceivedMessageCell
             cell.messageContent.text = messages[indexPath.row].content
-            cell.profileImage.alpha = 0
-            //let currentSenderName = messages[indexPath.row].sender.name
-            cell.senderText.isHidden = true
-            /*
-             The following code attempts to grab specific cells to concatenate them in case the sender is the same. However, due to some error with parallel threading that xcode does, we have commented out this code
-             
-             if indexPath.row > 0 {
-             if self.messages[indexPath.row - 1].sender.name == currentSenderName {
-             cell.stackTopConstraint.constant = 0
-             cell.senderText.isHidden = true
-             cell.profileImage.alpha = 0
-             }
-             }
-             self.prevSender = currentSenderName
-             
-             */
+            if cell.messageContent.text!.count < 3 {
+                cell.messageContent.text = " " + cell.messageContent.text! + " "
+                if cell.messageContent.text!.count < 2 {
+                    cell.messageContent.text?.append(" ")
+                }
+            }
+            cell.senderText.text = messages[indexPath.row].sender.name
+            cell.profileImage.image = messages[indexPath.row].sender.profilepic ?? #imageLiteral(resourceName: "Logo Idea #2")
+            cell.profileImage.alpha = 1
+            cell.senderText.isHidden = false
+            cell.stackTopConstraint.constant = cell.initstackTopConstraintConstant
             return cell
         }
+            //CASE 3: OTHERS SEND CONSECUTIVE MESSAGES, OR THEY SEND INDIVIDUAL MESSAGES
         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: K.CellIdentifiers.messageCell) as! ReceivedMessageCell
-                       cell.messageContent.text = messages[indexPath.row].content
-                       cell.profileImage.image = messages[indexPath.row].sender.profilepic
-                       let currentSenderName = messages[indexPath.row].sender.name
-                       cell.senderText.text = currentSenderName
-                       cell.profileImage.alpha = 1
-             cell.senderText.isHidden = false
-             return cell
-            
+            cell.messageContent.text = messages[indexPath.row].content
+            if cell.messageContent.text!.count < 3 {
+                 cell.messageContent.text = " " + cell.messageContent.text! + " "
+                if cell.messageContent.text!.count < 2 {
+                    cell.messageContent.text?.append(" ")
+                }
+             }
+            cell.senderText.text = messages[indexPath.row].sender.name
+            cell.profileImage.image = messages[indexPath.row].sender.profilepic ?? #imageLiteral(resourceName: "Logo Idea #2")
+            //CONSECUTIVE MESSAGE CASE
+            if self.messages[indexPath.row - 1].sender.name == self.messages[indexPath.row].sender.name
+            {
+                cell.stackTopConstraint.constant = 0
+                cell.senderText.isHidden = true
+                cell.profileImage.alpha = 0
+                return cell
+            }
+                //SINGLE MESSAGE CASE
+            else {
+                cell.stackTopConstraint.constant = cell.initstackTopConstraintConstant
+                cell.senderText.isHidden = false
+                cell.profileImage.alpha = 1
+                return cell
+            }
         }
+        
     }
 }
 
@@ -324,10 +318,12 @@ extension ChatViewController {
     }
     
     func scrollToBottom(){
+        guard messages.count > 0 else {
+            return
+        }
         DispatchQueue.main.async {
-            
-            let indexPath = IndexPath(row:  self.chatTable.numberOfRows(inSection: 0) - 1, section: 0)
-            self.chatTable.scrollToRow(at: indexPath, at: .bottom, animated: true)
+            let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
+            self.chatTable.scrollToRow(at: indexPath, at: .top, animated: false)
         }
     }
     

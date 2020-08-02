@@ -36,6 +36,7 @@ struct K {
         struct ClassCollection {
             static let name = "Classes"
             static let userCollection = "users"
+            static let messagesCollection = "messages"
         }
         struct EmailCollection {
             static let name = "EmailIDs"
@@ -46,6 +47,11 @@ struct K {
         static let classNameField = "Name"
         static let profNameField = "professor"
         static let lectureNoField = "lecture number"
+        struct MessageFields {
+            static let senderField = "sender"
+            static let timeField = "date"
+            static let contentField = "content"
+        }
     }
     
     static var keyboardHeight : CGFloat!

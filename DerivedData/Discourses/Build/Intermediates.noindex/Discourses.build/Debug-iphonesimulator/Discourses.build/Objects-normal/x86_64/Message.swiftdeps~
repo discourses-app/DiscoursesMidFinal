@@ -11,29 +11,37 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - "AssignmentPrecedence"
-- "Bool"
 - "Double"
+- !private "K"
 - "Message"
 - "Sender"
 - "String"
 - "UIImage"
 depends-member:
-- ["10Discourses7MessageV", "Bool"]
+- !private ["10Discourses1KV8FirebaseV", "MessageFields"]
+- !private ["10Discourses1KV", "Firebase"]
 - ["10Discourses7MessageV", "Double"]
+- !private ["10Discourses7MessageV", "K"]
 - ["10Discourses7MessageV", "Sender"]
 - ["10Discourses7MessageV", "String"]
 - ["10Discourses7MessageV", "content"]
+- ["10Discourses7MessageV", "dbRepresentation"]
 - ["10Discourses7MessageV", "init"]
-- ["10Discourses7MessageV", "isConsecutive"]
 - ["10Discourses7MessageV", "sender"]
 - ["10Discourses7MessageV", "timeSent"]
+- !private ["10Discourses1KV8FirebaseV13MessageFieldsV", "contentField"]
+- !private ["10Discourses1KV8FirebaseV13MessageFieldsV", "senderField"]
+- !private ["10Discourses1KV8FirebaseV13MessageFieldsV", "timeField"]
 - ["10Discourses6SenderV", "String"]
 - ["10Discourses6SenderV", "UIImage"]
 - ["10Discourses6SenderV", "init"]
 - ["10Discourses6SenderV", "name"]
 - ["10Discourses6SenderV", "profilepic"]
 depends-nominal:
+- !private "10Discourses1KV8FirebaseV"
+- !private "10Discourses1KV"
 - "10Discourses7MessageV"
+- !private "10Discourses1KV8FirebaseV13MessageFieldsV"
 - "10Discourses6SenderV"
 depends-dynamic-lookup:
 depends-external:
@@ -134,4 +142,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "39cfd838133862dca973668e0cd9a803"
+interface-hash: "1fdfaeb68766070b7405bd77046ea12b"
