@@ -26,6 +26,7 @@ class LoginViewController: UIViewController {
     var userEmail : String?
     var newUser = false
     let db = Firestore.firestore()
+    var user : User?
 //MARK: - Native function manipulation
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -128,12 +129,56 @@ class LoginViewController: UIViewController {
             return
         }
         if segue.identifier == K.Segues.loginVCtoClasslistVC {
+            
+            
             let homeVC = segue.destination as! SubscribedClassesViewController
             homeVC.newUser = newUser
+            homeVC.user = user!
+//            homeVC.loadClasses()
+            
         }
         
     }
+    
+    
+    //MARK: - Firebase implementations
+//configure user and send to the next view controller
+    func performSegueToMainMenu(withEmail email : String){
+        user = User()
+        user!.email = email
+        let loadingAlert = UIAlertController(title: "Signing In", message: nil, preferredStyle: .alert)
+        self.present(loadingAlert, animated: true, completion: nil)
+        db.collection(K.Firebase.EmailCollection.name).document(userEmail!).getDocument { (document, error) in
+            if let e = error {
+                print(e)
+                return
+            }
+            if let document = document, document.exists {
+                let data = document.data()!
+                self.user!.firstName = data[K.Firebase.EmailCollection.userFirstField] as! String
+                self.user!.lastName = data[K.Firebase.EmailCollection.userLastField] as! String
+                
+            }
+            
+            self.db.collection(K.Firebase.EmailCollection.name).document(email).collection(K.Firebase.EmailCollection.subbedClasses).getDocuments { (querySnapshot, error) in
+                if let e = error {
+                    print(e.localizedDescription)
+                    return
+                }
+                if let documents = querySnapshot?.documents {
+                    for document in documents {
+                        let data = document.data()
+                        let newClass = Class(name: data[K.Firebase.classNameField] as! String, professor: data[K.Firebase.profNameField] as! String, lectureNo: data[K.Firebase.lectureNoField] as! Int)
+                        self.user?.subbedClasses.append(newClass)
+                    }
+                }
+                loadingAlert.dismiss(animated: true, completion: nil)
+                self.performSegue(withIdentifier: K.Segues.loginVCtoClasslistVC, sender: self)
+            }
+        }
+    }
 }
+
 
 //MARK: - TextField Delegate
 
@@ -161,7 +206,7 @@ extension LoginViewController {
         let goSignIn = UIAlertAction(title: "Sign In Instead", style: .default) { (UIAlertAction) in
             self.performSegue(withIdentifier: K.Segues.loginVCToSignUpVC, sender: self)
         }
-        let loadingAlert = UIAlertController(title: "Signing In", message: nil, preferredStyle: .alert)
+        let loadingAlert = UIAlertController(title: "Authenticating", message: nil, preferredStyle: .alert)
         self.present(loadingAlert, animated: true, completion: nil)
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
             loadingAlert.dismiss(animated: true, completion: nil)
@@ -175,29 +220,10 @@ extension LoginViewController {
             } else {
                 self.userEmail = authResult?.user.email
 //                self.loadAllClassesSubscribed { success in
-                self.performSegue(withIdentifier: K.Segues.loginVCtoClasslistVC, sender: self)
+                self.performSegueToMainMenu(withEmail: self.userEmail!)
 //                }
-                
             }
         }
     }
-//    func loadAllClassesSubscribed(completionHandler: @escaping(_ success: Bool)->Void) {
-//
-//        let db = Firestore.firestore()
-//        db.collection("EmailIDs").document(self.userEmail!).collection("Classes").getDocuments() { (querySnapshot, err) in
-//            K.subcribedClasses = []
-//            if let err = err {
-//                print("Error getting documents: \(err)")
-//                completionHandler(false)
-//            } else {
-//                for (index, document) in querySnapshot!.documents.enumerated() {
-//                    let dict = document.data()
-//                    K.subcribedClasses.append(Class(name: dict["name"] as! String, professor: dict["professor"] as! String, lectureNo: dict["lectureNo"] as! Int))
-//                }
-//            }
-//            completionHandler(true)
-//        }
-//
-//    }
     
 }

@@ -45,6 +45,7 @@ provides-dynamic-lookup:
 - "textViewDidChange"
 - "textViewShouldBeginEditing"
 - "uploadMessage"
+- "user"
 - "viewDidAppear"
 - "viewDidLoad"
 depends-top-level:
@@ -101,6 +102,7 @@ depends-top-level:
 - "UIViewController"
 - !private "UInt64"
 - "UnicodeScalarType"
+- "User"
 - !private "_ColorLiteralType"
 - "_ImageLiteralType"
 - !private "print"
@@ -339,6 +341,7 @@ depends-member:
 - ["10Discourses18ChatViewControllerC", "UITextView"]
 - ["10Discourses18ChatViewControllerC", "UIView"]
 - !private ["10Discourses18ChatViewControllerC", "UInt64"]
+- ["10Discourses18ChatViewControllerC", "User"]
 - ["10Discourses18ChatViewControllerC", "X"]
 - ["10Discourses18ChatViewControllerC", "Y"]
 - ["10Discourses18ChatViewControllerC", "attachmentButtonPressed"]
@@ -402,6 +405,7 @@ depends-member:
 - ["10Discourses18ChatViewControllerC", "textViewShouldBeginEditing"]
 - ["10Discourses18ChatViewControllerC", "textViewShouldEndEditing"]
 - ["10Discourses18ChatViewControllerC", "uploadMessage"]
+- ["10Discourses18ChatViewControllerC", "user"]
 - ["10Discourses18ChatViewControllerC", "viewDidAppear"]
 - ["10Discourses18ChatViewControllerC", "viewDidLoad"]
 - ["10Discourses18ChatViewControllerC", "viewForZooming"]
@@ -1514,6 +1518,7 @@ depends-member:
 - ["So8NSObjectC", "UITextView"]
 - ["So8NSObjectC", "UIView"]
 - !private ["So8NSObjectC", "UInt64"]
+- ["So8NSObjectC", "User"]
 - ["So8NSObjectC", "X"]
 - ["So8NSObjectC", "Y"]
 - !private ["So8NSObjectC", "addBackground"]
@@ -1626,6 +1631,7 @@ depends-member:
 - !private ["So8NSObjectC", "trimmingCharacters"]
 - ["So8NSObjectC", "uploadMessage"]
 - !private ["So8NSObjectC", "uppercased"]
+- ["So8NSObjectC", "user"]
 - ["So8NSObjectC", "viewDidAppear"]
 - ["So8NSObjectC", "viewDidLoad"]
 - ["So8NSObjectC", "viewForZooming"]
@@ -2565,6 +2571,7 @@ depends-member:
 - ["So11UIResponderC", "UITextView"]
 - ["So11UIResponderC", "UIView"]
 - !private ["So11UIResponderC", "UInt64"]
+- ["So11UIResponderC", "User"]
 - ["So11UIResponderC", "X"]
 - ["So11UIResponderC", "Y"]
 - !private ["So11UIResponderC", "addBackground"]
@@ -2654,6 +2661,7 @@ depends-member:
 - ["So11UIResponderC", "textViewShouldBeginEditing"]
 - ["So11UIResponderC", "textViewShouldEndEditing"]
 - ["So11UIResponderC", "uploadMessage"]
+- ["So11UIResponderC", "user"]
 - ["So11UIResponderC", "viewDidAppear"]
 - ["So11UIResponderC", "viewDidLoad"]
 - ["So11UIResponderC", "viewForZooming"]
@@ -3489,6 +3497,7 @@ depends-member:
 - ["So16UIViewControllerC", "UITextView"]
 - ["So16UIViewControllerC", "UIView"]
 - !private ["So16UIViewControllerC", "UInt64"]
+- ["So16UIViewControllerC", "User"]
 - ["So16UIViewControllerC", "X"]
 - ["So16UIViewControllerC", "Y"]
 - ["So16UIViewControllerC", ""]
@@ -3552,6 +3561,7 @@ depends-member:
 - ["So16UIViewControllerC", "textViewShouldBeginEditing"]
 - ["So16UIViewControllerC", "textViewShouldEndEditing"]
 - ["So16UIViewControllerC", "uploadMessage"]
+- ["So16UIViewControllerC", "user"]
 - ["So16UIViewControllerC", "viewDidAppear"]
 - ["So16UIViewControllerC", "viewDidLoad"]
 - ["So16UIViewControllerC", "viewForZooming"]
@@ -4237,4 +4247,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "d626425956358315994ec78ac9071bd2"
+interface-hash: "359e3dbd3e8e51f01e325a185300009b"

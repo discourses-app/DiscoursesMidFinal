@@ -24,6 +24,7 @@
 		8F57476D24C1BE5B00286C87 /* SentMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F57476824C1BE5B00286C87 /* SentMessageCell.swift */; };
 		8F57476E24C1BE5B00286C87 /* ReceivedMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F57476924C1BE5B00286C87 /* ReceivedMessageCell.swift */; };
 		8F91F79624CB17E700F3A597 /* UIStackVIew-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91F79524CB17E700F3A597 /* UIStackVIew-extension.swift */; };
+		8FD10C2624D694A900B2D267 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD10C2524D694A900B2D267 /* UserModel.swift */; };
 		8FFC6CF224C1B14900A41B95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFC6CF124C1B14900A41B95 /* AppDelegate.swift */; };
 		8FFC6CF424C1B14900A41B95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFC6CF324C1B14900A41B95 /* SceneDelegate.swift */; };
 		8FFC6CF624C1B14900A41B95 /* StartupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFC6CF524C1B14900A41B95 /* StartupViewController.swift */; };
@@ -69,6 +70,7 @@
 		8F57476824C1BE5B00286C87 /* SentMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentMessageCell.swift; sourceTree = "<group>"; };
 		8F57476924C1BE5B00286C87 /* ReceivedMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceivedMessageCell.swift; sourceTree = "<group>"; };
 		8F91F79524CB17E700F3A597 /* UIStackVIew-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackVIew-extension.swift"; sourceTree = "<group>"; };
+		8FD10C2524D694A900B2D267 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		8FFC6CEE24C1B14900A41B95 /* Discourses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Discourses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FFC6CF124C1B14900A41B95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FFC6CF324C1B14900A41B95 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			children = (
 				8F5605B224C1B6A30014289C /* Message.swift */,
 				8F5605B424C1B6C20014289C /* ClassModel.swift */,
+				8FD10C2524D694A900B2D267 /* UserModel.swift */,
 				8F5605B624C1B6DE0014289C /* UIImage-ResizeExtension.swift */,
 				8F57475D24C1BCBB00286C87 /* KeyboardLayoutConstraint.swift */,
 				8F91F79524CB17E700F3A597 /* UIStackVIew-extension.swift */,
@@ -404,6 +407,7 @@
 				8F5605BB24C1B8510014289C /* SubscribedClassesViewController.swift in Sources */,
 				8FFC6D0624C1B2E800A41B95 /* Constants.swift in Sources */,
 				8F57476024C1BCFC00286C87 /* LoginViewController.swift in Sources */,
+				8FD10C2624D694A900B2D267 /* UserModel.swift in Sources */,
 				8F91F79624CB17E700F3A597 /* UIStackVIew-extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -37,6 +37,7 @@ depends-member:
 - ["10Discourses5ClassV", "init"]
 - ["10Discourses1KV8FirebaseV15ClassCollectionV", "init"]
 - ["10Discourses1KV8FirebaseV15ClassCollectionV", "name"]
+- ["10Discourses1KV8FirebaseV15ClassCollectionV", "userCollection"]
 - ["10Discourses1KV8FirebaseV15EmailCollectionV", "init"]
 - ["10Discourses1KV8FirebaseV15EmailCollectionV", "name"]
 - ["10Discourses1KV8FirebaseV15EmailCollectionV", "subbedClasses"]
@@ -172,4 +173,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "076b890c15564892755f4a93b578dcad"
+interface-hash: "5ee84ce6dae9633a8fa4eec07a95c3f5"

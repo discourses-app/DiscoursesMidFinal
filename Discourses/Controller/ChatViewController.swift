@@ -28,6 +28,7 @@ class ChatViewController: UIViewController {
     var bgColor : UIColor?
     var prevSender : String?
     var curruserName : String?
+    var user : User?
     var X : CGFloat = 0.0
     var Y : CGFloat = 0.0
     var tableWidth : CGFloat = 0.0
@@ -190,8 +191,6 @@ extension ChatViewController {
             "content" : content
         ]
         let classthread = "\(self.courseName!)_\(self.profName!)_\(self.lecNumber!)"
-        
-        
     }
 }
 

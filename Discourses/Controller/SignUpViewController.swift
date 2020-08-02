@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 class SignUpViewController: UIViewController {
-
+//MARK: - Element declaration
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet var pwdText: UITextField!
     @IBOutlet var confirmPwdText: UITextField!
@@ -19,10 +19,14 @@ class SignUpViewController: UIViewController {
     @IBOutlet var lastNameText: UITextField!
     @IBOutlet var signUpBtn: UIButton!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    
+//MARK: - Variable declaration
     var baseVC : LoginViewController?
     var email : String?
     var password : String?
     let db = Firestore.firestore()
+    
+//MARK: - Native function manipulation
     override func viewDidLoad() {
         super.viewDidLoad()
        //an animated spinner so that it doesn't look bad while we wait
@@ -105,6 +109,7 @@ class SignUpViewController: UIViewController {
         
     }
     
+    //MARK: - Button actions
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
         self.dismiss(animated: true) {

@@ -22,24 +22,12 @@ class SearchClassViewController: UIViewController {
     var data : [String] = []
     var filterdata:[String]!
     let db = Firestore.firestore()
-    var userEmail : String?
-    var userName : String?
+    var classListVC : SubscribedClassesViewController?
     //MARK: - Native function manipulation
     override func viewDidLoad() {
         super.viewDidLoad()
         //set user email
         tableData()
-        userEmail = Auth.auth().currentUser?.email
-        db.collection(K.Firebase.EmailCollection.name).document(userEmail!).getDocument { (document, error) in
-            if let e = error {
-                print(e)
-                return
-            }
-            if let document = document, document.exists {
-                let data = document.data()!
-                self.userName = "\(data[K.Firebase.EmailCollection.userFirstField]!) \(data[K.Firebase.EmailCollection.userLastField]!)"
-            }
-        }
         //back buton set up
         backBtn.setImage(#imageLiteral(resourceName: "backBtn"), for: .normal)
         
@@ -73,10 +61,6 @@ class SearchClassViewController: UIViewController {
         tableView.separatorStyle = .none
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
-        //        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapOnSearchPage(_:)))
-        //        mainView.addGestureRecognizer(tapGesture)
-        //       TOO MANY ISSUES W THE ABOVE CODE WE CAN WORRY ABOUT IT LATER!
-        
         
     }
     
@@ -98,36 +82,24 @@ class SearchClassViewController: UIViewController {
 //MARK: - Firebase functions
 
 extension SearchClassViewController {
-//    func loadAllClassesSubscribed(completionHandler: @escaping(_ success: Bool)->Void) {
-//
-//        let db = Firestore.firestore()
-//        db.collection("EmailIDs").document(self.userEmail!).collection("Classes").getDocuments() { (querySnapshot, err) in
-//            K.subcribedClasses = []
-//            if let err = err {
-//                print("Error getting documents: \(err)")
-//                completionHandler(false)
-//            } else {
-//                for (index, document) in querySnapshot!.documents.enumerated() {
-//                    let course = document.documentID.split(separator: "*")
-//                    K.subcribedClasses.append(Class(name: String(course[0]), professor: String(course[1]), lectureNo: Int(String(course[2]))!))
-//                }
-//            }
-//            completionHandler(true)
-//        }
-//    }
     
     func subscribeUser(toCourse course : Class){
         //add course to user
         db.collection(K.Firebase.EmailCollection.name)
-            .document(userEmail!)
+            .document(classListVC!.user!.email)
             .collection(K.Firebase.EmailCollection.subbedClasses)
-            .addDocument(data: course.dbRepresentation)
+            .document(course.stringRepresentation)
+            .setData(course.dbRepresentation)
         
         //add user to course
         db.collection(K.Firebase.ClassCollection.name)
             .document(course.stringRepresentation)
             .collection(K.Firebase.ClassCollection.userCollection)
-            .addDocument(data: ["name": userName!, "email": userEmail!])
+            .document(classListVC!.user!.email)
+            .setData(["name": classListVC!.user!.fullName, "email": classListVC!.user!.email])
+        
+        //add course to user's classes
+        classListVC!.user!.subbedClasses.insert(course, at: 0)
     }
 }
 
@@ -236,16 +208,8 @@ extension SearchClassViewController : UITableViewDelegate {
         let className = cell!.textLabel!.text!
         let profName = (cell?.contentView.viewWithTag(2) as! UILabel).text!
         let lectureNumber = 1 //TODO: assign later
-        
-        let addingClassAlert = UIAlertController(title: "Adding your class", message: "Please wait a moment.", preferredStyle: .alert)
-        self.present(addingClassAlert, animated: true, completion: nil)
         subscribeUser(toCourse: Class(name: className, professor: profName, lectureNo: lectureNumber))
-        addingClassAlert.dismiss(animated: true, completion: nil)
-        //ADDING CLASS TO THE DATABASE!
-//        let newlySubscribed = Class (name: className, professor: profName)
-        
-        
-        
+
         //removing a name from the collection 'data' if it is selected by the user
         //we will have to make a struct that stores the name of a class along with the professor teaching said class
         for (index, element) in K.allClasses.enumerated() {
@@ -255,10 +219,6 @@ extension SearchClassViewController : UITableViewDelegate {
         }
         tableData()
         
-        //ADD CLASS NAME TO personal LIST HERE
-        //self.performSegue(withIdentifier: "toChatView", sender: self)
-        //(cell?.viewWithTag(1) as! UIImageView).image = #imageLiteral(resourceName: "doneAdding")
-        
     }
 }
 
@@ -267,7 +227,6 @@ extension SearchClassViewController : UITableViewDelegate {
 extension SearchClassViewController {
     func tableData() {
         data = []
-        
         for classes in K.allClasses{
             data.append("\(classes.name)/\(classes.professor)".uppercased())
         }

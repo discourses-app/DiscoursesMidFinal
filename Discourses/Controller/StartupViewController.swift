@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import FirebaseAuth
+import FirebaseFirestore
 class StartupViewController: UIViewController {
 
     @IBOutlet weak var logoImage: UIImageView!
@@ -23,6 +24,7 @@ class StartupViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
         
         
         Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { (Timer) in

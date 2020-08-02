@@ -27,14 +27,14 @@ class SubscribedClassesViewController: UIViewController {
     let db = Firestore.firestore()
     var selectedCellIndex : IndexPath?
     var selectedCellUIColor : UIColor?
-    var userEmail : String?
-    var subbedCourses : [Class] = []
+    
+    var user : User?
     var newUser = false
 //MARK: - Native functions manipulation
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        userEmail = Auth.auth().currentUser?.email
+        
         //table view set up
         classListTable.delegate = self
         classListTable.dataSource = self
@@ -59,11 +59,12 @@ class SubscribedClassesViewController: UIViewController {
 //        loadAllClassesSubscribed { success in
 //            self.classListTable.reloadData()
 //        }
-        loadClasses()
+        
         if newUser {
             newUser = false
             performSegue(withIdentifier: K.Segues.classListVCtoAddClassVC, sender: self)
         }
+        classListTable.reloadData()
     }
     
 
@@ -75,6 +76,12 @@ class SubscribedClassesViewController: UIViewController {
                 let selectedCell = tableView(classListTable, cellForRowAt: selectedCellIndex!) as! ClassBubbleTableViewCell
                 endVC.courseName = selectedCell.classNameLabel.text
                 endVC.profName = selectedCell.professorNameLabel.text
+                endVC.user = user
+            }
+        }
+        if segue.identifier == K.Segues.classListVCtoAddClassVC {
+            if let endVC = segue.destination as? SearchClassViewController {
+                endVC.classListVC = self
             }
         }
     }
@@ -85,46 +92,6 @@ class SubscribedClassesViewController: UIViewController {
 }
 //MARK: - Firebase functions
 extension SubscribedClassesViewController {
-//    func loadAllClassesSubscribed(completionHandler: @escaping(_ success: Bool)->Void) {
-//
-//        let db = Firestore.firestore()
-//        db.collection("EmailIDs").document(self.userEmail!).collection("Classes").getDocuments() { (querySnapshot, err) in
-//
-//            K.subcribedClasses = []
-//            if let err = err {
-//                print("Error getting documents: \(err)")
-//                completionHandler(false)
-//            } else {
-//                for (index, document) in querySnapshot!.documents.enumerated() {
-//
-//                    let dict = document.data()
-//                    K.subcribedClasses.append(Class(name: dict["name"] as! String, professor: dict["professor"] as! String, lectureNo: dict["lectureNo"] as! Int))
-//                }
-//            }
-//            completionHandler(true)
-//        }
-//
-//    }
-
-    func loadClasses() {
-        subbedCourses = []
-        db.collection(K.Firebase.EmailCollection.name).document(userEmail!).collection(K.Firebase.EmailCollection.subbedClasses).getDocuments { (querySnapshot, error) in
-            if let e = error {
-                print(e.localizedDescription)
-                return
-            }
-            if let documents = querySnapshot?.documents {
-                for document in documents {
-                    let data = document.data()
-                    let newClass = Class(name: data[K.Firebase.classNameField] as! String, professor: data[K.Firebase.profNameField] as! String, lectureNo: data[K.Firebase.lectureNoField] as! Int)
-                    DispatchQueue.main.async {
-                        self.subbedCourses.append(newClass)
-                        self.classListTable.reloadData()
-                    }
-                }
-            }
-        }
-    }
 }
 
 //MARK: - TableView Delegate
@@ -147,7 +114,7 @@ extension SubscribedClassesViewController : UITableViewDelegate {
 extension SubscribedClassesViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        return K.subcribedClasses.count
-        return subbedCourses.count
+        return user!.subbedClasses.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -160,8 +127,8 @@ extension SubscribedClassesViewController : UITableViewDataSource {
         print(indexPath.row)
 //        cell.classNameLabel.text = K.subcribedClasses[indexPath.row].name.uppercased()
 //        cell.professorNameLabel.text = K.subcribedClasses[indexPath.row].professor.uppercased()
-        cell.classNameLabel.text = subbedCourses[indexPath.row].name.uppercased()
-        cell.professorNameLabel.text = subbedCourses[indexPath.row].professor.uppercased()
+        cell.classNameLabel.text = user!.subbedClasses[indexPath.row].name.uppercased()
+        cell.professorNameLabel.text = user!.subbedClasses[indexPath.row].professor.uppercased()
          return cell
         
     }

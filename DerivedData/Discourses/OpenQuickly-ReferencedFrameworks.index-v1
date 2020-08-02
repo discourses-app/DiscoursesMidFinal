@@ -4,8 +4,8 @@
 <array>
 	<string>GoogleMobileAds</string>
 	<string>FirebasePerformance</string>
-	<string>SafariServices</string>
 	<string>FirebaseDynamicLinks</string>
+	<string>SafariServices</string>
 	<string>FirebaseMLNLTranslate</string>
 	<string>objc</string>
 	<string>FirebaseAuth</string>
@@ -39,20 +39,20 @@
 	<string>FirebaseMLVisionBarcodeModel</string>
 	<string>FirebaseMLVisionTextModel</string>
 	<string>Foundation</string>
-	<string>WatchKit</string>
 	<string>FirebaseMLModelInterpreter</string>
 	<string>Fabric</string>
-	<string>AppKit</string>
-	<string>GameKit</string>
 	<string>Security</string>
-	<string>FirebaseMLVisionAutoML</string>
+	<string>AppKit</string>
+	<string>WatchKit</string>
+	<string>GameKit</string>
 	<string>netinet</string>
+	<string>FirebaseMLVisionAutoML</string>
 	<string>FirebaseMLVisionObjectDetection</string>
 	<string>FirebaseStorage</string>
 	<string>SystemConfiguration</string>
-	<string>CoreGraphics</string>
-	<string>FirebaseAnalytics</string>
 	<string>FirebaseFunctions</string>
+	<string>FirebaseAnalytics</string>
+	<string>CoreGraphics</string>
 	<string>UIKit</string>
 </array>
 </plist>
