@@ -160,12 +160,12 @@ extension SearchClassViewController : UITableViewDataSource {
         let selectedCellValues : [String]
         if filterdata.count != 0
         {
-            selectedCellValues = filterdata[indexPath.row].components(separatedBy: "/")
+            selectedCellValues = filterdata[indexPath.row].components(separatedBy: "*")
             cell.textLabel!.text = selectedCellValues[0].uppercased()
             cell.textLabel!.textAlignment = .left
         }
         else{
-            selectedCellValues = data[indexPath.row].components(separatedBy: "/")
+            selectedCellValues = data[indexPath.row].components(separatedBy: "*")
             cell.textLabel!.text = selectedCellValues[0].uppercased()
             cell.textLabel!.textAlignment = .left
         }
@@ -200,24 +200,34 @@ extension SearchClassViewController : UITableViewDelegate {
 //        print("This cell from the chat list was selected: \(indexPath.row)")
         let cell = tableView.cellForRow(at: indexPath)
         guard (cell?.viewWithTag(1) as! UIImageView).image != #imageLiteral(resourceName: "checkMark") else {return}
+       
         UIView.transition(with: (cell?.viewWithTag(1) as! UIImageView),
                           duration: 0.75,
                           options: .transitionFlipFromTop,
                           animations: { (cell?.viewWithTag(1) as! UIImageView).image = #imageLiteral(resourceName: "checkMark") },
-                          completion: nil)
+                          completion: { finished in
+    
         let className = cell!.textLabel!.text!
         let profName = (cell?.contentView.viewWithTag(2) as! UILabel).text!
         let lectureNumber = 1 //TODO: assign later
-        subscribeUser(toCourse: Class(name: className, professor: profName, lectureNo: lectureNumber))
+        let newClass = Class(name: className, professor: profName, lectureNo: lectureNumber)
+        self.subscribeUser(toCourse: newClass)
 
         //removing a name from the collection 'data' if it is selected by the user
-        //we will have to make a struct that stores the name of a class along with the professor teaching said class
-        for (index, element) in K.allClasses.enumerated() {
-            if element.name.uppercased() == className && element.professor.uppercased() == profName {
-                K.allClasses.remove(at: index)
+        for (index, element) in self.data.enumerated() {
+            if element == newClass.stringRepresentation {
+                self.data.remove(at: index)
             }
         }
-        tableData()
+        for (index, element) in self.filterdata.enumerated() {
+            if element == newClass.stringRepresentation {
+                self.filterdata.remove(at: index)
+            }
+        }
+
+        //tableData()
+        //self.tableView.reloadData()
+        })
         
     }
 }
@@ -226,10 +236,36 @@ extension SearchClassViewController : UITableViewDelegate {
 
 extension SearchClassViewController {
     func tableData() {
-        data = []
-        for classes in K.allClasses{
-            data.append("\(classes.name)/\(classes.professor)".uppercased())
+        var found = false
+        //ADDING ALL CLASSES THAT ARE NOT IN THE SUBBEDCLASS LIST
+        //TO THE VARIABLE DATA (WHICH THE SEARCH BAR USES TO SEARCH!)
+        if classListVC != nil {
+            data = []
+            for element in K.allClasses {
+                found = false
+                for subbedClass in (classListVC?.user!.subbedClasses)! {
+                    if element.stringRepresentation == subbedClass.stringRepresentation {
+                        found = true
+                    }
+                }
+                if !found {
+                    data.append(element.stringRepresentation)
+                }
+            }
         }
+            //I WAS WORRIED THAT CLASSLISTVC NEED NOT ALWAYS EXIST IN THE STACK OF VIEWS
+            //SO THIS IS TO PREPARE FOR THAT KIND OF AN ISSUE
+            else {
+                data = []
+                for element in K.allClasses{
+                    data.append(element.stringRepresentation)
+                }
+            }
         
+        }
+    
+ 
     }
-}
+    
+    
+

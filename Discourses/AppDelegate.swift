@@ -16,10 +16,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Use Firebase library to configure APIs
         FirebaseApp.configure() //slowing down textView testing
+        DispatchQueue.main.async {
+            self.loadEveryClass()
+        }
         // Override point for customization after application launch.
         return true
     }
+    
+    func loadEveryClass() {
+        let db = Firestore.firestore()
+         print("So I tried loading every class?")
+             db.collection(K.Firebase.ClassCollection.name)
+                 .getDocuments() { (querySnapshot, error) in
+                     K.allClasses = []
+                     if error == nil {
+                         let documents = querySnapshot?.documents
+                         for document in documents! {
+                             let docID = document.documentID
+                             let array = docID.components(separatedBy: "*")
+                             let className = array[0]
+                             let profName = array[1]
+                             let lecNum = Int(array[2])
+                             K.allClasses.append(Class(name: className, professor: profName, lectureNo: lecNum!))
+                             print(className)
 
+                         }
+
+                     }
+
+                     else {
+                         print("Bro, error ho gaya while loading every possible class! \(error)")
+                     }
+                      print("Am Done Loading!")
+             }
+         }
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

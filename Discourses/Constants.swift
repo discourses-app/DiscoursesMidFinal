@@ -62,13 +62,13 @@ struct K {
     ]
     
     static var allClasses :[Class] = [
-        Class(name: "ComSci 31", professor: "Smallberg", lectureNo: 1),
-        Class(name: "Math 32A", professor: "L. Chayes", lectureNo: 1),
-       Class(name: "Math 33B", professor: "Hlushchanka", lectureNo: 1),
-       Class(name: "ComSci 32", professor: "Carey Nachenberg", lectureNo: 1),
-       Class(name: "MGMT 100A", professor: "Marugame", lectureNo: 1),
-       Class(name: "ComSci 180", professor: "Sarrafzadeh", lectureNo: 1),
-       Class(name: "Physics 1B", professor: "Corbin", lectureNo: 1)
+//        Class(name: "ComSci 31", professor: "Smallberg", lectureNo: 1),
+//        Class(name: "Math 32A", professor: "L. Chayes", lectureNo: 1),
+//       Class(name: "Math 33B", professor: "Hlushchanka", lectureNo: 1),
+//       Class(name: "ComSci 32", professor: "Carey Nachenberg", lectureNo: 1),
+//       Class(name: "MGMT 100A", professor: "Marugame", lectureNo: 1),
+//       Class(name: "ComSci 180", professor: "Sarrafzadeh", lectureNo: 1),
+//       Class(name: "Physics 1B", professor: "Corbin", lectureNo: 1)
     ]
     
 }

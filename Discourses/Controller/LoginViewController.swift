@@ -207,23 +207,28 @@ extension LoginViewController {
             self.performSegue(withIdentifier: K.Segues.loginVCToSignUpVC, sender: self)
         }
         let loadingAlert = UIAlertController(title: "Authenticating", message: nil, preferredStyle: .alert)
-        self.present(loadingAlert, animated: true, completion: nil)
+        self.present(loadingAlert, animated: true, completion: {
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-            loadingAlert.dismiss(animated: true, completion: nil)
             if let err = error {
+                loadingAlert.dismiss(animated: true, completion: {
                 let errAlert = UIAlertController(title: "Error logging you in!", message: err.localizedDescription, preferredStyle: .alert)
                 errAlert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
                 if err.localizedDescription == localEmailInexistentErr {
                     errAlert.addAction(goSignIn)
                 }
                 self.present(errAlert, animated: true, completion: nil)
+                })
             } else {
+                loadingAlert.dismiss(animated: true, completion: {
+                print("Did I enter this else block?")
                 self.userEmail = authResult?.user.email
 //                self.loadAllClassesSubscribed { success in
                 self.performSegueToMainMenu(withEmail: self.userEmail!)
 //                }
+                })
             }
         }
+        })
     }
     
 }
