@@ -23,20 +23,19 @@ provides-dynamic-lookup:
 depends-top-level:
 - "CGFloat"
 - "Class"
-- "FloatLiteralType"
-- "IntegerLiteralType"
 - "K"
 - "StringLiteralType"
 depends-member:
+- ["10Discourses1KV15CellIdentifiersV", "addClass"]
 - ["10Discourses1KV15CellIdentifiersV", "classBubble"]
 - ["10Discourses1KV15CellIdentifiersV", "init"]
 - ["10Discourses1KV15CellIdentifiersV", "messageCell"]
 - ["10Discourses1KV15CellIdentifiersV", "sentCell"]
+- ["10Discourses1KV15CellStructNamesV", "addClass"]
 - ["10Discourses1KV15CellStructNamesV", "classBubble"]
 - ["10Discourses1KV15CellStructNamesV", "init"]
 - ["10Discourses1KV15CellStructNamesV", "messageCell"]
 - ["10Discourses1KV15CellStructNamesV", "sentCell"]
-- ["10Discourses5ClassV", "init"]
 - ["10Discourses1KV8FirebaseV15ClassCollectionV", "init"]
 - ["10Discourses1KV8FirebaseV15ClassCollectionV", "messagesCollection"]
 - ["10Discourses1KV8FirebaseV15ClassCollectionV", "name"]
@@ -76,7 +75,6 @@ depends-member:
 depends-nominal:
 - "10Discourses1KV15CellIdentifiersV"
 - "10Discourses1KV15CellStructNamesV"
-- "10Discourses5ClassV"
 - "10Discourses1KV8FirebaseV15ClassCollectionV"
 - "10Discourses1KV8FirebaseV15EmailCollectionV"
 - "10Discourses1KV8FirebaseV"
@@ -182,4 +180,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "8cf4b20984469aecad2e65c075ee51cc"
+interface-hash: "71d462a2d4c840ce04a2d78884db0093"

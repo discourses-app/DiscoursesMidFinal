@@ -205,6 +205,22 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+@class UILabel;
+@class UIImageView;
+@class NSCoder;
+
+SWIFT_CLASS("_TtC10Discourses12AddClassCell")
+@interface AddClassCell : UITableViewCell
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified classLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified lectureNumLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified professorLabel;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified addClassImage;
+- (void)awakeFromNib;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UIApplication;
 @class UISceneSession;
 @class UISceneConnectionOptions;
@@ -222,11 +238,9 @@ SWIFT_CLASS("_TtC10Discourses11AppDelegate")
 @class NSLayoutConstraint;
 @class UITextView;
 @class UIStackView;
-@class UILabel;
 @class UITableView;
 @class UIButton;
 @class NSBundle;
-@class NSCoder;
 
 SWIFT_CLASS("_TtC10Discourses18ChatViewController")
 @interface ChatViewController : UIViewController
@@ -253,7 +267,6 @@ SWIFT_CLASS("_TtC10Discourses18ChatViewController")
 
 
 
-@class UITableViewCell;
 
 @interface ChatViewController (SWIFT_EXTENSION(Discourses)) <UITableViewDataSource>
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
@@ -279,6 +292,7 @@ SWIFT_CLASS("_TtC10Discourses24ClassBubbleTableViewCell")
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified bubbleView;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified classNameLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified professorNameLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified lectureNumLabel;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint * _Null_unspecified bubbleTopConstraint;
 - (void)awakeFromNib;
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
@@ -296,7 +310,6 @@ SWIFT_CLASS("_TtC10Discourses24KeyboardLayoutConstraint") SWIFT_AVAILABILITY(tvo
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UIImageView;
 @class UITextField;
 @class UIStoryboardSegue;
 

@@ -23,6 +23,8 @@
 		8F57476C24C1BE5B00286C87 /* ClassBubbleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F57476724C1BE5A00286C87 /* ClassBubbleTableViewCell.xib */; };
 		8F57476D24C1BE5B00286C87 /* SentMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F57476824C1BE5B00286C87 /* SentMessageCell.swift */; };
 		8F57476E24C1BE5B00286C87 /* ReceivedMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F57476924C1BE5B00286C87 /* ReceivedMessageCell.swift */; };
+		8F63723824D93C32003185C3 /* AddClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F63723624D93C32003185C3 /* AddClassCell.swift */; };
+		8F63723924D93C32003185C3 /* AddClassCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F63723724D93C32003185C3 /* AddClassCell.xib */; };
 		8F91F79624CB17E700F3A597 /* UIStackVIew-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91F79524CB17E700F3A597 /* UIStackVIew-extension.swift */; };
 		8FD10C2624D694A900B2D267 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD10C2524D694A900B2D267 /* UserModel.swift */; };
 		8FFC6CF224C1B14900A41B95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFC6CF124C1B14900A41B95 /* AppDelegate.swift */; };
@@ -69,6 +71,8 @@
 		8F57476724C1BE5A00286C87 /* ClassBubbleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassBubbleTableViewCell.xib; sourceTree = "<group>"; };
 		8F57476824C1BE5B00286C87 /* SentMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentMessageCell.swift; sourceTree = "<group>"; };
 		8F57476924C1BE5B00286C87 /* ReceivedMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceivedMessageCell.swift; sourceTree = "<group>"; };
+		8F63723624D93C32003185C3 /* AddClassCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClassCell.swift; sourceTree = "<group>"; };
+		8F63723724D93C32003185C3 /* AddClassCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddClassCell.xib; sourceTree = "<group>"; };
 		8F91F79524CB17E700F3A597 /* UIStackVIew-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackVIew-extension.swift"; sourceTree = "<group>"; };
 		8FD10C2524D694A900B2D267 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		8FFC6CEE24C1B14900A41B95 /* Discourses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Discourses.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,10 +166,12 @@
 			children = (
 				8F57476324C1BE1F00286C87 /* ReceivedMessageCell.xib */,
 				8F57476924C1BE5B00286C87 /* ReceivedMessageCell.swift */,
-				8F57476524C1BE5900286C87 /* ClassBubbleTableViewCell.swift */,
-				8F57476724C1BE5A00286C87 /* ClassBubbleTableViewCell.xib */,
 				8F57476824C1BE5B00286C87 /* SentMessageCell.swift */,
 				8F57476624C1BE5A00286C87 /* SentMessageCell.xib */,
+				8F57476524C1BE5900286C87 /* ClassBubbleTableViewCell.swift */,
+				8F57476724C1BE5A00286C87 /* ClassBubbleTableViewCell.xib */,
+				8F63723624D93C32003185C3 /* AddClassCell.swift */,
+				8F63723724D93C32003185C3 /* AddClassCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -338,6 +344,7 @@
 				8FFC6D1B24C1B3DC00A41B95 /* Cabin-BoldItalic.ttf in Resources */,
 				8FFC6D1724C1B3DC00A41B95 /* Cabin-SemiBold.ttf in Resources */,
 				8F57476C24C1BE5B00286C87 /* ClassBubbleTableViewCell.xib in Resources */,
+				8F63723924D93C32003185C3 /* AddClassCell.xib in Resources */,
 				8FFC6D1924C1B3DC00A41B95 /* Cabin-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F57476E24C1BE5B00286C87 /* ReceivedMessageCell.swift in Sources */,
+				8F63723824D93C32003185C3 /* AddClassCell.swift in Sources */,
 				8F5605B524C1B6C20014289C /* ClassModel.swift in Sources */,
 				8F57476224C1BD6200286C87 /* SearchClassViewController.swift in Sources */,
 				8FFC6CF624C1B14900A41B95 /* StartupViewController.swift in Sources */,

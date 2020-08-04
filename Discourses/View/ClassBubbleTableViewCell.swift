@@ -13,6 +13,7 @@ class ClassBubbleTableViewCell: UITableViewCell {
     @IBOutlet weak var classNameLabel: UILabel!
     @IBOutlet weak var professorNameLabel: UILabel!
     
+    @IBOutlet weak var lectureNumLabel: UILabel!
     @IBOutlet weak var bubbleTopConstraint: NSLayoutConstraint!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,6 +21,8 @@ class ClassBubbleTableViewCell: UITableViewCell {
         classNameLabel.font = UIFont(name: "AirbnbCerealApp-ExtraBold", size: 30)
         classNameLabel.text = classNameLabel.text?.uppercased()
         professorNameLabel.font = UIFont(name: "AirbnbCerealApp-Medium", size: 14)
+        
+        lectureNumLabel.font = UIFont(name: "AirbnbCerealApp-Medium", size: 14)
         
         bubbleView.layer.cornerRadius = 20
         

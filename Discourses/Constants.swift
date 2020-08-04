@@ -24,12 +24,14 @@ struct K {
         static let messageCell = "messageCellIdentifier"
         static let classBubble = "classBubbleIdentifier"
         static let sentCell = "SentCellIdentifier"
+        static let addClass = "addClassCellIdentifier"
     }
     
     struct CellStructNames {
         static let messageCell = "ReceivedMessageCell"
         static let classBubble = "ClassBubbleTableViewCell"
         static let sentCell = "SentMessageCell"
+        static let addClass = "AddClassCell"
     }
     
     struct Firebase {
