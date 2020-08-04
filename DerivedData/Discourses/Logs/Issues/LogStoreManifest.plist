@@ -62,6 +62,34 @@
 			<key>uniqueIdentifier</key>
 			<string>5F97D1E2-AA92-4C3F-9D7B-F5A8349E2724</string>
 		</dict>
+		<key>660CECAA-4112-418B-A466-99116C3EB81A</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
+			<key>fileName</key>
+			<string>660CECAA-4112-418B-A466-99116C3EB81A.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>Discourses-anygetxpykemlgcgttxkmolmpqyn</string>
+			<key>timeStartedRecording</key>
+			<real>618242799.11089396</real>
+			<key>timeStoppedRecording</key>
+			<real>618242801.44561803</real>
+			<key>title</key>
+			<string>Build target Discourses</string>
+			<key>uniqueIdentifier</key>
+			<string>660CECAA-4112-418B-A466-99116C3EB81A</string>
+		</dict>
 		<key>670AF647-6AD0-40EB-9E6F-59D882226BE7</key>
 		<dict>
 			<key>className</key>
@@ -397,34 +425,6 @@
 			<string>Build target gRPC-C++</string>
 			<key>uniqueIdentifier</key>
 			<string>E16FA5C3-2933-469C-A60E-B9AC8DDC0996</string>
-		</dict>
-		<key>E56A5E41-6B5A-4365-B083-EAD1E1B9D267</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogMajorGroupSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
-			<key>fileName</key>
-			<string>E56A5E41-6B5A-4365-B083-EAD1E1B9D267.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>signature</key>
-			<string>Discourses-anygetxpykemlgcgttxkmolmpqyn</string>
-			<key>timeStartedRecording</key>
-			<real>618231610.37714505</real>
-			<key>timeStoppedRecording</key>
-			<real>618231613.731552</real>
-			<key>title</key>
-			<string>Build target Discourses</string>
-			<key>uniqueIdentifier</key>
-			<string>E56A5E41-6B5A-4365-B083-EAD1E1B9D267</string>
 		</dict>
 		<key>E7590E48-A667-45C4-B176-8772EE0F7690</key>
 		<dict>

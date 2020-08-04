@@ -26,10 +26,12 @@ depends-top-level:
 - "K"
 - "StringLiteralType"
 depends-member:
+- ["10Discourses1KV15CellIdentifiersV", "addClass"]
 - ["10Discourses1KV15CellIdentifiersV", "classBubble"]
 - ["10Discourses1KV15CellIdentifiersV", "init"]
 - ["10Discourses1KV15CellIdentifiersV", "messageCell"]
 - ["10Discourses1KV15CellIdentifiersV", "sentCell"]
+- ["10Discourses1KV15CellStructNamesV", "addClass"]
 - ["10Discourses1KV15CellStructNamesV", "classBubble"]
 - ["10Discourses1KV15CellStructNamesV", "init"]
 - ["10Discourses1KV15CellStructNamesV", "messageCell"]
@@ -178,4 +180,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "55cedad4b9fb804a595a45e2792c42dc"
+interface-hash: "71d462a2d4c840ce04a2d78884db0093"

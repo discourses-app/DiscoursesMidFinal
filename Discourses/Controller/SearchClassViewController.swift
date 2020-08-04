@@ -139,8 +139,8 @@ extension SearchClassViewController : UITableViewDataSource {
         let course = Class(name: courseInfo[0], professor: courseInfo[1], lectureNo: Int(courseInfo[2])!)
         cell.course = course
         cell.classLabel.text = course.name
-        cell.lectureNumLabel.text = "Lec \(course.lectureNo)".uppercased()
-        cell.professorLabel.text = course.professor
+        cell.lectureNumLabel.text = ""/*"Lec \(course.lectureNo)".uppercased()*/
+        cell.professorLabel.text = course.professor + "  |  " + "Lec \(course.lectureNo)".uppercased()
         cell.addClassImage.image = #imageLiteral(resourceName: "addImage")
         return cell
     }

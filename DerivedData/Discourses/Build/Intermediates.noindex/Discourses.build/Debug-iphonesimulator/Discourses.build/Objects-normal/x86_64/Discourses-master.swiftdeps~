@@ -1,11 +1,11 @@
 version: "Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
 options: "4166ceb2c03227d874751e7baa2c8d10"
-build_time: [1596538054, 72895000]
+build_time: [1596548625, 766235000]
 inputs:
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/Discourses/View/ReceivedMessageCell.swift": [1596518704, 870073571]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/Discourses/View/AddClassCell.swift": [1596537663, 812221849]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/Discourses/Model/ClassModel.swift": [1596298167, 752104779]
-  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/Discourses/Controller/SearchClassViewController.swift": [1596538051, 68189480]
+  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/Discourses/Controller/SearchClassViewController.swift": [1596548625, 236597853]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/Discourses/Controller/StartupViewController.swift": [1596518704, 866927648]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/Discourses/Controller/ChatViewController.swift": [1596518704, 863772549]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/Discourses/Controller/SignUpViewController.swift": [1596518704, 865746702]
@@ -13,10 +13,10 @@ inputs:
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/Discourses/Model/UIImage-ResizeExtension.swift": [1595684151, 661177388]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/Discourses/AppDelegate.swift": [1596518704, 862332890]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/Discourses/Model/Message.swift": [1596518704, 868663483]
-  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/Discourses/View/ClassBubbleTableViewCell.swift": [1595684151, 662015337]
+  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/Discourses/View/ClassBubbleTableViewCell.swift": [1596538809, 640068618]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/Discourses/View/SentMessageCell.swift": [1596518704, 870796308]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/Discourses/SceneDelegate.swift": [1595684151, 661703509]
-  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/Discourses/Controller/SubscribedClassesViewController.swift": [1596518704, 867761929]
+  "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/Discourses/Controller/SubscribedClassesViewController.swift": [1596548380, 410508534]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/Discourses/Constants.swift": [1596534515, 602759881]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/Discourses/Controller/LoginViewController.swift": [1596518704, 864297823]
   "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/Discourses/Model/UserModel.swift": [1596518704, 869348363]

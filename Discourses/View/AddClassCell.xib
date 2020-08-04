@@ -30,7 +30,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lec 1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VkX-av-uLW">
-                        <rect key="frame" x="307" y="71" width="55" height="21"/>
+                        <rect key="frame" x="307" y="75" width="55" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="55" id="GfQ-Jf-XmA"/>
                         </constraints>
@@ -49,6 +49,7 @@
                 <color key="backgroundColor" name="BrandBackgroundColor"/>
                 <constraints>
                     <constraint firstItem="uI8-AO-JNG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="095-fB-qEG"/>
+                    <constraint firstItem="VkX-av-uLW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="AY8-Ac-Fa3"/>
                     <constraint firstItem="bDf-Fp-vHO" firstAttribute="leading" secondItem="VkX-av-uLW" secondAttribute="trailing" constant="15" id="DT1-gF-l72"/>
                     <constraint firstItem="tSe-aZ-hld" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Je2-0X-daI"/>
                     <constraint firstItem="bDf-Fp-vHO" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="K8A-3Z-0jr"/>
@@ -58,7 +59,6 @@
                     <constraint firstAttribute="trailing" secondItem="bDf-Fp-vHO" secondAttribute="trailing" constant="15" id="mji-DJ-l4p"/>
                     <constraint firstItem="VkX-av-uLW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tSe-aZ-hld" secondAttribute="trailing" constant="10" id="qeL-Sl-dUu"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="uI8-AO-JNG" secondAttribute="bottom" constant="5" id="sjT-t3-GZR"/>
-                    <constraint firstItem="uI8-AO-JNG" firstAttribute="top" secondItem="VkX-av-uLW" secondAttribute="bottom" constant="3" id="y4P-Cp-1f8"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
