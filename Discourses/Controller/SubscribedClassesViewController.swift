@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseFirestore
 import FirebaseAuth
+
 class SubscribedClassesViewController: UIViewController {
     
     //MARK: - Element declaration

@@ -49,6 +49,11 @@
 		8FFC6D2824C1B40F00A41B95 /* AirbnbCerealLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC6D2224C1B40F00A41B95 /* AirbnbCerealLight.ttf */; };
 		8FFC6D2C24C1B44A00A41B95 /* Acme-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC6D2A24C1B44900A41B95 /* Acme-Regular.ttf */; };
 		8FFC6D2D24C1B44A00A41B95 /* OFL2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC6D2B24C1B44A00A41B95 /* OFL2.txt */; };
+		D215D52A24D94E29009B913B /* ChatMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D215D52924D94E29009B913B /* ChatMenu.swift */; };
+		D215D53424D99741009B913B /* MenuNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D215D53324D99741009B913B /* MenuNavigationItem.swift */; };
+		D215D53624D99AF5009B913B /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D215D53524D99AF5009B913B /* MenuTableViewController.swift */; };
+		D215D53924D9A9B4009B913B /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D215D53724D9A9B4009B913B /* MenuCell.swift */; };
+		D215D53A24D9A9B4009B913B /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D215D53824D9A9B4009B913B /* MenuCell.xib */; };
 		D289F7F024CED7BF0024AD80 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D289F7EF24CED7BF0024AD80 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +104,11 @@
 		8FFC6D2B24C1B44A00A41B95 /* OFL2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL2.txt; sourceTree = "<group>"; };
 		A70E9AC9F00BB47C71FEBC38 /* Pods-Discourses.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Discourses.release.xcconfig"; path = "Target Support Files/Pods-Discourses/Pods-Discourses.release.xcconfig"; sourceTree = "<group>"; };
 		C8C5C48DA1E9A2A12C71A2D7 /* Pods-Discourses.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Discourses.debug.xcconfig"; path = "Target Support Files/Pods-Discourses/Pods-Discourses.debug.xcconfig"; sourceTree = "<group>"; };
+		D215D52924D94E29009B913B /* ChatMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMenu.swift; sourceTree = "<group>"; };
+		D215D53324D99741009B913B /* MenuNavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuNavigationItem.swift; sourceTree = "<group>"; };
+		D215D53524D99AF5009B913B /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		D215D53724D9A9B4009B913B /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		D215D53824D9A9B4009B913B /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		D289F7EF24CED7BF0024AD80 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +163,7 @@
 				8F5605BA24C1B8510014289C /* SubscribedClassesViewController.swift */,
 				8F57476124C1BD6200286C87 /* SearchClassViewController.swift */,
 				8F5605B824C1B81C0014289C /* ChatViewController.swift */,
+				D215D53524D99AF5009B913B /* MenuTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -165,7 +176,11 @@
 				8F57476524C1BE5900286C87 /* ClassBubbleTableViewCell.swift */,
 				8F57476724C1BE5A00286C87 /* ClassBubbleTableViewCell.xib */,
 				8F57476824C1BE5B00286C87 /* SentMessageCell.swift */,
+				D215D53324D99741009B913B /* MenuNavigationItem.swift */,
+				D215D52924D94E29009B913B /* ChatMenu.swift */,
 				8F57476624C1BE5A00286C87 /* SentMessageCell.xib */,
+				D215D53724D9A9B4009B913B /* MenuCell.swift */,
+				D215D53824D9A9B4009B913B /* MenuCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -327,6 +342,7 @@
 				8FFC6D1324C1B3DC00A41B95 /* OFL.txt in Resources */,
 				8FFC6D2D24C1B44A00A41B95 /* OFL2.txt in Resources */,
 				8FFC6D2624C1B40F00A41B95 /* AirbnbCerealBlack.ttf in Resources */,
+				D215D53A24D9A9B4009B913B /* MenuCell.xib in Resources */,
 				8FFC6CF924C1B14900A41B95 /* Main.storyboard in Resources */,
 				8F57476B24C1BE5B00286C87 /* SentMessageCell.xib in Resources */,
 				8FFC6D2824C1B40F00A41B95 /* AirbnbCerealLight.ttf in Resources */,
@@ -395,9 +411,11 @@
 				8F5605B524C1B6C20014289C /* ClassModel.swift in Sources */,
 				8F57476224C1BD6200286C87 /* SearchClassViewController.swift in Sources */,
 				8FFC6CF624C1B14900A41B95 /* StartupViewController.swift in Sources */,
+				D215D52A24D94E29009B913B /* ChatMenu.swift in Sources */,
 				8F5605B924C1B81C0014289C /* ChatViewController.swift in Sources */,
 				D289F7F024CED7BF0024AD80 /* SignUpViewController.swift in Sources */,
 				8F57475E24C1BCBB00286C87 /* KeyboardLayoutConstraint.swift in Sources */,
+				D215D53624D99AF5009B913B /* MenuTableViewController.swift in Sources */,
 				8F5605B724C1B6DE0014289C /* UIImage-ResizeExtension.swift in Sources */,
 				8FFC6CF224C1B14900A41B95 /* AppDelegate.swift in Sources */,
 				8F5605B324C1B6A30014289C /* Message.swift in Sources */,
@@ -405,10 +423,12 @@
 				8F57476D24C1BE5B00286C87 /* SentMessageCell.swift in Sources */,
 				8FFC6CF424C1B14900A41B95 /* SceneDelegate.swift in Sources */,
 				8F5605BB24C1B8510014289C /* SubscribedClassesViewController.swift in Sources */,
+				D215D53924D9A9B4009B913B /* MenuCell.swift in Sources */,
 				8FFC6D0624C1B2E800A41B95 /* Constants.swift in Sources */,
 				8F57476024C1BCFC00286C87 /* LoginViewController.swift in Sources */,
 				8FD10C2624D694A900B2D267 /* UserModel.swift in Sources */,
 				8F91F79624CB17E700F3A597 /* UIStackVIew-extension.swift in Sources */,
+				D215D53424D99741009B913B /* MenuNavigationItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

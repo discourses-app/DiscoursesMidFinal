@@ -165,6 +165,9 @@
                                         <rect key="frame" x="333" y="0.0" width="41" height="53"/>
                                         <color key="tintColor" name="BrandForegroundColor"/>
                                         <state key="normal" image="line.horizontal.3" catalog="system"/>
+                                        <connections>
+                                            <segue destination="KcJ-3t-fQs" kind="presentation" id="MMl-HI-xXa"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -341,7 +344,7 @@
                                         <fragment content="Sign Up">
                                             <attributes>
                                                 <color key="NSColor" red="0.94901960784313721" green="0.93725490196078431" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" metaFont="label" size="15"/>
+                                                <font key="NSFont" metaFont="system" size="15"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -548,6 +551,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wop-I9-uwz" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="460.86956521739131" y="907.36607142857133"/>
+        </scene>
+        <!--MENU-->
+        <scene sceneID="3xB-Z0-qVe">
+            <objects>
+                <tableViewController id="NV0-OI-InJ" customClass="MenuTableViewController" customModule="Discourses" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Uiz-HN-evj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="NV0-OI-InJ" id="KKy-rK-Ccu"/>
+                            <outlet property="delegate" destination="NV0-OI-InJ" id="qYe-EE-4uf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="MENU" id="AJD-en-a6Q" customClass="MenuNavigationItem" customModule="Discourses" customModuleProvider="target"/>
+                    <connections>
+                        <outlet property="titleNavItem" destination="AJD-en-a6Q" id="3lB-dc-B9u"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q50-L0-OLP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2295.6521739130435" y="906.69642857142856"/>
+        </scene>
+        <!--Chat Menu-->
+        <scene sceneID="25r-qO-iKK">
+            <objects>
+                <navigationController id="KcJ-3t-fQs" customClass="ChatMenu" customModule="Discourses" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xkx-rF-eRb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="NV0-OI-InJ" kind="relationship" relationship="rootViewController" id="kxj-td-PTw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JlK-t7-nzo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1283" y="907"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="ey8-Mc-VhJ">

@@ -19,10 +19,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DispatchQueue.main.async {
             self.loadEveryClass()
         }
+        //Design for the ONE navigation bar that exists in the side menu
+        //Apparently, this is the only place where we can set it up
+        let navigationBarAppearace = UINavigationBar.appearance()
+        navigationBarAppearace.setBackgroundImage(UIImage(), for: .default)
+        navigationBarAppearace.shadowImage = UIImage()
+        navigationBarAppearace.layer.cornerRadius = 20
+        navigationBarAppearace.layer.masksToBounds = true
+        navigationBarAppearace.clipsToBounds = true
+        navigationBarAppearace.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        navigationBarAppearace.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "AirbnbCerealApp-ExtraBold", size: 20)!, NSAttributedString.Key.foregroundColor : UIColor(named: "BrandForegroundColor")!]
         // Override point for customization after application launch.
         return true
     }
-    
+    //MARK:- Firebase function
     func loadEveryClass() {
         let db = Firestore.firestore()
          print("So I tried loading every class?")
