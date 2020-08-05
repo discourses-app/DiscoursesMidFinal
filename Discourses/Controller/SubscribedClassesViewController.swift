@@ -76,6 +76,7 @@ class SubscribedClassesViewController: UIViewController {
                 endVC.bgColor = selectedCellUIColor
                 endVC.course = user!.subbedClasses[selectedCellIndex!.row]
                 endVC.user = user
+                endVC.subscribedClassVC = self
                 //ADELE
                 endVC.messages = []
                 endVC.loadMessages(forCourse: endVC.course!)

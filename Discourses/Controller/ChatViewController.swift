@@ -41,6 +41,7 @@ class ChatViewController: UIViewController {
     var userEmail : String!
     var messageListener: ListenerRegistration?
     var messages : [Message] = []
+    var subscribedClassVC : SubscribedClassesViewController!
     
     //MARK: - Native function manipulation
     
@@ -124,6 +125,7 @@ class ChatViewController: UIViewController {
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
         self.dismiss(animated: true) {
+            
             print("Dismissing current view controller")
         }
     }
@@ -360,6 +362,8 @@ extension ChatViewController {
             let destViewController = segue.destination as! ChatMenu
             let secondViewcontroller = destViewController.viewControllers.first as! MenuTableViewController
             secondViewcontroller.courseStringRepresentation = self.course!.stringRepresentation
+            secondViewcontroller.user = self.user
+            secondViewcontroller.subClassVC = self.subscribedClassVC
         }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.

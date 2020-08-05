@@ -13,6 +13,9 @@ class MenuTableViewController: UITableViewController {
     @IBOutlet var titleNavItem: MenuNavigationItem!
     var courseStringRepresentation : String!
     var array : [String]!
+    var user : User?
+    var course : Class?
+    var subClassVC : SubscribedClassesViewController!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
@@ -51,6 +54,9 @@ class MenuTableViewController: UITableViewController {
         let MenuCell = self.tableView.dequeueReusableCell(withIdentifier: "MenuCell", for: indexPath) as! MenuCell
         MenuCell.className.text = array[0]
         MenuCell.profAndLecName.text = "\(array[1])  |  LEC \(array[2])"
+        course = Class(name: array[0], professor: array[1], lectureNo: Int(array[2])!)
+        MenuCell.getValues(byUser: user!, course: course!, VC : subClassVC)
+        
         return MenuCell
         }
         else {
