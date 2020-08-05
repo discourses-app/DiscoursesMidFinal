@@ -16,18 +16,23 @@ class MenuCell: UITableViewCell {
     @IBOutlet var leaveGroupBtn: UIButton!
     @IBOutlet var memberNumber: UILabel!
     @IBOutlet var mutingChat: UILabel!
+    @IBOutlet var memberNumberBtn: UIButton!
+    @IBOutlet var galleryBtn: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.layer.cornerRadius = 20
-        self.layer.masksToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
+        super.setSelected(false, animated: animated)
+        
         // Configure the view for the selected state
     }
     
+    
+    //MARK:- Button Actions
+    @IBAction func LeavingGroup(_ sender: UIButton) {
+        print("He left the group!")
+    }
 }

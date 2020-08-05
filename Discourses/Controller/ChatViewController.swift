@@ -306,6 +306,7 @@ extension ChatViewController : UITableViewDelegate {
 
 extension ChatViewController {
     
+    
     @objc func someAction(_ sender:UITapGestureRecognizer){
         if inputField.isFirstResponder {
             backMostView.endEditing(true)
@@ -347,5 +348,20 @@ extension ChatViewController {
             blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
             alpha: CGFloat(1.0)
         )
+    }
+}
+
+//MARK:- Segue to SideMenu
+extension ChatViewController {
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == K.Segues.chatVCtoSideMenu
+        {
+            let destViewController = segue.destination as! ChatMenu
+            let secondViewcontroller = destViewController.viewControllers.first as! MenuTableViewController
+            secondViewcontroller.courseStringRepresentation = self.course!.stringRepresentation
+        }
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
     }
 }

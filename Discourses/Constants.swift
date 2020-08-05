@@ -18,6 +18,7 @@ struct K {
         static let classListVCtoAddClassVC = "classListToSearchClass"
         static let loginVCtoClasslistVC = "loginVCtoClasslistVC"
         static let loginVCToSignUpVC = "loginVCToSignUpVC"
+        static let chatVCtoSideMenu = "chatMenuSegue"
     }
     
     struct CellIdentifiers {

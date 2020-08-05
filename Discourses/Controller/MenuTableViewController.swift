@@ -11,6 +11,8 @@ import UIKit
 class MenuTableViewController: UITableViewController {
 
     @IBOutlet var titleNavItem: MenuNavigationItem!
+    var courseStringRepresentation : String!
+    var array : [String]!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
@@ -22,6 +24,8 @@ class MenuTableViewController: UITableViewController {
         self.tableView.backgroundColor = #colorLiteral(red: 0.3927595317, green: 0.4966250658, blue: 0.5855669975, alpha: 1)
         self.tableView.layer.cornerRadius = 20
         self.tableView.layer.masksToBounds = true
+        print(courseStringRepresentation)
+        array = courseStringRepresentation.components(separatedBy: "*")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -45,9 +49,8 @@ class MenuTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
         let MenuCell = self.tableView.dequeueReusableCell(withIdentifier: "MenuCell", for: indexPath) as! MenuCell
-//        MenuCell.backgroundView?.backgroundColor = UIColor.clear
-//        MenuCell.contentView.backgroundColor = #colorLiteral(red: 0.3215686275, green: 0.4196078431, blue: 0.5137254902, alpha: 1)
-       
+        MenuCell.className.text = array[0]
+        MenuCell.profAndLecName.text = "\(array[1])  |  LEC \(array[2])"
         return MenuCell
         }
         else {
