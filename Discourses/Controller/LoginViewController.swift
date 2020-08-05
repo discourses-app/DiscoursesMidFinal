@@ -161,6 +161,7 @@ class LoginViewController: UIViewController {
             }
             
             self.db.collection(K.Firebase.EmailCollection.name).document(email).collection(K.Firebase.EmailCollection.subbedClasses).getDocuments { (querySnapshot, error) in
+                loadingAlert.dismiss(animated: true, completion: nil)
                 if let e = error {
                     print(e.localizedDescription)
                     return
@@ -172,8 +173,10 @@ class LoginViewController: UIViewController {
                         self.user?.subbedClasses.append(newClass)
                     }
                 }
-                loadingAlert.dismiss(animated: true, completion: nil)
-                self.performSegue(withIdentifier: K.Segues.loginVCtoClasslistVC, sender: self)
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime(uptimeNanoseconds: 5)) {
+                    self.performSegue(withIdentifier: K.Segues.loginVCtoClasslistVC, sender: self)
+                }
+                
             }
         }
     }
@@ -201,7 +204,7 @@ extension LoginViewController {
     
     
     func loginFirebase (withEmail email: String, withPassword password : String){
-        let localEmailInexistentErr = "There is no user record corresponding to this identifier. The user may have been deleted." //there's a better way of using an enumeration for catching errors but I can't seem to use it
+        let localEmailInexistentErr = "There is no user record corresponding to this identifier. The user may have been deleted." //there's a better way of using an enumeration for catching particular errors but I can't seem to use it
         
         let goSignIn = UIAlertAction(title: "Sign In Instead", style: .default) { (UIAlertAction) in
             self.performSegue(withIdentifier: K.Segues.loginVCToSignUpVC, sender: self)
@@ -222,9 +225,7 @@ extension LoginViewController {
                 loadingAlert.dismiss(animated: true, completion: {
                 print("Did I enter this else block?")
                 self.userEmail = authResult?.user.email
-//                self.loadAllClassesSubscribed { success in
                 self.performSegueToMainMenu(withEmail: self.userEmail!)
-//                }
                 })
             }
         }

@@ -183,8 +183,9 @@ class SignUpViewController: UIViewController {
                         K.Firebase.EmailCollection.userLastField : self.lastNameText.text!
                 ])
                 self.baseVC?.newUser = true
-                self.baseVC?.loginFirebase(withEmail: self.emailText.text!, withPassword: self.pwdText.text!)
-                self.dismiss(animated: true, completion: nil)
+                self.dismiss(animated: true) {
+                    self.baseVC?.loginFirebase(withEmail: self.emailText.text!, withPassword: self.pwdText.text!)
+                }
             }
         }
     }

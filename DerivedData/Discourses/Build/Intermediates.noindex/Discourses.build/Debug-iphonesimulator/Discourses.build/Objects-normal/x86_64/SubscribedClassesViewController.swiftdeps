@@ -23,6 +23,7 @@ provides-dynamic-lookup:
 - "viewWillAppear"
 depends-top-level:
 - !private "%"
+- !private "+"
 - !private "=="
 - "AssignmentPrecedence"
 - "Bool"

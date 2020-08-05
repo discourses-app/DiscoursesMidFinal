@@ -37,7 +37,6 @@ class ChatViewController: UIViewController {
     var flag : Int = 0 //just trust me on why we need this - aritra
     let db = Firestore.firestore()
     var course : Class?
-    var lecNumber : Int? = 1
     var userEmail : String!
     var messageListener: ListenerRegistration?
     var messages : [Message] = []

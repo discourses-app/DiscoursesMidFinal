@@ -27,7 +27,6 @@ provides-dynamic-lookup:
 - "inputField"
 - "inputStackView"
 - "keyboardHeight"
-- "lecNumber"
 - "loadMessages"
 - "menuButton"
 - "messageListener"
@@ -369,7 +368,6 @@ depends-member:
 - ["10Discourses18ChatViewControllerC", "inputField"]
 - ["10Discourses18ChatViewControllerC", "inputStackView"]
 - ["10Discourses18ChatViewControllerC", "keyboardHeight"]
-- ["10Discourses18ChatViewControllerC", "lecNumber"]
 - ["10Discourses18ChatViewControllerC", "loadMessages"]
 - ["10Discourses18ChatViewControllerC", "menuButton"]
 - ["10Discourses18ChatViewControllerC", "messageListener"]
@@ -1580,7 +1578,6 @@ depends-member:
 - !private ["So8NSObjectC", "isScrollEnabled"]
 - ["So8NSObjectC", "keyboardHeight"]
 - !private ["So8NSObjectC", "layer"]
-- ["So8NSObjectC", "lecNumber"]
 - ["So8NSObjectC", "loadMessages"]
 - !private ["So8NSObjectC", "main"]
 - !private ["So8NSObjectC", "masksToBounds"]
@@ -2657,7 +2654,6 @@ depends-member:
 - !private ["So11UIResponderC", "isScrollEnabled"]
 - ["So11UIResponderC", "keyboardHeight"]
 - !private ["So11UIResponderC", "layer"]
-- ["So11UIResponderC", "lecNumber"]
 - ["So11UIResponderC", "loadMessages"]
 - ["So11UIResponderC", "menuButton"]
 - !private ["So11UIResponderC", "messageContent"]
@@ -3562,7 +3558,6 @@ depends-member:
 - ["So16UIViewControllerC", "inputField"]
 - ["So16UIViewControllerC", "inputStackView"]
 - ["So16UIViewControllerC", "keyboardHeight"]
-- ["So16UIViewControllerC", "lecNumber"]
 - ["So16UIViewControllerC", "loadMessages"]
 - ["So16UIViewControllerC", "menuButton"]
 - ["So16UIViewControllerC", "messageListener"]
@@ -4297,4 +4292,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "baec7d32ae32c20aa29a0b2511108444"
+interface-hash: "7a9c90e7f477367c881f35906078464b"

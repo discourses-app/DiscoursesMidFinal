@@ -125,9 +125,10 @@ extension SubscribedClassesViewController : UITableViewDataSource {
         backgroundView.backgroundColor = UIColor.clear
         cell.selectedBackgroundView = backgroundView
         cell.bubbleView.backgroundColor = bgColorForCell
-        cell.lectureNumLabel.text = "LEC \(user!.subbedClasses[indexPath.row].lectureNo)"
+//        cell.lectureNumLabel.text = "LEC \(user!.subbedClasses[indexPath.row].lectureNo)"
+        cell.lectureNumLabel.text = ""
         cell.classNameLabel.text = user!.subbedClasses[indexPath.row].name.uppercased()
-        cell.professorNameLabel.text = user!.subbedClasses[indexPath.row].professor.uppercased()
+        cell.professorNameLabel.text = user!.subbedClasses[indexPath.row].professor.uppercased() + "  |  " + "LEC \(user!.subbedClasses[indexPath.row].lectureNo)"
         return cell
         
     }
