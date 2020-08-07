@@ -7,24 +7,52 @@ provides-member:
 - ["10Discourses11AppDelegateC", ""]
 provides-dynamic-lookup:
 - "application"
+- "loadEveryClass"
 depends-top-level:
+- !private "=="
 - "AppDelegate"
+- "AssignmentPrecedence"
 - "Bool"
 - !private "BooleanLiteralType"
+- !private "Class"
+- !private "DispatchQueue"
 - !private "FirebaseApp"
+- !private "Firestore"
+- !private "FloatLiteralType"
+- !private "Int"
+- !private "IntegerLiteralType"
+- !private "K"
+- !private "NSAttributedString"
 - "Set"
-- !private "StringLiteralType"
+- "StringLiteralType"
 - "UIApplication"
 - "UIApplicationDelegate"
+- !private "UIColor"
+- !private "UIFont"
+- !private "UIImage"
+- !private "UINavigationBar"
 - "UIResponder"
 - "UIScene"
 - "UISceneConfiguration"
 - "UISceneSession"
+- "UnicodeScalarType"
+- !private "print"
 depends-member:
+- !private ["s18AdditiveArithmeticP", "init"]
 - ["10Discourses11AppDelegateC", "Bool"]
+- !private ["10Discourses11AppDelegateC", "Class"]
+- !private ["10Discourses11AppDelegateC", "DispatchQueue"]
 - !private ["10Discourses11AppDelegateC", "FirebaseApp"]
+- !private ["10Discourses11AppDelegateC", "Firestore"]
+- !private ["10Discourses11AppDelegateC", "Int"]
+- !private ["10Discourses11AppDelegateC", "K"]
+- !private ["10Discourses11AppDelegateC", "NSAttributedString"]
 - ["10Discourses11AppDelegateC", "Set"]
 - ["10Discourses11AppDelegateC", "UIApplication"]
+- !private ["10Discourses11AppDelegateC", "UIColor"]
+- !private ["10Discourses11AppDelegateC", "UIFont"]
+- !private ["10Discourses11AppDelegateC", "UIImage"]
+- !private ["10Discourses11AppDelegateC", "UINavigationBar"]
 - ["10Discourses11AppDelegateC", "UIScene"]
 - ["10Discourses11AppDelegateC", "UISceneConfiguration"]
 - ["10Discourses11AppDelegateC", "UISceneSession"]
@@ -42,12 +70,47 @@ depends-member:
 - ["10Discourses11AppDelegateC", "applicationWillTerminate"]
 - ["10Discourses11AppDelegateC", "deinit"]
 - ["10Discourses11AppDelegateC", "init"]
+- ["10Discourses11AppDelegateC", "loadEveryClass"]
+- !private ["10Discourses11AppDelegateC", "print"]
 - ["10Discourses11AppDelegateC", "window"]
+- !private ["Sa", "append"]
+- !private ["Sa", "subscript"]
+- !private ["SK", "append"]
+- !private ["SK", "components"]
+- !private ["SK", "subscript"]
+- !private ["Sz", "init"]
+- !private ["So12CACornerMaskV", "layerMaxXMinYCorner"]
+- !private ["So12CACornerMaskV", "layerMinXMinYCorner"]
+- !private ["So7CALayerC", "cornerRadius"]
+- !private ["So7CALayerC", "maskedCorners"]
+- !private ["So7CALayerC", "masksToBounds"]
+- !private ["So15CALayerDelegateP", "appearance"]
+- !private ["So15CALayerDelegateP", "clipsToBounds"]
+- !private ["So15CALayerDelegateP", "layer"]
+- !private ["So15CALayerDelegateP", "setBackgroundImage"]
+- !private ["So15CALayerDelegateP", "shadowImage"]
+- !private ["So15CALayerDelegateP", "titleTextAttributes"]
+- !private ["So13CAMediaTimingP", "cornerRadius"]
+- !private ["So13CAMediaTimingP", "maskedCorners"]
+- !private ["So13CAMediaTimingP", "masksToBounds"]
+- !private ["s7CVarArgP", "Class"]
 - ["s7CVarArgP", "ConnectionOptions"]
+- !private ["s7CVarArgP", "DispatchQueue"]
 - !private ["s7CVarArgP", "FirebaseApp"]
+- !private ["s7CVarArgP", "Firestore"]
+- !private ["s7CVarArgP", "Int"]
+- !private ["s7CVarArgP", "K"]
+- !private ["s7CVarArgP", "Key"]
 - ["s7CVarArgP", "LaunchOptionsKey"]
+- !private ["s7CVarArgP", "NSAttributedString"]
+- !private ["s7CVarArgP", "UIColor"]
+- !private ["s7CVarArgP", "UIFont"]
+- !private ["s7CVarArgP", "UIImage"]
+- !private ["s7CVarArgP", "UINavigationBar"]
 - !private ["s7CVarArgP", "UISceneConfiguration"]
 - ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "appearance"]
+- !private ["s7CVarArgP", "append"]
 - ["s7CVarArgP", "application"]
 - ["s7CVarArgP", "applicationDidBecomeActive"]
 - ["s7CVarArgP", "applicationDidEnterBackground"]
@@ -60,15 +123,57 @@ depends-member:
 - ["s7CVarArgP", "applicationWillEnterForeground"]
 - ["s7CVarArgP", "applicationWillResignActive"]
 - ["s7CVarArgP", "applicationWillTerminate"]
+- !private ["s7CVarArgP", "async"]
+- !private ["s7CVarArgP", "clipsToBounds"]
+- !private ["s7CVarArgP", "collection"]
+- !private ["s7CVarArgP", "components"]
 - !private ["s7CVarArgP", "configure"]
+- !private ["s7CVarArgP", "cornerRadius"]
+- !private ["s7CVarArgP", "documentID"]
+- !private ["s7CVarArgP", "documents"]
+- !private ["s7CVarArgP", "firestore"]
+- !private ["s7CVarArgP", "getDocuments"]
 - !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "layer"]
+- !private ["s7CVarArgP", "loadEveryClass"]
+- !private ["s7CVarArgP", "main"]
+- !private ["s7CVarArgP", "maskedCorners"]
+- !private ["s7CVarArgP", "masksToBounds"]
+- !private ["s7CVarArgP", "print"]
 - !private ["s7CVarArgP", "role"]
+- !private ["s7CVarArgP", "setBackgroundImage"]
+- !private ["s7CVarArgP", "shadowImage"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "titleTextAttributes"]
 - ["s7CVarArgP", "window"]
+- !private ["10Discourses5ClassV", "init"]
+- !private ["10Discourses1KV8FirebaseV15ClassCollectionV", "name"]
+- !private ["Sl", "append"]
+- !private ["Sl", "components"]
+- !private ["Sl", "subscript"]
+- !private ["So22FIRCollectionReferenceC", "getDocuments"]
+- !private ["SL", "components"]
+- !private ["SL", "init"]
+- !private ["10Foundation15ContiguousBytesP", "append"]
+- !private ["10Foundation15ContiguousBytesP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "Class"]
 - ["s28CustomDebugStringConvertibleP", "ConnectionOptions"]
+- !private ["s28CustomDebugStringConvertibleP", "DispatchQueue"]
 - !private ["s28CustomDebugStringConvertibleP", "FirebaseApp"]
+- !private ["s28CustomDebugStringConvertibleP", "Firestore"]
+- !private ["s28CustomDebugStringConvertibleP", "Int"]
+- !private ["s28CustomDebugStringConvertibleP", "K"]
+- !private ["s28CustomDebugStringConvertibleP", "Key"]
 - ["s28CustomDebugStringConvertibleP", "LaunchOptionsKey"]
+- !private ["s28CustomDebugStringConvertibleP", "NSAttributedString"]
+- !private ["s28CustomDebugStringConvertibleP", "UIColor"]
+- !private ["s28CustomDebugStringConvertibleP", "UIFont"]
+- !private ["s28CustomDebugStringConvertibleP", "UIImage"]
+- !private ["s28CustomDebugStringConvertibleP", "UINavigationBar"]
 - !private ["s28CustomDebugStringConvertibleP", "UISceneConfiguration"]
 - ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "appearance"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
 - ["s28CustomDebugStringConvertibleP", "application"]
 - ["s28CustomDebugStringConvertibleP", "applicationDidBecomeActive"]
 - ["s28CustomDebugStringConvertibleP", "applicationDidEnterBackground"]
@@ -81,15 +186,53 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "applicationWillEnterForeground"]
 - ["s28CustomDebugStringConvertibleP", "applicationWillResignActive"]
 - ["s28CustomDebugStringConvertibleP", "applicationWillTerminate"]
+- !private ["s28CustomDebugStringConvertibleP", "async"]
+- !private ["s28CustomDebugStringConvertibleP", "clipsToBounds"]
+- !private ["s28CustomDebugStringConvertibleP", "collection"]
+- !private ["s28CustomDebugStringConvertibleP", "components"]
 - !private ["s28CustomDebugStringConvertibleP", "configure"]
+- !private ["s28CustomDebugStringConvertibleP", "cornerRadius"]
+- !private ["s28CustomDebugStringConvertibleP", "documentID"]
+- !private ["s28CustomDebugStringConvertibleP", "documents"]
+- !private ["s28CustomDebugStringConvertibleP", "firestore"]
+- !private ["s28CustomDebugStringConvertibleP", "getDocuments"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "layer"]
+- !private ["s28CustomDebugStringConvertibleP", "loadEveryClass"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
+- !private ["s28CustomDebugStringConvertibleP", "maskedCorners"]
+- !private ["s28CustomDebugStringConvertibleP", "masksToBounds"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
 - !private ["s28CustomDebugStringConvertibleP", "role"]
+- !private ["s28CustomDebugStringConvertibleP", "setBackgroundImage"]
+- !private ["s28CustomDebugStringConvertibleP", "shadowImage"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "titleTextAttributes"]
 - ["s28CustomDebugStringConvertibleP", "window"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "components"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "Class"]
 - ["s23CustomStringConvertibleP", "ConnectionOptions"]
+- !private ["s23CustomStringConvertibleP", "DispatchQueue"]
 - !private ["s23CustomStringConvertibleP", "FirebaseApp"]
+- !private ["s23CustomStringConvertibleP", "Firestore"]
+- !private ["s23CustomStringConvertibleP", "Int"]
+- !private ["s23CustomStringConvertibleP", "K"]
+- !private ["s23CustomStringConvertibleP", "Key"]
 - ["s23CustomStringConvertibleP", "LaunchOptionsKey"]
+- !private ["s23CustomStringConvertibleP", "NSAttributedString"]
+- !private ["s23CustomStringConvertibleP", "UIColor"]
+- !private ["s23CustomStringConvertibleP", "UIFont"]
+- !private ["s23CustomStringConvertibleP", "UIImage"]
+- !private ["s23CustomStringConvertibleP", "UINavigationBar"]
 - !private ["s23CustomStringConvertibleP", "UISceneConfiguration"]
 - ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "appearance"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
 - ["s23CustomStringConvertibleP", "application"]
 - ["s23CustomStringConvertibleP", "applicationDidBecomeActive"]
 - ["s23CustomStringConvertibleP", "applicationDidEnterBackground"]
@@ -102,15 +245,64 @@ depends-member:
 - ["s23CustomStringConvertibleP", "applicationWillEnterForeground"]
 - ["s23CustomStringConvertibleP", "applicationWillResignActive"]
 - ["s23CustomStringConvertibleP", "applicationWillTerminate"]
+- !private ["s23CustomStringConvertibleP", "async"]
+- !private ["s23CustomStringConvertibleP", "clipsToBounds"]
+- !private ["s23CustomStringConvertibleP", "collection"]
+- !private ["s23CustomStringConvertibleP", "components"]
 - !private ["s23CustomStringConvertibleP", "configure"]
+- !private ["s23CustomStringConvertibleP", "cornerRadius"]
+- !private ["s23CustomStringConvertibleP", "documentID"]
+- !private ["s23CustomStringConvertibleP", "documents"]
+- !private ["s23CustomStringConvertibleP", "firestore"]
+- !private ["s23CustomStringConvertibleP", "getDocuments"]
 - !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "layer"]
+- !private ["s23CustomStringConvertibleP", "loadEveryClass"]
+- !private ["s23CustomStringConvertibleP", "main"]
+- !private ["s23CustomStringConvertibleP", "maskedCorners"]
+- !private ["s23CustomStringConvertibleP", "masksToBounds"]
+- !private ["s23CustomStringConvertibleP", "print"]
 - !private ["s23CustomStringConvertibleP", "role"]
+- !private ["s23CustomStringConvertibleP", "setBackgroundImage"]
+- !private ["s23CustomStringConvertibleP", "shadowImage"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "titleTextAttributes"]
 - ["s23CustomStringConvertibleP", "window"]
+- !private ["10Foundation12DataProtocolP", "append"]
+- !private ["10Foundation12DataProtocolP", "subscript"]
+- !private ["Se", "append"]
+- !private ["Se", "components"]
+- !private ["Se", "init"]
+- !private ["Se", "subscript"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
+- !private ["So18OS_dispatch_objectC", "async"]
+- !private ["So18OS_dispatch_objectC", "main"]
+- !private ["So17OS_dispatch_queueC", "async"]
+- !private ["So17OS_dispatch_queueC", "main"]
+- !private ["So19FIRDocumentSnapshotC", "documentID"]
+- !private ["SE", "append"]
+- !private ["SE", "components"]
+- !private ["SE", "init"]
+- !private ["SE", "subscript"]
+- !private ["SQ", "Class"]
 - ["SQ", "ConnectionOptions"]
+- !private ["SQ", "DispatchQueue"]
 - !private ["SQ", "FirebaseApp"]
+- !private ["SQ", "Firestore"]
+- !private ["SQ", "Int"]
+- !private ["SQ", "K"]
+- !private ["SQ", "Key"]
 - ["SQ", "LaunchOptionsKey"]
+- !private ["SQ", "NSAttributedString"]
+- !private ["SQ", "UIColor"]
+- !private ["SQ", "UIFont"]
+- !private ["SQ", "UIImage"]
+- !private ["SQ", "UINavigationBar"]
 - !private ["SQ", "UISceneConfiguration"]
 - ["SQ", ""]
+- !private ["SQ", "appearance"]
+- !private ["SQ", "append"]
 - ["SQ", "application"]
 - ["SQ", "applicationDidBecomeActive"]
 - ["SQ", "applicationDidEnterBackground"]
@@ -123,16 +315,66 @@ depends-member:
 - ["SQ", "applicationWillEnterForeground"]
 - ["SQ", "applicationWillResignActive"]
 - ["SQ", "applicationWillTerminate"]
+- !private ["SQ", "async"]
+- !private ["SQ", "clipsToBounds"]
+- !private ["SQ", "collection"]
+- !private ["SQ", "components"]
 - !private ["SQ", "configure"]
+- !private ["SQ", "cornerRadius"]
+- !private ["SQ", "default"]
+- !private ["SQ", "documentID"]
+- !private ["SQ", "documents"]
+- !private ["SQ", "firestore"]
+- !private ["SQ", "font"]
+- !private ["SQ", "foregroundColor"]
+- !private ["SQ", "getDocuments"]
 - !private ["SQ", "init"]
+- !private ["SQ", "layer"]
+- !private ["SQ", "layerMaxXMinYCorner"]
+- !private ["SQ", "layerMinXMinYCorner"]
+- !private ["SQ", "loadEveryClass"]
+- !private ["SQ", "main"]
+- !private ["SQ", "maskedCorners"]
+- !private ["SQ", "masksToBounds"]
+- !private ["SQ", "print"]
 - !private ["SQ", "role"]
+- !private ["SQ", "setBackgroundImage"]
+- !private ["SQ", "shadowImage"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "titleTextAttributes"]
 - ["SQ", "window"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "layerMaxXMinYCorner"]
+- !private ["s25ExpressibleByArrayLiteralP", "layerMinXMinYCorner"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "components"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s32ExpressibleByStringInterpolationP", "components"]
+- !private ["s26ExpressibleByStringLiteralP", "components"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "components"]
+- !private ["10Discourses1KV8FirebaseV", "ClassCollection"]
 - !private ["So6FIRAppC", "configure"]
+- !private ["So12FIRFirestoreC", "collection"]
+- !private ["So12FIRFirestoreC", "firestore"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["SH", "Class"]
 - ["SH", "ConnectionOptions"]
+- !private ["SH", "DispatchQueue"]
 - !private ["SH", "FirebaseApp"]
+- !private ["SH", "Firestore"]
+- !private ["SH", "Int"]
+- !private ["SH", "K"]
+- !private ["SH", "Key"]
 - ["SH", "LaunchOptionsKey"]
+- !private ["SH", "NSAttributedString"]
+- !private ["SH", "UIColor"]
+- !private ["SH", "UIFont"]
+- !private ["SH", "UIImage"]
+- !private ["SH", "UINavigationBar"]
 - !private ["SH", "UISceneConfiguration"]
 - ["SH", ""]
+- !private ["SH", "appearance"]
+- !private ["SH", "append"]
 - ["SH", "application"]
 - ["SH", "applicationDidBecomeActive"]
 - ["SH", "applicationDidEnterBackground"]
@@ -145,22 +387,142 @@ depends-member:
 - ["SH", "applicationWillEnterForeground"]
 - ["SH", "applicationWillResignActive"]
 - ["SH", "applicationWillTerminate"]
+- !private ["SH", "async"]
+- !private ["SH", "clipsToBounds"]
+- !private ["SH", "collection"]
+- !private ["SH", "components"]
 - !private ["SH", "configure"]
+- !private ["SH", "cornerRadius"]
+- !private ["SH", "default"]
+- !private ["SH", "documentID"]
+- !private ["SH", "documents"]
+- !private ["SH", "firestore"]
+- !private ["SH", "font"]
+- !private ["SH", "foregroundColor"]
+- !private ["SH", "getDocuments"]
 - !private ["SH", "init"]
+- !private ["SH", "layer"]
+- !private ["SH", "loadEveryClass"]
+- !private ["SH", "main"]
+- !private ["SH", "maskedCorners"]
+- !private ["SH", "masksToBounds"]
+- !private ["SH", "print"]
 - !private ["SH", "role"]
+- !private ["SH", "setBackgroundImage"]
+- !private ["SH", "shadowImage"]
+- !private ["SH", "subscript"]
+- !private ["SH", "titleTextAttributes"]
 - ["SH", "window"]
+- !private ["8SideMenu18InitializableClassP", "Class"]
+- ["8SideMenu18InitializableClassP", "ConnectionOptions"]
+- !private ["8SideMenu18InitializableClassP", "DispatchQueue"]
+- !private ["8SideMenu18InitializableClassP", "FirebaseApp"]
+- !private ["8SideMenu18InitializableClassP", "Firestore"]
+- !private ["8SideMenu18InitializableClassP", "Int"]
+- !private ["8SideMenu18InitializableClassP", "K"]
+- !private ["8SideMenu18InitializableClassP", "Key"]
+- ["8SideMenu18InitializableClassP", "LaunchOptionsKey"]
+- !private ["8SideMenu18InitializableClassP", "NSAttributedString"]
+- !private ["8SideMenu18InitializableClassP", "UIColor"]
+- !private ["8SideMenu18InitializableClassP", "UIFont"]
+- !private ["8SideMenu18InitializableClassP", "UIImage"]
+- !private ["8SideMenu18InitializableClassP", "UINavigationBar"]
+- !private ["8SideMenu18InitializableClassP", "UISceneConfiguration"]
+- ["8SideMenu18InitializableClassP", ""]
+- !private ["8SideMenu18InitializableClassP", "appearance"]
+- ["8SideMenu18InitializableClassP", "application"]
+- ["8SideMenu18InitializableClassP", "applicationDidBecomeActive"]
+- ["8SideMenu18InitializableClassP", "applicationDidEnterBackground"]
+- ["8SideMenu18InitializableClassP", "applicationDidFinishLaunching"]
+- ["8SideMenu18InitializableClassP", "applicationDidReceiveMemoryWarning"]
+- ["8SideMenu18InitializableClassP", "applicationProtectedDataDidBecomeAvailable"]
+- ["8SideMenu18InitializableClassP", "applicationProtectedDataWillBecomeUnavailable"]
+- ["8SideMenu18InitializableClassP", "applicationShouldRequestHealthAuthorization"]
+- ["8SideMenu18InitializableClassP", "applicationSignificantTimeChange"]
+- ["8SideMenu18InitializableClassP", "applicationWillEnterForeground"]
+- ["8SideMenu18InitializableClassP", "applicationWillResignActive"]
+- ["8SideMenu18InitializableClassP", "applicationWillTerminate"]
+- !private ["8SideMenu18InitializableClassP", "async"]
+- !private ["8SideMenu18InitializableClassP", "clipsToBounds"]
+- !private ["8SideMenu18InitializableClassP", "collection"]
+- !private ["8SideMenu18InitializableClassP", "components"]
+- !private ["8SideMenu18InitializableClassP", "configure"]
+- !private ["8SideMenu18InitializableClassP", "cornerRadius"]
+- !private ["8SideMenu18InitializableClassP", "documentID"]
+- !private ["8SideMenu18InitializableClassP", "documents"]
+- !private ["8SideMenu18InitializableClassP", "firestore"]
+- !private ["8SideMenu18InitializableClassP", "getDocuments"]
+- !private ["8SideMenu18InitializableClassP", "init"]
+- !private ["8SideMenu18InitializableClassP", "layer"]
+- !private ["8SideMenu18InitializableClassP", "loadEveryClass"]
+- !private ["8SideMenu18InitializableClassP", "main"]
+- !private ["8SideMenu18InitializableClassP", "maskedCorners"]
+- !private ["8SideMenu18InitializableClassP", "masksToBounds"]
+- !private ["8SideMenu18InitializableClassP", "print"]
+- !private ["8SideMenu18InitializableClassP", "role"]
+- !private ["8SideMenu18InitializableClassP", "setBackgroundImage"]
+- !private ["8SideMenu18InitializableClassP", "shadowImage"]
+- !private ["8SideMenu18InitializableClassP", "titleTextAttributes"]
+- ["8SideMenu18InitializableClassP", "window"]
+- !private ["Si", "init"]
+- !private ["10Discourses1KV", "Firebase"]
+- !private ["10Discourses1KV", "allClasses"]
+- !private ["So21NSAttributedStringKeya", "font"]
+- !private ["So21NSAttributedStringKeya", "foregroundColor"]
+- !private ["s25LosslessStringConvertibleP", "components"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "components"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["SM", "append"]
+- !private ["SM", "subscript"]
+- !private ["10Foundation19MutableDataProtocolP", "append"]
+- !private ["10Foundation19MutableDataProtocolP", "subscript"]
+- !private ["So18NSAttributedStringC", "Key"]
+- !private ["So8NSCodingP", "Key"]
+- !private ["So8NSCodingP", "appearance"]
+- !private ["So8NSCodingP", "clipsToBounds"]
+- !private ["So8NSCodingP", "components"]
+- !private ["So8NSCodingP", "cornerRadius"]
 - !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "layer"]
+- !private ["So8NSCodingP", "maskedCorners"]
+- !private ["So8NSCodingP", "masksToBounds"]
 - !private ["So8NSCodingP", "role"]
+- !private ["So8NSCodingP", "setBackgroundImage"]
+- !private ["So8NSCodingP", "shadowImage"]
+- !private ["So8NSCodingP", "titleTextAttributes"]
+- !private ["So9NSCopyingP", "Key"]
+- !private ["So9NSCopyingP", "components"]
 - !private ["So9NSCopyingP", "init"]
+- !private ["So21NSItemProviderReadingP", "Key"]
+- !private ["So21NSItemProviderReadingP", "components"]
+- !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderWritingP", "Key"]
+- !private ["So21NSItemProviderWritingP", "components"]
+- !private ["So21NSItemProviderWritingP", "init"]
+- !private ["So16NSMutableCopyingP", "Key"]
+- !private ["So16NSMutableCopyingP", "components"]
 - ["So8NSObjectC", "Bool"]
+- !private ["So8NSObjectC", "Class"]
 - ["So8NSObjectC", "ConnectionOptions"]
+- !private ["So8NSObjectC", "DispatchQueue"]
 - !private ["So8NSObjectC", "FirebaseApp"]
+- !private ["So8NSObjectC", "Firestore"]
+- !private ["So8NSObjectC", "Int"]
+- !private ["So8NSObjectC", "K"]
+- !private ["So8NSObjectC", "Key"]
 - ["So8NSObjectC", "LaunchOptionsKey"]
+- !private ["So8NSObjectC", "NSAttributedString"]
 - ["So8NSObjectC", "Set"]
 - ["So8NSObjectC", "UIApplication"]
+- !private ["So8NSObjectC", "UIColor"]
+- !private ["So8NSObjectC", "UIFont"]
+- !private ["So8NSObjectC", "UIImage"]
+- !private ["So8NSObjectC", "UINavigationBar"]
 - ["So8NSObjectC", "UIScene"]
 - ["So8NSObjectC", "UISceneConfiguration"]
 - ["So8NSObjectC", "UISceneSession"]
+- !private ["So8NSObjectC", "appearance"]
 - ["So8NSObjectC", "application"]
 - ["So8NSObjectC", "applicationDidBecomeActive"]
 - ["So8NSObjectC", "applicationDidEnterBackground"]
@@ -173,15 +535,45 @@ depends-member:
 - ["So8NSObjectC", "applicationWillEnterForeground"]
 - ["So8NSObjectC", "applicationWillResignActive"]
 - ["So8NSObjectC", "applicationWillTerminate"]
+- !private ["So8NSObjectC", "async"]
+- !private ["So8NSObjectC", "clipsToBounds"]
+- !private ["So8NSObjectC", "collection"]
+- !private ["So8NSObjectC", "components"]
 - !private ["So8NSObjectC", "configure"]
+- !private ["So8NSObjectC", "cornerRadius"]
+- !private ["So8NSObjectC", "documentID"]
+- !private ["So8NSObjectC", "documents"]
+- !private ["So8NSObjectC", "firestore"]
+- !private ["So8NSObjectC", "getDocuments"]
 - ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "layer"]
+- ["So8NSObjectC", "loadEveryClass"]
+- !private ["So8NSObjectC", "main"]
+- !private ["So8NSObjectC", "maskedCorners"]
+- !private ["So8NSObjectC", "masksToBounds"]
+- !private ["So8NSObjectC", "print"]
 - !private ["So8NSObjectC", "role"]
+- !private ["So8NSObjectC", "setBackgroundImage"]
+- !private ["So8NSObjectC", "shadowImage"]
+- !private ["So8NSObjectC", "titleTextAttributes"]
 - ["So8NSObjectC", "window"]
+- !private ["So8NSObjectP", "Class"]
 - ["So8NSObjectP", "ConnectionOptions"]
+- !private ["So8NSObjectP", "DispatchQueue"]
 - !private ["So8NSObjectP", "FirebaseApp"]
+- !private ["So8NSObjectP", "Firestore"]
+- !private ["So8NSObjectP", "Int"]
+- !private ["So8NSObjectP", "K"]
+- !private ["So8NSObjectP", "Key"]
 - ["So8NSObjectP", "LaunchOptionsKey"]
+- !private ["So8NSObjectP", "NSAttributedString"]
+- !private ["So8NSObjectP", "UIColor"]
+- !private ["So8NSObjectP", "UIFont"]
+- !private ["So8NSObjectP", "UIImage"]
+- !private ["So8NSObjectP", "UINavigationBar"]
 - !private ["So8NSObjectP", "UISceneConfiguration"]
 - ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "appearance"]
 - ["So8NSObjectP", "application"]
 - ["So8NSObjectP", "applicationDidBecomeActive"]
 - ["So8NSObjectP", "applicationDidEnterBackground"]
@@ -194,14 +586,104 @@ depends-member:
 - ["So8NSObjectP", "applicationWillEnterForeground"]
 - ["So8NSObjectP", "applicationWillResignActive"]
 - ["So8NSObjectP", "applicationWillTerminate"]
+- !private ["So8NSObjectP", "async"]
+- !private ["So8NSObjectP", "clipsToBounds"]
+- !private ["So8NSObjectP", "collection"]
+- !private ["So8NSObjectP", "components"]
 - !private ["So8NSObjectP", "configure"]
+- !private ["So8NSObjectP", "cornerRadius"]
+- !private ["So8NSObjectP", "documentID"]
+- !private ["So8NSObjectP", "documents"]
+- !private ["So8NSObjectP", "firestore"]
+- !private ["So8NSObjectP", "getDocuments"]
 - !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "layer"]
+- !private ["So8NSObjectP", "loadEveryClass"]
+- !private ["So8NSObjectP", "main"]
+- !private ["So8NSObjectP", "maskedCorners"]
+- !private ["So8NSObjectP", "masksToBounds"]
+- !private ["So8NSObjectP", "print"]
 - !private ["So8NSObjectP", "role"]
+- !private ["So8NSObjectP", "setBackgroundImage"]
+- !private ["So8NSObjectP", "shadowImage"]
+- !private ["So8NSObjectP", "titleTextAttributes"]
 - ["So8NSObjectP", "window"]
+- !private ["So14NSSecureCodingP", "Key"]
+- !private ["So14NSSecureCodingP", "components"]
+- !private ["So14NSSecureCodingP", "cornerRadius"]
 - !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "maskedCorners"]
+- !private ["So14NSSecureCodingP", "masksToBounds"]
 - !private ["So14NSSecureCodingP", "role"]
+- !private ["So8NSStringC", "components"]
+- !private ["Sj", "init"]
+- !private ["So9OS_objectC", "async"]
+- !private ["So9OS_objectC", "main"]
+- !private ["s9OptionSetP", "layerMaxXMinYCorner"]
+- !private ["s9OptionSetP", "layerMinXMinYCorner"]
+- !private ["So8FIRQueryC", "getDocuments"]
+- !private ["So24FIRQueryDocumentSnapshotC", "documentID"]
+- !private ["So16FIRQuerySnapshotC", "documents"]
+- !private ["Sk", "append"]
+- !private ["Sk", "subscript"]
+- !private ["Sm", "append"]
+- !private ["Sm", "components"]
+- !private ["Sm", "subscript"]
+- !private ["SY", "default"]
+- !private ["SY", "font"]
+- !private ["SY", "foregroundColor"]
+- !private ["SY", "layerMaxXMinYCorner"]
+- !private ["SY", "layerMinXMinYCorner"]
+- !private ["s10SIMDScalarP", "init"]
+- !private ["7Combine9SchedulerP", "async"]
+- !private ["7Combine9SchedulerP", "main"]
+- !private ["ST", "append"]
+- !private ["ST", "components"]
+- !private ["ST", "subscript"]
+- !private ["s10SetAlgebraP", "layerMaxXMinYCorner"]
+- !private ["s10SetAlgebraP", "layerMinXMinYCorner"]
+- !private ["SZ", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["Sx", "init"]
+- !private ["SS", "components"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["Sy", "components"]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
+- !private ["s16TextOutputStreamP", "components"]
+- !private ["s20TextOutputStreamableP", "components"]
+- !private ["So29UIAccessibilityIdentificationP", "appearance"]
+- !private ["So29UIAccessibilityIdentificationP", "clipsToBounds"]
+- !private ["So29UIAccessibilityIdentificationP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "layer"]
+- !private ["So29UIAccessibilityIdentificationP", "setBackgroundImage"]
+- !private ["So29UIAccessibilityIdentificationP", "shadowImage"]
+- !private ["So29UIAccessibilityIdentificationP", "titleTextAttributes"]
+- !private ["So12UIAppearanceP", "appearance"]
+- !private ["So12UIAppearanceP", "clipsToBounds"]
+- !private ["So12UIAppearanceP", "layer"]
+- !private ["So12UIAppearanceP", "setBackgroundImage"]
+- !private ["So12UIAppearanceP", "shadowImage"]
+- !private ["So12UIAppearanceP", "titleTextAttributes"]
+- !private ["So21UIAppearanceContainerP", "appearance"]
+- !private ["So21UIAppearanceContainerP", "clipsToBounds"]
+- !private ["So21UIAppearanceContainerP", "layer"]
+- !private ["So21UIAppearanceContainerP", "setBackgroundImage"]
+- !private ["So21UIAppearanceContainerP", "shadowImage"]
+- !private ["So21UIAppearanceContainerP", "titleTextAttributes"]
 - ["So13UIApplicationC", "LaunchOptionsKey"]
+- !private ["So21UIApplicationDelegateP", "Class"]
+- !private ["So21UIApplicationDelegateP", "DispatchQueue"]
 - !private ["So21UIApplicationDelegateP", "FirebaseApp"]
+- !private ["So21UIApplicationDelegateP", "Firestore"]
+- !private ["So21UIApplicationDelegateP", "Int"]
+- !private ["So21UIApplicationDelegateP", "K"]
+- !private ["So21UIApplicationDelegateP", "NSAttributedString"]
+- !private ["So21UIApplicationDelegateP", "UIColor"]
+- !private ["So21UIApplicationDelegateP", "UIFont"]
+- !private ["So21UIApplicationDelegateP", "UIImage"]
+- !private ["So21UIApplicationDelegateP", "UINavigationBar"]
 - !private ["So21UIApplicationDelegateP", "UISceneConfiguration"]
 - ["So21UIApplicationDelegateP", ""]
 - ["So21UIApplicationDelegateP", "application"]
@@ -216,12 +698,78 @@ depends-member:
 - ["So21UIApplicationDelegateP", "applicationWillEnterForeground"]
 - ["So21UIApplicationDelegateP", "applicationWillResignActive"]
 - ["So21UIApplicationDelegateP", "applicationWillTerminate"]
+- !private ["So21UIApplicationDelegateP", "loadEveryClass"]
+- !private ["So21UIApplicationDelegateP", "print"]
 - ["So21UIApplicationDelegateP", "window"]
+- !private ["So12UIBarMetricsV", "default"]
+- !private ["So16UIBarPositioningP", "appearance"]
+- !private ["So16UIBarPositioningP", "clipsToBounds"]
+- !private ["So16UIBarPositioningP", "layer"]
+- !private ["So16UIBarPositioningP", "setBackgroundImage"]
+- !private ["So16UIBarPositioningP", "shadowImage"]
+- !private ["So16UIBarPositioningP", "titleTextAttributes"]
+- !private ["So7UIColorC", "init"]
+- !private ["So17UICoordinateSpaceP", "appearance"]
+- !private ["So17UICoordinateSpaceP", "clipsToBounds"]
+- !private ["So17UICoordinateSpaceP", "layer"]
+- !private ["So17UICoordinateSpaceP", "setBackgroundImage"]
+- !private ["So17UICoordinateSpaceP", "shadowImage"]
+- !private ["So17UICoordinateSpaceP", "titleTextAttributes"]
+- !private ["So13UIDynamicItemP", "appearance"]
+- !private ["So13UIDynamicItemP", "clipsToBounds"]
+- !private ["So13UIDynamicItemP", "layer"]
+- !private ["So13UIDynamicItemP", "setBackgroundImage"]
+- !private ["So13UIDynamicItemP", "shadowImage"]
+- !private ["So13UIDynamicItemP", "titleTextAttributes"]
+- !private ["So18UIFocusEnvironmentP", "appearance"]
+- !private ["So18UIFocusEnvironmentP", "clipsToBounds"]
+- !private ["So18UIFocusEnvironmentP", "layer"]
+- !private ["So18UIFocusEnvironmentP", "setBackgroundImage"]
+- !private ["So18UIFocusEnvironmentP", "shadowImage"]
+- !private ["So18UIFocusEnvironmentP", "titleTextAttributes"]
+- !private ["So11UIFocusItemP", "appearance"]
+- !private ["So11UIFocusItemP", "clipsToBounds"]
+- !private ["So11UIFocusItemP", "layer"]
+- !private ["So11UIFocusItemP", "setBackgroundImage"]
+- !private ["So11UIFocusItemP", "shadowImage"]
+- !private ["So11UIFocusItemP", "titleTextAttributes"]
+- !private ["So20UIFocusItemContainerP", "appearance"]
+- !private ["So20UIFocusItemContainerP", "clipsToBounds"]
+- !private ["So20UIFocusItemContainerP", "layer"]
+- !private ["So20UIFocusItemContainerP", "setBackgroundImage"]
+- !private ["So20UIFocusItemContainerP", "shadowImage"]
+- !private ["So20UIFocusItemContainerP", "titleTextAttributes"]
+- !private ["So6UIFontC", "init"]
+- !private ["So7UIImageC", "init"]
+- !private ["So39UIItemProviderPresentationSizeProvidingP", "init"]
+- !private ["So24UILargeContentViewerItemP", "appearance"]
+- !private ["So24UILargeContentViewerItemP", "clipsToBounds"]
+- !private ["So24UILargeContentViewerItemP", "layer"]
+- !private ["So24UILargeContentViewerItemP", "setBackgroundImage"]
+- !private ["So24UILargeContentViewerItemP", "shadowImage"]
+- !private ["So24UILargeContentViewerItemP", "titleTextAttributes"]
+- !private ["So15UINavigationBarC", "appearance"]
+- !private ["So15UINavigationBarC", "clipsToBounds"]
+- !private ["So15UINavigationBarC", "layer"]
+- !private ["So15UINavigationBarC", "setBackgroundImage"]
+- !private ["So15UINavigationBarC", "shadowImage"]
+- !private ["So15UINavigationBarC", "titleTextAttributes"]
+- !private ["So30UIPasteConfigurationSupportingP", "Class"]
 - ["So30UIPasteConfigurationSupportingP", "ConnectionOptions"]
+- !private ["So30UIPasteConfigurationSupportingP", "DispatchQueue"]
 - !private ["So30UIPasteConfigurationSupportingP", "FirebaseApp"]
+- !private ["So30UIPasteConfigurationSupportingP", "Firestore"]
+- !private ["So30UIPasteConfigurationSupportingP", "Int"]
+- !private ["So30UIPasteConfigurationSupportingP", "K"]
 - ["So30UIPasteConfigurationSupportingP", "LaunchOptionsKey"]
+- !private ["So30UIPasteConfigurationSupportingP", "NSAttributedString"]
+- !private ["So30UIPasteConfigurationSupportingP", "UIColor"]
+- !private ["So30UIPasteConfigurationSupportingP", "UIFont"]
+- !private ["So30UIPasteConfigurationSupportingP", "UIImage"]
+- !private ["So30UIPasteConfigurationSupportingP", "UINavigationBar"]
 - !private ["So30UIPasteConfigurationSupportingP", "UISceneConfiguration"]
 - ["So30UIPasteConfigurationSupportingP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "appearance"]
 - ["So30UIPasteConfigurationSupportingP", "application"]
 - ["So30UIPasteConfigurationSupportingP", "applicationDidBecomeActive"]
 - ["So30UIPasteConfigurationSupportingP", "applicationDidEnterBackground"]
@@ -234,17 +782,35 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "applicationWillEnterForeground"]
 - ["So30UIPasteConfigurationSupportingP", "applicationWillResignActive"]
 - ["So30UIPasteConfigurationSupportingP", "applicationWillTerminate"]
+- !private ["So30UIPasteConfigurationSupportingP", "clipsToBounds"]
+- !private ["So30UIPasteConfigurationSupportingP", "layer"]
+- !private ["So30UIPasteConfigurationSupportingP", "loadEveryClass"]
+- !private ["So30UIPasteConfigurationSupportingP", "print"]
+- !private ["So30UIPasteConfigurationSupportingP", "setBackgroundImage"]
+- !private ["So30UIPasteConfigurationSupportingP", "shadowImage"]
+- !private ["So30UIPasteConfigurationSupportingP", "titleTextAttributes"]
 - ["So30UIPasteConfigurationSupportingP", "window"]
 - ["So11UIResponderC", "Bool"]
+- !private ["So11UIResponderC", "Class"]
 - ["So11UIResponderC", "ConnectionOptions"]
+- !private ["So11UIResponderC", "DispatchQueue"]
 - !private ["So11UIResponderC", "FirebaseApp"]
+- !private ["So11UIResponderC", "Firestore"]
+- !private ["So11UIResponderC", "Int"]
+- !private ["So11UIResponderC", "K"]
 - ["So11UIResponderC", "LaunchOptionsKey"]
+- !private ["So11UIResponderC", "NSAttributedString"]
 - ["So11UIResponderC", "Set"]
 - ["So11UIResponderC", "UIApplication"]
+- !private ["So11UIResponderC", "UIColor"]
+- !private ["So11UIResponderC", "UIFont"]
+- !private ["So11UIResponderC", "UIImage"]
+- !private ["So11UIResponderC", "UINavigationBar"]
 - ["So11UIResponderC", "UIScene"]
 - ["So11UIResponderC", "UISceneConfiguration"]
 - ["So11UIResponderC", "UISceneSession"]
 - ["So11UIResponderC", ""]
+- !private ["So11UIResponderC", "appearance"]
 - ["So11UIResponderC", "application"]
 - ["So11UIResponderC", "applicationDidBecomeActive"]
 - ["So11UIResponderC", "applicationDidEnterBackground"]
@@ -257,13 +823,31 @@ depends-member:
 - ["So11UIResponderC", "applicationWillEnterForeground"]
 - ["So11UIResponderC", "applicationWillResignActive"]
 - ["So11UIResponderC", "applicationWillTerminate"]
+- !private ["So11UIResponderC", "clipsToBounds"]
 - ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "layer"]
+- ["So11UIResponderC", "loadEveryClass"]
+- !private ["So11UIResponderC", "print"]
+- !private ["So11UIResponderC", "setBackgroundImage"]
+- !private ["So11UIResponderC", "shadowImage"]
+- !private ["So11UIResponderC", "titleTextAttributes"]
 - ["So11UIResponderC", "window"]
+- !private ["So30UIResponderStandardEditActionsP", "Class"]
 - ["So30UIResponderStandardEditActionsP", "ConnectionOptions"]
+- !private ["So30UIResponderStandardEditActionsP", "DispatchQueue"]
 - !private ["So30UIResponderStandardEditActionsP", "FirebaseApp"]
+- !private ["So30UIResponderStandardEditActionsP", "Firestore"]
+- !private ["So30UIResponderStandardEditActionsP", "Int"]
+- !private ["So30UIResponderStandardEditActionsP", "K"]
 - ["So30UIResponderStandardEditActionsP", "LaunchOptionsKey"]
+- !private ["So30UIResponderStandardEditActionsP", "NSAttributedString"]
+- !private ["So30UIResponderStandardEditActionsP", "UIColor"]
+- !private ["So30UIResponderStandardEditActionsP", "UIFont"]
+- !private ["So30UIResponderStandardEditActionsP", "UIImage"]
+- !private ["So30UIResponderStandardEditActionsP", "UINavigationBar"]
 - !private ["So30UIResponderStandardEditActionsP", "UISceneConfiguration"]
 - ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So30UIResponderStandardEditActionsP", "appearance"]
 - ["So30UIResponderStandardEditActionsP", "application"]
 - ["So30UIResponderStandardEditActionsP", "applicationDidBecomeActive"]
 - ["So30UIResponderStandardEditActionsP", "applicationDidEnterBackground"]
@@ -276,15 +860,39 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "applicationWillEnterForeground"]
 - ["So30UIResponderStandardEditActionsP", "applicationWillResignActive"]
 - ["So30UIResponderStandardEditActionsP", "applicationWillTerminate"]
+- !private ["So30UIResponderStandardEditActionsP", "clipsToBounds"]
+- !private ["So30UIResponderStandardEditActionsP", "layer"]
+- !private ["So30UIResponderStandardEditActionsP", "loadEveryClass"]
+- !private ["So30UIResponderStandardEditActionsP", "print"]
+- !private ["So30UIResponderStandardEditActionsP", "setBackgroundImage"]
+- !private ["So30UIResponderStandardEditActionsP", "shadowImage"]
+- !private ["So30UIResponderStandardEditActionsP", "titleTextAttributes"]
 - ["So30UIResponderStandardEditActionsP", "window"]
 - ["So7UISceneC", "ConnectionOptions"]
 - !private ["So20UISceneConfigurationC", "init"]
 - !private ["So14UISceneSessionC", "role"]
+- !private ["So18UITraitEnvironmentP", "appearance"]
+- !private ["So18UITraitEnvironmentP", "clipsToBounds"]
+- !private ["So18UITraitEnvironmentP", "layer"]
+- !private ["So18UITraitEnvironmentP", "setBackgroundImage"]
+- !private ["So18UITraitEnvironmentP", "shadowImage"]
+- !private ["So18UITraitEnvironmentP", "titleTextAttributes"]
+- !private ["So23UIUserActivityRestoringP", "Class"]
 - ["So23UIUserActivityRestoringP", "ConnectionOptions"]
+- !private ["So23UIUserActivityRestoringP", "DispatchQueue"]
 - !private ["So23UIUserActivityRestoringP", "FirebaseApp"]
+- !private ["So23UIUserActivityRestoringP", "Firestore"]
+- !private ["So23UIUserActivityRestoringP", "Int"]
+- !private ["So23UIUserActivityRestoringP", "K"]
 - ["So23UIUserActivityRestoringP", "LaunchOptionsKey"]
+- !private ["So23UIUserActivityRestoringP", "NSAttributedString"]
+- !private ["So23UIUserActivityRestoringP", "UIColor"]
+- !private ["So23UIUserActivityRestoringP", "UIFont"]
+- !private ["So23UIUserActivityRestoringP", "UIImage"]
+- !private ["So23UIUserActivityRestoringP", "UINavigationBar"]
 - !private ["So23UIUserActivityRestoringP", "UISceneConfiguration"]
 - ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "appearance"]
 - ["So23UIUserActivityRestoringP", "application"]
 - ["So23UIUserActivityRestoringP", "applicationDidBecomeActive"]
 - ["So23UIUserActivityRestoringP", "applicationDidEnterBackground"]
@@ -297,12 +905,59 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "applicationWillEnterForeground"]
 - ["So23UIUserActivityRestoringP", "applicationWillResignActive"]
 - ["So23UIUserActivityRestoringP", "applicationWillTerminate"]
+- !private ["So23UIUserActivityRestoringP", "clipsToBounds"]
+- !private ["So23UIUserActivityRestoringP", "layer"]
+- !private ["So23UIUserActivityRestoringP", "loadEveryClass"]
+- !private ["So23UIUserActivityRestoringP", "print"]
+- !private ["So23UIUserActivityRestoringP", "setBackgroundImage"]
+- !private ["So23UIUserActivityRestoringP", "shadowImage"]
+- !private ["So23UIUserActivityRestoringP", "titleTextAttributes"]
 - ["So23UIUserActivityRestoringP", "window"]
+- !private ["So6UIViewC", "appearance"]
+- !private ["So6UIViewC", "clipsToBounds"]
+- !private ["So6UIViewC", "layer"]
+- !private ["So6UIViewC", "setBackgroundImage"]
+- !private ["So6UIViewC", "shadowImage"]
+- !private ["So6UIViewC", "titleTextAttributes"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "components"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "components"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "components"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "components"]
+- !private ["s26_ExpressibleByColorLiteralP", "init"]
+- !private ["s26_ExpressibleByImageLiteralP", "init"]
+- !private ["7SwiftUI18_FormatSpecifiableP", "init"]
+- !private ["s19_HasContiguousBytesP", "append"]
+- !private ["s19_HasContiguousBytesP", "components"]
+- !private ["s19_HasContiguousBytesP", "subscript"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "components"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "font"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "foregroundColor"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Class"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "ConnectionOptions"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQueue"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "FirebaseApp"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Firestore"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Int"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "K"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Key"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "LaunchOptionsKey"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSAttributedString"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIColor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIFont"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIImage"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UINavigationBar"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UISceneConfiguration"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "appearance"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "application"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "applicationDidBecomeActive"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "applicationDidEnterBackground"]
@@ -315,15 +970,45 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "applicationWillEnterForeground"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "applicationWillResignActive"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "applicationWillTerminate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "async"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "clipsToBounds"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "collection"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "components"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "configure"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "cornerRadius"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "documentID"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "documents"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "firestore"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getDocuments"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "layer"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "loadEveryClass"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "maskedCorners"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "masksToBounds"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "role"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setBackgroundImage"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "shadowImage"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "titleTextAttributes"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "window"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Class"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "ConnectionOptions"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "DispatchQueue"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "FirebaseApp"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Firestore"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Int"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "K"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Key"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "LaunchOptionsKey"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSAttributedString"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIColor"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIFont"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIImage"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UINavigationBar"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UISceneConfiguration"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "appearance"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "application"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "applicationDidBecomeActive"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "applicationDidEnterBackground"]
@@ -336,34 +1021,164 @@ depends-member:
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "applicationWillEnterForeground"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "applicationWillResignActive"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "applicationWillTerminate"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "async"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "clipsToBounds"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "collection"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "components"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "configure"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "cornerRadius"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "documentID"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "documents"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "firestore"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "getDocuments"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "layer"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "loadEveryClass"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "main"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "maskedCorners"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "masksToBounds"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "print"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "role"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setBackgroundImage"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shadowImage"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "titleTextAttributes"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "window"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "components"]
+- !private ["s21_ObjectiveCBridgeableP", "font"]
+- !private ["s21_ObjectiveCBridgeableP", "foregroundColor"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s20_SwiftNewtypeWrapperP", "font"]
+- !private ["s20_SwiftNewtypeWrapperP", "foregroundColor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "appearance"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "clipsToBounds"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "layer"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "setBackgroundImage"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "shadowImage"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "titleTextAttributes"]
 depends-nominal:
+- !private "s18AdditiveArithmeticP"
 - "10Discourses11AppDelegateC"
+- !private "Sa"
+- !private "SK"
+- !private "Sz"
+- !private "So12CACornerMaskV"
+- !private "So7CALayerC"
+- !private "So15CALayerDelegateP"
+- !private "So13CAMediaTimingP"
 - "s7CVarArgP"
+- !private "10Discourses5ClassV"
+- !private "10Discourses1KV8FirebaseV15ClassCollectionV"
+- !private "Sl"
+- !private "So22FIRCollectionReferenceC"
+- !private "SL"
+- !private "10Foundation15ContiguousBytesP"
 - "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
+- !private "s26DefaultStringInterpolationV"
+- !private "So18OS_dispatch_objectC"
+- !private "So17OS_dispatch_queueC"
+- !private "So19FIRDocumentSnapshotC"
+- !private "SE"
 - "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "10Discourses1KV8FirebaseV"
 - !private "So6FIRAppC"
+- !private "So12FIRFirestoreC"
+- !private "s17FixedWidthIntegerP"
 - "SH"
+- "8SideMenu18InitializableClassP"
+- !private "Si"
+- !private "10Discourses1KV"
+- !private "So21NSAttributedStringKeya"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- !private "So18NSAttributedStringC"
 - !private "So8NSCodingP"
 - !private "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
 - "So8NSObjectC"
 - "So8NSObjectP"
 - !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "Sj"
+- !private "So9OS_objectC"
+- !private "s9OptionSetP"
+- !private "So8FIRQueryC"
+- !private "So24FIRQueryDocumentSnapshotC"
+- !private "So16FIRQuerySnapshotC"
+- !private "Sk"
+- !private "Sm"
+- !private "SY"
+- !private "s10SIMDScalarP"
+- !private "7Combine9SchedulerP"
+- !private "ST"
+- !private "s10SetAlgebraP"
+- !private "SZ"
+- !private "s13SignedNumericP"
+- !private "Sx"
+- !private "SS"
+- !private "s27StringInterpolationProtocolP"
+- !private "Sy"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- !private "So21UIAppearanceContainerP"
 - "So13UIApplicationC"
 - "So21UIApplicationDelegateP"
+- !private "So12UIBarMetricsV"
+- !private "So16UIBarPositioningP"
+- !private "So7UIColorC"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
+- !private "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- !private "So6UIFontC"
+- !private "So7UIImageC"
+- !private "So39UIItemProviderPresentationSizeProvidingP"
+- !private "So24UILargeContentViewerItemP"
+- !private "So15UINavigationBarC"
 - "So30UIPasteConfigurationSupportingP"
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
 - "So7UISceneC"
 - !private "So20UISceneConfigurationC"
 - !private "So14UISceneSessionC"
+- !private "So18UITraitEnvironmentP"
 - "So23UIUserActivityRestoringP"
+- !private "So6UIViewC"
+- !private "s14_ArrayProtocolP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s26_ExpressibleByColorLiteralP"
+- !private "s26_ExpressibleByImageLiteralP"
+- !private "7SwiftUI18_FormatSpecifiableP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s20_SwiftNewtypeWrapperP"
+- !private "s38__DefaultCustomPlaygroundQuickLookableP"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64.swiftmodule"
@@ -382,72 +1197,76 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-umbrella.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore-umbrella.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth-umbrella.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserMetadata.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRSnapshotMetadata.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRCollectionReference.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentReference.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreSource.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentChange.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthAPNSTokenType.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestore.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Pods/Firebase/CoreOnly/Sources/Firebase.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthUIDelegate.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFieldValue.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRWriteBatch.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFieldPath.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuth.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIROAuthCredential.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthCredential.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuthVersion.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRMultiFactorSession.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRListenerRegistration.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRConfiguration.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRTransaction.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRMultiFactorAssertion.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneMultiFactorAssertion.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserInfo.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAdditionalUserInfo.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRMultiFactorInfo.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneMultiFactorInfo.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRTimestamp.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRApp.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIROAuthProvider.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRFederatedAuthProvider.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthProvider.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGameCenterAuthProvider.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUser.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRMultiFactorResolver.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneMultiFactorGenerator.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRMultiFactor.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRActionCodeSettings.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreSettings.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthSettings.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreErrors.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthTokenResult.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRGeoPoint.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentSnapshot.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRQuerySnapshot.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRQuery.h"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/Pods/Firebase/CoreOnly/Sources/module.modulemap"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Modules/module.modulemap"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Modules/module.modulemap"
-- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/Discourses/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/SideMenu/SideMenu.framework/Modules/SideMenu.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-umbrella.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore-umbrella.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth-umbrella.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/SideMenu/SideMenu.framework/Headers/SideMenu-umbrella.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserMetadata.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRSnapshotMetadata.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRCollectionReference.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentReference.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreSource.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentChange.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthAPNSTokenType.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestore.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/Pods/Firebase/CoreOnly/Sources/Firebase.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthUIDelegate.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFieldValue.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRWriteBatch.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFieldPath.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIROAuthCredential.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthCredential.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuthVersion.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRMultiFactorSession.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRListenerRegistration.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRTransaction.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRMultiFactorAssertion.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneMultiFactorAssertion.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAdditionalUserInfo.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRMultiFactorInfo.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneMultiFactorInfo.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRTimestamp.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIROAuthProvider.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRFederatedAuthProvider.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthProvider.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGameCenterAuthProvider.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRMultiFactorResolver.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneMultiFactorGenerator.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRMultiFactor.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRActionCodeSettings.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreSettings.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthSettings.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreErrors.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/SideMenu/SideMenu.framework/Headers/SideMenu-Swift.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthTokenResult.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRGeoPoint.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentSnapshot.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRQuerySnapshot.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRQuery.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/Pods/Firebase/CoreOnly/Sources/module.modulemap"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Modules/module.modulemap"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Modules/module.modulemap"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/SideMenu/SideMenu.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
@@ -463,4 +1282,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "d28916b74d5291242f4267e34756c470"
+interface-hash: "a056768972d69e5d5232304506d6aefc"

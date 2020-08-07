@@ -344,7 +344,7 @@
                                         <fragment content="Sign Up">
                                             <attributes>
                                                 <color key="NSColor" red="0.94901960784313721" green="0.93725490196078431" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                <font key="NSFont" metaFont="label" size="15"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>

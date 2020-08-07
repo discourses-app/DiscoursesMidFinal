@@ -258,6 +258,38 @@ depends-member:
 - !private ["SH", "uintValue"]
 - !private ["SH", "updateConstant"]
 - !private ["SH", "userInfo"]
+- !private ["8SideMenu18InitializableClassP", "AnimationOptions"]
+- !private ["8SideMenu18InitializableClassP", "K"]
+- !private ["8SideMenu18InitializableClassP", "KeyboardLayoutConstraint"]
+- !private ["8SideMenu18InitializableClassP", "NotificationCenter"]
+- !private ["8SideMenu18InitializableClassP", "TimeInterval"]
+- !private ["8SideMenu18InitializableClassP", "UIApplication"]
+- !private ["8SideMenu18InitializableClassP", "UIResponder"]
+- !private ["8SideMenu18InitializableClassP", "UIView"]
+- !private ["8SideMenu18InitializableClassP", "UIWindow"]
+- ["8SideMenu18InitializableClassP", ""]
+- !private ["8SideMenu18InitializableClassP", "addObserver"]
+- !private ["8SideMenu18InitializableClassP", "animate"]
+- !private ["8SideMenu18InitializableClassP", "awakeFromNib"]
+- !private ["8SideMenu18InitializableClassP", "cgRectValue"]
+- !private ["8SideMenu18InitializableClassP", "constant"]
+- !private ["8SideMenu18InitializableClassP", "default"]
+- !private ["8SideMenu18InitializableClassP", "doubleValue"]
+- !private ["8SideMenu18InitializableClassP", "keyWindow"]
+- !private ["8SideMenu18InitializableClassP", "keyboardAnimationCurveUserInfoKey"]
+- !private ["8SideMenu18InitializableClassP", "keyboardAnimationDurationUserInfoKey"]
+- !private ["8SideMenu18InitializableClassP", "keyboardFrameEndUserInfoKey"]
+- !private ["8SideMenu18InitializableClassP", "keyboardVisibleHeight"]
+- !private ["8SideMenu18InitializableClassP", "keyboardWillHideNotification"]
+- !private ["8SideMenu18InitializableClassP", "keyboardWillShowNotification"]
+- !private ["8SideMenu18InitializableClassP", "layoutIfNeeded"]
+- !private ["8SideMenu18InitializableClassP", "offset"]
+- !private ["8SideMenu18InitializableClassP", "print"]
+- !private ["8SideMenu18InitializableClassP", "removeObserver"]
+- !private ["8SideMenu18InitializableClassP", "shared"]
+- !private ["8SideMenu18InitializableClassP", "uintValue"]
+- !private ["8SideMenu18InitializableClassP", "updateConstant"]
+- !private ["8SideMenu18InitializableClassP", "userInfo"]
 - !private ["10Discourses1KV", "keyboardHeight"]
 - ["10Discourses24KeyboardLayoutConstraintC", "CGFloat"]
 - !private ["10Discourses24KeyboardLayoutConstraintC", "K"]
@@ -632,6 +664,7 @@ depends-nominal:
 - !private "SF"
 - "7SwiftUI7GestureP"
 - "SH"
+- "8SideMenu18InitializableClassP"
 - !private "10Discourses1KV"
 - "10Discourses24KeyboardLayoutConstraintC"
 - !private "s25LosslessStringConvertibleP"
@@ -706,9 +739,11 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/SideMenu/SideMenu.framework/Modules/SideMenu.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-umbrella.h"
 - "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore-umbrella.h"
 - "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth-umbrella.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/SideMenu/SideMenu.framework/Headers/SideMenu-umbrella.h"
 - "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserMetadata.h"
 - "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRSnapshotMetadata.h"
 - "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRCollectionReference.h"
@@ -762,6 +797,7 @@ depends-external:
 - "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
 - "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreErrors.h"
 - "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/SideMenu/SideMenu.framework/Headers/SideMenu-Swift.h"
 - "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
 - "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthTokenResult.h"
 - "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRGeoPoint.h"
@@ -772,6 +808,7 @@ depends-external:
 - "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Modules/module.modulemap"
 - "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Modules/module.modulemap"
 - "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/SideMenu/SideMenu.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"

@@ -162,6 +162,7 @@
 				D289F7EF24CED7BF0024AD80 /* SignUpViewController.swift */,
 				8F5605BA24C1B8510014289C /* SubscribedClassesViewController.swift */,
 				8F57476124C1BD6200286C87 /* SearchClassViewController.swift */,
+				D215D52924D94E29009B913B /* ChatMenu.swift */,
 				8F5605B824C1B81C0014289C /* ChatViewController.swift */,
 				D215D53524D99AF5009B913B /* MenuTableViewController.swift */,
 			);
@@ -177,7 +178,6 @@
 				8F57476724C1BE5A00286C87 /* ClassBubbleTableViewCell.xib */,
 				8F57476824C1BE5B00286C87 /* SentMessageCell.swift */,
 				D215D53324D99741009B913B /* MenuNavigationItem.swift */,
-				D215D52924D94E29009B913B /* ChatMenu.swift */,
 				8F57476624C1BE5A00286C87 /* SentMessageCell.xib */,
 				D215D53724D9A9B4009B913B /* MenuCell.swift */,
 				D215D53824D9A9B4009B913B /* MenuCell.xib */,
@@ -580,7 +580,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.abhishek.Discourses-demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abhishek.Discourses;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -599,7 +599,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.abhishek.Discourses-demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abhishek.Discourses;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

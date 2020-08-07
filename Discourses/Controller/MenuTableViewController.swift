@@ -16,6 +16,7 @@ class MenuTableViewController: UITableViewController {
     var user : User?
     var course : Class?
     var subClassVC : SubscribedClassesViewController!
+    var chatVC : ChatViewController!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
@@ -27,7 +28,7 @@ class MenuTableViewController: UITableViewController {
         self.tableView.backgroundColor = #colorLiteral(red: 0.3927595317, green: 0.4966250658, blue: 0.5855669975, alpha: 1)
         self.tableView.layer.cornerRadius = 20
         self.tableView.layer.masksToBounds = true
-        print(courseStringRepresentation)
+        print(courseStringRepresentation!)
         array = courseStringRepresentation.components(separatedBy: "*")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -50,20 +51,28 @@ class MenuTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
+//        if indexPath.row == 0 {
         let MenuCell = self.tableView.dequeueReusableCell(withIdentifier: "MenuCell", for: indexPath) as! MenuCell
         MenuCell.className.text = array[0]
         MenuCell.profAndLecName.text = "\(array[1])  |  LEC \(array[2])"
         course = Class(name: array[0], professor: array[1], lectureNo: Int(array[2])!)
         MenuCell.getValues(byUser: user!, course: course!, VC : subClassVC)
-        
+        MenuCell.heightConstraint.constant = self.view.frame.height - 500
+        MenuCell.contentView.backgroundColor = #colorLiteral(red: 0.3927595317, green: 0.4966250658, blue: 0.5855669975, alpha: 1)
+        MenuCell.chatVC = chatVC
+        MenuCell.baseVC = self
+        MenuCell.className.font = UIFont(name: "AirbnbCerealApp-Bold", size: 30)
+        MenuCell.profAndLecName.font = UIFont(name: "AirbnbCerealApp-Book", size: 18)
+        MenuCell.memberNumber.font = UIFont(name: "AirbnbCerealApp-Book", size: 20)
+        MenuCell.galleryLabel.font = UIFont(name: "AirbnbCerealApp-Book", size: 20)
+        MenuCell.mutingChat.font = UIFont(name: "AirbnbCerealApp-Book", size: 20)
         return MenuCell
-        }
-        else {
-             let MenuCell = self.tableView.dequeueReusableCell(withIdentifier: "MenuCell", for: indexPath)
-            MenuCell.contentView.backgroundColor = #colorLiteral(red: 0.3927595317, green: 0.4966250658, blue: 0.5855669975, alpha: 1)
-            return MenuCell
-        }
+        //        }
+//        else {
+//             let MenuCell = self.tableView.dequeueReusableCell(withIdentifier: "MenuCell", for: indexPath)
+//            MenuCell.contentView.backgroundColor = #colorLiteral(red: 0.3927595317, green: 0.4966250658, blue: 0.5855669975, alpha: 1)
+//            return MenuCell
+//        }
     }
     
 

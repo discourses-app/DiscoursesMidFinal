@@ -26,8 +26,8 @@ provides-dynamic-lookup:
 - "viewDidAppear"
 - "viewDidLoad"
 depends-top-level:
+- !private "!"
 - !private "!="
-- !private "&&"
 - !private "-"
 - !private "=="
 - !private "??"
@@ -238,8 +238,6 @@ depends-member:
 - !private ["s7CVarArgP", "viewWithTag"]
 - !private ["10Discourses5ClassV", "dbRepresentation"]
 - !private ["10Discourses5ClassV", "init"]
-- !private ["10Discourses5ClassV", "name"]
-- !private ["10Discourses5ClassV", "professor"]
 - !private ["10Discourses5ClassV", "stringRepresentation"]
 - !private ["10Discourses1KV8FirebaseV15ClassCollectionV", "name"]
 - !private ["10Discourses1KV8FirebaseV15ClassCollectionV", "userCollection"]
@@ -423,8 +421,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "addClassLbl"]
 - !private ["s23CustomStringConvertibleP", "addSubview"]
 - !private ["s23CustomStringConvertibleP", "append"]
-- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
-- !private ["s23CustomStringConvertibleP", "appendLiteral"]
 - !private ["s23CustomStringConvertibleP", "attributedPlaceholder"]
 - !private ["s23CustomStringConvertibleP", "autoresizesSubviews"]
 - !private ["s23CustomStringConvertibleP", "backBtn"]
@@ -554,8 +550,6 @@ depends-member:
 - !private ["Se", "subscript"]
 - !private ["Se", "textColor"]
 - !private ["Se", "uppercased"]
-- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
-- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
 - !private ["So20FIRDocumentReferenceC", "collection"]
 - !private ["So20FIRDocumentReferenceC", "setData"]
 - !private ["10Discourses1KV8FirebaseV15EmailCollectionV", "name"]
@@ -722,10 +716,12 @@ depends-member:
 - !private ["s23ExpressibleByNilLiteralP", "count"]
 - !private ["s23ExpressibleByNilLiteralP", "dataSource"]
 - !private ["s23ExpressibleByNilLiteralP", "delegate"]
+- !private ["s23ExpressibleByNilLiteralP", "enumerated"]
 - !private ["s23ExpressibleByNilLiteralP", "font"]
 - !private ["s23ExpressibleByNilLiteralP", "layer"]
 - !private ["s23ExpressibleByNilLiteralP", "register"]
 - !private ["s23ExpressibleByNilLiteralP", "reloadData"]
+- !private ["s23ExpressibleByNilLiteralP", "remove"]
 - !private ["s23ExpressibleByNilLiteralP", "searchTextField"]
 - !private ["s23ExpressibleByNilLiteralP", "sendSubviewToBack"]
 - !private ["s23ExpressibleByNilLiteralP", "separatorStyle"]
@@ -752,10 +748,12 @@ depends-member:
 - !private ["7SwiftUI7GestureP", "count"]
 - !private ["7SwiftUI7GestureP", "dataSource"]
 - !private ["7SwiftUI7GestureP", "delegate"]
+- !private ["7SwiftUI7GestureP", "enumerated"]
 - !private ["7SwiftUI7GestureP", "font"]
 - !private ["7SwiftUI7GestureP", "layer"]
 - !private ["7SwiftUI7GestureP", "register"]
 - !private ["7SwiftUI7GestureP", "reloadData"]
+- !private ["7SwiftUI7GestureP", "remove"]
 - !private ["7SwiftUI7GestureP", "searchTextField"]
 - !private ["7SwiftUI7GestureP", "sendSubviewToBack"]
 - !private ["7SwiftUI7GestureP", "separatorStyle"]
@@ -877,6 +875,109 @@ depends-member:
 - ["SH", "viewForZoomingInScrollView"]
 - !private ["SH", "viewWithTag"]
 - !private ["10Foundation9IndexPathV", "row"]
+- !private ["8SideMenu18InitializableClassP", "CGRect"]
+- !private ["8SideMenu18InitializableClassP", "Class"]
+- ["8SideMenu18InitializableClassP", "Firestore"]
+- !private ["8SideMenu18InitializableClassP", "K"]
+- !private ["8SideMenu18InitializableClassP", "Key"]
+- !private ["8SideMenu18InitializableClassP", "NSAttributedString"]
+- !private ["8SideMenu18InitializableClassP", "UIColor"]
+- !private ["8SideMenu18InitializableClassP", "UIFont"]
+- !private ["8SideMenu18InitializableClassP", "UIImageView"]
+- !private ["8SideMenu18InitializableClassP", "UILabel"]
+- !private ["8SideMenu18InitializableClassP", "UITableViewCell"]
+- !private ["8SideMenu18InitializableClassP", "UIView"]
+- ["8SideMenu18InitializableClassP", ""]
+- !private ["8SideMenu18InitializableClassP", "addClassLbl"]
+- !private ["8SideMenu18InitializableClassP", "addSubview"]
+- !private ["8SideMenu18InitializableClassP", "attributedPlaceholder"]
+- !private ["8SideMenu18InitializableClassP", "autoresizesSubviews"]
+- !private ["8SideMenu18InitializableClassP", "backBtn"]
+- !private ["8SideMenu18InitializableClassP", "backgroundColor"]
+- !private ["8SideMenu18InitializableClassP", "bgView"]
+- !private ["8SideMenu18InitializableClassP", "cellForRow"]
+- !private ["8SideMenu18InitializableClassP", "classListVC"]
+- !private ["8SideMenu18InitializableClassP", "clear"]
+- !private ["8SideMenu18InitializableClassP", "collection"]
+- !private ["8SideMenu18InitializableClassP", "components"]
+- !private ["8SideMenu18InitializableClassP", "contains"]
+- !private ["8SideMenu18InitializableClassP", "contentView"]
+- !private ["8SideMenu18InitializableClassP", "cornerRadius"]
+- !private ["8SideMenu18InitializableClassP", "data"]
+- !private ["8SideMenu18InitializableClassP", "dataSource"]
+- !private ["8SideMenu18InitializableClassP", "db"]
+- !private ["8SideMenu18InitializableClassP", "delegate"]
+- !private ["8SideMenu18InitializableClassP", "dequeueReusableCell"]
+- !private ["8SideMenu18InitializableClassP", "dismiss"]
+- !private ["8SideMenu18InitializableClassP", "document"]
+- !private ["8SideMenu18InitializableClassP", "filterdata"]
+- ["8SideMenu18InitializableClassP", "firestore"]
+- !private ["8SideMenu18InitializableClassP", "font"]
+- !private ["8SideMenu18InitializableClassP", "frame"]
+- !private ["8SideMenu18InitializableClassP", "image"]
+- ["8SideMenu18InitializableClassP", "indexPathForPreferredFocusedView"]
+- ["8SideMenu18InitializableClassP", "indexPathForPreferredFocusedViewInTableView"]
+- !private ["8SideMenu18InitializableClassP", "init"]
+- !private ["8SideMenu18InitializableClassP", "isEmpty"]
+- !private ["8SideMenu18InitializableClassP", "layer"]
+- !private ["8SideMenu18InitializableClassP", "mainView"]
+- !private ["8SideMenu18InitializableClassP", "masksToBounds"]
+- !private ["8SideMenu18InitializableClassP", "minimumScaleFactor"]
+- !private ["8SideMenu18InitializableClassP", "numberOfLines"]
+- ["8SideMenu18InitializableClassP", "numberOfSections"]
+- ["8SideMenu18InitializableClassP", "numberOfSectionsInTableView"]
+- ["8SideMenu18InitializableClassP", "position"]
+- ["8SideMenu18InitializableClassP", "positionForBar"]
+- !private ["8SideMenu18InitializableClassP", "register"]
+- !private ["8SideMenu18InitializableClassP", "reloadData"]
+- !private ["8SideMenu18InitializableClassP", "resignFirstResponder"]
+- ["8SideMenu18InitializableClassP", "scrollViewDidChangeAdjustedContentInset"]
+- ["8SideMenu18InitializableClassP", "scrollViewDidEndDecelerating"]
+- ["8SideMenu18InitializableClassP", "scrollViewDidEndDragging"]
+- ["8SideMenu18InitializableClassP", "scrollViewDidEndScrollingAnimation"]
+- ["8SideMenu18InitializableClassP", "scrollViewDidEndZooming"]
+- ["8SideMenu18InitializableClassP", "scrollViewDidScroll"]
+- ["8SideMenu18InitializableClassP", "scrollViewDidScrollToTop"]
+- ["8SideMenu18InitializableClassP", "scrollViewDidZoom"]
+- ["8SideMenu18InitializableClassP", "scrollViewShouldScrollToTop"]
+- ["8SideMenu18InitializableClassP", "scrollViewWillBeginDecelerating"]
+- ["8SideMenu18InitializableClassP", "scrollViewWillBeginDragging"]
+- ["8SideMenu18InitializableClassP", "scrollViewWillBeginZooming"]
+- ["8SideMenu18InitializableClassP", "scrollViewWillEndDragging"]
+- ["8SideMenu18InitializableClassP", "searchBar"]
+- ["8SideMenu18InitializableClassP", "searchBarBookmarkButtonClicked"]
+- ["8SideMenu18InitializableClassP", "searchBarCancelButtonClicked"]
+- ["8SideMenu18InitializableClassP", "searchBarResultsListButtonClicked"]
+- ["8SideMenu18InitializableClassP", "searchBarSearchButtonClicked"]
+- ["8SideMenu18InitializableClassP", "searchBarShouldBeginEditing"]
+- ["8SideMenu18InitializableClassP", "searchBarShouldEndEditing"]
+- ["8SideMenu18InitializableClassP", "searchBarTextDidBeginEditing"]
+- ["8SideMenu18InitializableClassP", "searchBarTextDidEndEditing"]
+- !private ["8SideMenu18InitializableClassP", "searchTextField"]
+- ["8SideMenu18InitializableClassP", "sectionIndexTitles"]
+- ["8SideMenu18InitializableClassP", "sectionIndexTitlesForTableView"]
+- !private ["8SideMenu18InitializableClassP", "selectedBackgroundView"]
+- !private ["8SideMenu18InitializableClassP", "sendSubviewToBack"]
+- !private ["8SideMenu18InitializableClassP", "separatorStyle"]
+- !private ["8SideMenu18InitializableClassP", "setData"]
+- !private ["8SideMenu18InitializableClassP", "setImage"]
+- !private ["8SideMenu18InitializableClassP", "subscribeUser"]
+- !private ["8SideMenu18InitializableClassP", "tableData"]
+- ["8SideMenu18InitializableClassP", "tableView"]
+- ["8SideMenu18InitializableClassP", "tableViewDidEndMultipleSelectionInteraction"]
+- !private ["8SideMenu18InitializableClassP", "tag"]
+- !private ["8SideMenu18InitializableClassP", "text"]
+- !private ["8SideMenu18InitializableClassP", "textAlignment"]
+- !private ["8SideMenu18InitializableClassP", "textColor"]
+- !private ["8SideMenu18InitializableClassP", "textLabel"]
+- !private ["8SideMenu18InitializableClassP", "transition"]
+- !private ["8SideMenu18InitializableClassP", "uppercased"]
+- !private ["8SideMenu18InitializableClassP", "user"]
+- !private ["8SideMenu18InitializableClassP", "viewDidAppear"]
+- !private ["8SideMenu18InitializableClassP", "viewDidLoad"]
+- ["8SideMenu18InitializableClassP", "viewForZooming"]
+- ["8SideMenu18InitializableClassP", "viewForZoomingInScrollView"]
+- !private ["8SideMenu18InitializableClassP", "viewWithTag"]
 - !private ["10Discourses1KV", "Firebase"]
 - !private ["10Discourses1KV", "allClasses"]
 - !private ["So21NSAttributedStringKeya", "foregroundColor"]
@@ -1326,10 +1427,12 @@ depends-member:
 - !private ["Sq", "count"]
 - !private ["Sq", "dataSource"]
 - !private ["Sq", "delegate"]
+- !private ["Sq", "enumerated"]
 - !private ["Sq", "font"]
 - !private ["Sq", "layer"]
 - !private ["Sq", "register"]
 - !private ["Sq", "reloadData"]
+- !private ["Sq", "remove"]
 - !private ["Sq", "searchTextField"]
 - !private ["Sq", "sendSubviewToBack"]
 - !private ["Sq", "separatorStyle"]
@@ -1452,15 +1555,12 @@ depends-member:
 - !private ["SS", "contains"]
 - !private ["SS", "isEmpty"]
 - !private ["SS", "uppercased"]
-- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
-- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
 - !private ["Sy", "components"]
 - !private ["Sy", "contains"]
 - !private ["Sy", "isEmpty"]
 - !private ["Sy", "uppercased"]
+- !private ["10Discourses31SubscribedClassesViewControllerC", "deinit"]
 - !private ["10Discourses31SubscribedClassesViewControllerC", "user"]
-- !private ["s16TextOutputStreamP", "appendInterpolation"]
-- !private ["s16TextOutputStreamP", "appendLiteral"]
 - !private ["s16TextOutputStreamP", "components"]
 - !private ["s16TextOutputStreamP", "contains"]
 - !private ["s16TextOutputStreamP", "isEmpty"]
@@ -2985,10 +3085,12 @@ depends-member:
 - !private ["7SwiftUI4ViewP", "count"]
 - !private ["7SwiftUI4ViewP", "dataSource"]
 - !private ["7SwiftUI4ViewP", "delegate"]
+- !private ["7SwiftUI4ViewP", "enumerated"]
 - !private ["7SwiftUI4ViewP", "font"]
 - !private ["7SwiftUI4ViewP", "layer"]
 - !private ["7SwiftUI4ViewP", "register"]
 - !private ["7SwiftUI4ViewP", "reloadData"]
+- !private ["7SwiftUI4ViewP", "remove"]
 - !private ["7SwiftUI4ViewP", "searchTextField"]
 - !private ["7SwiftUI4ViewP", "sendSubviewToBack"]
 - !private ["7SwiftUI4ViewP", "separatorStyle"]
@@ -3340,7 +3442,6 @@ depends-nominal:
 - "s23CustomStringConvertibleP"
 - !private "10Foundation12DataProtocolP"
 - !private "Se"
-- !private "s26DefaultStringInterpolationV"
 - !private "So20FIRDocumentReferenceC"
 - !private "10Discourses1KV8FirebaseV15EmailCollectionV"
 - !private "SE"
@@ -3356,6 +3457,7 @@ depends-nominal:
 - !private "7SwiftUI7GestureP"
 - "SH"
 - !private "10Foundation9IndexPathV"
+- "8SideMenu18InitializableClassP"
 - !private "10Discourses1KV"
 - !private "So21NSAttributedStringKeya"
 - !private "s25LosslessStringConvertibleP"
@@ -3387,7 +3489,6 @@ depends-nominal:
 - !private "s10SetAlgebraP"
 - !private "So14UIControlStateV"
 - !private "SS"
-- !private "s27StringInterpolationProtocolP"
 - !private "Sy"
 - !private "10Discourses31SubscribedClassesViewControllerC"
 - !private "s16TextOutputStreamP"
@@ -3474,9 +3575,11 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/SideMenu/SideMenu.framework/Modules/SideMenu.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-umbrella.h"
 - "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore-umbrella.h"
 - "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth-umbrella.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/SideMenu/SideMenu.framework/Headers/SideMenu-umbrella.h"
 - "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserMetadata.h"
 - "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRSnapshotMetadata.h"
 - "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRCollectionReference.h"
@@ -3530,6 +3633,7 @@ depends-external:
 - "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
 - "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreErrors.h"
 - "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/SideMenu/SideMenu.framework/Headers/SideMenu-Swift.h"
 - "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
 - "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthTokenResult.h"
 - "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRGeoPoint.h"
@@ -3540,6 +3644,7 @@ depends-external:
 - "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Modules/module.modulemap"
 - "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Modules/module.modulemap"
 - "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/abhishekmarda/Documents/Academics/UCLA/Computer Science/BruinLabs/DiscoursesMidFinal/DerivedData/Discourses/Build/Products/Debug-iphonesimulator/SideMenu/SideMenu.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.6.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"

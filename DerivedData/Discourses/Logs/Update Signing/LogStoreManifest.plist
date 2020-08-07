@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>E25AC262-EBCC-4622-A58D-BB8689312F63</key>
+		<key>A871C08E-3651-4B26-AED9-3D296216EFE0</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -15,24 +15,52 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.ProvisioningLog</string>
 			<key>fileName</key>
-			<string>E25AC262-EBCC-4622-A58D-BB8689312F63.xcactivitylog</string>
+			<string>A871C08E-3651-4B26-AED9-3D296216EFE0.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
-				<string>S</string>
+				<string>E</string>
 			</dict>
 			<key>signature</key>
 			<string>Update Signing</string>
 			<key>timeStartedRecording</key>
-			<real>617965947.99710703</real>
+			<real>618510068.78753197</real>
 			<key>timeStoppedRecording</key>
-			<real>617965951.16884398</real>
+			<real>618510071.68563497</real>
 			<key>title</key>
 			<string>Update Signing</string>
 			<key>uniqueIdentifier</key>
-			<string>E25AC262-EBCC-4622-A58D-BB8689312F63</string>
+			<string>A871C08E-3651-4B26-AED9-3D296216EFE0</string>
+		</dict>
+		<key>C3EB51CD-2519-4C42-8681-4CC56A514E75</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.ProvisioningLog</string>
+			<key>fileName</key>
+			<string>C3EB51CD-2519-4C42-8681-4CC56A514E75.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>signature</key>
+			<string>Update Signing</string>
+			<key>timeStartedRecording</key>
+			<real>618511529.24324703</real>
+			<key>timeStoppedRecording</key>
+			<real>618511530.90172899</real>
+			<key>title</key>
+			<string>Update Signing</string>
+			<key>uniqueIdentifier</key>
+			<string>C3EB51CD-2519-4C42-8681-4CC56A514E75</string>
 		</dict>
 	</dict>
 </dict>

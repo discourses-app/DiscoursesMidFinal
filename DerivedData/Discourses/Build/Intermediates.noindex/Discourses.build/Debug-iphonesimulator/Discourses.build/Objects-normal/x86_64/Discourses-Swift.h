@@ -187,6 +187,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import Foundation;
+@import SideMenu;
 @import UIKit;
 #endif
 
@@ -218,6 +219,16 @@ SWIFT_CLASS("_TtC10Discourses11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSBundle;
+@class NSCoder;
+
+SWIFT_CLASS("_TtC10Discourses8ChatMenu")
+@interface ChatMenu : SideMenuNavigationController
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UIView;
 @class NSLayoutConstraint;
 @class UITextView;
@@ -225,8 +236,6 @@ SWIFT_CLASS("_TtC10Discourses11AppDelegate")
 @class UILabel;
 @class UITableView;
 @class UIButton;
-@class NSBundle;
-@class NSCoder;
 
 SWIFT_CLASS("_TtC10Discourses18ChatViewController")
 @interface ChatViewController : UIViewController
@@ -249,6 +258,12 @@ SWIFT_CLASS("_TtC10Discourses18ChatViewController")
 
 
 @interface ChatViewController (SWIFT_EXTENSION(Discourses)) <UITableViewDelegate>
+@end
+
+@class UIStoryboardSegue;
+
+@interface ChatViewController (SWIFT_EXTENSION(Discourses))
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 @end
 
 
@@ -298,7 +313,6 @@ SWIFT_CLASS("_TtC10Discourses24KeyboardLayoutConstraint") SWIFT_AVAILABILITY(tvo
 
 @class UIImageView;
 @class UITextField;
-@class UIStoryboardSegue;
 
 SWIFT_CLASS("_TtC10Discourses19LoginViewController")
 @interface LoginViewController : UIViewController
@@ -324,6 +338,48 @@ SWIFT_CLASS("_TtC10Discourses19LoginViewController")
 @interface LoginViewController (SWIFT_EXTENSION(Discourses)) <UITextFieldDelegate>
 - (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
 - (BOOL)textFieldShouldEndEditing:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+SWIFT_CLASS("_TtC10Discourses8MenuCell")
+@interface MenuCell : UITableViewCell
+@property (nonatomic, strong) IBOutlet UIView * _Null_unspecified bgView;
+@property (nonatomic, strong) IBOutlet UILabel * _Null_unspecified className;
+@property (nonatomic, strong) IBOutlet UILabel * _Null_unspecified profAndLecName;
+@property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified leaveGroupBtn;
+@property (nonatomic, strong) IBOutlet UILabel * _Null_unspecified memberNumber;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified galleryLabel;
+@property (nonatomic, strong) IBOutlet UILabel * _Null_unspecified mutingChat;
+@property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified memberNumberBtn;
+@property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified galleryBtn;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint * _Null_unspecified heightConstraint;
+- (void)awakeFromNib;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (IBAction)LeavingGroup:(UIButton * _Nonnull)sender;
+- (IBAction)membersButtonPressed:(UIButton * _Nonnull)sender;
+- (IBAction)galleryButtonPressed:(UIButton * _Nonnull)sender;
+- (IBAction)muteButtonPressed:(UIButton * _Nonnull)sender;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10Discourses18MenuNavigationItem")
+@interface MenuNavigationItem : UINavigationItem
+- (nonnull instancetype)initWithTitle:(NSString * _Nonnull)title OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10Discourses23MenuTableViewController")
+@interface MenuTableViewController : UITableViewController
+@property (nonatomic, strong) IBOutlet MenuNavigationItem * _Null_unspecified titleNavItem;
+- (void)viewDidLoad;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
