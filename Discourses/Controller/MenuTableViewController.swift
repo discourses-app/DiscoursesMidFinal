@@ -60,8 +60,13 @@ class MenuTableViewController: UITableViewController {
         course = Class(name: array[0], professor: array[1], lectureNo: Int(array[2])!)
         MenuCell.getValues(byUser: user!, course: course!, VC : subClassVC)
         countUsers { success in
-            let Number = String(self.memberNumbers)
+            if success == true {
             MenuCell.memberNumber.text = "\(self.memberNumbers!) member(s)"
+            }
+            
+            else {
+                //adele UI Alert here pls do add, my love!
+            }
         }
         MenuCell.heightConstraint.constant = self.view.frame.height - 500
         MenuCell.contentView.backgroundColor = #colorLiteral(red: 0.3927595317, green: 0.4966250658, blue: 0.5855669975, alpha: 1)

@@ -54,6 +54,8 @@
 		D215D53624D99AF5009B913B /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D215D53524D99AF5009B913B /* MenuTableViewController.swift */; };
 		D215D53924D9A9B4009B913B /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D215D53724D9A9B4009B913B /* MenuCell.swift */; };
 		D215D53A24D9A9B4009B913B /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D215D53824D9A9B4009B913B /* MenuCell.xib */; };
+		D215D53C24DE1CA6009B913B /* AddClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D215D53B24DE1CA6009B913B /* AddClassCell.swift */; };
+		D215D53E24DE1CB9009B913B /* AddClassCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D215D53D24DE1CB9009B913B /* AddClassCell.xib */; };
 		D289F7F024CED7BF0024AD80 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D289F7EF24CED7BF0024AD80 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +111,8 @@
 		D215D53524D99AF5009B913B /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		D215D53724D9A9B4009B913B /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		D215D53824D9A9B4009B913B /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
+		D215D53B24DE1CA6009B913B /* AddClassCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClassCell.swift; sourceTree = "<group>"; };
+		D215D53D24DE1CB9009B913B /* AddClassCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddClassCell.xib; sourceTree = "<group>"; };
 		D289F7EF24CED7BF0024AD80 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,6 +180,8 @@
 				8F57476924C1BE5B00286C87 /* ReceivedMessageCell.swift */,
 				8F57476524C1BE5900286C87 /* ClassBubbleTableViewCell.swift */,
 				8F57476724C1BE5A00286C87 /* ClassBubbleTableViewCell.xib */,
+				D215D53B24DE1CA6009B913B /* AddClassCell.swift */,
+				D215D53D24DE1CB9009B913B /* AddClassCell.xib */,
 				8F57476824C1BE5B00286C87 /* SentMessageCell.swift */,
 				D215D53324D99741009B913B /* MenuNavigationItem.swift */,
 				8F57476624C1BE5A00286C87 /* SentMessageCell.xib */,
@@ -336,6 +342,7 @@
 				8FFC6CFE24C1B14B00A41B95 /* LaunchScreen.storyboard in Resources */,
 				8FFC6D2724C1B40F00A41B95 /* AirbnbCerealBold.ttf in Resources */,
 				8FFC6CFB24C1B14B00A41B95 /* Assets.xcassets in Resources */,
+				D215D53E24DE1CB9009B913B /* AddClassCell.xib in Resources */,
 				8FFC6D1824C1B3DC00A41B95 /* Cabin-SemiBoldItalic.ttf in Resources */,
 				8FFC6D2424C1B40F00A41B95 /* AirbnbCerealBook.ttf in Resources */,
 				8FFC6D1524C1B3DC00A41B95 /* Cabin-Medium.ttf in Resources */,
@@ -423,6 +430,7 @@
 				8F57476D24C1BE5B00286C87 /* SentMessageCell.swift in Sources */,
 				8FFC6CF424C1B14900A41B95 /* SceneDelegate.swift in Sources */,
 				8F5605BB24C1B8510014289C /* SubscribedClassesViewController.swift in Sources */,
+				D215D53C24DE1CA6009B913B /* AddClassCell.swift in Sources */,
 				D215D53924D9A9B4009B913B /* MenuCell.swift in Sources */,
 				8FFC6D0624C1B2E800A41B95 /* Constants.swift in Sources */,
 				8F57476024C1BCFC00286C87 /* LoginViewController.swift in Sources */,

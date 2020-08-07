@@ -59,7 +59,7 @@ class SearchClassViewController: UIViewController {
         tableView.delegate = self
         filterdata = data
         tableView.separatorStyle = .none
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.tableView.register(UINib(nibName: K.CellStructNames.addClass, bundle: nil), forCellReuseIdentifier: K.CellIdentifiers.addClass)
         
         
     }
@@ -134,61 +134,14 @@ extension SearchClassViewController : UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        if let imageView : UIImageView = cell.viewWithTag(1) as? UIImageView {
-            imageView.image = #imageLiteral(resourceName: "addImage")
-            
-        }
-        else {
-            
-            let joinBtn = UIImageView(frame: CGRect(x: tableView.frame.maxX - 70, y: 30, width: 40, height: 40))
-            joinBtn.image = #imageLiteral(resourceName: "addImage")
-            //           let tap = UITapGestureRecognizer()
-            //            joinBtn.addGestureRecognizer(tap)
-            joinBtn.tag = 1
-            cell.contentView.addSubview(joinBtn)
-        }
-        
-        cell.layer.cornerRadius = 20
-        cell.layer.masksToBounds = true
-        cell.textLabel?.layer.cornerRadius = 20
-        cell.textLabel?.layer.masksToBounds = true
-        let bg = UIView()
-        bg.backgroundColor = UIColor.clear
-        cell.selectedBackgroundView = bg
-        cell.backgroundColor = #colorLiteral(red: 0.8117647059, green: 0.4352941176, blue: 0.1490196078, alpha: 1)
-        let selectedCellValues : [String]
-        if filterdata.count != 0
-        {
-            selectedCellValues = filterdata[indexPath.row].components(separatedBy: "*")
-            cell.textLabel!.text = selectedCellValues[0].uppercased()
-            cell.textLabel!.textAlignment = .left
-        }
-        else{
-            selectedCellValues = data[indexPath.row].components(separatedBy: "*")
-            cell.textLabel!.text = selectedCellValues[0].uppercased()
-            cell.textLabel!.textAlignment = .left
-        }
-        if let profLbl : UILabel = cell.viewWithTag(2) as? UILabel {
-            profLbl.text = selectedCellValues[1].uppercased()
-        }
-            
-        else {
-            let profLabel = UILabel(frame: CGRect(x: 20.5, y: 60, width: 275, height: 20))
-            profLabel.text = selectedCellValues[1].uppercased()
-            profLabel.textColor = #colorLiteral(red: 0.9490196078, green: 0.937254902, blue: 0.8745098039, alpha: 1)
-            profLabel.textAlignment = .left
-            profLabel.font =  UIFont(name: "AirbnbCerealApp-Bold", size: 18)
-            profLabel.autoresizesSubviews = true
-            profLabel.minimumScaleFactor = 0.4
-            //profLabel.adjustsFontSizeToFitWidth = true (shrinks font!)
-            //profLabel.preferredMaxLayoutWidth = tableView.frame.maxX - 70 - 40
-            profLabel.numberOfLines = 0
-            profLabel.tag = 2
-            cell.contentView.addSubview(profLabel)
-        }
-        cell.textLabel!.font = UIFont(name: "AirbnbCerealApp-ExtraBold", size: 30)
-        cell.textLabel!.textColor = #colorLiteral(red: 0.9490196078, green: 0.937254902, blue: 0.8745098039, alpha: 1)
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.CellIdentifiers.addClass) as! AddClassCell
+        let courseInfo = filterdata[indexPath.row].components(separatedBy: "*")
+        let course = Class(name: courseInfo[0], professor: courseInfo[1], lectureNo: Int(courseInfo[2])!)
+        cell.course = course
+        cell.classLabel.text = course.name
+        cell.lectureNumLabel.text = ""/*"Lec \(course.lectureNo)".uppercased()*/
+        cell.professorLabel.text = course.professor + "  |  " + "Lec \(course.lectureNo)".uppercased()
+        cell.addClassImage.image = #imageLiteral(resourceName: "addImage")
         return cell
     }
 }
@@ -197,36 +150,34 @@ extension SearchClassViewController : UITableViewDataSource {
 
 extension SearchClassViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print("This cell from the chat list was selected: \(indexPath.row)")
-        let cell = tableView.cellForRow(at: indexPath)
-        guard (cell?.viewWithTag(1) as! UIImageView).image != #imageLiteral(resourceName: "checkMark") else {return}
-       
-        UIView.transition(with: (cell?.viewWithTag(1) as! UIImageView),
+        //        print("This cell from the chat list was selected: \(indexPath.row)")
+        let cell = tableView.cellForRow(at: indexPath) as! AddClassCell
+        guard !cell.selectedOnce else {
+            return
+        }
+        UIView.transition(with: (cell.addClassImage),
                           duration: 0.75,
                           options: .transitionFlipFromTop,
-                          animations: { (cell?.viewWithTag(1) as! UIImageView).image = #imageLiteral(resourceName: "checkMark") },
+                          animations: { cell.addClassImage.image = #imageLiteral(resourceName: "checkMark") },
                           completion: { finished in
-    
-        let className = cell!.textLabel!.text!
-        let profName = (cell?.contentView.viewWithTag(2) as! UILabel).text!
-        let lectureNumber = 1 //TODO: assign later
-        let newClass = Class(name: className, professor: profName, lectureNo: lectureNumber)
-        self.subscribeUser(toCourse: newClass)
-
-        //removing a name from the collection 'data' if it is selected by the user
-        for (index, element) in self.data.enumerated() {
-            if element == newClass.stringRepresentation {
-                self.data.remove(at: index)
-            }
-        }
-        for (index, element) in self.filterdata.enumerated() {
-            if element == newClass.stringRepresentation {
-                self.filterdata.remove(at: index)
-            }
-        }
-
-        //tableData()
-        //self.tableView.reloadData()
+                            
+                            cell.selectedOnce = true
+                            self.subscribeUser(toCourse: cell.course!)
+                            
+                            //removing a name from the collection 'data' if it is selected by the user
+                            for (index, element) in self.data.enumerated() {
+                                if element == cell.course!.stringRepresentation {
+                                    self.data.remove(at: index)
+                                }
+                            }
+                            for (index, element) in self.filterdata.enumerated() {
+                                if element == cell.course!.stringRepresentation {
+                                    self.filterdata.remove(at: index)
+                                }
+                            }
+                            
+                            //tableData()
+                            //self.tableView.reloadData()
         })
         
     }
@@ -255,17 +206,18 @@ extension SearchClassViewController {
         }
             //I WAS WORRIED THAT CLASSLISTVC NEED NOT ALWAYS EXIST IN THE STACK OF VIEWS
             //SO THIS IS TO PREPARE FOR THAT KIND OF AN ISSUE
-            else {
-                data = []
-                for element in K.allClasses{
-                    data.append(element.stringRepresentation)
-                }
+        else {
+            data = []
+            for element in K.allClasses{
+                data.append(element.stringRepresentation)
             }
-        
         }
-    
- 
+        
     }
     
     
+}
+
+    
+
 
