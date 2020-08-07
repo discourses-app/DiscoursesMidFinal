@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class MenuTableViewController: UITableViewController {
 
@@ -17,6 +18,7 @@ class MenuTableViewController: UITableViewController {
     var course : Class?
     var subClassVC : SubscribedClassesViewController!
     var chatVC : ChatViewController!
+    var memberNumbers: Int!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
@@ -57,6 +59,10 @@ class MenuTableViewController: UITableViewController {
         MenuCell.profAndLecName.text = "\(array[1])  |  LEC \(array[2])"
         course = Class(name: array[0], professor: array[1], lectureNo: Int(array[2])!)
         MenuCell.getValues(byUser: user!, course: course!, VC : subClassVC)
+        countUsers { success in
+            let Number = String(self.memberNumbers)
+            MenuCell.memberNumber.text = "\(self.memberNumbers!) member(s)"
+        }
         MenuCell.heightConstraint.constant = self.view.frame.height - 500
         MenuCell.contentView.backgroundColor = #colorLiteral(red: 0.3927595317, green: 0.4966250658, blue: 0.5855669975, alpha: 1)
         MenuCell.chatVC = chatVC
@@ -74,7 +80,27 @@ class MenuTableViewController: UITableViewController {
 //            return MenuCell
 //        }
     }
-    
+     //MARK:- Firebase function
+    typealias CompletionHandler = (_ success:Bool) -> Void
+    func countUsers (completionHandler: @escaping CompletionHandler) {
+        var flag = true
+        memberNumbers = 0
+        let db = Firestore.firestore();
+        db.collection(K.Firebase.ClassCollection.name)
+            .document(courseStringRepresentation)
+            .collection(K.Firebase.ClassCollection.userCollection)
+            .getDocuments { (querySnapshot,error) in
+                if error != nil {
+                    print("kayka galti ho gaya user counting mein?")
+                    completionHandler(false)
+                }
+                else {
+                    self.memberNumbers = querySnapshot?.count as! Int
+                }
+                flag = true
+                completionHandler(flag)
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
